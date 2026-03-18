@@ -658,19 +658,11 @@
     // CONFIG
     // =====================================================================
     const CONFIG = {
-      SHEET_ID: "1RD9N9OPMHMCa-AQNbWffqwbRIKTFZH-5H5I7l5hw6wU",
-      SHEET_TAB: "hotels",
       AFFILIATE_ID: "DEIN_AFFILIATE_ID",
-      COL: {
-        name: "name", ortsteil: "ortsteil", typ: "typ", status: "status",
-        website: "website", booking_url: "booking_url",
-        short_pitch: "short_pitch", insider_tip: "insider_tip", tag: "tag",
-        ski_in_out: "ski_in_out", ski_in_out_note: "ski_in_out_note",
-        nearest_lift_name: "nearest_lift_name", nearest_lift_type: "nearest_lift_type",
-        lift_distance_m: "lift_distance_m", piste_distance_m: "piste_distance_m",
-        loipe_distance_m: "loipe_distance_m", loipe_name: "loipe_name",
-        google_rating: "google_rating", google_reviews: "google_reviews",
-        ai_description: "ai_description", image_url: "image_url",
+      DEFAULT_DESTINATION: "kleinwalsertal",
+      DESTINATIONS: {
+        "kleinwalsertal": "Kleinwalsertal",
+        // Add more: "oberstdorf": "Oberstdorf", "lech": "Lech am Arlberg"
       }
     };
 
@@ -708,11 +700,21 @@
     const safeUrl = u => { const s = norm(u); if (!s) return ""; return s.startsWith("http") ? s : "https://"+s; };
     const splitTags = s => { const t = norm(s); return t ? t.split(",").map(x=>x.trim()).filter(Boolean) : []; };
 
-    function getCol(obj, key) {
-      if (obj[key] != null && obj[key] !== "") return obj[key];
-      const k = Object.keys(obj).find(x => x.toLowerCase() === key.toLowerCase());
-      return k ? obj[k] : "";
+    // =====================================================================
+    // DESTINATION ROUTING
+    // =====================================================================
+    function getDestinationSlug() {
+      // Try URL path: /kleinwalsertal or /oberstdorf
+      const path = window.location.pathname.replace(/^\/|\/$/g, "").toLowerCase();
+      if (path && CONFIG.DESTINATIONS[path]) return path;
+      // Try query param: ?d=kleinwalsertal
+      const params = new URLSearchParams(window.location.search);
+      const d = (params.get("d") || "").toLowerCase();
+      if (d && CONFIG.DESTINATIONS[d]) return d;
+      return CONFIG.DEFAULT_DESTINATION;
     }
+
+    let CURRENT_DEST = getDestinationSlug();
 
     function getHotelImage(h) {
       if (h.image_url) return safeUrl(h.image_url);
@@ -729,63 +731,43 @@
     }
 
     // =====================================================================
-    // GOOGLE SHEET LOADER (JSONP)
+    // DATA LOADER (JSON files from discover.py)
     // =====================================================================
-    function loadViaJsonp() {
-      const tq = encodeURIComponent("select *");
-      const sheet = encodeURIComponent(CONFIG.SHEET_TAB);
-      const url = `https://docs.google.com/spreadsheets/d/${CONFIG.SHEET_ID}/gviz/tq?sheet=${sheet}&tq=${tq}&headers=1&tqx=responseHandler:gvizCB`;
-      return new Promise((resolve, reject) => {
-        const old = document.getElementById("gvizScript");
-        if (old) old.remove();
-        const timer = setTimeout(() => reject(new Error("Timeout")), 10000);
-        window.gvizCB = resp => {
-          clearTimeout(timer);
-          try {
-            const t = resp.table;
-            const cols = (t.cols||[]).map(c => (c.label||"").trim());
-            const rows = (t.rows||[]).map(r => (r.c||[]).map(cell => cell ? (cell.v ?? "") : ""));
-            resolve({ cols, rows });
-          } catch (e) { reject(e); }
+    async function loadHotels(slug) {
+      const resp = await fetch(`data/${slug}/hotels.json`);
+      if (!resp.ok) throw new Error(`Destination "${slug}" nicht gefunden`);
+      const data = await resp.json();
+      return (data.hotels || []).map(h => {
+        const name = norm(h.name || "");
+        if (!name) return null;
+        const tags = typeof h.tags === "string" ? splitTags(h.tags) : (h.tags || []);
+        const textBlob = [name, h.ortsteil, h.typ, h.short_pitch, h.insider_tip,
+          tags.join(" "), h.ski_in_out_note, h.loipe_name, h.nearest_lift_name].filter(Boolean).join(" ");
+        return {
+          name,
+          ortsteil: norm(h.ortsteil),
+          typ: norm(h.typ),
+          website: norm(h.website),
+          booking_url: norm(h.booking_url),
+          short_pitch: norm(h.short_pitch),
+          insider_tip: norm(h.insider_tip),
+          tags,
+          ski_in_out: norm(h.ski_in_out),
+          ski_in_out_note: norm(h.ski_in_out_note || ""),
+          nearest_lift_name: norm(h.nearest_lift_name),
+          nearest_lift_type: norm(h.nearest_lift_type || ""),
+          lift_distance_m: safeNum(h.lift_distance_m),
+          piste_distance_m: safeNum(h.piste_distance_m),
+          loipe_distance_m: safeNum(h.loipe_distance_m),
+          loipe_name: norm(h.loipe_name || ""),
+          google_rating: safeNum(h.google_rating),
+          google_reviews: safeNum(h.google_reviews),
+          ai_description: norm(h.ai_description),
+          image_url: norm(h.image_url || ""),
+          wellness: norm(h.wellness || ""),
+          textBlob,
         };
-        const s = document.createElement("script");
-        s.id = "gvizScript"; s.src = url;
-        s.onerror = () => { clearTimeout(timer); reject(new Error("Load failed")); };
-        document.head.appendChild(s);
-      });
-    }
-
-    // =====================================================================
-    // DATA PARSING
-    // =====================================================================
-    function toHotel(cols, row) {
-      const obj = {}; cols.forEach((c, i) => obj[c] = row[i]);
-      const name = norm(getCol(obj, CONFIG.COL.name));
-      if (!name) return null;
-      const ortsteil = norm(getCol(obj, CONFIG.COL.ortsteil));
-      const typ = norm(getCol(obj, CONFIG.COL.typ));
-      const website = norm(getCol(obj, CONFIG.COL.website));
-      const booking_url = norm(getCol(obj, CONFIG.COL.booking_url));
-      const short_pitch = norm(getCol(obj, CONFIG.COL.short_pitch));
-      const insider_tip = norm(getCol(obj, CONFIG.COL.insider_tip));
-      const tags = splitTags(getCol(obj, CONFIG.COL.tag) || getCol(obj, "tags"));
-      const ski_in_out = norm(getCol(obj, CONFIG.COL.ski_in_out));
-      const ski_in_out_note = norm(getCol(obj, CONFIG.COL.ski_in_out_note));
-      const nearest_lift_name = norm(getCol(obj, CONFIG.COL.nearest_lift_name));
-      const nearest_lift_type = norm(getCol(obj, CONFIG.COL.nearest_lift_type));
-      const lift_distance_m = safeNum(getCol(obj, CONFIG.COL.lift_distance_m));
-      const piste_distance_m = safeNum(getCol(obj, CONFIG.COL.piste_distance_m));
-      const loipe_distance_m = safeNum(getCol(obj, CONFIG.COL.loipe_distance_m));
-      const loipe_name = norm(getCol(obj, CONFIG.COL.loipe_name));
-      const google_rating = safeNum(getCol(obj, CONFIG.COL.google_rating));
-      const google_reviews = safeNum(getCol(obj, CONFIG.COL.google_reviews));
-      const ai_description = norm(getCol(obj, CONFIG.COL.ai_description));
-      const image_url = norm(getCol(obj, CONFIG.COL.image_url));
-      const textBlob = [name, ortsteil, typ, short_pitch, insider_tip, tags.join(" "), ski_in_out_note, loipe_name, nearest_lift_name].join(" ");
-      return { name, ortsteil, typ, website, booking_url, short_pitch, insider_tip, tags,
-        ski_in_out, ski_in_out_note, nearest_lift_name, nearest_lift_type,
-        lift_distance_m, piste_distance_m, loipe_distance_m, loipe_name,
-        google_rating, google_reviews, ai_description, image_url, textBlob };
+      }).filter(Boolean);
     }
 
     // =====================================================================
@@ -1017,35 +999,20 @@
     // =====================================================================
     // BOOT
     // =====================================================================
-    async function loadDescriptions() {
-      try {
-        const resp = await fetch("data/descriptions.json");
-        if (!resp.ok) return {};
-        return await resp.json();
-      } catch (e) { return {}; }
-    }
-
     (async function boot() {
       try {
-        const [{ cols, rows }, descriptions] = await Promise.all([
-          loadViaJsonp(),
-          loadDescriptions()
-        ]);
-        HOTELS = rows.map(r => toHotel(cols, r)).filter(Boolean);
-        // Merge AI descriptions from JSON file
-        if (Object.keys(descriptions).length) {
-          HOTELS.forEach(h => {
-            if (!h.ai_description && descriptions[h.name]) {
-              h.ai_description = descriptions[h.name];
-            }
-          });
-        }
-        el.dataStatus.textContent = HOTELS.length + " Hotels geladen";
+        const destName = CONFIG.DESTINATIONS[CURRENT_DEST] || CURRENT_DEST;
+        // Update page title and hero
+        document.querySelector(".hero h1").textContent = `Dein perfektes Hotel in ${destName}`;
+        document.title = `AlpenStay | Hotels in ${destName}`;
+
+        HOTELS = await loadHotels(CURRENT_DEST);
+        el.dataStatus.textContent = `${HOTELS.length} Hotels in ${destName} geladen`;
         el.dataStatus.classList.add("success");
         renderCurated("alle");
         resetWizard();
       } catch (err) {
-        el.dataStatus.textContent = "Fehler beim Laden: " + err.message;
+        el.dataStatus.textContent = "Fehler: " + err.message;
         el.dataStatus.classList.add("error");
       }
     })();
