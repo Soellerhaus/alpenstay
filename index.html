@@ -2,909 +2,434 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <title>AlpenStay | Dein Hotel in den Alpen finden</title>
+  <title>AlpenStay | Dein Hotel im Kleinwalsertal finden</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Finde dein ideales Hotel in den Alpen in 20 Sekunden – klare Auswahl statt endlose Listen." />
+  <meta name="description" content="Finde dein ideales Hotel im Kleinwalsertal – kuratiert, ehrlich, ohne Marketing-Blabla." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     :root {
-      /* Modern 2025 Color Palette - Softer, more premium */
       --bg-primary: #0a0e1a;
       --bg-secondary: #111827;
       --bg-card: #1a1f2e;
       --bg-card-hover: #1f2937;
-
-      --accent-primary: #14b8a6;
-      --accent-secondary: #0d9488;
-      --accent-soft: rgba(20, 184, 166, 0.1);
-      --accent-glow: rgba(20, 184, 166, 0.3);
-
+      --accent: #14b8a6;
+      --accent-hover: #0d9488;
+      --accent-soft: rgba(20, 184, 166, 0.08);
       --text-primary: #f8fafc;
       --text-secondary: #cbd5e1;
       --text-muted: #94a3b8;
-
-      --border-subtle: rgba(148, 163, 184, 0.1);
-      --border-medium: rgba(148, 163, 184, 0.2);
-
-      --success: #10b981;
-      --warning: #f59e0b;
-      --danger: #ef4444;
-
-      --radius-sm: 12px;
-      --radius-md: 16px;
-      --radius-lg: 20px;
-      --radius-xl: 24px;
-
-      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
-      --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.2);
-      --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.3);
-      --shadow-glow: 0 0 24px rgba(20, 184, 166, 0.2);
-
-      --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
-      --transition-base: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+      --border: rgba(255, 255, 255, 0.06);
+      --border-medium: rgba(255, 255, 255, 0.1);
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --radius-xl: 20px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.2);
+      --shadow-md: 0 4px 16px rgba(0,0,0,0.3);
+      --shadow-lg: 0 8px 32px rgba(0,0,0,0.4);
+      --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --transition: 200ms cubic-bezier(0.4, 0, 0.2, 1);
     }
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+      font-family: var(--font-body);
       line-height: 1.6;
       color: var(--text-secondary);
-      background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+      background: var(--bg-primary);
       min-height: 100vh;
       -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
     }
-    /* Typography */
-    h1, h2, h3, h4 {
-      color: var(--text-primary);
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      line-height: 1.2;
-    }
-    h1 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1rem; }
-    h2 { font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 0.75rem; }
-    h3 { font-size: clamp(1.25rem, 2.5vw, 1.5rem); }
-    a {
-      text-decoration: none;
-      color: inherit;
-      transition: color var(--transition-fast);
-    }
-    button {
-      font-family: inherit;
-      border: none;
-      cursor: pointer;
-      transition: all var(--transition-base);
-    }
-    /* Container */
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
-    }
-    /* Destination Nav Bar */
-    .dest-nav {
-      background: var(--bg-secondary);
-      border-bottom: 1px solid var(--border-subtle);
-      padding: 0.5rem 0;
-      font-size: 0.8125rem;
-    }
-    .dest-nav-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-    .dest-nav-label {
-      color: var(--text-muted);
-      font-weight: 600;
-    }
-    .dest-nav-links {
-      display: flex;
-      gap: 0.25rem;
-      flex-wrap: wrap;
-    }
-    .dest-nav-links a {
-      padding: 0.375rem 0.75rem;
-      border-radius: 999px;
-      color: var(--text-muted);
-      font-size: 0.8125rem;
-      transition: all var(--transition-fast);
-    }
-    .dest-nav-links a:hover {
-      color: var(--accent-primary);
-      background: var(--accent-soft);
-    }
-    .dest-nav-links a.active {
-      color: var(--accent-primary);
-      background: var(--accent-soft);
-      font-weight: 600;
-    }
-    .dest-nav-links .coming-soon {
-      color: var(--text-muted);
-      opacity: 0.5;
-      cursor: default;
-      font-style: italic;
-    }
-    /* Header */
+    h1, h2, h3 { font-family: var(--font-display); color: var(--text-primary); font-weight: 700; line-height: 1.2; }
+    a { text-decoration: none; color: inherit; }
+    button { font-family: var(--font-body); border: none; cursor: pointer; }
+    img { display: block; max-width: 100%; }
+
+    /* ── Layout ── */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+
+    /* ── Header ── */
     header {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      backdrop-filter: blur(12px) saturate(180%);
-      background: rgba(10, 14, 26, 0.8);
-      border-bottom: 1px solid var(--border-subtle);
-      box-shadow: var(--shadow-sm);
+      position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+      backdrop-filter: blur(16px) saturate(180%);
+      background: rgba(10, 14, 26, 0.85);
+      border-bottom: 1px solid var(--border);
     }
     .header-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 1rem 1.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1.5rem;
+      max-width: 1200px; margin: 0 auto; padding: 0.875rem 1.5rem;
+      display: flex; align-items: center; justify-content: space-between; gap: 1.5rem;
     }
     .logo {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      font-weight: 700;
-      font-size: 1.125rem;
-      color: var(--text-primary);
+      font-family: var(--font-display); font-weight: 700; font-size: 1.25rem;
+      color: var(--text-primary); display: flex; align-items: center; gap: 0.625rem;
       letter-spacing: -0.01em;
     }
-    .logo-icon {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.25rem;
-      box-shadow: var(--shadow-glow);
+    .logo-mark {
+      width: 32px; height: 32px; border-radius: 50%;
+      background: var(--accent); display: flex; align-items: center;
+      justify-content: center; font-size: 1rem;
     }
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-      font-size: 0.9375rem;
-    }
-    .nav-links a {
-      color: var(--text-muted);
-      position: relative;
-      padding: 0.5rem 0;
-    }
-    .nav-links a:hover {
-      color: var(--accent-primary);
-    }
-    .nav-links a::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background: var(--accent-primary);
-      transition: width var(--transition-base);
-    }
-    .nav-links a:hover::after {
-      width: 100%;
-    }
+    .nav-links { display: flex; gap: 2rem; font-size: 0.875rem; font-weight: 500; }
+    .nav-links a { color: var(--text-muted); transition: color var(--transition); }
+    .nav-links a:hover { color: var(--text-primary); }
     .nav-cta {
-      padding: 0.625rem 1.25rem;
-      border-radius: 999px;
-      background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-      color: var(--bg-primary);
-      font-weight: 600;
-      font-size: 0.875rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      box-shadow: var(--shadow-glow);
+      padding: 0.5rem 1.25rem; border-radius: 999px; background: var(--accent);
+      color: var(--bg-primary); font-weight: 600; font-size: 0.8125rem;
+      transition: all var(--transition);
     }
-    .nav-cta:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 0 32px rgba(20, 184, 166, 0.4);
-    }
-    /* Hero Section */
+    .nav-cta:hover { background: var(--accent-hover); }
+
+    /* ── Hero ── */
     .hero {
-      padding: 4rem 0 3rem;
-      text-align: center;
+      position: relative; min-height: 85vh; display: flex; align-items: center;
+      justify-content: center; text-align: center; overflow: hidden;
+      padding: 6rem 1.5rem 4rem;
     }
-    .hero h1 {
-      max-width: 800px;
-      margin: 0 auto 1.5rem;
+    .hero-bg {
+      position: absolute; inset: 0; z-index: 0;
+      background: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?w=1920&q=80') center/cover no-repeat;
     }
-    .hero-highlight {
-      background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+    .hero-bg::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(180deg, rgba(10,14,26,0.5) 0%, rgba(10,14,26,0.85) 70%, var(--bg-primary) 100%);
     }
-    .hero-subtitle {
-      font-size: 1.125rem;
-      color: var(--text-muted);
-      max-width: 600px;
-      margin: 0 auto 2rem;
-      line-height: 1.7;
+    .hero-content { position: relative; z-index: 1; max-width: 700px; }
+    .hero h1 { font-size: clamp(2.5rem, 5vw, 3.75rem); margin-bottom: 1.25rem; letter-spacing: -0.02em; }
+    .hero-sub {
+      font-size: 1.125rem; color: var(--text-muted); margin-bottom: 2.5rem;
+      font-weight: 400; line-height: 1.7;
     }
-    .hero-cta-row {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-bottom: 2rem;
+    .hero-cta {
+      display: inline-flex; align-items: center; gap: 0.625rem;
+      padding: 1rem 2rem; border-radius: 999px; background: var(--accent);
+      color: var(--bg-primary); font-weight: 600; font-size: 1.0625rem;
+      transition: all var(--transition);
     }
-    /* Buttons */
-    .btn {
-      padding: 0.875rem 1.75rem;
-      border-radius: 999px;
-      font-weight: 600;
-      font-size: 1rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.625rem;
-      min-height: 48px;
-      transition: all var(--transition-base);
-    }
-    .btn-primary {
-      background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-      color: var(--bg-primary);
-      box-shadow: var(--shadow-glow);
-    }
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 0 32px rgba(20, 184, 166, 0.5);
-    }
-    .btn-secondary {
-      background: var(--bg-card);
-      color: var(--text-secondary);
-      border: 1px solid var(--border-medium);
-    }
-    .btn-secondary:hover {
-      background: var(--bg-card-hover);
-      border-color: var(--accent-primary);
-      color: var(--accent-primary);
-    }
-    .btn-ghost {
-      background: transparent;
-      color: var(--text-muted);
-      border: 1px solid var(--border-medium);
-    }
-    .btn-ghost:hover {
-      background: var(--bg-card);
-      color: var(--accent-primary);
-      border-color: var(--accent-primary);
-    }
-    .btn-booking {
-      padding: 0.625rem 1.25rem;
-      border-radius: 999px;
-      background: #003580;
-      color: #fff;
-      font-weight: 600;
-      font-size: 0.8125rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      white-space: nowrap;
-      transition: all var(--transition-base);
-    }
-    .btn-booking:hover {
-      background: #00224f;
-      transform: scale(1.05);
-    }
-    /* Notice/Status Box */
-    .notice {
-      padding: 1rem 1.25rem;
-      border-radius: var(--radius-md);
-      background: var(--bg-card);
-      border: 1px solid var(--border-medium);
-      color: var(--text-secondary);
-      font-size: 0.9375rem;
-      box-shadow: var(--shadow-sm);
-      max-width: 700px;
-      margin: 0 auto;
-    }
-    .notice strong {
-      color: var(--text-primary);
-      font-weight: 600;
-    }
-    .notice.success {
-      border-color: rgba(16, 185, 129, 0.3);
-      background: rgba(16, 185, 129, 0.05);
-    }
-    .notice.error {
-      border-color: rgba(239, 68, 68, 0.3);
-      background: rgba(239, 68, 68, 0.05);
-    }
-    .notice.warning {
-      border-color: rgba(245, 158, 11, 0.3);
-      background: rgba(245, 158, 11, 0.05);
-    }
-    .debug-info {
-      margin-top: 0.75rem;
-      padding: 0.75rem;
-      background: var(--bg-secondary);
-      border-radius: var(--radius-sm);
-      font-family: 'Courier New', monospace;
-      font-size: 0.8125rem;
-      max-height: 200px;
-      overflow-y: auto;
-    }
-    /* Wizard Section */
-    .wizard-section {
-      padding: 3rem 0;
-    }
+    .hero-cta:hover { background: var(--accent-hover); transform: translateY(-2px); }
+    .hero-cta svg { width: 18px; height: 18px; }
+
+    /* ── Wizard ── */
+    .wizard-section { padding: 5rem 0; }
     .wizard {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 2rem;
+      max-width: 800px; margin: 0 auto; padding: 3rem 2.5rem;
+      background: var(--bg-card); border: 1px solid var(--border);
       border-radius: var(--radius-xl);
-      background: var(--bg-card);
-      border: 1px solid var(--border-medium);
-      box-shadow: var(--shadow-lg);
     }
-    .wizard-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1rem;
-      margin-bottom: 2rem;
-      flex-wrap: wrap;
+    .wizard-progress-bar {
+      width: 100%; height: 3px; background: var(--bg-secondary);
+      border-radius: 999px; margin-bottom: 3rem; overflow: hidden;
     }
-    .wizard-title {
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: var(--text-primary);
+    .wizard-progress-fill {
+      height: 100%; background: var(--accent); border-radius: 999px;
+      transition: width 300ms ease;
     }
-    .wizard-progress {
-      font-size: 0.875rem;
-      color: var(--text-muted);
+    .wizard-step-indicator {
+      font-family: var(--font-body); font-size: 0.75rem; font-weight: 600;
+      color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em;
+      margin-bottom: 0.75rem; text-align: center;
     }
-    .wizard-progress strong {
-      color: var(--accent-primary);
-      font-weight: 700;
-    }
-    /* Progress Bar */
-    .progress-bar {
-      width: 100%;
-      height: 8px;
-      background: var(--bg-secondary);
-      border-radius: 999px;
-      overflow: hidden;
-      margin-bottom: 2rem;
-    }
-    .progress-fill {
-      height: 100%;
-      background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
-      border-radius: 999px;
-      transition: width var(--transition-base);
-      box-shadow: 0 0 12px rgba(20, 184, 166, 0.5);
-    }
-    /* Wizard Steps */
-    .wizard-step {
-      display: none;
-    }
-    .wizard-step.active {
-      display: block;
-      animation: fadeIn var(--transition-base);
-    }
+    .wizard-step { display: none; }
+    .wizard-step.active { display: block; animation: fadeIn 200ms ease; }
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(8px); }
+      from { opacity: 0; transform: translateY(6px); }
       to { opacity: 1; transform: translateY(0); }
     }
-    .step-title {
-      font-size: 1.375rem;
-      font-weight: 700;
-      color: var(--text-primary);
-      margin-bottom: 1.5rem;
-      text-align: center;
+    .step-question {
+      font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2rem);
+      color: var(--text-primary); text-align: center; margin-bottom: 2rem;
     }
-    /* Choice Grid */
     .choice-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1rem;
-      margin-bottom: 2rem;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem; margin-bottom: 2rem;
     }
     .choice {
-      padding: 1.5rem 1.25rem;
-      border-radius: var(--radius-lg);
-      background: var(--bg-secondary);
-      border: 2px solid var(--border-medium);
-      color: var(--text-secondary);
-      text-align: center;
-      cursor: pointer;
-      transition: all var(--transition-base);
-      min-height: 120px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 0.5rem;
+      padding: 1.75rem 1.25rem; border-radius: var(--radius-lg);
+      background: var(--bg-secondary); border: 1px solid var(--border);
+      color: var(--text-secondary); text-align: center; cursor: pointer;
+      transition: all var(--transition); display: flex; flex-direction: column;
+      align-items: center; gap: 0.5rem;
     }
     .choice:hover {
-      border-color: var(--accent-primary);
-      background: var(--bg-card-hover);
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-md);
+      border-color: var(--accent); background: var(--accent-soft);
+      transform: translateY(-3px);
     }
-    .choice-icon {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-    }
-    .choice-label {
-      font-weight: 600;
-      font-size: 1rem;
-      color: var(--text-primary);
-    }
-    .choice-desc {
-      font-size: 0.875rem;
-      color: var(--text-muted);
-    }
-    /* Wizard Actions */
+    .choice-label { font-weight: 600; font-size: 0.9375rem; color: var(--text-primary); }
+    .choice-desc { font-size: 0.8125rem; color: var(--text-muted); }
     .wizard-actions {
-      display: flex;
-      justify-content: space-between;
-      gap: 1rem;
-      flex-wrap: wrap;
-      padding-top: 1.5rem;
-      border-top: 1px solid var(--border-subtle);
+      display: flex; justify-content: space-between; gap: 1rem;
+      padding-top: 1.5rem; border-top: 1px solid var(--border);
     }
+    .btn-back, .btn-reset {
+      padding: 0.625rem 1.25rem; border-radius: 999px; background: transparent;
+      color: var(--text-muted); font-size: 0.875rem; font-weight: 500;
+      border: 1px solid var(--border-medium); transition: all var(--transition);
+    }
+    .btn-back:hover, .btn-reset:hover { color: var(--text-primary); border-color: var(--text-muted); }
+    .btn-show {
+      padding: 0.625rem 1.5rem; border-radius: 999px; background: var(--accent);
+      color: var(--bg-primary); font-weight: 600; font-size: 0.875rem;
+      transition: all var(--transition);
+    }
+    .btn-show:hover { background: var(--accent-hover); }
     .wizard-summary {
-      margin-top: 1.5rem;
-      padding: 1rem 1.25rem;
-      border-radius: var(--radius-md);
-      background: var(--accent-soft);
-      border: 1px solid rgba(20, 184, 166, 0.2);
-      font-size: 0.9375rem;
-      color: var(--text-secondary);
+      margin-top: 1.25rem; padding: 0.875rem 1.25rem; border-radius: var(--radius-md);
+      background: var(--accent-soft); border: 1px solid rgba(20,184,166,0.15);
+      font-size: 0.875rem; color: var(--text-muted); text-align: center;
     }
-    .wizard-summary strong {
-      color: var(--accent-primary);
+    .wizard-summary strong { color: var(--accent); }
+
+    /* ── Section Headers ── */
+    .section-header { text-align: center; margin-bottom: 3rem; }
+    .section-header h2 {
+      font-size: clamp(1.75rem, 3vw, 2.5rem); margin-bottom: 0.75rem;
+      letter-spacing: -0.02em;
     }
-    /* Results Section */
-    .results-section {
-      padding: 3rem 0;
+    .section-header p { font-size: 1rem; color: var(--text-muted); max-width: 500px; margin: 0 auto; }
+
+    /* ── Curated List Pills ── */
+    .curated-section { padding: 4rem 0; }
+    .curated-pills {
+      display: flex; gap: 0.625rem; flex-wrap: wrap; justify-content: center;
+      margin-bottom: 2.5rem;
     }
-    .section-header {
-      margin-bottom: 2rem;
-      text-align: center;
+    .curated-pill {
+      padding: 0.625rem 1.25rem; border-radius: 999px; background: var(--bg-card);
+      border: 1px solid var(--border-medium); color: var(--text-muted);
+      font-size: 0.875rem; font-weight: 500; cursor: pointer;
+      transition: all var(--transition);
     }
-    .section-title {
-      font-size: 2rem;
-      font-weight: 700;
-      color: var(--text-primary);
-      margin-bottom: 0.75rem;
+    .curated-pill:hover, .curated-pill.active {
+      background: var(--accent); color: var(--bg-primary);
+      border-color: var(--accent);
     }
-    .section-subtitle {
-      font-size: 1.125rem;
-      color: var(--text-muted);
-      max-width: 700px;
-      margin: 0 auto;
-    }
-    /* Cards Grid */
+
+    /* ── Hotel Cards Grid ── */
+    .results-section { padding: 4rem 0; }
     .cards-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
       gap: 1.5rem;
-      margin-bottom: 2rem;
     }
-    /* Hotel Card */
     .hotel-card {
-      border-radius: var(--radius-xl);
-      background: var(--bg-card);
-      border: 1px solid var(--border-medium);
-      overflow: hidden;
-      transition: all var(--transition-base);
-      box-shadow: var(--shadow-md);
-      display: flex;
-      flex-direction: column;
+      border-radius: var(--radius-xl); background: var(--bg-card);
+      border: 1px solid var(--border); overflow: hidden;
+      transition: all var(--transition); display: flex; flex-direction: column;
     }
-    .hotel-card:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-lg);
-      border-color: var(--accent-primary);
-    }
-    .card-header {
-      padding: 1.25rem 1.5rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 1rem;
-      border-bottom: 1px solid var(--border-subtle);
-    }
-    .card-badges {
-      display: flex;
-      gap: 0.5rem;
-      flex-wrap: wrap;
-    }
-    .badge {
-      padding: 0.375rem 0.75rem;
-      border-radius: 999px;
-      font-size: 0.75rem;
-      font-weight: 600;
-      white-space: nowrap;
-    }
-    .badge-primary {
-      background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-      color: var(--bg-primary);
-    }
-    .badge-secondary {
+    .hotel-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: var(--border-medium); }
+    .card-image {
+      width: 100%; aspect-ratio: 16/9; object-fit: cover;
       background: var(--bg-secondary);
-      color: var(--text-muted);
-      border: 1px solid var(--border-medium);
     }
-    .badge-match {
-      background: rgba(16, 185, 129, 0.15);
-      color: var(--success);
-      border: 1px solid rgba(16, 185, 129, 0.3);
+    .card-image-placeholder {
+      width: 100%; aspect-ratio: 16/9; background: var(--bg-secondary);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2.5rem; color: var(--text-muted); opacity: 0.3;
     }
-    .card-body {
-      padding: 1.5rem;
-      flex: 1;
+    .card-body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
+    .card-location {
+      font-size: 0.75rem; font-weight: 600; color: var(--text-muted);
+      text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.5rem;
     }
     .card-title {
-      font-size: 1.375rem;
-      font-weight: 700;
-      color: var(--text-primary);
-      margin-bottom: 0.5rem;
+      font-family: var(--font-display); font-size: 1.375rem; font-weight: 700;
+      color: var(--text-primary); margin-bottom: 0.625rem; line-height: 1.25;
     }
-    .card-location {
-      font-size: 0.9375rem;
-      color: var(--text-muted);
-      margin-bottom: 0.75rem;
-      display: flex;
-      align-items: center;
-      gap: 0.375rem;
+    .card-rating {
+      display: inline-flex; align-items: center; gap: 0.375rem;
+      font-size: 0.8125rem; color: #fbbf24; font-weight: 600; margin-bottom: 0.875rem;
     }
-    .card-google-rating {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.375rem;
-      padding: 0.375rem 0.75rem;
-      border-radius: var(--radius-sm);
-      background: rgba(251, 191, 36, 0.1);
-      border: 1px solid rgba(251, 191, 36, 0.2);
-      font-size: 0.8125rem;
-      color: #fbbf24;
-      font-weight: 600;
-      margin-bottom: 1rem;
+    .card-rating .count { color: var(--text-muted); font-weight: 400; }
+    .card-quote {
+      font-family: var(--font-display); font-style: italic; font-size: 0.9375rem;
+      color: var(--text-secondary); line-height: 1.65; margin-bottom: 1.25rem;
+      flex: 1;
     }
-    .card-google-rating .rating-count {
-      color: var(--text-muted);
-      font-weight: 400;
-    }
+    .card-quote::before { content: '\201E'; }
+    .card-quote::after { content: '\201C'; }
     .card-features {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-bottom: 1rem;
+      display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.25rem;
     }
     .feature-chip {
-      padding: 0.375rem 0.75rem;
-      border-radius: var(--radius-sm);
-      background: var(--bg-secondary);
-      border: 1px solid var(--border-medium);
-      font-size: 0.8125rem;
-      color: var(--text-secondary);
-      display: flex;
-      align-items: center;
-      gap: 0.375rem;
-    }
-    .card-description {
-      font-size: 0.9375rem;
-      color: var(--text-muted);
-      line-height: 1.6;
-      margin-bottom: 1.25rem;
-    }
-    .card-footer {
-      padding: 1rem 1.5rem;
-      background: var(--bg-secondary);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 0.75rem;
-      border-top: 1px solid var(--border-subtle);
-      flex-wrap: wrap;
-    }
-    .card-meta {
-      font-size: 0.875rem;
-      color: var(--text-muted);
-    }
-    .card-meta strong {
-      color: var(--text-primary);
-      display: block;
-      margin-bottom: 0.25rem;
+      padding: 0.3125rem 0.625rem; border-radius: 999px;
+      background: var(--bg-secondary); border: 1px solid var(--border);
+      font-size: 0.75rem; color: var(--text-muted); font-weight: 500;
     }
     .card-actions {
-      display: flex;
-      gap: 0.5rem;
-      flex-wrap: wrap;
+      display: flex; gap: 0.625rem; padding-top: 1.25rem;
+      border-top: 1px solid var(--border);
     }
-    .card-cta {
-      padding: 0.625rem 1.25rem;
-      border-radius: 999px;
-      background: var(--accent-primary);
-      color: var(--bg-primary);
-      font-weight: 600;
-      font-size: 0.875rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      white-space: nowrap;
+    .btn-details {
+      flex: 1; padding: 0.6875rem; border-radius: var(--radius-md);
+      background: transparent; border: 1px solid var(--border-medium);
+      color: var(--text-secondary); font-weight: 600; font-size: 0.8125rem;
+      text-align: center; transition: all var(--transition); cursor: pointer;
     }
-    .card-cta:hover {
-      background: var(--accent-secondary);
-      transform: scale(1.05);
+    .btn-details:hover { border-color: var(--accent); color: var(--accent); }
+    .btn-booking {
+      flex: 1; padding: 0.6875rem; border-radius: var(--radius-md);
+      background: var(--accent); color: var(--bg-primary); font-weight: 600;
+      font-size: 0.8125rem; text-align: center; transition: all var(--transition);
+      display: inline-flex; align-items: center; justify-content: center; gap: 0.375rem;
     }
-    /* Modal */
+    .btn-booking:hover { background: var(--accent-hover); }
+
+    /* ── Modal ── */
     .modal-backdrop {
-      position: fixed;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.7);
-      backdrop-filter: blur(8px);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      padding: 1.5rem;
-      z-index: 100;
-      animation: fadeIn var(--transition-base);
+      position: fixed; inset: 0; background: rgba(0,0,0,0.75);
+      backdrop-filter: blur(8px); display: none; align-items: center;
+      justify-content: center; padding: 1.5rem; z-index: 100;
     }
-    .modal-backdrop.open {
-      display: flex;
-    }
+    .modal-backdrop.open { display: flex; }
     .modal {
-      width: 100%;
-      max-width: 800px;
-      max-height: 90vh;
-      overflow-y: auto;
-      border-radius: var(--radius-xl);
-      background: var(--bg-card);
-      border: 1px solid var(--border-medium);
-      box-shadow: var(--shadow-lg);
-      animation: slideUp var(--transition-base);
+      width: 100%; max-width: 760px; max-height: 90vh; overflow-y: auto;
+      border-radius: var(--radius-xl); background: var(--bg-card);
+      border: 1px solid var(--border); animation: modalIn 200ms ease;
     }
-    @keyframes slideUp {
-      from { opacity: 0; transform: translateY(24px); }
-      to { opacity: 1; transform: translateY(0); }
+    @keyframes modalIn {
+      from { opacity: 0; transform: scale(0.96) translateY(12px); }
+      to { opacity: 1; transform: scale(1) translateY(0); }
     }
-    .modal-header {
-      padding: 1.5rem 2rem;
-      border-bottom: 1px solid var(--border-subtle);
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 1rem;
+    .modal-image {
+      width: 100%; aspect-ratio: 16/9; object-fit: cover; background: var(--bg-secondary);
     }
-    .modal-title-group h3 {
-      font-size: 1.5rem;
-      color: var(--text-primary);
-      margin-bottom: 0.25rem;
+    .modal-image-placeholder {
+      width: 100%; aspect-ratio: 16/9; background: var(--bg-secondary);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 3rem; color: var(--text-muted); opacity: 0.2;
     }
-    .modal-subtitle {
-      font-size: 0.9375rem;
-      color: var(--text-muted);
+    .modal-content { padding: 2rem; }
+    .modal-location {
+      font-size: 0.75rem; font-weight: 600; color: var(--text-muted);
+      text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.375rem;
+    }
+    .modal-title {
+      font-family: var(--font-display); font-size: 2rem; font-weight: 700;
+      color: var(--text-primary); margin-bottom: 0.75rem; line-height: 1.15;
+    }
+    .modal-rating {
+      display: inline-flex; align-items: center; gap: 0.375rem;
+      font-size: 0.9375rem; color: #fbbf24; font-weight: 600; margin-bottom: 1.5rem;
+    }
+    .modal-rating .count { color: var(--text-muted); font-weight: 400; }
+    .modal-quote {
+      font-family: var(--font-display); font-style: italic; font-size: 1.0625rem;
+      color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.5rem;
+      padding: 1.25rem 1.5rem; border-left: 3px solid var(--accent);
+      background: var(--accent-soft); border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    }
+    .modal-quote::before { content: '\201E'; }
+    .modal-quote::after { content: '\201C'; }
+    .modal-insider {
+      padding: 1rem 1.25rem; border-radius: var(--radius-md);
+      background: var(--bg-secondary); border: 1px solid var(--border);
+      margin-bottom: 1.5rem; font-size: 0.9375rem; color: var(--text-secondary);
+    }
+    .modal-insider strong {
+      display: block; font-size: 0.75rem; font-weight: 600; color: var(--text-muted);
+      text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.375rem;
+    }
+    .modal-facts {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;
+      margin-bottom: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border);
+    }
+    .fact { padding: 0.75rem 1rem; border-radius: var(--radius-md); background: var(--bg-secondary); }
+    .fact-label { font-size: 0.6875rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.25rem; }
+    .fact-value { font-size: 0.9375rem; color: var(--text-primary); font-weight: 500; }
+    .modal-ctas {
+      display: flex; gap: 0.75rem; padding-top: 1.5rem; border-top: 1px solid var(--border);
+    }
+    .modal-btn {
+      flex: 1; padding: 0.875rem; border-radius: var(--radius-md);
+      font-weight: 600; font-size: 0.875rem; text-align: center;
+      transition: all var(--transition); cursor: pointer;
+    }
+    .modal-btn-website {
+      background: transparent; border: 1px solid var(--border-medium);
+      color: var(--text-secondary);
+    }
+    .modal-btn-website:hover { border-color: var(--accent); color: var(--accent); }
+    .modal-btn-booking {
+      background: var(--accent); border: 1px solid var(--accent);
+      color: var(--bg-primary);
+    }
+    .modal-btn-booking:hover { background: var(--accent-hover); }
+    .modal-close-row {
+      display: flex; justify-content: flex-end; padding: 1rem 1.5rem 0;
     }
     .modal-close {
-      padding: 0.5rem 1rem;
-      border-radius: var(--radius-sm);
-      background: var(--bg-secondary);
-      color: var(--text-muted);
-      font-size: 0.875rem;
-      border: 1px solid var(--border-medium);
+      background: none; border: none; color: var(--text-muted);
+      font-size: 0.8125rem; cursor: pointer; padding: 0.375rem 0.75rem;
+      border-radius: var(--radius-sm); transition: color var(--transition);
     }
-    .modal-close:hover {
-      background: var(--bg-primary);
-      color: var(--text-primary);
+    .modal-close:hover { color: var(--text-primary); }
+
+    /* ── About ── */
+    .about-section { padding: 5rem 0 3rem; }
+    .about-inner {
+      max-width: 640px; margin: 0 auto; text-align: center;
     }
-    .modal-body {
-      padding: 2rem;
-    }
-    .modal-google-rating {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.5rem 1rem;
-      border-radius: var(--radius-md);
-      background: rgba(251, 191, 36, 0.1);
-      border: 1px solid rgba(251, 191, 36, 0.2);
-      font-size: 0.9375rem;
-      color: #fbbf24;
-      font-weight: 600;
-      margin-bottom: 1.25rem;
-    }
-    .modal-google-rating .rating-count {
-      color: var(--text-muted);
-      font-weight: 400;
-    }
-    .modal-description {
-      padding: 1.25rem;
-      border-radius: var(--radius-md);
-      background: var(--accent-soft);
-      border: 1px solid rgba(20, 184, 166, 0.2);
-      margin-bottom: 1.5rem;
-    }
-    .modal-description strong {
-      color: var(--accent-primary);
-      display: block;
-      margin-bottom: 0.5rem;
-    }
-    .modal-ai-desc {
-      padding: 1.25rem;
-      border-radius: var(--radius-md);
-      background: var(--bg-secondary);
-      border: 1px solid var(--border-medium);
-      margin-bottom: 1.5rem;
-      line-height: 1.7;
-      color: var(--text-secondary);
-    }
-    .modal-ai-desc strong {
-      color: var(--text-primary);
-      display: block;
-      margin-bottom: 0.5rem;
-      font-size: 0.875rem;
-    }
-    .modal-info {
-      display: grid;
-      grid-template-columns: 180px 1fr;
-      gap: 1rem 1.5rem;
-      margin-bottom: 1.5rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid var(--border-subtle);
-    }
-    .info-label {
-      font-weight: 600;
-      color: var(--text-primary);
-      font-size: 0.875rem;
-    }
-    .info-value {
-      color: var(--text-secondary);
-      font-size: 0.875rem;
-    }
-    .modal-actions {
-      display: flex;
-      gap: 0.75rem;
-      flex-wrap: wrap;
-    }
-    /* About Section */
-    .about-section {
-      padding: 3rem 0;
-    }
-    .about-content {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 2rem;
-      border-radius: var(--radius-xl);
-      background: var(--bg-card);
-      border: 1px solid var(--border-medium);
-      box-shadow: var(--shadow-md);
-    }
-    .about-content h2 {
-      margin-bottom: 1rem;
-    }
-    .about-content p {
-      margin-bottom: 1rem;
-      line-height: 1.7;
-      color: var(--text-secondary);
-    }
-    .about-content p:last-child {
-      margin-bottom: 0;
-    }
-    /* Footer */
+    .about-inner h2 { font-size: 1.75rem; margin-bottom: 1rem; }
+    .about-inner p { color: var(--text-muted); margin-bottom: 1rem; line-height: 1.7; font-size: 0.9375rem; }
+
+    /* ── Footer ── */
     footer {
-      padding: 2rem 0;
-      border-top: 1px solid var(--border-subtle);
-      margin-top: 4rem;
+      padding: 2.5rem 0; border-top: 1px solid var(--border); margin-top: 3rem;
     }
-    .footer-content {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1.5rem;
-      flex-wrap: wrap;
+    .footer-inner {
+      max-width: 1200px; margin: 0 auto; padding: 0 1.5rem;
+      display: flex; justify-content: space-between; align-items: center;
+      gap: 1.5rem; flex-wrap: wrap;
     }
-    .footer-links {
-      display: flex;
-      gap: 1.5rem;
-      flex-wrap: wrap;
+    .footer-brand { font-family: var(--font-display); font-weight: 700; color: var(--text-primary); font-size: 1rem; }
+    .footer-links { display: flex; gap: 1.5rem; }
+    .footer-links a { font-size: 0.8125rem; color: var(--text-muted); transition: color var(--transition); }
+    .footer-links a:hover { color: var(--text-primary); }
+    .footer-disclosure {
+      width: 100%; text-align: center; padding-top: 1.5rem; margin-top: 1.5rem;
+      border-top: 1px solid var(--border); font-size: 0.75rem; color: var(--text-muted);
+      max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.6;
     }
-    .footer-links a {
-      color: var(--text-muted);
-      font-size: 0.875rem;
+
+    /* ── Status ── */
+    .status-bar {
+      padding: 0.75rem 1rem; border-radius: var(--radius-md);
+      background: var(--bg-card); border: 1px solid var(--border);
+      font-size: 0.8125rem; color: var(--text-muted); text-align: center;
+      max-width: 500px; margin: 2rem auto 0;
     }
-    .footer-links a:hover {
-      color: var(--accent-primary);
-    }
-    .footer-meta {
-      width: 100%;
-      text-align: center;
-      padding-top: 1rem;
-      margin-top: 1rem;
-      border-top: 1px solid var(--border-subtle);
-      font-size: 0.8125rem;
-      color: var(--text-muted);
-    }
-    /* Responsive */
+    .status-bar.success { border-color: rgba(20,184,166,0.2); color: var(--accent); }
+    .status-bar.warning { border-color: rgba(245,158,11,0.2); color: #f59e0b; }
+    .status-bar.error { border-color: rgba(239,68,68,0.2); color: #ef4444; }
+
+    /* ── Responsive ── */
     @media (max-width: 768px) {
-      .header-inner {
-        padding: 0.875rem 1rem;
-      }
-      .nav-links {
-        display: none;
-      }
-      .hero {
-        padding: 2rem 0;
-      }
-      .wizard {
-        padding: 1.5rem 1rem;
-      }
-      .choice-grid {
-        grid-template-columns: 1fr;
-      }
-      .cards-grid {
-        grid-template-columns: 1fr;
-      }
-      .modal-info {
-        grid-template-columns: 1fr;
-      }
-      .modal-header,
-      .modal-body {
-        padding: 1.25rem;
-      }
-      .dest-nav-inner {
-        padding: 0 1rem;
-      }
+      .nav-links { display: none; }
+      .hero { min-height: 70vh; padding: 5rem 1rem 3rem; }
+      .wizard { padding: 2rem 1.25rem; }
+      .choice-grid { grid-template-columns: 1fr; }
+      .cards-grid { grid-template-columns: 1fr; }
+      .modal { max-height: 100vh; border-radius: 0; }
+      .modal-facts { grid-template-columns: 1fr; }
+      .modal-ctas { flex-direction: column; }
+      .wizard-actions { flex-direction: column; }
+      .wizard-actions > * { width: 100%; text-align: center; justify-content: center; }
     }
-    @media (max-width: 480px) {
-      .container {
-        padding: 0 1rem;
-      }
-      .wizard-actions {
-        flex-direction: column;
-      }
-      .btn {
-        width: 100%;
-        justify-content: center;
-      }
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .cards-grid { grid-template-columns: repeat(2, 1fr); }
     }
-    /* Utility Classes */
-    .text-center { text-align: center; }
-    .mb-1 { margin-bottom: 0.5rem; }
-    .mb-2 { margin-bottom: 1rem; }
-    .mb-3 { margin-bottom: 1.5rem; }
-    .mt-2 { margin-top: 1rem; }
-    .hidden { display: none; }
+    .hidden { display: none !important; }
   </style>
 </head>
 <body>
-  <!-- Destination Navigation -->
-  <div class="dest-nav">
-    <div class="dest-nav-inner">
-      <span class="dest-nav-label">Destinationen:</span>
-      <div class="dest-nav-links">
-        <a href="#" class="active">Kleinwalsertal</a>
-        <span class="coming-soon">+ weitere folgen</span>
-      </div>
-    </div>
-  </div>
 
   <!-- Header -->
   <header>
     <div class="header-inner">
       <a href="#" class="logo">
-        <div class="logo-icon">&#9968;</div>
-        <span>AlpenStay</span>
+        <div class="logo-mark">&#9968;</div>
+        AlpenStay
       </a>
       <nav class="nav-links">
         <a href="#wizard">Finder</a>
@@ -912,220 +437,179 @@
         <a href="#listen">Listen</a>
         <a href="#about">Info</a>
       </nav>
-      <button class="nav-cta" id="navStart">
-        <span>&#128270;</span>
-        <span>Hotel finden</span>
-      </button>
+      <button class="nav-cta" id="navStart">Hotel finden &rarr;</button>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="container">
-      <h1>
-        Dein ideales Alpen-Hotel in <span class="hero-highlight">20 Sekunden</span>
-      </h1>
-      <p class="hero-subtitle">
-        Beantworte ein paar kurze Fragen und erhalte eine persoenliche Auswahl &ndash; ohne endlose Listen.
-      </p>
-      <div class="hero-cta-row">
-        <button class="btn btn-primary" id="btnStart">
-          <span>&#128270;</span>
-          <span>Jetzt starten</span>
-        </button>
-        <button class="btn btn-secondary" id="btnListen">
-          <span>&#11088;</span>
-          <span>Zu den Listen</span>
-        </button>
-      </div>
-      <div class="notice" id="dataStatus">
-        <strong>&#9203; Daten werden geladen&hellip;</strong>
-        <div class="debug-info hidden" id="debugInfo"></div>
-      </div>
+  <!-- Hero -->
+  <section class="hero" id="top">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <h1>Dein perfektes Hotel im Kleinwalsertal</h1>
+      <p class="hero-sub">Kuratiert. Ehrlich. Ohne Marketing-Blabla.</p>
+      <button class="hero-cta" id="btnStart">
+        Hotel finden
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </button>
+      <div class="status-bar" id="dataStatus">Daten werden geladen&hellip;</div>
     </div>
   </section>
 
-  <!-- Wizard Section -->
+  <!-- Wizard -->
   <section id="wizard" class="wizard-section">
     <div class="container">
       <div class="wizard">
-        <div class="wizard-header">
-          <div class="wizard-title">Hotel-Finder</div>
-          <div class="wizard-progress">
-            Schritt <strong id="stepNum">1</strong> von 5
-          </div>
+        <div class="wizard-progress-bar">
+          <div class="wizard-progress-fill" id="progressFill" style="width:20%"></div>
         </div>
-        <!-- Progress Bar -->
-        <div class="progress-bar">
-          <div class="progress-fill" id="progressFill" style="width: 20%"></div>
-        </div>
-        <!-- Step 1: Party Type -->
+
         <div class="wizard-step active" data-step="1">
-          <h2 class="step-title">Mit Kindern oder ohne?</h2>
+          <div class="wizard-step-indicator">Schritt <span id="stepNum">1</span> von 5</div>
+          <h2 class="step-question">Mit Kindern oder ohne?</h2>
           <div class="choice-grid">
             <button class="choice" data-key="party" data-val="family">
-              <div class="choice-icon">&#128104;&#8205;&#128105;&#8205;&#128103;&#8205;&#128102;</div>
               <div class="choice-label">Mit Kindern</div>
               <div class="choice-desc">Familienfreundlich &amp; praktisch</div>
             </button>
             <button class="choice" data-key="party" data-val="adults">
-              <div class="choice-icon">&#128145;</div>
               <div class="choice-label">Ohne Kinder</div>
               <div class="choice-desc">Paare &amp; Ruhe</div>
             </button>
             <button class="choice" data-key="party" data-val="egal">
-              <div class="choice-icon">&#129335;</div>
               <div class="choice-label">Egal</div>
               <div class="choice-desc">Beides passt</div>
             </button>
           </div>
         </div>
-        <!-- Step 2: Ski Access -->
+
         <div class="wizard-step" data-step="2">
-          <h2 class="step-title">Ski-in/Ski-out wichtig?</h2>
+          <div class="wizard-step-indicator">Schritt <span class="stepNumSync">2</span> von 5</div>
+          <h2 class="step-question">Ski-in/Ski-out wichtig?</h2>
           <div class="choice-grid">
             <button class="choice" data-key="ski" data-val="skiinout_yes">
-              <div class="choice-icon">&#9975;</div>
-              <div class="choice-label">Ja, direkt</div>
+              <div class="choice-label">Ja, direkt an der Piste</div>
               <div class="choice-desc">Lift &amp; Piste sehr nah</div>
             </button>
             <button class="choice" data-key="ski" data-val="skiinout_no">
-              <div class="choice-icon">&#128652;</div>
               <div class="choice-label">Nein, muss nicht</div>
-              <div class="choice-desc">Skibus ist ok</div>
+              <div class="choice-desc">Skibus reicht</div>
             </button>
             <button class="choice" data-key="ski" data-val="egal">
-              <div class="choice-icon">&#129335;</div>
               <div class="choice-label">Egal</div>
               <div class="choice-desc">Nicht entscheidend</div>
             </button>
           </div>
         </div>
-        <!-- Step 3: Activity Focus -->
+
         <div class="wizard-step" data-step="3">
-          <h2 class="step-title">Langlauf oder Wandern?</h2>
+          <div class="wizard-step-indicator">Schritt <span class="stepNumSync">3</span> von 5</div>
+          <h2 class="step-question">Langlauf oder Wandern?</h2>
           <div class="choice-grid">
             <button class="choice" data-key="focus" data-val="langlauf">
-              <div class="choice-icon">&#9975;</div>
               <div class="choice-label">Langlauf</div>
               <div class="choice-desc">Nahe Loipe</div>
             </button>
             <button class="choice" data-key="focus" data-val="wandern">
-              <div class="choice-icon">&#129406;</div>
               <div class="choice-label">Wandern</div>
               <div class="choice-desc">Guter Ausgangspunkt</div>
             </button>
             <button class="choice" data-key="focus" data-val="egal">
-              <div class="choice-icon">&#129335;</div>
               <div class="choice-label">Egal</div>
               <div class="choice-desc">Beides passt</div>
             </button>
           </div>
         </div>
-        <!-- Step 4: Wellness -->
+
         <div class="wizard-step" data-step="4">
-          <h2 class="step-title">Wellness ja oder nein?</h2>
+          <div class="wizard-step-indicator">Schritt <span class="stepNumSync">4</span> von 5</div>
+          <h2 class="step-question">Wellness wichtig?</h2>
           <div class="choice-grid">
             <button class="choice" data-key="wellness" data-val="yes">
-              <div class="choice-icon">&#129526;</div>
-              <div class="choice-label">Ja</div>
-              <div class="choice-desc">Wichtig fuer mich</div>
+              <div class="choice-label">Ja, unbedingt</div>
+              <div class="choice-desc">Spa, Sauna &amp; Co.</div>
             </button>
             <button class="choice" data-key="wellness" data-val="no">
-              <div class="choice-icon">&#10060;</div>
               <div class="choice-label">Nein</div>
               <div class="choice-desc">Nicht wichtig</div>
             </button>
             <button class="choice" data-key="wellness" data-val="egal">
-              <div class="choice-icon">&#129335;</div>
               <div class="choice-label">Egal</div>
               <div class="choice-desc">Nice to have</div>
             </button>
           </div>
         </div>
-        <!-- Step 5: Location -->
+
         <div class="wizard-step" data-step="5">
-          <h2 class="step-title">Ruhig oder zentral?</h2>
+          <div class="wizard-step-indicator">Schritt <span class="stepNumSync">5</span> von 5</div>
+          <h2 class="step-question">Ruhig oder zentral?</h2>
           <div class="choice-grid">
             <button class="choice" data-key="lage" data-val="ruhig">
-              <div class="choice-icon">&#127807;</div>
-              <div class="choice-label">Ruhig</div>
-              <div class="choice-desc">Weniger Trubel</div>
+              <div class="choice-label">Ruhige Lage</div>
+              <div class="choice-desc">Abseits vom Trubel</div>
             </button>
             <button class="choice" data-key="lage" data-val="zentral">
-              <div class="choice-icon">&#127960;</div>
               <div class="choice-label">Zentral</div>
               <div class="choice-desc">Kurze Wege</div>
             </button>
             <button class="choice" data-key="lage" data-val="egal">
-              <div class="choice-icon">&#129335;</div>
               <div class="choice-label">Egal</div>
               <div class="choice-desc">Beides ok</div>
             </button>
           </div>
         </div>
-        <!-- Wizard Actions -->
+
         <div class="wizard-actions">
-          <button class="btn btn-ghost" id="btnBack">
-            <span>&larr;</span>
-            <span>Zurueck</span>
-          </button>
-          <button class="btn btn-ghost" id="btnReset">
-            <span>&#8634;</span>
-            <span>Neu starten</span>
-          </button>
-          <button class="btn btn-primary" id="btnShow">
-            <span>&#10003;</span>
-            <span>Empfehlungen anzeigen</span>
-          </button>
+          <button class="btn-back" id="btnBack">&larr; Zur&uuml;ck</button>
+          <button class="btn-reset" id="btnReset">Neu starten</button>
+          <button class="btn-show" id="btnShow">Empfehlungen &rarr;</button>
         </div>
-        <!-- Summary -->
         <div class="wizard-summary hidden" id="wizardSummary"></div>
       </div>
     </div>
   </section>
 
-  <!-- Results Section -->
+  <!-- Results -->
   <section id="empfehlungen" class="results-section">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title">Deine Empfehlungen</h2>
-        <p class="section-subtitle" id="resultSub">
-          Starte den Finder &ndash; dann erscheinen hier passende Hotels.
-        </p>
+        <h2>Deine Empfehlungen</h2>
+        <p id="resultSub">Starte den Finder &ndash; dann erscheinen hier passende Hotels.</p>
       </div>
       <div class="cards-grid" id="resultCards"></div>
     </div>
   </section>
 
-  <!-- Curated Lists Section -->
-  <section id="listen" class="results-section">
+  <!-- Curated Lists -->
+  <section id="listen" class="curated-section">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title">Kuratierte Listen</h2>
-        <p class="section-subtitle">
-          Direkt einsteigen &ndash; ohne Fragen beantworten.
-        </p>
+        <h2>Kuratierte Listen</h2>
+        <p>Direkt einsteigen &ndash; ohne Fragen.</p>
+      </div>
+      <div class="curated-pills" id="curatedPills">
+        <button class="curated-pill active" data-list="alle">Alle Hotels</button>
+        <button class="curated-pill" data-list="familie">Familien mit Kindern</button>
+        <button class="curated-pill" data-list="ski">Ski-in/Ski-out</button>
+        <button class="curated-pill" data-list="langlauf">Langlauf</button>
+        <button class="curated-pill" data-list="ruhig">Ruhige Lage</button>
+        <button class="curated-pill" data-list="wellness">Wellness</button>
       </div>
       <div class="cards-grid" id="curatedCards"></div>
     </div>
   </section>
 
-  <!-- About Section -->
+  <!-- About -->
   <section id="about" class="about-section">
     <div class="container">
-      <div class="about-content">
-        <h2>Ueber AlpenStay</h2>
+      <div class="about-inner">
+        <h2>&Uuml;ber AlpenStay</h2>
         <p>
-          <strong>AlpenStay</strong> ist ein unabhaengiger Unterkunfts-Guide fuer die Alpen.
-          Unser Ziel: Gaesten eine ehrliche und schnelle Orientierung geben &ndash; ohne Marketing-Blabla und endlose Listen.
+          AlpenStay ist ein unabh&auml;ngiger Hotel-Guide f&uuml;r das Kleinwalsertal.
+          Keine endlosen Listen, kein Marketing-Blabla &ndash; nur ehrliche Empfehlungen
+          von Menschen, die das Tal kennen.
         </p>
         <p>
-          Aktuell decken wir das <strong>Kleinwalsertal</strong> ab &ndash; weitere Alpen-Destinationen folgen bald.
-        </p>
-        <p>
-          Manche Links fuehren zu externen Hotel-Webseiten oder Buchungsplattformen.
-          Einige dieser Links sind Affiliate-Links &ndash; fuer dich entstehen dadurch keine Mehrkosten.
+          Weitere Alpen-Destinationen folgen bald.
         </p>
       </div>
     </div>
@@ -1133,50 +617,37 @@
 
   <!-- Footer -->
   <footer>
-    <div class="footer-content">
-      <div>&copy; <span id="year"></span> AlpenStay</div>
+    <div class="footer-inner">
+      <div class="footer-brand">AlpenStay</div>
       <div class="footer-links">
         <a href="#wizard">Finder</a>
-        <a href="#empfehlungen">Hotels</a>
         <a href="#listen">Listen</a>
-        <a href="#about">Info</a>
+        <a href="#about">&Uuml;ber uns</a>
       </div>
     </div>
-    <div class="container">
-      <div class="footer-meta">
-        Hinweis: Einige externe Links auf dieser Seite sind Affiliate-/Partnerlinks. Fuer dich entstehen dadurch keine Mehrkosten.
-      </div>
+    <div class="footer-disclosure">
+      Wir verdienen eine kleine Provision bei Buchungen &uuml;ber unsere Links.
+      Das &auml;ndert nichts an unserer unabh&auml;ngigen Meinung.
     </div>
   </footer>
 
   <!-- Modal -->
   <div class="modal-backdrop" id="modalBackdrop">
     <div class="modal">
-      <div class="modal-header">
-        <div class="modal-title-group">
-          <h3 id="mTitle">Hotel</h3>
-          <div class="modal-subtitle" id="mSubtitle">&mdash;</div>
-        </div>
-        <button class="modal-close" id="mClose">&#10005; Schliessen</button>
+      <div class="modal-close-row">
+        <button class="modal-close" id="mClose">&times; Schlie&szlig;en</button>
       </div>
-      <div class="modal-body">
-        <div class="modal-google-rating hidden" id="mGoogleRating"></div>
-        <div class="modal-description" id="mDesc"></div>
-        <div class="modal-ai-desc hidden" id="mAiDesc"></div>
-        <div class="modal-info" id="mKV"></div>
-        <div class="modal-actions">
-          <button class="btn btn-primary" id="mWebsite">
-            <span>&#128279;</span>
-            <span>Website oeffnen</span>
-          </button>
-          <a class="btn-booking hidden" id="mBooking" href="#" target="_blank" rel="noopener">
-            <span>&#128197;</span>
-            <span>Jetzt buchen</span>
-          </a>
-          <button class="btn btn-secondary" id="mCopy">
-            <span>&#128203;</span>
-            <span>Link kopieren</span>
-          </button>
+      <div id="mImageWrap"></div>
+      <div class="modal-content">
+        <div class="modal-location" id="mLocation"></div>
+        <h2 class="modal-title" id="mTitle"></h2>
+        <div class="modal-rating hidden" id="mRating"></div>
+        <div class="modal-quote hidden" id="mQuote"></div>
+        <div class="modal-insider hidden" id="mInsider"></div>
+        <div class="modal-facts" id="mFacts"></div>
+        <div class="modal-ctas">
+          <button class="modal-btn modal-btn-website" id="mWebsite">Website des Hotels</button>
+          <a class="modal-btn modal-btn-booking" id="mBooking" href="#" target="_blank" rel="noopener sponsored">Bei Booking.com buchen &rarr;</a>
         </div>
       </div>
     </div>
@@ -1190,324 +661,122 @@
       SHEET_ID: "1RD9N9OPMHMCa-AQNbWffqwbRIKTFZH-5H5I7l5hw6wU",
       SHEET_TAB: "hotels",
       AFFILIATE_ID: "DEIN_AFFILIATE_ID",
-      USE_FALLBACK: true,
+      // Fallback images per Ortsteil
+      FALLBACK_IMAGES: {
+        "Riezlern": "https://images.unsplash.com/photo-1548777123-e216912df7d8?w=800&q=75",
+        "Hirschegg": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=75",
+        "Mittelberg": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=75",
+        "Baad": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=75",
+        "_default": "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&q=75"
+      },
       COL: {
-        name: "name",
-        ortsteil: "ortsteil",
-        typ: "typ",
-        status: "status",
-        website: "website",
-        booking_url: "booking_url",
-        short_pitch: "short_pitch",
-        insider_tip: "insider_tip",
-        tag: "tag",
-        ski_in_out: "ski_in_out",
-        ski_in_out_note: "ski_in_out_note",
-        nearest_lift_name: "nearest_lift_name",
-        nearest_lift_type: "nearest_lift_type",
-        lift_distance_m: "lift_distance_m",
-        piste_distance_m: "piste_distance_m",
-        loipe_distance_m: "loipe_distance_m",
-        loipe_name: "loipe_name",
-        google_place_id: "google_place_id",
-        google_rating: "google_rating",
-        google_reviews: "google_reviews",
-        ai_description: "ai_description",
+        name: "name", ortsteil: "ortsteil", typ: "typ", status: "status",
+        website: "website", booking_url: "booking_url",
+        short_pitch: "short_pitch", insider_tip: "insider_tip", tag: "tag",
+        ski_in_out: "ski_in_out", ski_in_out_note: "ski_in_out_note",
+        nearest_lift_name: "nearest_lift_name", nearest_lift_type: "nearest_lift_type",
+        lift_distance_m: "lift_distance_m", piste_distance_m: "piste_distance_m",
+        loipe_distance_m: "loipe_distance_m", loipe_name: "loipe_name",
+        google_rating: "google_rating", google_reviews: "google_reviews",
+        ai_description: "ai_description", image_url: "image_url",
       }
     };
-
-    // =====================================================================
-    // FALLBACK TEST DATA
-    // =====================================================================
-    const FALLBACK_HOTELS = [
-      {
-        name: "Familienhotel Sonnenschein",
-        ortsteil: "Riezlern",
-        typ: "Hotel",
-        status: "aktiv",
-        website: "https://example.com/sonnenschein",
-        short_pitch: "Perfekt fuer Familien mit Kindern - Spielbereich, kinderfreundliches Restaurant",
-        insider_tip: "Direkt neben dem Kindergarten-Skigebiet",
-        tags: ["familie", "kinder", "ski"],
-        ski_in_out: "nein",
-        lift_distance_m: 250,
-        nearest_lift_name: "Kanzelwandbahn",
-        google_rating: 4.5,
-        google_reviews: 214,
-        ai_description: "",
-        textBlob: "familie kinder spielbereich kindergarten ski"
-      },
-      {
-        name: "Wellness Resort Bergblick",
-        ortsteil: "Hirschegg",
-        typ: "Resort",
-        status: "aktiv",
-        website: "https://example.com/bergblick",
-        short_pitch: "Adults-only Wellness-Oase mit Panorama-Spa",
-        insider_tip: "Ruhebereich mit Blick auf die Kanzelwand",
-        tags: ["adults_only", "wellness", "spa"],
-        ski_in_out: "nein",
-        lift_distance_m: 400,
-        loipe_distance_m: 150,
-        loipe_name: "Schwarzwassertal-Loipe",
-        nearest_lift_name: "Heuberg-Arena",
-        google_rating: 4.7,
-        google_reviews: 389,
-        ai_description: "",
-        textBlob: "adults only wellness spa sauna panorama ruhe"
-      },
-      {
-        name: "Pension Alpenglueck",
-        ortsteil: "Mittelberg",
-        typ: "Pension",
-        status: "aktiv",
-        website: "https://example.com/alpenglueck",
-        short_pitch: "Gemuetliche Pension in ruhiger Lage",
-        insider_tip: "Idealer Ausgangspunkt zum Wandern",
-        tags: ["wandern", "ruhig"],
-        ski_in_out: "nein",
-        lift_distance_m: 800,
-        loipe_distance_m: 100,
-        nearest_lift_name: "Walmendingerhorn",
-        google_rating: 4.3,
-        google_reviews: 87,
-        ai_description: "",
-        textBlob: "ruhig wandern natur ausgangspunkt"
-      },
-      {
-        name: "Ski Lodge Direkt",
-        ortsteil: "Riezlern",
-        typ: "Lodge",
-        status: "aktiv",
-        website: "https://example.com/skilodge",
-        short_pitch: "Ski-in/Ski-out direkt an der Piste",
-        insider_tip: "Morgens als Erster auf der Piste",
-        tags: ["ski", "ski-in/out"],
-        ski_in_out: "ja",
-        lift_distance_m: 50,
-        piste_distance_m: 20,
-        nearest_lift_name: "Ifen",
-        google_rating: 4.6,
-        google_reviews: 156,
-        ai_description: "",
-        textBlob: "ski-in ski-out direkt piste lift"
-      },
-      {
-        name: "Langlauf Residenz",
-        ortsteil: "Baad",
-        typ: "Hotel",
-        status: "aktiv",
-        website: "https://example.com/langlauf",
-        short_pitch: "Spezialisiert auf Langlaeufer, direkt an der Loipe",
-        insider_tip: "5 Meter zur Loipe, perfekt fuer Fruehaufsteher",
-        tags: ["langlauf", "loipe", "ruhig"],
-        ski_in_out: "nein",
-        loipe_distance_m: 5,
-        loipe_name: "Baergunttal-Loipe",
-        lift_distance_m: 1200,
-        nearest_lift_name: "Walmendingerhorn",
-        google_rating: 4.4,
-        google_reviews: 63,
-        ai_description: "",
-        textBlob: "langlauf loipe einstieg ruhig baad talende"
-      }
-    ];
 
     // =====================================================================
     // STATE
     // =====================================================================
-    const $ = (id) => document.getElementById(id);
-
+    const $ = id => document.getElementById(id);
     const el = {
-      dataStatus: $("dataStatus"),
-      debugInfo: $("debugInfo"),
-      year: $("year"),
-      stepNum: $("stepNum"),
-      progressFill: $("progressFill"),
-      btnBack: $("btnBack"),
-      btnReset: $("btnReset"),
-      btnShow: $("btnShow"),
-      wizardSummary: $("wizardSummary"),
-      resultCards: $("resultCards"),
-      resultSub: $("resultSub"),
-      curatedCards: $("curatedCards"),
-      navStart: $("navStart"),
-      btnStart: $("btnStart"),
-      btnListen: $("btnListen"),
-      modalBackdrop: $("modalBackdrop"),
-      mClose: $("mClose"),
-      mTitle: $("mTitle"),
-      mSubtitle: $("mSubtitle"),
-      mGoogleRating: $("mGoogleRating"),
-      mDesc: $("mDesc"),
-      mAiDesc: $("mAiDesc"),
-      mKV: $("mKV"),
-      mWebsite: $("mWebsite"),
-      mBooking: $("mBooking"),
-      mCopy: $("mCopy"),
+      dataStatus: $("dataStatus"), stepNum: $("stepNum"),
+      progressFill: $("progressFill"), btnBack: $("btnBack"),
+      btnReset: $("btnReset"), btnShow: $("btnShow"),
+      wizardSummary: $("wizardSummary"), resultCards: $("resultCards"),
+      resultSub: $("resultSub"), curatedCards: $("curatedCards"),
+      curatedPills: $("curatedPills"), navStart: $("navStart"),
+      btnStart: $("btnStart"), modalBackdrop: $("modalBackdrop"),
+      mClose: $("mClose"), mTitle: $("mTitle"), mLocation: $("mLocation"),
+      mRating: $("mRating"), mQuote: $("mQuote"), mInsider: $("mInsider"),
+      mFacts: $("mFacts"), mWebsite: $("mWebsite"), mBooking: $("mBooking"),
+      mImageWrap: $("mImageWrap"),
     };
-
-    el.year.textContent = new Date().getFullYear();
 
     let HOTELS = [];
     let currentStep = 1;
-    const prefs = {
-      party: null,
-      ski: null,
-      focus: null,
-      wellness: null,
-      lage: null
-    };
+    const prefs = { party: null, ski: null, focus: null, wellness: null, lage: null };
 
     // =====================================================================
-    // DEBUG LOGGING
+    // HELPERS
     // =====================================================================
-    function debug(msg) {
-      console.log("[DEBUG]", msg);
-      const debugEl = el.debugInfo;
-      if (debugEl) {
-        debugEl.classList.remove("hidden");
-        debugEl.innerHTML += `<div>${new Date().toISOString().substr(11, 8)}: ${escapeHtml(msg)}</div>`;
-        debugEl.scrollTop = debugEl.scrollHeight;
+    const norm = v => (v ?? "").toString().trim();
+    const lower = v => norm(v).toLowerCase();
+    const escapeHtml = s => (s ?? "").toString().replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+    const safeNum = v => { const n = Number(String(v).replace(",",".").replace(/[^\d.]/g,"")); return Number.isFinite(n) ? n : null; };
+    const isYes = v => ["ja","yes","true","1"].includes(lower(v));
+    const containsAny = (t, arr) => { const l = lower(t); return arr.some(a => l.includes(a)); };
+    const safeUrl = u => { const s = norm(u); if (!s) return ""; return s.startsWith("http") ? s : "https://"+s; };
+    const splitTags = s => { const t = norm(s); return t ? t.split(",").map(x=>x.trim()).filter(Boolean) : []; };
+
+    function getCol(obj, key) {
+      if (obj[key] != null && obj[key] !== "") return obj[key];
+      const k = Object.keys(obj).find(x => x.toLowerCase() === key.toLowerCase());
+      return k ? obj[k] : "";
+    }
+
+    function getHotelImage(h) {
+      if (h.image_url) return safeUrl(h.image_url);
+      return CONFIG.FALLBACK_IMAGES[h.ortsteil] || CONFIG.FALLBACK_IMAGES._default;
+    }
+
+    function buildBookingUrl(h) {
+      if (h.booking_url) {
+        const url = safeUrl(h.booking_url);
+        if (url && !url.includes("aid=")) return url + (url.includes("?") ? "&" : "?") + "aid=" + CONFIG.AFFILIATE_ID;
+        return url;
       }
+      return "https://www.booking.com/searchresults.de.html?ss=" + encodeURIComponent(h.name) + "&aid=" + CONFIG.AFFILIATE_ID;
     }
 
     // =====================================================================
     // GOOGLE SHEET LOADER (JSONP)
     // =====================================================================
-    function gvizJsonpUrl() {
+    function loadViaJsonp() {
       const tq = encodeURIComponent("select *");
       const sheet = encodeURIComponent(CONFIG.SHEET_TAB);
-      return `https://docs.google.com/spreadsheets/d/${CONFIG.SHEET_ID}/gviz/tq?sheet=${sheet}&tq=${tq}&headers=1&tqx=responseHandler:gvizCallback`;
-    }
-
-    function loadViaJsonp() {
-      debug("Starte Google Sheet Laden...");
-      debug(`URL: ${gvizJsonpUrl()}`);
-
+      const url = `https://docs.google.com/spreadsheets/d/${CONFIG.SHEET_ID}/gviz/tq?sheet=${sheet}&tq=${tq}&headers=1&tqx=responseHandler:gvizCB`;
       return new Promise((resolve, reject) => {
         const old = document.getElementById("gvizScript");
         if (old) old.remove();
-
-        const timer = setTimeout(() => {
-          debug("TIMEOUT: Sheet konnte nicht in 10s geladen werden");
-          reject(new Error("Timeout beim Laden der Daten."));
-        }, 10000);
-
-        window.gvizCallback = (resp) => {
+        const timer = setTimeout(() => reject(new Error("Timeout")), 10000);
+        window.gvizCB = resp => {
           clearTimeout(timer);
-          debug("Google Sheet Antwort erhalten");
           try {
-            const table = resp.table;
-            const cols = (table.cols || []).map(c => (c.label || "").trim());
-            const rows = (table.rows || []).map(r => (r.c || []).map(cell => cell ? (cell.v ?? "") : ""));
-            debug(`Spalten: ${cols.length}, Zeilen: ${rows.length}`);
-            debug(`Spaltennamen: ${cols.join(", ")}`);
+            const t = resp.table;
+            const cols = (t.cols||[]).map(c => (c.label||"").trim());
+            const rows = (t.rows||[]).map(r => (r.c||[]).map(cell => cell ? (cell.v ?? "") : ""));
             resolve({ cols, rows });
-          } catch (e) {
-            debug(`FEHLER beim Parsen: ${e.message}`);
-            reject(e);
-          }
+          } catch (e) { reject(e); }
         };
-
         const s = document.createElement("script");
-        s.id = "gvizScript";
-        s.src = gvizJsonpUrl();
-        s.onerror = () => {
-          clearTimeout(timer);
-          debug("FEHLER: Script konnte nicht geladen werden");
-          reject(new Error("Sheet konnte nicht geladen werden. Pruefe Freigabe."));
-        };
+        s.id = "gvizScript"; s.src = url;
+        s.onerror = () => { clearTimeout(timer); reject(new Error("Load failed")); };
         document.head.appendChild(s);
-        debug("Script-Tag hinzugefuegt");
       });
-    }
-
-    // =====================================================================
-    // HELPER FUNCTIONS
-    // =====================================================================
-    function norm(v) {
-      return (v ?? "").toString().trim();
-    }
-    function lower(v) {
-      return norm(v).toLowerCase();
-    }
-    function getCol(obj, key) {
-      const v = obj[key];
-      if (v != null && v !== "") return v;
-      const k = Object.keys(obj).find(x => x.toLowerCase() === key.toLowerCase());
-      return k ? obj[k] : "";
-    }
-    function splitTags(s) {
-      const t = norm(s);
-      if (!t) return [];
-      return t.split(",").map(x => x.trim()).filter(Boolean);
-    }
-    function safeNum(v) {
-      const n = Number(String(v).replace(",", ".").replace(/[^\d.]/g, ""));
-      return Number.isFinite(n) ? n : null;
-    }
-    function isYes(v) {
-      const s = lower(v);
-      return s === "ja" || s === "yes" || s === "true" || s === "1";
-    }
-    function containsAny(text, arr) {
-      const t = lower(text);
-      return arr.some(a => t.includes(a));
-    }
-    function escapeHtml(s) {
-      return (s ?? "").toString()
-        .replaceAll("&", "&amp;")
-        .replaceAll("<", "&lt;")
-        .replaceAll(">", "&gt;")
-        .replaceAll('"', "&quot;")
-        .replaceAll("'", "&#039;");
-    }
-    function safeUrl(url) {
-      const u = norm(url);
-      if (!u) return "";
-      if (u.startsWith("http://") || u.startsWith("https://")) return u;
-      return "https://" + u;
-    }
-
-    // =====================================================================
-    // BOOKING URL BUILDER
-    // =====================================================================
-    function buildBookingUrl(hotel) {
-      // Use direct booking_url from sheet if available
-      if (hotel.booking_url) {
-        const url = safeUrl(hotel.booking_url);
-        // Append affiliate ID if not already present
-        if (url && !url.includes("aid=")) {
-          const sep = url.includes("?") ? "&" : "?";
-          return url + sep + "aid=" + CONFIG.AFFILIATE_ID;
-        }
-        return url;
-      }
-      // Fallback: build search URL from hotel name
-      const name = encodeURIComponent(hotel.name);
-      return `https://www.booking.com/searchresults.de.html?ss=${name}&aid=${CONFIG.AFFILIATE_ID}`;
     }
 
     // =====================================================================
     // DATA PARSING
     // =====================================================================
     function toHotel(cols, row) {
-      const obj = {};
-      cols.forEach((c, i) => obj[c] = row[i]);
-
+      const obj = {}; cols.forEach((c, i) => obj[c] = row[i]);
       const name = norm(getCol(obj, CONFIG.COL.name));
       if (!name) return null;
-
       const ortsteil = norm(getCol(obj, CONFIG.COL.ortsteil));
       const typ = norm(getCol(obj, CONFIG.COL.typ));
-      const status = norm(getCol(obj, CONFIG.COL.status));
       const website = norm(getCol(obj, CONFIG.COL.website));
       const booking_url = norm(getCol(obj, CONFIG.COL.booking_url));
       const short_pitch = norm(getCol(obj, CONFIG.COL.short_pitch));
       const insider_tip = norm(getCol(obj, CONFIG.COL.insider_tip));
-      const tagRaw = getCol(obj, CONFIG.COL.tag) || getCol(obj, "tags") || getCol(obj, "tag");
-      const tags = splitTags(tagRaw);
+      const tags = splitTags(getCol(obj, CONFIG.COL.tag) || getCol(obj, "tags"));
       const ski_in_out = norm(getCol(obj, CONFIG.COL.ski_in_out));
       const ski_in_out_note = norm(getCol(obj, CONFIG.COL.ski_in_out_note));
       const nearest_lift_name = norm(getCol(obj, CONFIG.COL.nearest_lift_name));
@@ -1516,619 +785,253 @@
       const piste_distance_m = safeNum(getCol(obj, CONFIG.COL.piste_distance_m));
       const loipe_distance_m = safeNum(getCol(obj, CONFIG.COL.loipe_distance_m));
       const loipe_name = norm(getCol(obj, CONFIG.COL.loipe_name));
-      const google_place_id = norm(getCol(obj, CONFIG.COL.google_place_id));
       const google_rating = safeNum(getCol(obj, CONFIG.COL.google_rating));
       const google_reviews = safeNum(getCol(obj, CONFIG.COL.google_reviews));
       const ai_description = norm(getCol(obj, CONFIG.COL.ai_description));
-
-      const textBlob = [
-        name, ortsteil, typ, status, short_pitch, insider_tip,
-        tags.join(" "), ski_in_out_note, loipe_name, nearest_lift_name
-      ].join(" ");
-
-      return {
-        name, ortsteil, typ, status,
-        website, booking_url,
-        short_pitch, insider_tip,
-        tags,
-        ski_in_out, ski_in_out_note,
-        nearest_lift_name, nearest_lift_type,
-        lift_distance_m, piste_distance_m,
-        loipe_distance_m, loipe_name,
-        google_place_id, google_rating, google_reviews,
-        ai_description,
-        textBlob,
-        _raw: obj
-      };
+      const image_url = norm(getCol(obj, CONFIG.COL.image_url));
+      const textBlob = [name, ortsteil, typ, short_pitch, insider_tip, tags.join(" "), ski_in_out_note, loipe_name, nearest_lift_name].join(" ");
+      return { name, ortsteil, typ, website, booking_url, short_pitch, insider_tip, tags,
+        ski_in_out, ski_in_out_note, nearest_lift_name, nearest_lift_type,
+        lift_distance_m, piste_distance_m, loipe_distance_m, loipe_name,
+        google_rating, google_reviews, ai_description, image_url, textBlob };
     }
 
     // =====================================================================
-    // HARD FILTER - CRITICAL FOR "MIT KINDERN"
+    // FILTERS & SCORING (unchanged logic)
     // =====================================================================
-    function hasTag(h, tag) {
-      const t = lower(tag);
-      return (h.tags || []).some(x => lower(x) === t);
+    const hasTag = (h, tag) => (h.tags||[]).some(x => lower(x) === lower(tag));
+    const isAdultsOnly = h => hasTag(h,"adults_only") || hasTag(h,"paare") || containsAny(lower(h.textBlob), ["adults only","nur erwachsene"]);
+
+    function scoreHotel(h, p) {
+      let s = 0; const b = lower(h.textBlob);
+      if (p.party==="family") { if (containsAny(b,["familie","kinder","familienhotel","spiel","kids"])) s+=20; }
+      else if (p.party==="adults") { if (containsAny(b,["adults only","ruhe","ruhig","spa","wellness"])) s+=15; if (containsAny(b,["kinder","familie","spiel"])) s-=8; }
+      else s+=3;
+      const hasSkiIO = isYes(h.ski_in_out) || containsAny(b,["ski-in","ski in","ski in/out","piste direkt","direkt am lift"]);
+      if (p.ski==="skiinout_yes") { if (hasSkiIO) s+=25; if (h.lift_distance_m!=null) s+=Math.max(0,15-Math.min(15,h.lift_distance_m/100)); if (h.piste_distance_m!=null) s+=Math.max(0,12-Math.min(12,h.piste_distance_m/100)); }
+      else if (p.ski==="skiinout_no") s+=5; else s+=3;
+      if (p.focus==="langlauf") { if ((h.loipe_distance_m!=null&&h.loipe_distance_m<=1200)||containsAny(b,["loipe","langlauf"])) s+=22; if (h.loipe_distance_m!=null) s+=Math.max(0,15-Math.min(15,h.loipe_distance_m/100)); }
+      else if (p.focus==="wandern") { if (containsAny(b,["wandern","wander","berge","trail","ausgangspunkt","natur","panorama"])) s+=18; }
+      else s+=3;
+      const hasW = containsAny(b,["wellness","spa","sauna","dampfbad","pool","massage"]);
+      if (p.wellness==="yes") { if (hasW) s+=18; else s-=8; } else if (p.wellness==="no") s+=5; else s+=3;
+      const isCentral = containsAny(b,["zentral","im ort","zentrum","dorf","mitten"]);
+      const isQuiet = containsAny(b,["ruhig","randlage","natur","baad","talende","abseits","still"]);
+      if (p.lage==="ruhig") { if (isQuiet) s+=15; if (isCentral) s-=5; }
+      else if (p.lage==="zentral") { if (isCentral) s+=15; if (isQuiet) s-=3; }
+      else s+=3;
+      if (h.google_rating>0) s+=Math.round((h.google_rating-3)*3);
+      if (h.short_pitch) s+=4; if (h.insider_tip) s+=4; if (h.website) s+=3;
+      return s;
     }
 
-    function isAdultsOnlyOrCouples(h) {
-      const blob = lower(h.textBlob);
-      return (
-        hasTag(h, "adults_only") ||
-        hasTag(h, "paare") ||
-        containsAny(blob, ["adults only", "nur erwachsene"])
-      );
+    function topMatches(p, n=6) {
+      const filtered = HOTELS.filter(h => !(p.party==="family" && isAdultsOnly(h)));
+      return filtered.map(h=>({h, score: scoreHotel(h,p)}))
+        .sort((a,b)=>b.score-a.score||a.h.name.localeCompare(b.h.name,"de"))
+        .slice(0,n);
     }
 
-    function allowedByPartyFilter(h, prefs) {
-      if (prefs.party === "family") {
-        if (isAdultsOnlyOrCouples(h)) {
-          return false;
-        }
-      }
-      return true;
-    }
-
-    // =====================================================================
-    // SCORING LOGIC
-    // =====================================================================
-    function scoreHotel(h, prefs) {
-      let score = 0;
-      const blob = lower(h.textBlob);
-
-      // Party type
-      if (prefs.party === "family") {
-        if (containsAny(blob, ["familie", "kinder", "familienhotel", "spiel", "kids"])) score += 20;
-      } else if (prefs.party === "adults") {
-        if (containsAny(blob, ["adults only", "ruhe", "ruhig", "spa", "wellness"])) score += 15;
-        if (containsAny(blob, ["kinder", "familie", "spiel"])) score -= 8;
-      } else {
-        score += 3;
-      }
-
-      // Ski-in/out
-      const hasSkiIO = isYes(h.ski_in_out) || containsAny(blob, ["ski-in", "ski in", "ski in/out", "piste direkt", "direkt am lift"]);
-      if (prefs.ski === "skiinout_yes") {
-        if (hasSkiIO) score += 25;
-        if (h.lift_distance_m != null) score += Math.max(0, 15 - Math.min(15, h.lift_distance_m / 100));
-        if (h.piste_distance_m != null) score += Math.max(0, 12 - Math.min(12, h.piste_distance_m / 100));
-      } else if (prefs.ski === "skiinout_no") {
-        score += 5;
-      } else {
-        score += 3;
-      }
-
-      // Focus
-      const hasLanglauf = (h.loipe_distance_m != null && h.loipe_distance_m <= 1200) || containsAny(blob, ["loipe", "langlauf", "einstieg loipe"]);
-      const hasWandern = containsAny(blob, ["wandern", "wander", "berge", "trail", "ausgangspunkt", "natur", "panorama"]);
-
-      if (prefs.focus === "langlauf") {
-        if (hasLanglauf) score += 22;
-        if (h.loipe_distance_m != null) score += Math.max(0, 15 - Math.min(15, h.loipe_distance_m / 100));
-      } else if (prefs.focus === "wandern") {
-        if (hasWandern) score += 18;
-      } else {
-        score += 3;
-      }
-
-      // Wellness
-      const hasWellness = containsAny(blob, ["wellness", "spa", "sauna", "dampfbad", "pool", "massage"]);
-      if (prefs.wellness === "yes") {
-        if (hasWellness) score += 18;
-        else score -= 8;
-      } else if (prefs.wellness === "no") {
-        score += 5;
-      } else {
-        score += 3;
-      }
-
-      // Location
-      const isCentral = containsAny(blob, ["zentral", "im ort", "zentrum", "dorf", "mitten"]);
-      const isQuiet = containsAny(blob, ["ruhig", "randlage", "natur", "baad", "talende", "abseits", "still"]);
-
-      if (prefs.lage === "ruhig") {
-        if (isQuiet) score += 15;
-        if (isCentral) score -= 5;
-      } else if (prefs.lage === "zentral") {
-        if (isCentral) score += 15;
-        if (isQuiet) score -= 3;
-      } else {
-        score += 3;
-      }
-
-      // Google rating bonus
-      if (h.google_rating != null && h.google_rating > 0) {
-        score += Math.round((h.google_rating - 3) * 3);
-      }
-
-      // General quality indicators
-      if (h.short_pitch) score += 4;
-      if (h.insider_tip) score += 4;
-      if (h.website) score += 3;
-
-      return score;
-    }
-
-    function topMatchesByPrefs(prefs, n = 5) {
-      debug(`Filtering hotels: total=${HOTELS.length}, party=${prefs.party}`);
-      const filtered = HOTELS.filter(h => allowedByPartyFilter(h, prefs));
-      debug(`After party filter: ${filtered.length} hotels`);
-
-      return filtered
-        .map(h => ({ h, score: scoreHotel(h, prefs) }))
-        .sort((a, b) => b.score - a.score || a.h.name.localeCompare(b.h.name, "de"))
-        .slice(0, n);
-    }
+    // Curated filters
+    const filters = {
+      alle: () => HOTELS,
+      familie: () => HOTELS.filter(h => containsAny(lower(h.textBlob),["familie","kinder","familienhotel","spiel","kids"]) && !isAdultsOnly(h)),
+      ski: () => HOTELS.filter(h => isYes(h.ski_in_out) || containsAny(lower(h.textBlob),["ski-in","ski in/out","direkt am lift","piste direkt"]) || (h.lift_distance_m!=null&&h.lift_distance_m<=150))
+        .sort((a,b)=>(a.lift_distance_m??999999)-(b.lift_distance_m??999999)),
+      langlauf: () => HOTELS.filter(h => (h.loipe_distance_m!=null&&h.loipe_distance_m<=900) || containsAny(lower(h.textBlob),["langlauf","loipe"]))
+        .sort((a,b)=>(a.loipe_distance_m??999999)-(b.loipe_distance_m??999999)),
+      ruhig: () => HOTELS.filter(h => containsAny(lower(h.textBlob),["ruhig","abseits","randlage","natur","still","talende","baad"])),
+      wellness: () => HOTELS.filter(h => containsAny(lower(h.textBlob),["wellness","spa","sauna","pool","massage"])),
+    };
 
     // =====================================================================
-    // CURATED LISTS
+    // RENDERING
     // =====================================================================
-    function curated_familyKids(h) {
-      const blob = lower(h.textBlob);
-      return (
-        containsAny(blob, ["familie", "kinder", "familienhotel", "spiel", "kids"]) &&
-        !isAdultsOnlyOrCouples(h)
-      );
-    }
-    function curated_langlauf(h) {
-      const blob = lower(h.textBlob);
-      return (h.loipe_distance_m != null && h.loipe_distance_m <= 900) || containsAny(blob, ["langlauf", "loipe"]);
-    }
-    function curated_skiVerified(h) {
-      const blob = lower(h.textBlob);
-      const hasSkiIO = isYes(h.ski_in_out) || containsAny(blob, ["ski-in", "ski in/out", "direkt am lift", "piste direkt"]);
-      const distOk = (h.lift_distance_m != null && h.lift_distance_m <= 150);
-      return hasSkiIO || distOk;
-    }
-    function curated_quiet(h) {
-      const blob = lower(h.textBlob);
-      return containsAny(blob, ["ruhig", "abseits", "randlage", "natur", "still", "talende", "baad"]);
-    }
-
-    // =====================================================================
-    // WIZARD LOGIC
-    // =====================================================================
-    function setStep(step) {
-      currentStep = Math.max(1, Math.min(5, step));
-
-      document.querySelectorAll(".wizard-step").forEach(s => {
-        s.classList.toggle("active", Number(s.dataset.step) === currentStep);
-      });
-
-      el.stepNum.textContent = String(currentStep);
-      el.progressFill.style.width = `${(currentStep / 5) * 100}%`;
-
-      el.btnBack.disabled = currentStep === 1;
-      el.btnBack.style.opacity = currentStep === 1 ? 0.5 : 1;
-    }
-
-    function resetWizard() {
-      prefs.party = null;
-      prefs.ski = null;
-      prefs.focus = null;
-      prefs.wellness = null;
-      prefs.lage = null;
-      el.wizardSummary.classList.add("hidden");
-      el.wizardSummary.textContent = "";
-      setStep(1);
-      el.resultCards.innerHTML = "";
-      el.resultSub.textContent = "Starte den Finder - dann erscheinen hier passende Hotels.";
-    }
-
-    function summarizePrefs() {
-      const map = {
-        party: { family: "Mit Kindern", adults: "Ohne Kinder", egal: "Egal" },
-        ski: { skiinout_yes: "Ski-in/out", skiinout_no: "Kein Ski-in/out", egal: "Ski egal" },
-        focus: { langlauf: "Langlauf", wandern: "Wandern", egal: "Aktivitaet egal" },
-        wellness: { yes: "Mit Wellness", no: "Ohne Wellness", egal: "Wellness egal" },
-        lage: { ruhig: "Ruhige Lage", zentral: "Zentrale Lage", egal: "Lage egal" },
-      };
-
-      const parts = [];
-      for (const k of ["party", "ski", "focus", "wellness", "lage"]) {
-        if (prefs[k]) parts.push(map[k][prefs[k]] || `${k}:${prefs[k]}`);
-      }
-
-      return parts.join(" \u00B7 ");
-    }
-
-    function allAnswered() {
-      return prefs.party && prefs.ski && prefs.focus && prefs.wellness && prefs.lage;
-    }
-
-    function onChoice(btn) {
-      const key = btn.dataset.key;
-      const val = btn.dataset.val;
-      if (!key || !val) return;
-
-      prefs[key] = val;
-      debug(`Auswahl: ${key}=${val}`);
-
-      el.wizardSummary.classList.remove("hidden");
-      el.wizardSummary.innerHTML = `<strong>Deine Auswahl:</strong> ${summarizePrefs()}`;
-
-      if (currentStep < 5) {
-        setStep(currentStep + 1);
-      } else if (allAnswered()) {
-        renderRecommendations();
-      }
-    }
-
-    // =====================================================================
-    // UI RENDERING
-    // =====================================================================
-    function googleRatingHtml(h) {
-      if (!h.google_rating || h.google_rating <= 0) return "";
-      const stars = "\u2B50";
-      const reviewText = h.google_reviews ? `<span class="rating-count">(${Math.round(h.google_reviews)} Bewertungen)</span>` : "";
-      return `<div class="card-google-rating">${stars} ${h.google_rating.toFixed(1)} ${reviewText}</div>`;
-    }
-
-    function getMatchReasonBadges(h, prefs) {
-      const reasons = [];
-      const blob = lower(h.textBlob);
-      if (prefs.party === "family" && containsAny(blob, ["familie", "kinder"])) {
-        reasons.push("Familienfreundlich");
-      }
-      if (prefs.party === "adults" && (isAdultsOnlyOrCouples(h) || containsAny(blob, ["ruhe", "spa"]))) {
-        reasons.push("Fuer Paare");
-      }
-      if (prefs.ski === "skiinout_yes" && (isYes(h.ski_in_out) || (h.lift_distance_m && h.lift_distance_m < 150))) {
-        reasons.push("Ski-in/out");
-      }
-      if (prefs.focus === "langlauf" && (h.loipe_distance_m != null || containsAny(blob, ["loipe", "langlauf"]))) {
-        reasons.push("Langlauf");
-      }
-      if (prefs.focus === "wandern" && containsAny(blob, ["wandern", "berge", "natur"])) {
-        reasons.push("Wandern");
-      }
-      if (prefs.wellness === "yes" && containsAny(blob, ["wellness", "spa", "sauna"])) {
-        reasons.push("Wellness");
-      }
-      if (prefs.lage === "ruhig" && containsAny(blob, ["ruhig", "abseits", "natur"])) {
-        reasons.push("Ruhig");
-      }
-      if (prefs.lage === "zentral" && containsAny(blob, ["zentral", "ort", "dorf"])) {
-        reasons.push("Zentral");
-      }
-      return reasons.slice(0, 3);
-    }
-
     function featureChips(h) {
-      const chips = [];
-
-      if (isYes(h.ski_in_out)) {
-        chips.push("\u26F7 Ski-in/out");
-      } else if (h.lift_distance_m != null) {
-        chips.push(`\uD83D\uDEA1 Lift ${Math.round(h.lift_distance_m)}m`);
-      }
-      if (h.loipe_distance_m != null) {
-        chips.push(`\u26F7 Loipe ${Math.round(h.loipe_distance_m)}m`);
-      }
-      const blob = lower(h.textBlob);
-      if (containsAny(blob, ["wellness", "spa", "sauna"])) {
-        chips.push("\uD83E\uDDD6 Wellness");
-      }
-      if (containsAny(blob, ["familie", "kinder"])) {
-        chips.push("\uD83D\uDC68\u200D\uD83D\uDC69\u200D\uD83D\uDC67\u200D\uD83D\uDC66 Familie");
-      }
-      return chips.slice(0, 4);
+      const c = []; const b = lower(h.textBlob);
+      if (isYes(h.ski_in_out)) c.push("Ski-in/out");
+      else if (h.lift_distance_m!=null) c.push("Lift "+Math.round(h.lift_distance_m)+"m");
+      if (h.loipe_distance_m!=null) c.push("Loipe "+Math.round(h.loipe_distance_m)+"m");
+      if (containsAny(b,["wellness","spa","sauna"])) c.push("Wellness");
+      if (containsAny(b,["familie","kinder"])) c.push("Familie");
+      return c.slice(0,4);
     }
 
-    function hotelCardHtml(h, rank, isRecommendation = true) {
-      const pitch = h.short_pitch || h.insider_tip || "Passende Wahl fuer deine Beduerfnisse.";
-      const features = featureChips(h);
-      const matchReasons = isRecommendation ? getMatchReasonBadges(h, prefs) : [];
-
-      const badgeHtml = rank === 0 && isRecommendation
-        ? '<span class="badge badge-primary">\u2B50 Best Match</span>'
-        : isRecommendation
-        ? '<span class="badge badge-match">\u2713 Passt</span>'
-        : '<span class="badge badge-secondary">Empfehlung</span>';
-
-      const matchBadgesHtml = matchReasons.length
-        ? matchReasons.map(r => `<span class="badge badge-match">${escapeHtml(r)}</span>`).join("")
+    function cardHtml(h) {
+      const img = getHotelImage(h);
+      const desc = h.ai_description || h.short_pitch || h.insider_tip || "";
+      const chips = featureChips(h);
+      const bookUrl = buildBookingUrl(h);
+      const ratingHtml = (h.google_rating && h.google_rating > 0)
+        ? `<div class="card-rating">\u2605 ${h.google_rating.toFixed(1)} <span class="count">\u00B7 ${Math.round(h.google_reviews||0)} Bewertungen</span></div>`
         : "";
 
-      const bookingUrl = buildBookingUrl(h);
+      return `<article class="hotel-card">
+        <img class="card-image" src="${escapeHtml(img)}" alt="${escapeHtml(h.name)}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+        <div class="card-image-placeholder" style="display:none">&#9968;</div>
+        <div class="card-body">
+          <div class="card-location">${escapeHtml([h.ortsteil, h.typ].filter(Boolean).join(" \u00B7 "))}</div>
+          <h3 class="card-title">${escapeHtml(h.name)}</h3>
+          ${ratingHtml}
+          ${desc ? `<p class="card-quote">${escapeHtml(desc)}</p>` : ""}
+          <div class="card-features">${chips.map(c=>`<span class="feature-chip">${escapeHtml(c)}</span>`).join("")}</div>
+          <div class="card-actions">
+            <button class="btn-details" data-open="${escapeHtml(h.name)}">Details ansehen</button>
+            <a class="btn-booking" href="${escapeHtml(bookUrl)}" target="_blank" rel="noopener sponsored">Bei Booking &rarr;</a>
+          </div>
+        </div>
+      </article>`;
+    }
 
-      return `
-        <article class="hotel-card">
-          <div class="card-header">
-            <div class="card-badges">
-              ${badgeHtml}
-              ${matchBadgesHtml}
-            </div>
-          </div>
-          <div class="card-body">
-            <h3 class="card-title">${escapeHtml(h.name)}</h3>
-            <div class="card-location">
-              \uD83D\uDCCD ${escapeHtml([h.ortsteil, h.typ].filter(Boolean).join(" \u00B7 "))}
-            </div>
-            ${googleRatingHtml(h)}
-            <div class="card-features">
-              ${features.map(f => `<span class="feature-chip">${escapeHtml(f)}</span>`).join("")}
-            </div>
-            <p class="card-description">${escapeHtml(pitch)}</p>
-          </div>
-          <div class="card-footer">
-            <div class="card-meta">
-              ${h.nearest_lift_name ? `<span>\uD83D\uDEA1 ${escapeHtml(h.nearest_lift_name)}</span>` : ""}
-            </div>
-            <div class="card-actions">
-              <button class="card-cta" data-open="${escapeHtml(h.name)}">
-                <span>Details</span>
-                <span>\u2192</span>
-              </button>
-              <a class="btn-booking" href="${escapeHtml(bookingUrl)}" target="_blank" rel="noopener sponsored">
-                <span>\uD83D\uDCC5</span>
-                <span>Jetzt buchen</span>
-              </a>
-            </div>
-          </div>
-        </article>
-      `;
+    function renderCards(container, hotels) {
+      container.innerHTML = hotels.map(h => cardHtml(h)).join("");
+      container.querySelectorAll("[data-open]").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const hotel = HOTELS.find(x => x.name === btn.getAttribute("data-open"));
+          if (hotel) openModal(hotel);
+        });
+      });
     }
 
     function renderRecommendations() {
-      debug("renderRecommendations() aufgerufen");
-
-      if (!HOTELS.length) {
-        el.resultSub.textContent = "Daten sind noch nicht geladen. Bitte kurz warten.";
-        debug("Keine Hotels verfuegbar");
-        return;
-      }
-
-      const scored = topMatchesByPrefs(prefs, 5);
-      debug(`Scored hotels: ${scored.length}`);
-
-      if (!scored.length) {
-        el.resultSub.textContent = `Keine passenden Hotels gefunden fuer: ${summarizePrefs()}`;
-        el.resultCards.innerHTML = "";
-        return;
-      }
-
-      el.resultSub.textContent = `Top-Matches fuer: ${summarizePrefs()}`;
-      el.resultCards.innerHTML = scored.map(({ h }, idx) => hotelCardHtml(h, idx, true)).join("");
-
-      el.resultCards.querySelectorAll("[data-open]").forEach(btn => {
-        btn.addEventListener("click", () => {
-          const name = btn.getAttribute("data-open");
-          const hotel = HOTELS.find(x => x.name === name);
-          if (hotel) openModal(hotel);
-        });
-      });
-
+      if (!HOTELS.length) { el.resultSub.textContent = "Daten werden noch geladen\u2026"; return; }
+      const scored = topMatches(prefs, 6);
+      if (!scored.length) { el.resultSub.textContent = "Keine passenden Hotels gefunden."; el.resultCards.innerHTML = ""; return; }
+      el.resultSub.textContent = summarizePrefs();
+      renderCards(el.resultCards, scored.map(s=>s.h));
       document.getElementById("empfehlungen").scrollIntoView({ behavior: "smooth", block: "start" });
     }
 
-    function listCardHtml(title, subtitle, items) {
-      const inner = items.slice(0, 3).map(h => {
-        const bookingUrl = buildBookingUrl(h);
-        return `
-          <div style="padding:1rem;border-radius:12px;background:var(--bg-secondary);border:1px solid var(--border-medium);margin-top:0.75rem;">
-            <div style="font-weight:700;color:var(--text-primary);font-size:1rem;margin-bottom:0.25rem;">
-              ${escapeHtml(h.name)}
-            </div>
-            <div style="color:var(--text-muted);font-size:0.875rem;margin-bottom:0.5rem;">
-              \uD83D\uDCCD ${escapeHtml([h.ortsteil, h.typ].filter(Boolean).join(" \u00B7 "))}
-            </div>
-            ${googleRatingHtml(h)}
-            <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:0.625rem;">
-              ${h.lift_distance_m != null ? `<span class="feature-chip">\uD83D\uDEA1 ${Math.round(h.lift_distance_m)}m</span>` : ""}
-              ${h.loipe_distance_m != null ? `<span class="feature-chip">\u26F7 ${Math.round(h.loipe_distance_m)}m</span>` : ""}
-            </div>
-            <div style="display:flex;gap:0.5rem;flex-wrap:wrap;">
-              <button class="card-cta" data-open="${escapeHtml(h.name)}">
-                <span>Details</span>
-                <span>\u2192</span>
-              </button>
-              <a class="btn-booking" href="${escapeHtml(bookingUrl)}" target="_blank" rel="noopener sponsored">
-                <span>\uD83D\uDCC5</span>
-                <span>Buchen</span>
-              </a>
-            </div>
-          </div>
-        `;
-      }).join("");
-
-      return `
-        <article class="hotel-card">
-          <div class="card-header">
-            <div class="card-badges">
-              <span class="badge badge-secondary">Liste</span>
-            </div>
-          </div>
-          <div class="card-body">
-            <h3 class="card-title">${escapeHtml(title)}</h3>
-            <div class="card-location">${escapeHtml(subtitle)}</div>
-            ${inner || `<div class="notice" style="margin-top:1rem;">Noch keine Hotels in dieser Liste.</div>`}
-          </div>
-        </article>
-      `;
-    }
-
-    function renderCurated() {
-      debug("renderCurated() aufgerufen");
-
-      if (!HOTELS.length) {
-        el.curatedCards.innerHTML = "";
-        debug("Keine Hotels fuer kuratierte Listen");
-        return;
-      }
-
-      const fam = HOTELS.filter(curated_familyKids).slice(0, 6);
-      const ll = HOTELS.filter(curated_langlauf)
-        .sort((a, b) => (a.loipe_distance_m ?? 999999) - (b.loipe_distance_m ?? 999999))
-        .slice(0, 6);
-      const sk = HOTELS.filter(curated_skiVerified)
-        .sort((a, b) => (a.lift_distance_m ?? 999999) - (b.lift_distance_m ?? 999999))
-        .slice(0, 6);
-      const ru = HOTELS.filter(curated_quiet).slice(0, 6);
-
-      debug(`Curated: fam=${fam.length}, ll=${ll.length}, sk=${sk.length}, ru=${ru.length}`);
-
-      el.curatedCards.innerHTML =
-        listCardHtml("Familien mit Kindern", "Familienfreundlich & praktisch", fam) +
-        listCardHtml("Langlauf-Fans", "Nahe Loipe & Einstieg", ll) +
-        listCardHtml("Ski-in/Ski-out", "Direkt an Lift & Piste", sk) +
-        listCardHtml("Ruhesucher", "Abseits vom Trubel", ru);
-
-      el.curatedCards.querySelectorAll("[data-open]").forEach(btn => {
-        btn.addEventListener("click", () => {
-          const name = btn.getAttribute("data-open");
-          const hotel = HOTELS.find(x => x.name === name);
-          if (hotel) openModal(hotel);
-        });
-      });
+    function renderCurated(listKey = "alle") {
+      if (!HOTELS.length) return;
+      const fn = filters[listKey] || filters.alle;
+      const hotels = fn().slice(0, 12);
+      renderCards(el.curatedCards, hotels);
     }
 
     // =====================================================================
     // MODAL
     // =====================================================================
     function openModal(h) {
+      const img = getHotelImage(h);
+      el.mImageWrap.innerHTML = `<img class="modal-image" src="${escapeHtml(img)}" alt="${escapeHtml(h.name)}" onerror="this.style.display='none'"/>`;
+      el.mLocation.textContent = [h.ortsteil, h.typ].filter(Boolean).join(" \u00B7 ");
       el.mTitle.textContent = h.name;
-      el.mSubtitle.textContent = [h.ortsteil, h.typ].filter(Boolean).join(" \u00B7 ") || "Alpen";
 
-      // Google Rating in modal
       if (h.google_rating && h.google_rating > 0) {
-        const reviewText = h.google_reviews ? ` (${Math.round(h.google_reviews)} Bewertungen)` : "";
-        el.mGoogleRating.innerHTML = `\u2B50 ${h.google_rating.toFixed(1)}${reviewText}`;
-        el.mGoogleRating.classList.remove("hidden");
-      } else {
-        el.mGoogleRating.classList.add("hidden");
-      }
+        el.mRating.innerHTML = `\u2605 ${h.google_rating.toFixed(1)} <span class="count">\u00B7 ${Math.round(h.google_reviews||0)} Bewertungen</span>`;
+        el.mRating.classList.remove("hidden");
+      } else { el.mRating.classList.add("hidden"); }
 
-      const desc = h.short_pitch || h.insider_tip || "Keine weitere Beschreibung vorhanden.";
-      el.mDesc.innerHTML = `<strong>Kurzfazit:</strong> ${escapeHtml(desc)}`;
+      const desc = h.ai_description || h.short_pitch || "";
+      if (desc) { el.mQuote.textContent = desc; el.mQuote.classList.remove("hidden"); }
+      else { el.mQuote.classList.add("hidden"); }
 
-      // AI description
-      if (h.ai_description) {
-        el.mAiDesc.innerHTML = `<strong>\uD83E\uDD16 KI-Beschreibung:</strong> ${escapeHtml(h.ai_description)}`;
-        el.mAiDesc.classList.remove("hidden");
-      } else {
-        el.mAiDesc.classList.add("hidden");
-      }
+      if (h.insider_tip) {
+        el.mInsider.innerHTML = `<strong>Insider-Tipp</strong>${escapeHtml(h.insider_tip)}`;
+        el.mInsider.classList.remove("hidden");
+      } else { el.mInsider.classList.add("hidden"); }
 
-      const info = [];
-      if (h.website) info.push(["Website", h.website]);
-      if (h.nearest_lift_name) info.push(["Naechster Lift", `${h.nearest_lift_name}${h.nearest_lift_type ? " \u00B7 " + h.nearest_lift_type : ""}`]);
-      if (h.lift_distance_m != null) info.push(["Lift-Distanz", `${Math.round(h.lift_distance_m)} m`]);
-      if (h.piste_distance_m != null) info.push(["Piste-Distanz", `${Math.round(h.piste_distance_m)} m`]);
-      if (h.loipe_name) info.push(["Loipe", h.loipe_name]);
-      if (h.loipe_distance_m != null) info.push(["Loipe-Distanz", `${Math.round(h.loipe_distance_m)} m`]);
-      if (h.ski_in_out) info.push(["Ski-in/Ski-out", h.ski_in_out]);
-      if (h.ski_in_out_note) info.push(["Hinweis", h.ski_in_out_note]);
-      if (h.tags?.length) info.push(["Tags", h.tags.join(", ")]);
-
-      el.mKV.innerHTML = info.map(([label, value]) => `
-        <div class="info-label">${escapeHtml(label)}</div>
-        <div class="info-value">${escapeHtml(value)}</div>
-      `).join("") || `<div class="info-label">Info</div><div class="info-value">Keine weiteren Daten verfuegbar.</div>`;
+      const facts = [];
+      if (h.ortsteil) facts.push(["Ortsteil", h.ortsteil]);
+      if (h.nearest_lift_name) facts.push(["N\u00E4chster Lift", h.nearest_lift_name + (h.nearest_lift_type ? " \u00B7 "+h.nearest_lift_type : "")]);
+      if (h.lift_distance_m != null) facts.push(["Lift-Distanz", Math.round(h.lift_distance_m)+" m"]);
+      if (h.loipe_name) facts.push(["Loipe", h.loipe_name]);
+      if (h.loipe_distance_m != null) facts.push(["Loipe-Distanz", Math.round(h.loipe_distance_m)+" m"]);
+      if (h.ski_in_out) facts.push(["Ski-in/out", h.ski_in_out]);
+      el.mFacts.innerHTML = facts.map(([l,v])=>`<div class="fact"><div class="fact-label">${escapeHtml(l)}</div><div class="fact-value">${escapeHtml(v)}</div></div>`).join("");
 
       const url = safeUrl(h.website);
       el.mWebsite.onclick = () => { if (url) window.open(url, "_blank", "noopener"); };
-
-      // Booking button in modal
-      const bookingUrl = buildBookingUrl(h);
-      if (bookingUrl) {
-        el.mBooking.href = bookingUrl;
-        el.mBooking.classList.remove("hidden");
-      } else {
-        el.mBooking.classList.add("hidden");
-      }
-
-      el.mCopy.onclick = async () => {
-        if (!url) return;
-        try {
-          await navigator.clipboard.writeText(url);
-          el.mCopy.innerHTML = '<span>\u2713</span><span>Kopiert</span>';
-          setTimeout(() => el.mCopy.innerHTML = '<span>\uD83D\uDCCB</span><span>Link kopieren</span>', 1500);
-        } catch (e) {
-          alert("Kopieren fehlgeschlagen. Bitte manuell kopieren.");
-        }
-      };
-
+      el.mBooking.href = buildBookingUrl(h);
       el.modalBackdrop.classList.add("open");
     }
 
-    function closeModal() {
-      el.modalBackdrop.classList.remove("open");
-    }
+    function closeModal() { el.modalBackdrop.classList.remove("open"); }
 
     // =====================================================================
-    // EVENT LISTENERS
+    // WIZARD
+    // =====================================================================
+    function setStep(step) {
+      currentStep = Math.max(1, Math.min(5, step));
+      document.querySelectorAll(".wizard-step").forEach(s => s.classList.toggle("active", +s.dataset.step === currentStep));
+      el.stepNum.textContent = currentStep;
+      el.progressFill.style.width = (currentStep/5*100)+"%";
+      el.btnBack.disabled = currentStep === 1;
+      el.btnBack.style.opacity = currentStep === 1 ? 0.4 : 1;
+    }
+
+    function resetWizard() {
+      Object.keys(prefs).forEach(k => prefs[k] = null);
+      el.wizardSummary.classList.add("hidden");
+      setStep(1);
+      el.resultCards.innerHTML = "";
+      el.resultSub.textContent = "Starte den Finder \u2013 dann erscheinen hier passende Hotels.";
+    }
+
+    function summarizePrefs() {
+      const m = { party:{family:"Mit Kindern",adults:"Ohne Kinder",egal:"Egal"},
+        ski:{skiinout_yes:"Ski-in/out",skiinout_no:"Kein Ski-in/out",egal:"Ski egal"},
+        focus:{langlauf:"Langlauf",wandern:"Wandern",egal:"Aktivit\u00E4t egal"},
+        wellness:{yes:"Wellness",no:"Ohne Wellness",egal:"Wellness egal"},
+        lage:{ruhig:"Ruhige Lage",zentral:"Zentral",egal:"Lage egal"} };
+      return Object.keys(prefs).filter(k=>prefs[k]).map(k=>m[k][prefs[k]]||prefs[k]).join(" \u00B7 ");
+    }
+
+    function allAnswered() { return prefs.party && prefs.ski && prefs.focus && prefs.wellness && prefs.lage; }
+
+    // =====================================================================
+    // EVENTS
     // =====================================================================
     document.querySelectorAll(".choice").forEach(btn => {
-      btn.addEventListener("click", () => onChoice(btn));
+      btn.addEventListener("click", () => {
+        const { key, val } = btn.dataset;
+        if (!key || !val) return;
+        prefs[key] = val;
+        el.wizardSummary.classList.remove("hidden");
+        el.wizardSummary.innerHTML = `<strong>Deine Auswahl:</strong> ${summarizePrefs()}`;
+        if (currentStep < 5) setStep(currentStep + 1);
+        else if (allAnswered()) renderRecommendations();
+      });
     });
 
     el.btnBack.addEventListener("click", () => setStep(currentStep - 1));
     el.btnReset.addEventListener("click", resetWizard);
     el.btnShow.addEventListener("click", () => {
-      if (allAnswered()) {
-        renderRecommendations();
-      } else {
-        el.wizardSummary.classList.remove("hidden");
-        el.wizardSummary.innerHTML = `<strong>Hinweis:</strong> Bitte beantworte alle Fragen.`;
-      }
+      if (allAnswered()) renderRecommendations();
+      else { el.wizardSummary.classList.remove("hidden"); el.wizardSummary.innerHTML = "<strong>Hinweis:</strong> Bitte beantworte alle Fragen."; }
     });
 
-    function scrollToId(id) {
-      const node = document.getElementById(id);
-      if (node) node.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-
-    el.navStart.addEventListener("click", () => scrollToId("wizard"));
-    el.btnStart.addEventListener("click", () => scrollToId("wizard"));
-    el.btnListen.addEventListener("click", () => scrollToId("listen"));
+    const scrollTo = id => document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+    el.navStart.addEventListener("click", () => scrollTo("wizard"));
+    el.btnStart.addEventListener("click", () => scrollTo("wizard"));
     el.mClose.addEventListener("click", closeModal);
-    el.modalBackdrop.addEventListener("click", (e) => {
-      if (e.target === el.modalBackdrop) closeModal();
-    });
-    window.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") closeModal();
+    el.modalBackdrop.addEventListener("click", e => { if (e.target === el.modalBackdrop) closeModal(); });
+    window.addEventListener("keydown", e => { if (e.key === "Escape") closeModal(); });
+
+    // Curated pills
+    el.curatedPills.addEventListener("click", e => {
+      const pill = e.target.closest(".curated-pill");
+      if (!pill) return;
+      el.curatedPills.querySelectorAll(".curated-pill").forEach(p => p.classList.remove("active"));
+      pill.classList.add("active");
+      renderCurated(pill.dataset.list);
     });
 
     // =====================================================================
     // BOOT
     // =====================================================================
     (async function boot() {
-      debug("App startet...");
-
       try {
-        debug("Versuche Google Sheet zu laden...");
         const { cols, rows } = await loadViaJsonp();
         HOTELS = rows.map(r => toHotel(cols, r)).filter(Boolean);
-        debug(`Hotels erfolgreich geladen: ${HOTELS.length}`);
-
-        el.dataStatus.classList.remove("error");
+        el.dataStatus.textContent = HOTELS.length + " Hotels geladen";
         el.dataStatus.classList.add("success");
-        el.dataStatus.innerHTML = `<strong>\u2713 Geladen:</strong> ${HOTELS.length} Hotels verfuegbar`;
-
-        renderCurated();
+        renderCurated("alle");
         resetWizard();
-
       } catch (err) {
-        console.error("Fehler beim Laden:", err);
-        debug(`FEHLER: ${err.message}`);
-
-        if (CONFIG.USE_FALLBACK) {
-          debug("Verwende Fallback-Daten...");
-          HOTELS = FALLBACK_HOTELS;
-
-          el.dataStatus.classList.remove("error");
-          el.dataStatus.classList.add("warning");
-          el.dataStatus.innerHTML = `
-            <strong>\u26A0 Demo-Modus:</strong> ${HOTELS.length} Test-Hotels geladen (Google Sheet konnte nicht geladen werden).
-            <br><small>Pruefe, ob das Sheet oeffentlich ist oder verwende deine echten Daten.</small>
-          `;
-
-          renderCurated();
-          resetWizard();
-        } else {
-          el.dataStatus.classList.add("error");
-          el.dataStatus.innerHTML = `<strong>\u2715 Fehler:</strong> ${escapeHtml(err.message)}`;
-        }
+        el.dataStatus.textContent = "Fehler beim Laden: " + err.message;
+        el.dataStatus.classList.add("error");
       }
     })();
   </script>
