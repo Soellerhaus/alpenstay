@@ -89,7 +89,7 @@
     }
     .hero-bg {
       position: absolute; inset: 0; z-index: 0;
-      background: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?w=1920&q=80') center/cover no-repeat;
+      background: linear-gradient(135deg, #0f1729 0%, #1a2744 50%, #0d3b4f 100%);
     }
     .hero-bg::after {
       content: ''; position: absolute; inset: 0;
@@ -661,14 +661,6 @@
       SHEET_ID: "1RD9N9OPMHMCa-AQNbWffqwbRIKTFZH-5H5I7l5hw6wU",
       SHEET_TAB: "hotels",
       AFFILIATE_ID: "DEIN_AFFILIATE_ID",
-      // Fallback images per Ortsteil
-      FALLBACK_IMAGES: {
-        "Riezlern": "https://images.unsplash.com/photo-1548777123-e216912df7d8?w=800&q=75",
-        "Hirschegg": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=75",
-        "Mittelberg": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=75",
-        "Baad": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=75",
-        "_default": "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&q=75"
-      },
       COL: {
         name: "name", ortsteil: "ortsteil", typ: "typ", status: "status",
         website: "website", booking_url: "booking_url",
@@ -724,7 +716,7 @@
 
     function getHotelImage(h) {
       if (h.image_url) return safeUrl(h.image_url);
-      return CONFIG.FALLBACK_IMAGES[h.ortsteil] || CONFIG.FALLBACK_IMAGES._default;
+      return "";
     }
 
     function buildBookingUrl(h) {
@@ -865,10 +857,12 @@
       const ratingHtml = (h.google_rating && h.google_rating > 0)
         ? `<div class="card-rating">\u2605 ${h.google_rating.toFixed(1)} <span class="count">\u00B7 ${Math.round(h.google_reviews||0)} Bewertungen</span></div>`
         : "";
+      const imgHtml = img
+        ? `<img class="card-image" src="${escapeHtml(img)}" alt="${escapeHtml(h.name)}" loading="lazy" onerror="this.style.display='none'"/>`
+        : "";
 
       return `<article class="hotel-card">
-        <img class="card-image" src="${escapeHtml(img)}" alt="${escapeHtml(h.name)}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
-        <div class="card-image-placeholder" style="display:none">&#9968;</div>
+        ${imgHtml}
         <div class="card-body">
           <div class="card-location">${escapeHtml([h.ortsteil, h.typ].filter(Boolean).join(" \u00B7 "))}</div>
           <h3 class="card-title">${escapeHtml(h.name)}</h3>
@@ -914,7 +908,9 @@
     // =====================================================================
     function openModal(h) {
       const img = getHotelImage(h);
-      el.mImageWrap.innerHTML = `<img class="modal-image" src="${escapeHtml(img)}" alt="${escapeHtml(h.name)}" onerror="this.style.display='none'"/>`;
+      el.mImageWrap.innerHTML = img
+        ? `<img class="modal-image" src="${escapeHtml(img)}" alt="${escapeHtml(h.name)}" onerror="this.style.display='none'"/>`
+        : "";
       el.mLocation.textContent = [h.ortsteil, h.typ].filter(Boolean).join(" \u00B7 ");
       el.mTitle.textContent = h.name;
 
@@ -1021,10 +1017,29 @@
     // =====================================================================
     // BOOT
     // =====================================================================
+    async function loadDescriptions() {
+      try {
+        const resp = await fetch("data/descriptions.json");
+        if (!resp.ok) return {};
+        return await resp.json();
+      } catch (e) { return {}; }
+    }
+
     (async function boot() {
       try {
-        const { cols, rows } = await loadViaJsonp();
+        const [{ cols, rows }, descriptions] = await Promise.all([
+          loadViaJsonp(),
+          loadDescriptions()
+        ]);
         HOTELS = rows.map(r => toHotel(cols, r)).filter(Boolean);
+        // Merge AI descriptions from JSON file
+        if (Object.keys(descriptions).length) {
+          HOTELS.forEach(h => {
+            if (!h.ai_description && descriptions[h.name]) {
+              h.ai_description = descriptions[h.name];
+            }
+          });
+        }
         el.dataStatus.textContent = HOTELS.length + " Hotels geladen";
         el.dataStatus.classList.add("success");
         renderCurated("alle");
