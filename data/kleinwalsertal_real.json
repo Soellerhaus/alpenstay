@@ -1,0 +1,3137 @@
+{
+  "destination": "Kleinwalsertal",
+  "slug": "kleinwalsertal",
+  "region": "Vorarlberg, Oesterreich",
+  "hotel_count": 64,
+  "datenquelle": "Google Places API + Google Routes API + OSM Overpass API",
+  "stand": "2026-03-19",
+  "bergbahnen": {
+    "Kanzelwandbahn": {
+      "lat": 47.3558113,
+      "lng": 10.1846243,
+      "typ": "Gondelbahn"
+    },
+    "Walmendingerhorn-Bahn": {
+      "lat": 47.3229909,
+      "lng": 10.1523906,
+      "typ": "Gondelbahn"
+    },
+    "Ifenbahn": {
+      "lat": 47.3426246,
+      "lng": 10.1375605,
+      "typ": "Gondelbahn"
+    },
+    "Heuberg-Arena": {
+      "lat": 47.3428198,
+      "lng": 10.1661431,
+      "typ": "Sessellift/Schlepplift"
+    },
+    "Soellereckbahn": {
+      "lat": 47.400288,
+      "lng": 10.2422934,
+      "typ": "Sessellift"
+    },
+    "Parsenn-Schlepplift": {
+      "lat": 47.3549422,
+      "lng": 10.1773648,
+      "typ": "Schlepplift"
+    },
+    "Zaferna-Sessellift": {
+      "lat": 47.3275864,
+      "lng": 10.1534248,
+      "typ": "Sessellift"
+    }
+  },
+  "loipen": {
+    "Loipe Riezlern (Steinbogen)": {
+      "lat": 47.3555,
+      "lng": 10.183
+    },
+    "Loipe Hirschegg (Sportplatz)": {
+      "lat": 47.344,
+      "lng": 10.17
+    },
+    "Loipe Baad (Baergunttal)": {
+      "lat": 47.31,
+      "lng": 10.14
+    },
+    "Loipe Mittelberg (Waeldele)": {
+      "lat": 47.328,
+      "lng": 10.152
+    }
+  },
+  "hotels": [
+    {
+      "name": "Hotel Riezler Hof",
+      "google_place_id": "ChIJWybReOaenEcRR4R2uF3aGWI",
+      "ortsteil": "Riezlern",
+      "typ": "Hotel",
+      "adresse": "Walserstraße 57, 6991 Riezlern, Österreich",
+      "gps": {
+        "lat": 47.357658,
+        "lng": 10.187344999999999
+      },
+      "website": "http://www.riezlerhof.at/",
+      "business_status": "OPERATIONAL",
+      "google_rating": 4.2,
+      "google_reviews": 475,
+      "price_level": null,
+      "naechste_bergbahn": {
+        "name": "Kanzelwandbahn",
+        "typ": "Gondelbahn",
+        "distanz_m": 333,
+        "gehzeit_min": 4
+      },
+      "naechste_loipe": {
+        "name": "Loipe Riezlern (Steinbogen)",
+        "distanz_m": 437,
+        "gehzeit_min": 5
+      },
+      "naechste_piste": {
+        "name": "Funpark Crystal Ground",
+        "distanz_m": 200
+      },
+      "naechste_loipe_osm": {
+        "name": "Egg Loipe",
+        "distanz_m": 574
+      },
+      "ski_in_out": "nein",
+      "wellness": null,
+      "familie": null,
+      "adults_only": null,
+      "verpflegung": null,
+      "ai_description": null,
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Hotel%20Riezler%20Hof%20Kleinwalsertal",
+      "datenquelle": {
+        "hotel_daten": "Google Places API",
+        "distanzen": "Google Routes API (echte Gehstrecke) + OSM Overpass (Pisten/Loipen)",
+        "rating": "Google",
+        "stand": "2026-03-19"
+      }
+    },
+    {
+      "name": "Hotel Alte Krone",
+      "google_place_id": "ChIJLWvmQp2fnEcR_hxcI_1rMnk",
+      "ortsteil": "Mittelberg",
+      "typ": "Hotel",
+      "adresse": "Walserstraße 387, 6993 Mittelberg, Österreich",
+      "gps": {
+        "lat": 47.3238506,
+        "lng": 10.1554737
+      },
+      "website": "https://www.alte-krone.at/",
+      "business_status": "OPERATIONAL",
+      "google_rating": 4.6,
+      "google_reviews": 758,
+      "price_level": null,
+      "naechste_bergbahn": {
+        "name": "Walmendingerhorn-Bahn",
+        "typ": "Gondelbahn",
+        "distanz_m": 299,
+        "gehzeit_min": 3
+      },
+      "naechste_loipe": {
+        "name": "Loipe Mittelberg (Waeldele)",
+        "distanz_m": 1231,
+        "gehzeit_min": 25
+      },
+      "naechste_piste": {
+        "name": "Skiweg Mittelberg Zaferna",
+        "distanz_m": 167
+      },
+      "naechste_loipe_osm": {
+        "name": "Unbenannt",
+        "distanz_m": 226
+      },
+      "ski_in_out": "nein",
+      "wellness": null,
+      "familie": null,
+      "adults_only": null,
+      "verpflegung": null,
+      "ai_description": null,
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Hotel%20Alte%20Krone%20Kleinwalsertal",
+      "datenquelle": {
+        "hotel_daten": "Google Places API",
+        "distanzen": "Google Routes API (echte Gehstrecke) + OSM Overpass (Pisten/Loipen)",
+        "rating": "Google",
+        "stand": "2026-03-19"
+      }
+    },
+    {
+      "name": "Gästehaus Fritz Kleinwalsertal",
+      "google_place_id": "ChIJlyNW4HWfnEcR_6lO2jBHo7A",
+      "ortsteil": "Mittelberg",
+      "typ": "Pension",
+      "adresse": "Walserstraße 349, 6993 Mittelberg, Österreich",
+      "gps": {
+        "lat": 47.3277632,
+        "lng": 10.1587955
+      },
+      "website": "http://www.gaestehaus-fritz.at/",
+      "business_status": "OPERATIONAL",
+      "google_rating": 4.9,
+      "google_reviews": 93,
+      "price_level": null,
+      "naechste_bergbahn": {
+        "name": "Walmendingerhorn-Bahn",
+        "typ": "Gondelbahn",
+        "distanz_m": 773,
+        "gehzeit_min": 11
+      },
+      "naechste_loipe": {
+        "name": "Loipe Mittelberg (Waeldele)",
+        "distanz_m": 1623,
+        "gehzeit_min": 32
+      },
+      "naechste_piste": {
+        "name": "Skiweg Heuberg Zaferna",
+        "distanz_m": 264
+      },
+      "naechste_loipe_osm": {
+        "name": "Unbenannt",
+        "distanz_m": 99
+      },
+      "ski_in_out": "nein",
+      "wellness": null,
+      "familie": null,
+      "adults_only": null,
+      "verpflegung": null,
+      "ai_description": null,
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=G%C3%A4stehaus%20Fritz%20Kleinwalsertal%20Kleinwalsertal",
+      "datenquelle": {
+        "hotel_daten": "Google Places API",
+        "distanzen": "Google Routes API (echte Gehstrecke) + OSM Overpass (Pisten/Loipen)",
+        "rating": "Google",
+        "stand": "2026-03-19"
+      }
+    },
+    {
+      "name": "Haller's Posthotel",
+      "google_place_id": "ChIJwfQjDeaenEcRttYbayqR7rY",
+      "ortsteil": "Riezlern",
+      "typ": "Hotel",
+      "adresse": "Walserstraße 48, 6991 Riezlern, Österreich",
+      "gps": {
+        "lat": 47.358326899999994,
+        "lng": 10.1882285
+      },
+      "website": "http://www.posthotel.cc/",
+      "business_status": "OPERATIONAL",
+      "google_rating": 4.5,
+      "google_reviews": 416,
+      "price_level": null,
+      "naechste_bergbahn": {
+        "name": "Kanzelwandbahn",
+        "typ": "Gondelbahn",
+        "distanz_m": 426,
+        "gehzeit_min": 5
+      },
+      "naechste_loipe": {
+        "name": "Loipe Riezlern (Steinbogen)",
+        "distanz_m": 530,
+        "gehzeit_min": 6
+      },
+      "naechste_piste": {
+        "name": "Schwandlift-Piste",
+        "distanz_m": 170
+      },
+      "naechste_loipe_osm": {
+        "name": "Egg Loipe",
+        "distanz_m": 548
+      },
+      "ski_in_out": "nein",
+      "wellness": null,
+      "familie": null,
+      "adults_only": null,
+      "verpflegung": null,
+      "ai_description": null,
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Haller%27s%20Posthotel%20Kleinwalsertal",
+      "datenquelle": {
+        "hotel_daten": "Google Places API",
+        "distanzen": "Google Routes API (echte Gehstrecke) + OSM Overpass (Pisten/Loipen)",
+        "rating": "Google",
+        "stand": "2026-03-19"
+      }
+    },
+    {
+      "name": "Genuss- & Aktivhotel Sonnenburg",
+      "google_place_id": "ChIJm_i8UZOenEcR5wzFeCMesXc",
+      "ortsteil": "Riezlern",
+      "typ": "Hotel",
+      "adresse": "Außerschwende 21, 6991 Riezlern, Österreich",
+      "gps": {
+        "lat": 47.3695312,
+        "lng": 10.190844
+      },
+      "website": "https://www.genuss-aktivhotel.com/?utm_source=google&utm_medium=organic&utm_campaign=gmb",
+      "business_status": "OPERATIONAL",
+      "google_rating": 4.5,
+      "google_reviews": 388,
+      "price_level": null,
+      "naechste_bergbahn": {
+        "name": "Kanzelwandbahn",
+        "typ": "Gondelbahn",
+        "distanz_m": 2745,
+        "gehzeit_min": 38
+      },
+      "naechste_loipe": {
+        "name": "Loipe Riezlern (Steinbogen)",
+        "distanz_m": 2849,
+        "gehzeit_min": 39
+      },
+      "naechste_piste": {
+        "name": "Schwandlift-Piste",
+        "distanz_m": 1280
+      },
+      "naechste_loipe_osm": {
+        "name": "Unbenannt",
+        "distanz_m": 61
+      },
+      "ski_in_out": "nein",
+      "wellness": null,
+      "familie": null,
+      "adults_only": null,
+      "verpflegung": null,
+      "ai_description": null,
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Genuss-%20%26%20Aktivhotel%20Sonnenburg%20Kleinwalsertal",
+      "datenquelle": {
+        "hotel_daten": "Google Places API",
+        "distanzen": "Google Routes API (echte Gehstrecke) + OSM Overpass (Pisten/Loipen)",
+        "rating": "Google",
+        "stand": "2026-03-19"
+      }
+    },
+    {
+      "name": "IFA Alpenrose Hotel Kleinwalsertal",
+      "google_place_id": "ChIJEQg343WfnEcRJE0zFsLwoxg",
+      "ortsteil": "Mittelberg",
+      "typ": "Hotel",
+      "adresse": "Walserstraße 346, 6993 Mittelberg, Österreich",
+      "gps": {
+        "lat": 47.3280556,
+        "lng": 10.1586111
+      },
+      "website": "https://www.ifahotels.com/ifa-alpenrose-hotel",
+      "business_status": "OPERATIONAL",
+      "google_rating": 4.5,
+      "google_reviews": 535,
+      "price_level": null,
+      "naechste_bergbahn": {
+        "name": "Walmendingerhorn-Bahn",
+        "typ": "Gondelbahn",
+        "distanz_m": 796,
+        "gehzeit_min": 11
+      },
+      "naechste_loipe": {
+        "name": "Loipe Mittelberg (Waeldele)",
+        "distanz_m": 1646,
+        "gehzeit_min": 32
+      },
+      "naechste_piste": {
+        "name": "Skiweg Heuberg Zaferna",
+        "distanz_m": 246
+      },
+      "naechste_loipe_osm": {
+        "name": "Unbenannt",
+        "distanz_m": 101
+      },
+      "ski_in_out": "nein",
+      "wellness": null,
+      "familie": null,
+      "adults_only": null,
+      "verpflegung": null,
+      "ai_description": null,
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=IFA%20Alpenrose%20Hotel%20Kleinwalsertal%20Kleinwalsertal",
+      "datenquelle": {
+        "hotel_daten": "Google Places API",
+        "distanzen": "Google Routes API (echte Gehstrecke) + OSM Overpass (Pisten/Loipen)",
+        "rating": "Google",
+        "stand": "2026-03-19"
+      }
+    },
+    {
+      "name": "Adler Hotel",
+      "google_place_id": "ChIJMxCv8QafnEcRYdqvC9FSFTA",
+      "ortsteil": "Hirschegg",
+      "typ": "Hotel",
+      "adresse": "Walserstraße 251, 6992 Hirschegg, Österreich",
+      "gps": {
+        "lat": 47.344638200000006,
+        "lng": 10.16779
+      },
+      "website": "https://www.adlerhirschegg.de/?utm_source=google%20places&utm_medium=organic",
+      "business_status": "OPERATIONAL",
+      "google_rating": 4.5,
+      "google_reviews": 137,
+      "price_level": null,
+      "naechste_bergbahn": {
+        "name": "Heuberg-Arena",
+        "typ": "Sessellift/Schlepplift",
+        "distanz_m": 468,
+        "gehzeit_min": 8
+      },
+      "naechste_loipe": {
+        "name": "Loipe Hirschegg (Sportplatz)",
+        "distanz_m": 244,
+        "gehzeit_min": 3
+      },
+      "naechste_piste": {
+        "name": "Heuberg-Abfahrt",
+        "distanz_m": 224
+      },
+      "naechste_loipe_osm": {
+        "name": "Unbenannt",
+        "distanz_m": 1059
+      },
+      "ski_in_out": "nein",
+      "wellness": null,
+      "familie": null,
+      "adults_only": null,
+      "verpflegung": null,
+      "ai_description": null,
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Adler%20Hotel%20Kleinwalsertal",
+      "datenquelle": {
+        "hotel_daten": "Google Places API",
+        "distanzen": "Google Routes API (echte Gehstrecke) + OSM Overpass (Pisten/Loipen)",
+        "rating": "Google",
+        "stand": "2026-03-19"
+      }
+    },
+    {
+      "name": "A-ROSA Ifen Hotel Kleinwalsertal",
+      "google_place_id": "ChIJ13TMfwGfnEcRqJur3zN6mLs",
+      "ortsteil": "Hirschegg",
+      "typ": "Hotel",
+      "adresse": "Oberseitestraße 6, 6992 Hirschegg, Österreich",
+      "gps": {
+        "lat": 47.3492896,
+        "lng": 10.171928099999999
+      },
+      "website": "https://arosahotels.de/hotels/kleinwalsertal.html",
+      "business_status": "OPERATIONAL",
+      "google_rating": 4.5,
+      "google_reviews": 1523,
+      "price_level": null,
+      "naechste_bergbahn": {
+        "name": "Heuberg-Arena",
+        "typ": "Sessellift/Schlepplift",
+        "distanz_m": 1112,
+        "gehzeit_min": 17
+      },
+      "naechste_loipe": {
+        "name": "Loipe Hirschegg (Sportplatz)",
+        "distanz_m": 888,
+        "gehzeit_min": 12
+      },
+      "naechste_piste": {
+        "name": "Hubertus-Piste",
+        "distanz_m": 171
+      },
+      "naechste_loipe_osm": {
+        "name": "Unbenannt",
+        "distanz_m": 568
+      },
+      "ski_in_out": "nein",
+      "wellness": null,
+      "familie": null,
+      "adults_only": null,
+      "verpflegung": null,
+      "ai_description": null,
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=A-ROSA%20Ifen%20Hotel%20Kleinwalsertal%20Kleinwalsertal",
+      "datenquelle": {
+        "hotel_daten": "Google Places API",
+        "distanzen": "Google Routes API (echte Gehstrecke) + OSM Overpass (Pisten/Loipen)",
+        "rating": "Google",
+        "stand": "2026-03-19"
+      }
+    },
+    {
+      "name": "Wellnesshotel Walserhof",
+      "google_place_id": "ChIJYYoFSwKfnEcR9gj4PKccArE",
+      "ortsteil": "Hirschegg",
+      "typ": "Hotel",
+      "adresse": "Walserstraße 211, 6992 Hirschegg, Österreich",
+      "gps": {
+        "lat": 47.3487413,
+        "lng": 10.1730425
+      },
+      "website": "http://www.wellnesshotel-walserhof.at/",
+      "business_status": "OPERATIONAL",
+      "google_rating": 4.5,
+      "google_reviews": 478,
+      "price_level": null,
+      "naechste_bergbahn": {
+        "name": "Parsenn-Schlepplift",
+        "typ": "Schlepplift",
+        "distanz_m": 1034,
+        "gehzeit_min": 12
+      },
+      "naechste_loipe": {
+        "name": "Loipe Hirschegg (Sportplatz)",
+        "distanz_m": 857,
+        "gehzeit_min": 12
+      },
+      "naechste_piste": {
+        "name": "Hubertus-Piste",
+        "distanz_m": 240
+      },
+      "naechste_loipe_osm": {
+        "name": "Unbenannt",
+        "distanz_m": 656
+      },
+      "ski_in_out": "nein",
+      "wellness": null,
+      "familie": null,
+      "adults_only": null,
+      "verpflegung": null,
+      "ai_description": null,
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Wellnesshotel%20Walserhof%20Kleinwalsertal",
+      "datenquelle": {
+        "hotel_daten": "Google Places API",
+        "distanzen": "Google Routes API (echte Gehstrecke) + OSM Overpass (Pisten/Loipen)",
+        "rating": "Google",
+        "stand": "2026-03-19"
+      }
+    },
+    {
+      "name": "Alpen Lodge Riezlern",
+      "google_place_id": "ChIJMQtCY--fnEcREZbqiP8DPNU",
+      "ortsteil": "Riezlern",
+      "typ": "Lodge",
+      "adresse": "Eggstraße 25, 6991 Riezlern, Österreich",
+      "gps": {
+        "lat": 47.3596455,
+        "lng": 10.1776422
+      },
+      "website": "http://www.alpenlodgeriezlern.com/",
+      "business_status": "OPERATIONAL",
+      "google_rating": 5,
+      "google_reviews": 41,
+      "price_level": null,
+      "naechste_bergbahn": {
+        "name": "Parsenn-Schlepplift",
+        "typ": "Schlepplift",
+        "distanz_m": 552,
+        "gehzeit_min": 6
+      },
+      "naechste_loipe": {
+        "name": "Loipe Riezlern (Steinbogen)",
+        "distanz_m": 995,
+        "gehzeit_min": 13
+      },
+      "naechste_piste": {
+        "name": "Parsenn-Abfahrt",
+        "distanz_m": 505
+      },
+      "naechste_loipe_osm": {
+        "name": "Egg Loipe",
+        "distanz_m": 96
+      },
+      "ski_in_out": "nein",
+      "wellness": null,
+      "familie": null,
+      "adults_only": null,
+      "verpflegung": null,
+      "ai_description": null,
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Alpen%20Lodge%20Riezlern%20Kleinwalsertal",
+      "datenquelle": {
+        "hotel_daten": "Google Places API",
+        "distanzen": "Google Routes API (echte Gehstrecke) + OSM Overpass (Pisten/Loipen)",
+        "rating": "Google",
+        "stand": "2026-03-19"
+      }
+    },
+    {
+      "name": "Wellnesshotel Erlebach Riezlern - Kleinwalsertal",
+      "google_place_id": "ChIJjxBqUPqenEcRXhvVbQLcr4U",
+      "ortsteil": "Riezlern",
+      "typ": "Hotel",
+      "adresse": "Eggstraße 21, 6991 Riezlern, Österreich",
+      "gps": {
+        "lat": 47.358567,
+        "lng": 10.1775319
+      },
+      "website": "https://www.erlebach.de/?utm_source=google&utm_medium=organic&utm_campaign=gmb",
+      "business_status": "OPERATIONAL",
+      "google_rating": 4.6,
+      "google_reviews": 214,
+      "price_level": null,
+      "naechste_bergbahn": {
+        "name": "Parsenn-Schlepplift",
+        "typ": "Schlepplift",
+        "distanz_m": 432,
+        "gehzeit_min": 5
+      },
+      "naechste_loipe": {
+        "name": "Loipe Riezlern (Steinbogen)",
+        "distanz_m": 875,
+        "gehzeit_min": 11
+      },
+      "naechste_piste": {
+        "name": "Parsenn-Abfahrt",
+        "distanz_m": 385
+      },
+      "naechste_loipe_osm": {
+        "name": "Egg Loipe",
+        "distanz_m": 149
+      },
+      "ski_in_out": "nein",
+      "wellness": null,
+      "familie": null,
+      "adults_only": null,
+      "verpflegung": null,
+      "ai_description": null,
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Wellnesshotel%20Erlebach%20Riezlern%20-%20Kleinwalsertal%20Kleinwalsertal",
+      "datenquelle": {
+        "hotel_daten": "Google Places API",
+        "distanzen": "Google Routes API (echte Gehstrecke) + OSM Overpass (Pisten/Loipen)",
+        "rating": "Google",
+        "stand": "2026-03-19"
+      }
+    },
+    {
+      "name": "Haller's Genießerhotel",
+      "google_place_id": "ChIJ6R9rBAufnEcRqCHPdKrDxBA",
+      "ortsteil": "Mittelberg",
+      "typ": "Hotel",
+      "adresse": "Von-Klenze-Weg 5, 6993 Mittelberg, Österreich",
+      "gps": {
+        "lat": 47.3342789,
+        "lng": 10.163479299999999
+      },
+      "website": "http://www.hallers.at/",
+      "business_status": "OPERATIONAL",
+      "google_rating": 4.6,
+      "google_reviews": 330,
+      "price_level": null,
+      "naechste_bergbahn": {
+        "name": "Heuberg-Arena",
+        "typ": "Sessellift/Schlepplift",
+        "distanz_m": 1312,
+        "gehzeit_min": 16
+      },
+      "naechste_loipe": {
+        "name": "Loipe Hirschegg (Sportplatz)",
+        "distanz_m": 1523,
+        "gehzeit_min": 18
+      },
+      "naechste_piste": {
+        "name": "Skiweg Zaferna Heuberg",
+        "distanz_m": 470
+      },
+      "naechste_loipe_osm": {
+        "name": "Unbenannt",
+        "distanz_m": 398
+      },
+      "ski_in_out": "nein",
+      "wellness": null,
+      "familie": null,
+      "adults_only": null,
+      "verpflegung": null,
+      "ai_description": null,
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Haller%27s%20Genie%C3%9Ferhotel%20Kleinwalsertal",
+      "datenquelle": {
+        "hotel_daten": "Google Places API",
+        "distanzen": "Google Routes API (echte Gehstrecke) + OSM Overpass (Pisten/Loipen)",
+        "rating": "Google",
+        "stand": "2026-03-19"
+      }
+    },
+    {
+      "name": "Das Naturhotel Chesa Valisa",
+      "google_place_id": "ChIJW26i3wefnEcRGl3QKI1O9pI",
+      "ortsteil": "Hirschegg",
+      "typ": "Hotel",
+      "adresse": "D-87568, Gerbeweg 18, 6992 Hirschegg, Österreich",
+      "gps": {
+        "lat": 47.342107399999996,
+        "lng": 10.1644957
+      },
+      "website": "https://www.naturhotel.at/",
+      "business_status": "OPERATIONAL",
+      "google_rating": 4.7,
+      "google_reviews": 540,
+      "price_level": null,
+      "naechste_bergbahn": {
+        "name": "Heuberg-Arena",
+        "typ": "Sessellift/Schlepplift",
+        "distanz_m": 181,
+        "gehzeit_min": 2
+      },
+      "naechste_loipe": {
+        "name": "Loipe Hirschegg (Sportplatz)",
+        "distanz_m": 605,
+        "gehzeit_min": 8
+      },
+      "naechste_piste": {
+        "name": "Heuberg-Abfahrt",
+        "distanz_m": 39
+      },
+      "naechste_loipe_osm": {
+        "name": "Unbenannt",
+        "distanz_m": 1124
+      },
+      "ski_in_out": "ja",
+      "wellness": null,
+      "familie": null,
+      "adults_only": null,
+      "verpflegung": null,
+      "ai_description": null,
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Das%20Naturhotel%20Chesa%20Valisa%20Kleinwalsertal",
+      "datenquelle": {
+        "hotel_daten": "Google Places API",
+        "distanzen": "Google Routes API (echte Gehstrecke) + OSM Overpass (Pisten/Loipen)",
+        "rating": "Google",
+        "stand": "2026-03-19"
+      }
+    },
+    {
+      "name": "Der Kleinwalsertaler Rosenhof",
+      "google_place_id": "ChIJbzCvq4afnEcR1_bDomPdT3Q",
+      "ortsteil": "Mittelberg",
+      "typ": "Unterkunft",
+      "adresse": "An der Halde 15, 6993 Mittelberg, Österreich",
+      "gps": {
+        "lat": 47.3176868,
+        "lng": 10.146284099999999
+      },
+      "website": "https://www.rosenhof.com/",
+      "business_status": "OPERATIONAL",
+      "google_rating": 4.8,
+      "google_reviews": 294,
+      "price_level": null,
+      "naechste_bergbahn": {
+        "name": "Walmendingerhorn-Bahn",
+        "typ": "Gondelbahn",
+        "distanz_m": 727,
+        "gehzeit_min": 10
+      },
+      "naechste_loipe": {
+        "name": "Loipe Baad (Baergunttal)",
+        "distanz_m": 1751,
+        "gehzeit_min": 24
+      },
+      "naechste_piste": {
+        "name": "Unbenannt",
+        "distanz_m": 195
+      },
+      "naechste_loipe_osm": {
+        "name": "Unbenannt",
+        "distanz_m": 239
+      },
+      "ski_in_out": "nein",
+      "wellness": null,
+      "familie": null,
+      "adults_only": null,
+      "verpflegung": null,
+      "ai_description": null,
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Der%20Kleinwalsertaler%20Rosenhof%20Kleinwalsertal",
+      "datenquelle": {
+        "hotel_daten": "Google Places API",
+        "distanzen": "Google Routes API (echte Gehstrecke) + OSM Overpass (Pisten/Loipen)",
+        "rating": "Google",
+        "stand": "2026-03-19"
+      }
+    },
+    {
+      "name": "Hotel Birkenhöhe",
+      "google_place_id": "ChIJX7zF5AGfnEcRqyeJSU2-u-8",
+      "ortsteil": "Hirschegg",
+      "typ": "Hotel",
+      "adresse": "Oberseitestraße 34, 6992 Hirschegg, Österreich",
+      "gps": {
+        "lat": 47.350832,
+        "lng": 10.171021999999999
+      },
+      "website": "http://www.birkenhoehe.com/",
+      "business_status": "OPERATIONAL",
+      "google_rating": 4.8,
+      "google_reviews": 350,
+      "price_level": null,
+      "naechste_bergbahn": {
+        "name": "Parsenn-Schlepplift",
+        "typ": "Schlepplift",
+        "distanz_m": 1012,
+        "gehzeit_min": 13
+      },
+      "naechste_loipe": {
+        "name": "Loipe Hirschegg (Sportplatz)",
+        "distanz_m": 1089,
+        "gehzeit_min": 15
+      },
+      "naechste_piste": {
+        "name": "Unbenannt",
+        "distanz_m": 24
+      },
+      "naechste_loipe_osm": {
+        "name": "Unbenannt",
+        "distanz_m": 383
+      },
+      "ski_in_out": "ja",
+      "wellness": null,
+      "familie": null,
+      "adults_only": null,
+      "verpflegung": null,
+      "ai_description": null,
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Hotel%20Birkenh%C3%B6he%20Kleinwalsertal",
+      "datenquelle": {
+        "hotel_daten": "Google Places API",
+        "distanzen": "Google Routes API (echte Gehstrecke) + OSM Overpass (Pisten/Loipen)",
+        "rating": "Google",
+        "stand": "2026-03-19"
+      }
+    },
+    {
+      "name": "Hotel Leitner",
+      "google_place_id": "ChIJRQ5AaXafnEcRsS55iW-E3Zs",
+      "ortsteil": "Mittelberg",
+      "typ": "Hotel",
+      "adresse": "Walserstraße 355, 6993 Mittelberg, Österreich",
+      "gps": {
+        "lat": 47.3266065,
+        "lng": 10.159148
+      },
+      "website": "http://www.leitner-hotel.at/",
+      "business_status": "OPERATIONAL",
+      "google_rating": 4.7,
+      "google_reviews": 139,
+      "price_level": null,
+      "naechste_bergbahn": {
+        "name": "Walmendingerhorn-Bahn",
+        "typ": "Gondelbahn",
+        "distanz_m": 756,
+        "gehzeit_min": 11
+      },
+      "naechste_loipe": {
+        "name": "Loipe Mittelberg (Waeldele)",
+        "distanz_m": 1606,
+        "gehzeit_min": 32
+      },
+      "naechste_piste": {
+        "name": "Skiweg Mittelberg Zaferna",
+        "distanz_m": 246
+      },
+      "naechste_loipe_osm": {
+        "name": "Unbenannt",
+        "distanz_m": 154
+      },
+      "ski_in_out": "nein",
+      "wellness": null,
+      "familie": null,
+      "adults_only": null,
+      "verpflegung": null,
+      "ai_description": null,
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Hotel%20Leitner%20Kleinwalsertal",
+      "datenquelle": {
+        "hotel_daten": "Google Places API",
+        "distanzen": "Google Routes API (echte Gehstrecke) + OSM Overpass (Pisten/Loipen)",
+        "rating": "Google",
+        "stand": "2026-03-19"
+      }
+    },
+    {
+      "name": "Biohotel Walserstuba",
+      "google_place_id": "ChIJEy1YffuenEcRSbP55p8VMOs",
+      "ortsteil": "Riezlern",
+      "typ": "Hotel",
+      "adresse": "Eggstraße 2, 6991 Riezlern, Österreich",
+      "gps": {
+        "lat": 47.3556016,
+        "lng": 10.177685199999999
+      },
+      "website": "http://www.walserstuba.at/",
+      "business_status": "OPERATIONAL",
+      "google_rating": 4.8,
+      "google_reviews": 203,
+      "price_level": null,
+      "naechste_bergbahn": {
+        "name": "Parsenn-Schlepplift",
+        "typ": "Schlepplift",
+        "distanz_m": 70,
+        "gehzeit_min": 1
+      },
+      "naechste_loipe": {
+        "name": "Loipe Riezlern (Steinbogen)",
+        "distanz_m": 513,
+        "gehzeit_min": 7
+      },
+      "naechste_piste": {
+        "name": "Parsenn-Abfahrt",
+        "distanz_m": 55
+      },
+      "naechste_loipe_osm": {
+        "name": "Unbenannt",
+        "distanz_m": 308
+      },
+      "ski_in_out": "fast (unter 150m)",
+      "wellness": null,
+      "familie": null,
+      "adults_only": null,
+      "verpflegung": null,
+      "ai_description": null,
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Biohotel%20Walserstuba%20Kleinwalsertal",
+      "datenquelle": {
+        "hotel_daten": "Google Places API",
+        "distanzen": "Google Routes API (echte Gehstrecke) + OSM Overpass (Pisten/Loipen)",
+        "rating": "Google",
+        "stand": "2026-03-19"
+      }
+    },
+    {
+      "name": "Ski- und Aktivhotel Almhof Rupp",
+      "google_place_id": "ChIJF5AsiOOenEcR3adcTxQqk3g",
+      "ortsteil": "Riezlern",
+      "typ": "Hotel",
+      "adresse": "Walserstraße 83, 6991 Riezlern, Österreich",
+      "gps": {
+        "lat": 47.3550568,
+        "lng": 10.1839958
+      },
+      "website": "https://almhof-rupp.com/",
+      "business_status": "OPERATIONAL",
+      "google_rating": 4.4,
+      "google_reviews": 153,
+      "price_level": null,
+      "naechste_bergbahn": {
+        "name": "Kanzelwandbahn",
+        "typ": "Gondelbahn",
+        "distanz_m": 146,
+        "gehzeit_min": 2
+      },
+      "naechste_loipe": {
+        "name": "Loipe Riezlern (Steinbogen)",
+        "distanz_m": 166,
+        "gehzeit_min": 2
+      },
+      "naechste_piste": {
+        "name": "Ideallift-Abfahrt",
+        "distanz_m": 22
+      },
+      "naechste_loipe_osm": {
+        "name": "Egg Loipe",
+        "distanz_m": 683
+      },
+      "ski_in_out": "ja",
+      "wellness": null,
+      "familie": null,
+      "adults_only": null,
+      "verpflegung": null,
+      "ai_description": null,
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Ski-%20und%20Aktivhotel%20Almhof%20Rupp%20Kleinwalsertal",
+      "datenquelle": {
+        "hotel_daten": "Google Places API",
+        "distanzen": "Google Routes API (echte Gehstrecke) + OSM Overpass (Pisten/Loipen)",
+        "rating": "Google",
+        "stand": "2026-03-19"
+      }
+    },
+    {
+      "name": "Familienhotel Kleinwalsertal Hotelgesellschaft mbH",
+      "google_place_id": "ChIJ625RcO-enEcRSnXISx6xqIY",
+      "ortsteil": "Riezlern",
+      "typ": "Hotel",
+      "adresse": "Alte Schwendestraße 9, 6991 Riezlern, Österreich",
+      "gps": {
+        "lat": 47.360644799999996,
+        "lng": 10.1856282
+      },
+      "website": "http://www.familienhotel-kleinwalsertal.at/",
+      "business_status": "OPERATIONAL",
+      "google_rating": 4.3,
+      "google_reviews": 289,
+      "price_level": null,
+      "naechste_bergbahn": {
+        "name": "Kanzelwandbahn",
+        "typ": "Gondelbahn",
+        "distanz_m": 785,
+        "gehzeit_min": 11
+      },
+      "naechste_loipe": {
+        "name": "Loipe Riezlern (Steinbogen)",
+        "distanz_m": 889,
+        "gehzeit_min": 12
+      },
+      "naechste_piste": {
+        "name": "Schwandlift-Piste",
+        "distanz_m": 473
+      },
+      "naechste_loipe_osm": {
+        "name": "Egg Loipe",
+        "distanz_m": 239
+      },
+      "ski_in_out": "nein",
+      "wellness": null,
+      "familie": null,
+      "adults_only": null,
+      "verpflegung": null,
+      "ai_description": null,
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Familienhotel%20Kleinwalsertal%20Hotelgesellschaft%20mbH%20Kleinwalsertal",
+      "datenquelle": {
+        "hotel_daten": "Google Places API",
+        "distanzen": "Google Routes API (echte Gehstrecke) + OSM Overpass (Pisten/Loipen)",
+        "rating": "Google",
+        "stand": "2026-03-19"
+      }
+    },
+    {
+      "name": "Hotel Jagdhof",
+      "google_place_id": "ChIJdQz1LuaenEcRP7UBFzC0z_k",
+      "ortsteil": "Riezlern",
+      "typ": "Hotel",
+      "adresse": "Walserstraße 27, 6991 Riezlern, Österreich",
+      "gps": {
+        "lat": 47.3591635,
+        "lng": 10.190732599999999
+      },
+      "website": "http://www.hotel-jagdhof.de/",
+      "business_status": "OPERATIONAL",
+      "google_rating": 4.6,
+      "google_reviews": 213,
+      "price_level": null,
+      "naechste_bergbahn": {
+        "name": "Kanzelwandbahn",
+        "typ": "Gondelbahn",
+        "distanz_m": 663,
+        "gehzeit_min": 8
+      },
+      "naechste_loipe": {
+        "name": "Loipe Riezlern (Steinbogen)",
+        "distanz_m": 767,
+        "gehzeit_min": 9
+      },
+      "naechste_piste": {
+        "name": "Schwandlift-Piste",
+        "distanz_m": 127
+      },
+      "naechste_loipe_osm": {
+        "name": "Egg Loipe",
+        "distanz_m": 569
+      },
+      "ski_in_out": "fast (unter 150m)",
+      "wellness": null,
+      "familie": null,
+      "adults_only": null,
+      "verpflegung": null,
+      "ai_description": null,
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Hotel%20Jagdhof%20Kleinwalsertal",
+      "datenquelle": {
+        "hotel_daten": "Google Places API",
+        "distanzen": "Google Routes API (echte Gehstrecke) + OSM Overpass (Pisten/Loipen)",
+        "rating": "Google",
+        "stand": "2026-03-19"
+      }
+    },
+    {
+      "name": "Hotel Gemma Erwachsenenhotel",
+      "google_place_id": "ChIJp9VbZ_6enEcRNF1bm-95stg",
+      "ortsteil": "Hirschegg",
+      "typ": "Hotel",
+      "adresse": "Schwarzwassertalstraße 21, 6992 Hirschegg, Österreich",
+      "gps": {
+        "lat": 47.3532867,
+        "lng": 10.1715763
+      },
+      "website": "https://www.gemma.at/",
+      "business_status": "OPERATIONAL",
+      "google_rating": 4.5,
+      "google_reviews": 137,
+      "price_level": null,
+      "naechste_bergbahn": {
+        "name": "Parsenn-Schlepplift",
+        "typ": "Schlepplift",
+        "distanz_m": 456,
+        "gehzeit_min": 5
+      },
+      "naechste_loipe": {
+        "name": "Loipe Riezlern (Steinbogen)",
+        "distanz_m": 971,
+        "gehzeit_min": 13
+      },
+      "naechste_piste": {
+        "name": "Parsenn-Abfahrt",
+        "distanz_m": 61
+      },
+      "naechste_loipe_osm": {
+        "name": "Unbenannt",
+        "distanz_m": 183
+      },
+      "ski_in_out": "fast (unter 150m)",
+      "wellness": null,
+      "familie": null,
+      "adults_only": null,
+      "verpflegung": null,
+      "ai_description": null,
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Hotel%20Gemma%20Erwachsenenhotel%20Kleinwalsertal",
+      "datenquelle": {
+        "hotel_daten": "Google Places API",
+        "distanzen": "Google Routes API (echte Gehstrecke) + OSM Overpass (Pisten/Loipen)",
+        "rating": "Google",
+        "stand": "2026-03-19"
+      }
+    },
+    {
+      "name": "Aparthotel Kleinwalsertal",
+      "google_place_id": "ChIJaxDTKoKfnEcRrsdxTAyr31A",
+      "ortsteil": "Mittelberg",
+      "typ": "Hotel",
+      "adresse": "Wildentalstraße 3, 6993 Mittelberg, Österreich",
+      "gps": {
+        "lat": 47.3189831,
+        "lng": 10.1532918
+      },
+      "website": "https://www.aparthotel-kleinwalsertal.at/de/",
+      "business_status": "OPERATIONAL",
+      "google_rating": 4.2,
+      "google_reviews": 673,
+      "price_level": null,
+      "naechste_bergbahn": {
+        "name": "Walmendingerhorn-Bahn",
+        "typ": "Gondelbahn",
+        "distanz_m": 1121,
+        "gehzeit_min": 18
+      },
+      "naechste_loipe": {
+        "name": "Loipe Baad (Baergunttal)",
+        "distanz_m": 1469,
+        "gehzeit_min": 21
+      },
+      "naechste_piste": {
+        "name": "Unbenannt",
+        "distanz_m": 229
+      },
+      "naechste_loipe_osm": {
+        "name": "Wildentalstraße",
+        "distanz_m": 54
+      },
+      "ski_in_out": "nein",
+      "wellness": null,
+      "familie": null,
+      "adults_only": null,
+      "verpflegung": null,
+      "ai_description": null,
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Aparthotel%20Kleinwalsertal%20Kleinwalsertal",
+      "datenquelle": {
+        "hotel_daten": "Google Places API",
+        "distanzen": "Google Routes API (echte Gehstrecke) + OSM Overpass (Pisten/Loipen)",
+        "rating": "Google",
+        "stand": "2026-03-19"
+      }
+    },
+    {
+      "name": "Hotel Bellevue",
+      "google_place_id": "ChIJr4BxjuyenEcRgdCufINXxDk",
+      "ortsteil": "Riezlern",
+      "typ": "Hotel",
+      "adresse": "Außerschwende 4, 6991 Riezlern, Österreich",
+      "gps": {
+        "lat": 47.3674148,
+        "lng": 10.189618099999999
+      },
+      "website": "https://www.bellevue-kleinwalsertal.at/",
+      "business_status": "OPERATIONAL",
+      "google_rating": 4.3,
+      "google_reviews": 201,
+      "price_level": null,
+      "naechste_bergbahn": {
+        "name": "Kanzelwandbahn",
+        "typ": "Gondelbahn",
+        "distanz_m": 2371,
+        "gehzeit_min": 33
+      },
+      "naechste_loipe": {
+        "name": "Loipe Riezlern (Steinbogen)",
+        "distanz_m": 2476,
+        "gehzeit_min": 34
+      },
+      "naechste_piste": {
+        "name": "Schwandlift-Piste",
+        "distanz_m": 1048
+      },
+      "naechste_loipe_osm": {
+        "name": "Schwende-Loipe",
+        "distanz_m": 226
+      },
+      "ski_in_out": "nein",
+      "wellness": null,
+      "familie": null,
+      "adults_only": null,
+      "verpflegung": null,
+      "ai_description": null,
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Hotel%20Bellevue%20Kleinwalsertal",
+      "datenquelle": {
+        "hotel_daten": "Google Places API",
+        "distanzen": "Google Routes API (echte Gehstrecke) + OSM Overpass (Pisten/Loipen)",
+        "rating": "Google",
+        "stand": "2026-03-19"
+      }
+    },
+    {
+      "name": "Gästehaus Boersch, Familie Karin und Michael Jochum, Eggstraße 45 in Riezlern/Kleinwalsertal",
+      "google_place_id": "ChIJW_BoV_CenEcRJrLu63lSAlo",
+      "ortsteil": "Riezlern",
+      "typ": "Pension",
+      "adresse": "Eggstraße 45, 6991 Riezlern, Österreich",
+      "gps": {
+        "lat": 47.3623313,
+        "lng": 10.1792289
+      },
+      "website": "https://www.gaestehaus-boersch.de/",
+      "business_status": "OPERATIONAL",
+      "google_rating": 4.8,
+      "google_reviews": 84,
+      "price_level": null,
+      "naechste_bergbahn": {
+        "name": "Parsenn-Schlepplift",
+        "typ": "Schlepplift",
+        "distanz_m": 865,
+        "gehzeit_min": 11
+      },
+      "naechste_loipe": {
+        "name": "Loipe Riezlern (Steinbogen)",
+        "distanz_m": 1308,
+        "gehzeit_min": 17
+      },
+      "naechste_piste": {
+        "name": "Parsenn-Abfahrt",
+        "distanz_m": 812
+      },
+      "naechste_loipe_osm": {
+        "name": "Egg Loipe",
+        "distanz_m": 87
+      },
+      "ski_in_out": "nein",
+      "wellness": null,
+      "familie": null,
+      "adults_only": null,
+      "verpflegung": null,
+      "ai_description": null,
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=G%C3%A4stehaus%20Boersch%2C%20Familie%20Karin%20und%20Michael%20Jochum%2C%20Eggstra%C3%9Fe%2045%20in%20Riezlern/Kleinwalsertal%20Kleinwalsertal",
+      "datenquelle": {
+        "hotel_daten": "Google Places API",
+        "distanzen": "Google Routes API (echte Gehstrecke) + OSM Overpass (Pisten/Loipen)",
+        "rating": "Google",
+        "stand": "2026-03-19"
+      }
+    },
+    {
+      "name": "Boutique Hotel Herzhof",
+      "google_place_id": "ChIJd7M0y_GenEcRVEe4LZel8co",
+      "ortsteil": "Riezlern",
+      "typ": "Hotel",
+      "adresse": "Eggstraße 56a, 6991 Riezlern, Österreich",
+      "gps": {
+        "lat": 47.3626283,
+        "lng": 10.181341399999999
+      },
+      "website": "https://herzhof.at/",
+      "business_status": "OPERATIONAL",
+      "google_rating": 4.8,
+      "google_reviews": 66,
+      "price_level": null,
+      "naechste_bergbahn": {
+        "name": "Parsenn-Schlepplift",
+        "typ": "Schlepplift",
+        "distanz_m": 1049,
+        "gehzeit_min": 14
+      },
+      "naechste_loipe": {
+        "name": "Loipe Riezlern (Steinbogen)",
+        "distanz_m": 1492,
+        "gehzeit_min": 20
+      },
+      "naechste_piste": {
+        "name": "Kessler-Hang",
+        "distanz_m": 796
+      },
+      "naechste_loipe_osm": {
+        "name": "Egg Loipe",
+        "distanz_m": 67
+      },
+      "ski_in_out": "nein",
+      "wellness": null,
+      "familie": null,
+      "adults_only": null,
+      "verpflegung": null,
+      "ai_description": null,
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Boutique%20Hotel%20Herzhof%20Kleinwalsertal",
+      "datenquelle": {
+        "hotel_daten": "Google Places API",
+        "distanzen": "Google Routes API (echte Gehstrecke) + OSM Overpass (Pisten/Loipen)",
+        "rating": "Google",
+        "stand": "2026-03-19"
+      }
+    },
+    {
+      "name": "Frühstückspension Breitach Hus",
+      "google_place_id": "ChIJhwZvB_uenEcR1sD91oC9W1o",
+      "ortsteil": "Riezlern",
+      "typ": "Pension",
+      "adresse": "Eggstraße 14, 6991 Riezlern, Österreich",
+      "gps": {
+        "lat": 47.3577077,
+        "lng": 10.1777549
+      },
+      "website": "https://www.breitachhus.at/de",
+      "business_status": "OPERATIONAL",
+      "google_rating": 4.8,
+      "google_reviews": 59,
+      "price_level": null,
+      "naechste_bergbahn": {
+        "name": "Parsenn-Schlepplift",
+        "typ": "Schlepplift",
+        "distanz_m": 322,
+        "gehzeit_min": 4
+      },
+      "naechste_loipe": {
+        "name": "Loipe Riezlern (Steinbogen)",
+        "distanz_m": 765,
+        "gehzeit_min": 10
+      },
+      "naechste_piste": {
+        "name": "Parsenn-Abfahrt",
+        "distanz_m": 289
+      },
+      "naechste_loipe_osm": {
+        "name": "Egg Loipe",
+        "distanz_m": 203
+      },
+      "ski_in_out": "nein",
+      "wellness": null,
+      "familie": null,
+      "adults_only": null,
+      "verpflegung": null,
+      "ai_description": null,
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Fr%C3%BChst%C3%BCckspension%20Breitach%20Hus%20Kleinwalsertal",
+      "datenquelle": {
+        "hotel_daten": "Google Places API",
+        "distanzen": "Google Routes API (echte Gehstrecke) + OSM Overpass (Pisten/Loipen)",
+        "rating": "Google",
+        "stand": "2026-03-19"
+      }
+    },
+    {
+      "name": "Hotel Alpensonne",
+      "google_place_id": "ChIJc6lfb_qenEcRQ-THYyiEiyE",
+      "ortsteil": "Riezlern",
+      "typ": "Hotel",
+      "adresse": "Eggstraße 27, 6991 Riezlern, Österreich",
+      "gps": {
+        "lat": 47.359947,
+        "lng": 10.177787
+      },
+      "website": "https://www.hotel-alpensonne.at/",
+      "business_status": "OPERATIONAL",
+      "google_rating": 4.5,
+      "google_reviews": 125,
+      "price_level": null,
+      "naechste_bergbahn": {
+        "name": "Parsenn-Schlepplift",
+        "typ": "Schlepplift",
+        "distanz_m": 585,
+        "gehzeit_min": 7
+      },
+      "naechste_loipe": {
+        "name": "Loipe Riezlern (Steinbogen)",
+        "distanz_m": 1028,
+        "gehzeit_min": 13
+      },
+      "naechste_piste": {
+        "name": "Parsenn-Abfahrt",
+        "distanz_m": 538
+      },
+      "naechste_loipe_osm": {
+        "name": "Egg Loipe",
+        "distanz_m": 82
+      },
+      "ski_in_out": "nein",
+      "wellness": null,
+      "familie": null,
+      "adults_only": null,
+      "verpflegung": null,
+      "ai_description": null,
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Hotel%20Alpensonne%20Kleinwalsertal",
+      "datenquelle": {
+        "hotel_daten": "Google Places API",
+        "distanzen": "Google Routes API (echte Gehstrecke) + OSM Overpass (Pisten/Loipen)",
+        "rating": "Google",
+        "stand": "2026-03-19"
+      }
+    },
+    {
+      "name": "Gasthof Alpenblick",
+      "google_place_id": "ChIJJxJi_nKfnEcRQC9Uf8zNlA0",
+      "ortsteil": "Mittelberg",
+      "typ": "Gasthof",
+      "adresse": "Höfle 27, 6993 Mittelberg, Österreich",
+      "gps": {
+        "lat": 47.3295295,
+        "lng": 10.1678871
+      },
+      "website": "https://www.gasthaus-alpenblick.at/",
+      "business_status": "OPERATIONAL",
+      "google_rating": 4.7,
+      "google_reviews": 459,
+      "price_level": null,
+      "naechste_bergbahn": {
+        "name": "Walmendingerhorn-Bahn",
+        "typ": "Gondelbahn",
+        "distanz_m": 1762,
+        "gehzeit_min": 30
+      },
+      "naechste_loipe": {
+        "name": "Loipe Hirschegg (Sportplatz)",
+        "distanz_m": 2171,
+        "gehzeit_min": 31
+      },
+      "naechste_piste": {
+        "name": "Wildentalpiste",
+        "distanz_m": 104
+      },
+      "naechste_loipe_osm": {
+        "name": "Unbenannt",
+        "distanz_m": 342
+      },
+      "ski_in_out": "fast (unter 150m)",
+      "wellness": null,
+      "familie": null,
+      "adults_only": null,
+      "verpflegung": null,
+      "ai_description": null,
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Gasthof%20Alpenblick%20Kleinwalsertal",
+      "datenquelle": {
+        "hotel_daten": "Google Places API",
+        "distanzen": "Google Routes API (echte Gehstrecke) + OSM Overpass (Pisten/Loipen)",
+        "rating": "Google",
+        "stand": "2026-03-19"
+      }
+    },
+    {
+      "name": "LichterBerg",
+      "google_place_id": "ChIJMcb2RIOfnEcRXfoXRXL7LUY",
+      "ortsteil": "Hirschegg",
+      "typ": "Unterkunft",
+      "adresse": "Schwarzwassertalstraße 26a, 6992 Hirschegg, Österreich",
+      "gps": {
+        "lat": 47.354195,
+        "lng": 10.1711738
+      },
+      "website": "https://www.lichterberg.at/",
+      "business_status": "OPERATIONAL",
+      "google_rating": 4.9,
+      "google_reviews": 21,
+      "price_level": null,
+      "naechste_bergbahn": {
+        "name": "Parsenn-Schlepplift",
+        "typ": "Schlepplift",
+        "distanz_m": 490,
+        "gehzeit_min": 6
+      },
+      "naechste_loipe": {
+        "name": "Loipe Riezlern (Steinbogen)",
+        "distanz_m": 1005,
+        "gehzeit_min": 13
+      },
+      "naechste_piste": {
+        "name": "Parsenn-Abfahrt",
+        "distanz_m": 161
+      },
+      "naechste_loipe_osm": {
+        "name": "Unbenannt",
+        "distanz_m": 83
+      },
+      "ski_in_out": "nein",
+      "wellness": null,
+      "familie": null,
+      "adults_only": null,
+      "verpflegung": null,
+      "ai_description": null,
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=LichterBerg%20Kleinwalsertal",
+      "datenquelle": {
+        "hotel_daten": "Google Places API",
+        "distanzen": "Google Routes API (echte Gehstrecke) + OSM Overpass (Pisten/Loipen)",
+        "rating": "Google",
+        "stand": "2026-03-19"
+      }
+    },
+    {
+      "name": "Herzen's Landhaus Pension mit Frühstück",
+      "google_place_id": "ChIJlfqrEQafnEcRNx_Usr68QmM",
+      "ortsteil": "",
+      "typ": "Pension",
+      "adresse": "Walserstraße 249, 6992, Österreich",
+      "gps": {
+        "lat": 47.3447854,
+        "lng": 10.1681674
+      },
+      "website": "https://herzens-landhaus.at/",
+      "business_status": "OPERATIONAL",
+      "google_rating": 4.7,
+      "google_reviews": 35,
+      "price_level": null,
+      "naechste_bergbahn": {
+        "name": "Heuberg-Arena",
+        "typ": "Sessellift/Schlepplift",
+        "distanz_m": 525,
+        "gehzeit_min": 9
+      },
+      "naechste_loipe": {
+        "name": "Loipe Hirschegg (Sportplatz)",
+        "distanz_m": 250,
+        "gehzeit_min": 3
+      },
+      "naechste_piste": {
+        "name": "Heuberg-Abfahrt",
+        "distanz_m": 253
+      },
+      "naechste_loipe_osm": {
+        "name": "Unbenannt",
+        "distanz_m": 1040
+      },
+      "ski_in_out": "nein",
+      "wellness": null,
+      "familie": null,
+      "adults_only": null,
+      "verpflegung": null,
+      "ai_description": null,
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Herzen%27s%20Landhaus%20Pension%20mit%20Fr%C3%BChst%C3%BCck%20Kleinwalsertal",
+      "datenquelle": {
+        "hotel_daten": "Google Places API",
+        "distanzen": "Google Routes API (echte Gehstrecke) + OSM Overpass (Pisten/Loipen)",
+        "rating": "Google",
+        "stand": "2026-03-19"
+      }
+    },
+    {
+      "name": "Landhaus Michl",
+      "google_place_id": "ChIJRz5RdPyenEcRZvDBelBU_L8",
+      "ortsteil": "Riezlern",
+      "typ": "Unterkunft",
+      "adresse": "Sonnenhalde 10, 6991 Riezlern, Österreich",
+      "gps": {
+        "lat": 47.3556661,
+        "lng": 10.1755848
+      },
+      "website": "http://www.landhaus-michl.at/",
+      "business_status": "OPERATIONAL",
+      "google_rating": 4.9,
+      "google_reviews": 59,
+      "price_level": null,
+      "naechste_bergbahn": {
+        "name": "Parsenn-Schlepplift",
+        "typ": "Schlepplift",
+        "distanz_m": 323,
+        "gehzeit_min": 4
+      },
+      "naechste_loipe": {
+        "name": "Loipe Riezlern (Steinbogen)",
+        "distanz_m": 837,
+        "gehzeit_min": 11
+      },
+      "naechste_piste": {
+        "name": "Parsenn-Abfahrt",
+        "distanz_m": 158
+      },
+      "naechste_loipe_osm": {
+        "name": "Unbenannt",
+        "distanz_m": 183
+      },
+      "ski_in_out": "nein",
+      "wellness": null,
+      "familie": null,
+      "adults_only": null,
+      "verpflegung": null,
+      "ai_description": null,
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Landhaus%20Michl%20Kleinwalsertal",
+      "datenquelle": {
+        "hotel_daten": "Google Places API",
+        "distanzen": "Google Routes API (echte Gehstrecke) + OSM Overpass (Pisten/Loipen)",
+        "rating": "Google",
+        "stand": "2026-03-19"
+      }
+    },
+    {
+      "name": "Riezler Höhe",
+      "google_place_id": "ChIJgQ0tAUSfnEcR7ZDIVknMaIY",
+      "ortsteil": "Riezlern",
+      "typ": "Unterkunft",
+      "adresse": "Westeggweg 6, 6991 Riezlern, Österreich",
+      "gps": {
+        "lat": 47.3582671,
+        "lng": 10.191975399999999
+      },
+      "website": "http://www.riezler-hoehe.at/",
+      "business_status": "OPERATIONAL",
+      "google_rating": 4.8,
+      "google_reviews": 54,
+      "price_level": null,
+      "naechste_bergbahn": {
+        "name": "Kanzelwandbahn",
+        "typ": "Gondelbahn",
+        "distanz_m": 798,
+        "gehzeit_min": 10
+      },
+      "naechste_loipe": {
+        "name": "Loipe Riezlern (Steinbogen)",
+        "distanz_m": 902,
+        "gehzeit_min": 11
+      },
+      "naechste_piste": {
+        "name": "Schwandlift-Piste",
+        "distanz_m": 50
+      },
+      "naechste_loipe_osm": {
+        "name": "Egg Loipe",
+        "distanz_m": 706
+      },
+      "ski_in_out": "ja",
+      "wellness": null,
+      "familie": null,
+      "adults_only": null,
+      "verpflegung": null,
+      "ai_description": null,
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Riezler%20H%C3%B6he%20Kleinwalsertal",
+      "datenquelle": {
+        "hotel_daten": "Google Places API",
+        "distanzen": "Google Routes API (echte Gehstrecke) + OSM Overpass (Pisten/Loipen)",
+        "rating": "Google",
+        "stand": "2026-03-19"
+      }
+    },
+    {
+      "name": "Haus Bergfelder",
+      "google_place_id": "ChIJkSLQ7KefnEcRU4p5EzcuUO8",
+      "ortsteil": "Hirschegg",
+      "typ": "Unterkunft",
+      "adresse": "Rohrweg 24, 6992 Hirschegg, Österreich",
+      "gps": {
+        "lat": 47.341193,
+        "lng": 10.161285999999999
+      },
+      "website": "http://www.bergfelder.at/",
+      "business_status": "OPERATIONAL",
+      "google_rating": 4.9,
+      "google_reviews": 40,
+      "price_level": null,
+      "naechste_bergbahn": {
+        "name": "Heuberg-Arena",
+        "typ": "Sessellift/Schlepplift",
+        "distanz_m": 573,
+        "gehzeit_min": 9
+      },
+      "naechste_loipe": {
+        "name": "Loipe Hirschegg (Sportplatz)",
+        "distanz_m": 1044,
+        "gehzeit_min": 16
+      },
+      "naechste_piste": {
+        "name": "Skiweg Zaferna Heuberg",
+        "distanz_m": 20
+      },
+      "naechste_loipe_osm": {
+        "name": "Unbenannt",
+        "distanz_m": 1035
+      },
+      "ski_in_out": "ja",
+      "wellness": null,
+      "familie": null,
+      "adults_only": null,
+      "verpflegung": null,
+      "ai_description": null,
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Haus%20Bergfelder%20Kleinwalsertal",
+      "datenquelle": {
+        "hotel_daten": "Google Places API",
+        "distanzen": "Google Routes API (echte Gehstrecke) + OSM Overpass (Pisten/Loipen)",
+        "rating": "Google",
+        "stand": "2026-03-19"
+      }
+    },
+    {
+      "name": "Gästehaus Felder - Lang-Steudler KG",
+      "google_place_id": "ChIJCwsoKAGfnEcR7tNnBi3mn4k",
+      "ortsteil": "Hirschegg",
+      "typ": "Pension",
+      "adresse": "Am Sonnenbühl 21, 6992 Hirschegg, Österreich",
+      "gps": {
+        "lat": 47.347177099999996,
+        "lng": 10.1676492
+      },
+      "website": "http://www.gaestehaus-felder.at/",
+      "business_status": "OPERATIONAL",
+      "google_rating": 4.9,
+      "google_reviews": 72,
+      "price_level": null,
+      "naechste_bergbahn": {
+        "name": "Heuberg-Arena",
+        "typ": "Sessellift/Schlepplift",
+        "distanz_m": 651,
+        "gehzeit_min": 9
+      },
+      "naechste_loipe": {
+        "name": "Loipe Hirschegg (Sportplatz)",
+        "distanz_m": 557,
+        "gehzeit_min": 8
+      },
+      "naechste_piste": {
+        "name": "Hubertus-Piste",
+        "distanz_m": 116
+      },
+      "naechste_loipe_osm": {
+        "name": "Unbenannt",
+        "distanz_m": 781
+      },
+      "ski_in_out": "fast (unter 150m)",
+      "wellness": null,
+      "familie": null,
+      "adults_only": null,
+      "verpflegung": null,
+      "ai_description": null,
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=G%C3%A4stehaus%20Felder%20-%20Lang-Steudler%20KG%20Kleinwalsertal",
+      "datenquelle": {
+        "hotel_daten": "Google Places API",
+        "distanzen": "Google Routes API (echte Gehstrecke) + OSM Overpass (Pisten/Loipen)",
+        "rating": "Google",
+        "stand": "2026-03-19"
+      }
+    },
+    {
+      "name": "Der Berghof",
+      "google_place_id": "ChIJ76qWuQafnEcR5yr8WPUaPto",
+      "ortsteil": "Hirschegg",
+      "typ": "Unterkunft",
+      "adresse": "Walserstraße 222, 6992 Hirschegg, Österreich",
+      "gps": {
+        "lat": 47.347546699999995,
+        "lng": 10.170172299999999
+      },
+      "website": "http://www.der-berghof.at/",
+      "business_status": "OPERATIONAL",
+      "google_rating": 4.4,
+      "google_reviews": 53,
+      "price_level": null,
+      "naechste_bergbahn": {
+        "name": "Heuberg-Arena",
+        "typ": "Sessellift/Schlepplift",
+        "distanz_m": 836,
+        "gehzeit_min": 13
+      },
+      "naechste_loipe": {
+        "name": "Loipe Hirschegg (Sportplatz)",
+        "distanz_m": 611,
+        "gehzeit_min": 9
+      },
+      "naechste_piste": {
+        "name": "Unbenannt",
+        "distanz_m": 101
+      },
+      "naechste_loipe_osm": {
+        "name": "Unbenannt",
+        "distanz_m": 731
+      },
+      "ski_in_out": "fast (unter 150m)",
+      "wellness": null,
+      "familie": null,
+      "adults_only": null,
+      "verpflegung": null,
+      "ai_description": null,
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Der%20Berghof%20Kleinwalsertal",
+      "datenquelle": {
+        "hotel_daten": "Google Places API",
+        "distanzen": "Google Routes API (echte Gehstrecke) + OSM Overpass (Pisten/Loipen)",
+        "rating": "Google",
+        "stand": "2026-03-19"
+      }
+    },
+    {
+      "name": "Gasthof Hirsch",
+      "google_place_id": "ChIJL2inee2fnEcR-fPLZ9173HY",
+      "ortsteil": "Hirschegg",
+      "typ": "Gasthof",
+      "adresse": "Dürenbodenstraße 5, 6992 Hirschegg, Österreich",
+      "gps": {
+        "lat": 47.341941899999995,
+        "lng": 10.1689992
+      },
+      "website": "",
+      "business_status": "OPERATIONAL",
+      "google_rating": 4.7,
+      "google_reviews": 34,
+      "price_level": null,
+      "naechste_bergbahn": {
+        "name": "Heuberg-Arena",
+        "typ": "Sessellift/Schlepplift",
+        "distanz_m": 430,
+        "gehzeit_min": 7
+      },
+      "naechste_loipe": {
+        "name": "Loipe Hirschegg (Sportplatz)",
+        "distanz_m": 350,
+        "gehzeit_min": 5
+      },
+      "naechste_piste": {
+        "name": "Unbenannt",
+        "distanz_m": 184
+      },
+      "naechste_loipe_osm": {
+        "name": "Unbenannt",
+        "distanz_m": 1322
+      },
+      "ski_in_out": "nein",
+      "wellness": null,
+      "familie": null,
+      "adults_only": null,
+      "verpflegung": null,
+      "ai_description": null,
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Gasthof%20Hirsch%20Kleinwalsertal",
+      "datenquelle": {
+        "hotel_daten": "Google Places API",
+        "distanzen": "Google Routes API (echte Gehstrecke) + OSM Overpass (Pisten/Loipen)",
+        "rating": "Google",
+        "stand": "2026-03-19"
+      }
+    },
+    {
+      "name": "Kinderhotel Alphotel",
+      "google_place_id": "ChIJvwFU_AifnEcROi9BVRG16QY",
+      "ortsteil": "Hirschegg",
+      "typ": "Hotel",
+      "adresse": "Schlößleweg 6, 6992 Hirschegg, Österreich",
+      "gps": {
+        "lat": 47.339801,
+        "lng": 10.1656847
+      },
+      "website": "http://www.alphotel.at/",
+      "business_status": "OPERATIONAL",
+      "google_rating": 4.7,
+      "google_reviews": 304,
+      "price_level": null,
+      "naechste_bergbahn": {
+        "name": "Heuberg-Arena",
+        "typ": "Sessellift/Schlepplift",
+        "distanz_m": 499,
+        "gehzeit_min": 7
+      },
+      "naechste_loipe": {
+        "name": "Loipe Hirschegg (Sportplatz)",
+        "distanz_m": 763,
+        "gehzeit_min": 10
+      },
+      "naechste_piste": {
+        "name": "Unbenannt",
+        "distanz_m": 89
+      },
+      "naechste_loipe_osm": {
+        "name": "Unbenannt",
+        "distanz_m": 1028
+      },
+      "ski_in_out": "fast (unter 150m)",
+      "wellness": null,
+      "familie": null,
+      "adults_only": null,
+      "verpflegung": null,
+      "ai_description": null,
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Kinderhotel%20Alphotel%20Kleinwalsertal",
+      "datenquelle": {
+        "hotel_daten": "Google Places API",
+        "distanzen": "Google Routes API (echte Gehstrecke) + OSM Overpass (Pisten/Loipen)",
+        "rating": "Google",
+        "stand": "2026-03-19"
+      }
+    },
+    {
+      "name": "Hotel Tradizio",
+      "google_place_id": "ChIJDUPxa52fnEcRUPfCX_WcyKk",
+      "ortsteil": "Mittelberg",
+      "typ": "Hotel",
+      "adresse": "Walserstraße 384, 6993 Mittelberg, Österreich",
+      "gps": {
+        "lat": 47.324579,
+        "lng": 10.155104000000001
+      },
+      "website": "http://www.tradizio.at/",
+      "business_status": "OPERATIONAL",
+      "google_rating": 4.6,
+      "google_reviews": 524,
+      "price_level": null,
+      "naechste_bergbahn": {
+        "name": "Walmendingerhorn-Bahn",
+        "typ": "Gondelbahn",
+        "distanz_m": 330,
+        "gehzeit_min": 4
+      },
+      "naechste_loipe": {
+        "name": "Loipe Mittelberg (Waeldele)",
+        "distanz_m": 1147,
+        "gehzeit_min": 24
+      },
+      "naechste_piste": {
+        "name": "Skiweg Mittelberg Zaferna",
+        "distanz_m": 136
+      },
+      "naechste_loipe_osm": {
+        "name": "Unbenannt",
+        "distanz_m": 299
+      },
+      "ski_in_out": "fast (unter 150m)",
+      "wellness": null,
+      "familie": null,
+      "adults_only": null,
+      "verpflegung": null,
+      "ai_description": null,
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Hotel%20Tradizio%20Kleinwalsertal",
+      "datenquelle": {
+        "hotel_daten": "Google Places API",
+        "distanzen": "Google Routes API (echte Gehstrecke) + OSM Overpass (Pisten/Loipen)",
+        "rating": "Google",
+        "stand": "2026-03-19"
+      }
+    },
+    {
+      "name": "IFA Alpenhof Wildental",
+      "google_place_id": "ChIJnX78zn4bbUcRpNLv-imtkpE",
+      "ortsteil": "Mittelberg",
+      "typ": "Unterkunft",
+      "adresse": "Höfle 8, 6993 Mittelberg, Österreich",
+      "gps": {
+        "lat": 47.3276263,
+        "lng": 10.1684146
+      },
+      "website": "https://ifahotels.com/ifa-alpenhof-wildental",
+      "business_status": "OPERATIONAL",
+      "google_rating": 4.5,
+      "google_reviews": 265,
+      "price_level": null,
+      "naechste_bergbahn": {
+        "name": "Walmendingerhorn-Bahn",
+        "typ": "Gondelbahn",
+        "distanz_m": 1737,
+        "gehzeit_min": 29
+      },
+      "naechste_loipe": {
+        "name": "Loipe Hirschegg (Sportplatz)",
+        "distanz_m": 2146,
+        "gehzeit_min": 31
+      },
+      "naechste_piste": {
+        "name": "Waldpiste",
+        "distanz_m": 56
+      },
+      "naechste_loipe_osm": {
+        "name": "Unbenannt",
+        "distanz_m": 429
+      },
+      "ski_in_out": "fast (unter 150m)",
+      "wellness": null,
+      "familie": null,
+      "adults_only": null,
+      "verpflegung": null,
+      "ai_description": null,
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=IFA%20Alpenhof%20Wildental%20Kleinwalsertal",
+      "datenquelle": {
+        "hotel_daten": "Google Places API",
+        "distanzen": "Google Routes API (echte Gehstrecke) + OSM Overpass (Pisten/Loipen)",
+        "rating": "Google",
+        "stand": "2026-03-19"
+      }
+    },
+    {
+      "name": "Alpenhotel Widderstein",
+      "google_place_id": "ChIJE3eBXhmgnEcRIIXKXgjBB_8",
+      "ortsteil": "Mittelberg",
+      "typ": "Hotel",
+      "adresse": "Baad 7, 6993 Mittelberg, Österreich",
+      "gps": {
+        "lat": 47.3102035,
+        "lng": 10.120520500000001
+      },
+      "website": "http://www.alpenhotel-widderstein.eu/",
+      "business_status": "OPERATIONAL",
+      "google_rating": 4.4,
+      "google_reviews": 323,
+      "price_level": null,
+      "naechste_bergbahn": {
+        "name": "Walmendingerhorn-Bahn",
+        "typ": "Gondelbahn",
+        "distanz_m": 3388,
+        "gehzeit_min": 46
+      },
+      "naechste_loipe": {
+        "name": "Loipe Baad (Baergunttal)",
+        "distanz_m": 1596,
+        "gehzeit_min": 19
+      },
+      "naechste_piste": {
+        "name": "Talabfahrt Walmendingerhorn",
+        "distanz_m": 1091
+      },
+      "naechste_loipe_osm": {
+        "name": "Unbenannt",
+        "distanz_m": 54
+      },
+      "ski_in_out": "nein",
+      "wellness": null,
+      "familie": null,
+      "adults_only": null,
+      "verpflegung": null,
+      "ai_description": null,
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Alpenhotel%20Widderstein%20Kleinwalsertal",
+      "datenquelle": {
+        "hotel_daten": "Google Places API",
+        "distanzen": "Google Routes API (echte Gehstrecke) + OSM Overpass (Pisten/Loipen)",
+        "rating": "Google",
+        "stand": "2026-03-19"
+      }
+    },
+    {
+      "name": "SUITEHOTEL Kleinwalsertal",
+      "google_place_id": "ChIJo2DHogGfnEcRSViUXRTPg2Q",
+      "ortsteil": "Hirschegg",
+      "typ": "Hotel",
+      "adresse": "Oberseitestraße 23, 6992 Hirschegg, Österreich",
+      "gps": {
+        "lat": 47.349444399999996,
+        "lng": 10.17
+      },
+      "website": "http://www.suitehotel-kleinwalsertal.com/",
+      "business_status": "OPERATIONAL",
+      "google_rating": 4.2,
+      "google_reviews": 104,
+      "price_level": null,
+      "naechste_bergbahn": {
+        "name": "Heuberg-Arena",
+        "typ": "Sessellift/Schlepplift",
+        "distanz_m": 1016,
+        "gehzeit_min": 15
+      },
+      "naechste_loipe": {
+        "name": "Loipe Hirschegg (Sportplatz)",
+        "distanz_m": 944,
+        "gehzeit_min": 13
+      },
+      "naechste_piste": {
+        "name": "Hubertus-Piste",
+        "distanz_m": 86
+      },
+      "naechste_loipe_osm": {
+        "name": "Unbenannt",
+        "distanz_m": 520
+      },
+      "ski_in_out": "fast (unter 150m)",
+      "wellness": null,
+      "familie": null,
+      "adults_only": null,
+      "verpflegung": null,
+      "ai_description": null,
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=SUITEHOTEL%20Kleinwalsertal%20Kleinwalsertal",
+      "datenquelle": {
+        "hotel_daten": "Google Places API",
+        "distanzen": "Google Routes API (echte Gehstrecke) + OSM Overpass (Pisten/Loipen)",
+        "rating": "Google",
+        "stand": "2026-03-19"
+      }
+    },
+    {
+      "name": "alpen select apartments**** Kleinwalsertal",
+      "google_place_id": "ChIJO-Ozcp2fnEcR04Q5sMXHriY",
+      "ortsteil": "Mittelberg",
+      "typ": "Ferienwohnung",
+      "adresse": "Walserstraße 382a, 6993 Mittelberg, Österreich",
+      "gps": {
+        "lat": 47.3249778,
+        "lng": 10.155048299999999
+      },
+      "website": "https://www.apartmentskleinwalsertal.at/?utm_source=google%20places&utm_medium=organic",
+      "business_status": "OPERATIONAL",
+      "google_rating": 4.8,
+      "google_reviews": 106,
+      "price_level": null,
+      "naechste_bergbahn": {
+        "name": "Walmendingerhorn-Bahn",
+        "typ": "Gondelbahn",
+        "distanz_m": 417,
+        "gehzeit_min": 5
+      },
+      "naechste_loipe": {
+        "name": "Loipe Mittelberg (Waeldele)",
+        "distanz_m": 1146,
+        "gehzeit_min": 24
+      },
+      "naechste_piste": {
+        "name": "Skiweg Mittelberg Zaferna",
+        "distanz_m": 92
+      },
+      "naechste_loipe_osm": {
+        "name": "Unbenannt",
+        "distanz_m": 331
+      },
+      "ski_in_out": "fast (unter 150m)",
+      "wellness": null,
+      "familie": null,
+      "adults_only": null,
+      "verpflegung": null,
+      "ai_description": null,
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=alpen%20select%20apartments%2A%2A%2A%2A%20Kleinwalsertal%20Kleinwalsertal",
+      "datenquelle": {
+        "hotel_daten": "Google Places API",
+        "distanzen": "Google Routes API (echte Gehstrecke) + OSM Overpass (Pisten/Loipen)",
+        "rating": "Google",
+        "stand": "2026-03-19"
+      }
+    },
+    {
+      "name": "Naturhotel Lärchenhof",
+      "google_place_id": "ChIJh5EtEZ2fnEcRqziSuf7hS4I",
+      "ortsteil": "Mittelberg",
+      "typ": "Hotel",
+      "adresse": "Schützabühl 2, 6993 Mittelberg, Österreich",
+      "gps": {
+        "lat": 47.324859100000005,
+        "lng": 10.153924499999999
+      },
+      "website": "https://www.naturhotel-laerchenhof.at/",
+      "business_status": "OPERATIONAL",
+      "google_rating": 4.4,
+      "google_reviews": 97,
+      "price_level": null,
+      "naechste_bergbahn": {
+        "name": "Walmendingerhorn-Bahn",
+        "typ": "Gondelbahn",
+        "distanz_m": 423,
+        "gehzeit_min": 5
+      },
+      "naechste_loipe": {
+        "name": "Loipe Mittelberg (Waeldele)",
+        "distanz_m": 1054,
+        "gehzeit_min": 23
+      },
+      "naechste_piste": {
+        "name": "Skiweg Mittelberg Zaferna",
+        "distanz_m": 66
+      },
+      "naechste_loipe_osm": {
+        "name": "Unbenannt",
+        "distanz_m": 387
+      },
+      "ski_in_out": "fast (unter 150m)",
+      "wellness": null,
+      "familie": null,
+      "adults_only": null,
+      "verpflegung": null,
+      "ai_description": null,
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Naturhotel%20L%C3%A4rchenhof%20Kleinwalsertal",
+      "datenquelle": {
+        "hotel_daten": "Google Places API",
+        "distanzen": "Google Routes API (echte Gehstrecke) + OSM Overpass (Pisten/Loipen)",
+        "rating": "Google",
+        "stand": "2026-03-19"
+      }
+    },
+    {
+      "name": "Pension Gatterhof",
+      "google_place_id": "ChIJnxp1nuWenEcRWlDcUV-Nf1E",
+      "ortsteil": "Riezlern",
+      "typ": "Pension",
+      "adresse": "Engelbert-Kessler-Straße 13, 6991 Riezlern, Österreich",
+      "gps": {
+        "lat": 47.3588534,
+        "lng": 10.1844369
+      },
+      "website": "http://www.gatterhof.de/",
+      "business_status": "OPERATIONAL",
+      "google_rating": 4.9,
+      "google_reviews": 114,
+      "price_level": null,
+      "naechste_bergbahn": {
+        "name": "Kanzelwandbahn",
+        "typ": "Gondelbahn",
+        "distanz_m": 594,
+        "gehzeit_min": 8
+      },
+      "naechste_loipe": {
+        "name": "Loipe Riezlern (Steinbogen)",
+        "distanz_m": 699,
+        "gehzeit_min": 9
+      },
+      "naechste_piste": {
+        "name": "Kessler-Hang",
+        "distanz_m": 326
+      },
+      "naechste_loipe_osm": {
+        "name": "Egg Loipe",
+        "distanz_m": 335
+      },
+      "ski_in_out": "nein",
+      "wellness": null,
+      "familie": null,
+      "adults_only": null,
+      "verpflegung": null,
+      "ai_description": null,
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Pension%20Gatterhof%20Kleinwalsertal",
+      "datenquelle": {
+        "hotel_daten": "Google Places API",
+        "distanzen": "Google Routes API (echte Gehstrecke) + OSM Overpass (Pisten/Loipen)",
+        "rating": "Google",
+        "stand": "2026-03-19"
+      }
+    },
+    {
+      "name": "Gästehaus Susanne",
+      "google_place_id": "ChIJOxS9_oCfnEcRPChw7OcKGuc",
+      "ortsteil": "Mittelberg",
+      "typ": "Pension",
+      "adresse": "Birkenwies 5, 6993 Mittelberg, Österreich",
+      "gps": {
+        "lat": 47.3158525,
+        "lng": 10.1499537
+      },
+      "website": "https://www.zimmer-kleinwalsertal.de/",
+      "business_status": "OPERATIONAL",
+      "google_rating": 5,
+      "google_reviews": 44,
+      "price_level": null,
+      "naechste_bergbahn": {
+        "name": "Walmendingerhorn-Bahn",
+        "typ": "Gondelbahn",
+        "distanz_m": 1180,
+        "gehzeit_min": 18
+      },
+      "naechste_loipe": {
+        "name": "Loipe Baad (Baergunttal)",
+        "distanz_m": 1195,
+        "gehzeit_min": 17
+      },
+      "naechste_piste": {
+        "name": "Unbenannt",
+        "distanz_m": 229
+      },
+      "naechste_loipe_osm": {
+        "name": "Unbenannt",
+        "distanz_m": 21
+      },
+      "ski_in_out": "nein",
+      "wellness": null,
+      "familie": null,
+      "adults_only": null,
+      "verpflegung": null,
+      "ai_description": null,
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=G%C3%A4stehaus%20Susanne%20Kleinwalsertal",
+      "datenquelle": {
+        "hotel_daten": "Google Places API",
+        "distanzen": "Google Routes API (echte Gehstrecke) + OSM Overpass (Pisten/Loipen)",
+        "rating": "Google",
+        "stand": "2026-03-19"
+      }
+    },
+    {
+      "name": "Gästehaus Daheim - Familie Matt",
+      "google_place_id": "ChIJW-qB1eeenEcRSjaY6-s8L14",
+      "ortsteil": "Riezlern",
+      "typ": "Pension",
+      "adresse": "Walserstraße 25, 6991 Riezlern, Österreich",
+      "gps": {
+        "lat": 47.3592989,
+        "lng": 10.1911071
+      },
+      "website": "http://www.gaestehaus-daheim.de/",
+      "business_status": "OPERATIONAL",
+      "google_rating": 4.8,
+      "google_reviews": 88,
+      "price_level": null,
+      "naechste_bergbahn": {
+        "name": "Kanzelwandbahn",
+        "typ": "Gondelbahn",
+        "distanz_m": 684,
+        "gehzeit_min": 8
+      },
+      "naechste_loipe": {
+        "name": "Loipe Riezlern (Steinbogen)",
+        "distanz_m": 788,
+        "gehzeit_min": 9
+      },
+      "naechste_piste": {
+        "name": "Schwandlift-Piste",
+        "distanz_m": 144
+      },
+      "naechste_loipe_osm": {
+        "name": "Egg Loipe",
+        "distanz_m": 578
+      },
+      "ski_in_out": "fast (unter 150m)",
+      "wellness": null,
+      "familie": null,
+      "adults_only": null,
+      "verpflegung": null,
+      "ai_description": null,
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=G%C3%A4stehaus%20Daheim%20-%20Familie%20Matt%20Kleinwalsertal",
+      "datenquelle": {
+        "hotel_daten": "Google Places API",
+        "distanzen": "Google Routes API (echte Gehstrecke) + OSM Overpass (Pisten/Loipen)",
+        "rating": "Google",
+        "stand": "2026-03-19"
+      }
+    },
+    {
+      "name": "Gästehaus Sonnenhof (Fam. Birschel)",
+      "google_place_id": "ChIJUfeDHZ6fnEcR7hTKsYUjpCA",
+      "ortsteil": "Mittelberg",
+      "typ": "Pension",
+      "adresse": "Walserstraße 352, 6993 Mittelberg, Österreich",
+      "gps": {
+        "lat": 47.328483,
+        "lng": 10.157847
+      },
+      "website": "http://www.birschel.de/",
+      "business_status": "OPERATIONAL",
+      "google_rating": 4.5,
+      "google_reviews": 57,
+      "price_level": null,
+      "naechste_bergbahn": {
+        "name": "Walmendingerhorn-Bahn",
+        "typ": "Gondelbahn",
+        "distanz_m": 1048,
+        "gehzeit_min": 15
+      },
+      "naechste_loipe": {
+        "name": "Loipe Mittelberg (Waeldele)",
+        "distanz_m": 1897,
+        "gehzeit_min": 36
+      },
+      "naechste_piste": {
+        "name": "Skiweg Heuberg Zaferna",
+        "distanz_m": 185
+      },
+      "naechste_loipe_osm": {
+        "name": "Unbenannt",
+        "distanz_m": 114
+      },
+      "ski_in_out": "nein",
+      "wellness": null,
+      "familie": null,
+      "adults_only": null,
+      "verpflegung": null,
+      "ai_description": null,
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=G%C3%A4stehaus%20Sonnenhof%20%28Fam.%20Birschel%29%20Kleinwalsertal",
+      "datenquelle": {
+        "hotel_daten": "Google Places API",
+        "distanzen": "Google Routes API (echte Gehstrecke) + OSM Overpass (Pisten/Loipen)",
+        "rating": "Google",
+        "stand": "2026-03-19"
+      }
+    },
+    {
+      "name": "Haus Bergidyll - Frau Hildegard Mayer",
+      "google_place_id": "ChIJFyZXtHOfnEcR-bEajfmT4eY",
+      "ortsteil": "Mittelberg",
+      "typ": "Unterkunft",
+      "adresse": "Höfle 11, 6993 Mittelberg, Österreich",
+      "gps": {
+        "lat": 47.32833,
+        "lng": 10.166930299999999
+      },
+      "website": "",
+      "business_status": "OPERATIONAL",
+      "google_rating": 4.6,
+      "google_reviews": 19,
+      "price_level": null,
+      "naechste_bergbahn": {
+        "name": "Walmendingerhorn-Bahn",
+        "typ": "Gondelbahn",
+        "distanz_m": 1583,
+        "gehzeit_min": 27
+      },
+      "naechste_loipe": {
+        "name": "Loipe Hirschegg (Sportplatz)",
+        "distanz_m": 1991,
+        "gehzeit_min": 29
+      },
+      "naechste_piste": {
+        "name": "Wildentalpiste",
+        "distanz_m": 68
+      },
+      "naechste_loipe_osm": {
+        "name": "Unbenannt",
+        "distanz_m": 310
+      },
+      "ski_in_out": "fast (unter 150m)",
+      "wellness": null,
+      "familie": null,
+      "adults_only": null,
+      "verpflegung": null,
+      "ai_description": null,
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Haus%20Bergidyll%20-%20Frau%20Hildegard%20Mayer%20Kleinwalsertal",
+      "datenquelle": {
+        "hotel_daten": "Google Places API",
+        "distanzen": "Google Routes API (echte Gehstrecke) + OSM Overpass (Pisten/Loipen)",
+        "rating": "Google",
+        "stand": "2026-03-19"
+      }
+    },
+    {
+      "name": "Gästehaus Paradies",
+      "google_place_id": "ChIJIW9rXgmfnEcRqSb_fWxgEWM",
+      "ortsteil": "",
+      "typ": "Pension",
+      "adresse": "Tobel 10, 6992, Österreich",
+      "gps": {
+        "lat": 47.337179,
+        "lng": 10.165678999999999
+      },
+      "website": "http://www.gaestehaus-paradies.de/",
+      "business_status": "OPERATIONAL",
+      "google_rating": 4.8,
+      "google_reviews": 25,
+      "price_level": null,
+      "naechste_bergbahn": {
+        "name": "Heuberg-Arena",
+        "typ": "Sessellift/Schlepplift",
+        "distanz_m": 1083,
+        "gehzeit_min": 16
+      },
+      "naechste_loipe": {
+        "name": "Loipe Hirschegg (Sportplatz)",
+        "distanz_m": 1002,
+        "gehzeit_min": 14
+      },
+      "naechste_piste": {
+        "name": "Unbenannt",
+        "distanz_m": 275
+      },
+      "naechste_loipe_osm": {
+        "name": "Unbenannt",
+        "distanz_m": 743
+      },
+      "ski_in_out": "nein",
+      "wellness": null,
+      "familie": null,
+      "adults_only": null,
+      "verpflegung": null,
+      "ai_description": null,
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=G%C3%A4stehaus%20Paradies%20Kleinwalsertal",
+      "datenquelle": {
+        "hotel_daten": "Google Places API",
+        "distanzen": "Google Routes API (echte Gehstrecke) + OSM Overpass (Pisten/Loipen)",
+        "rating": "Google",
+        "stand": "2026-03-19"
+      }
+    },
+    {
+      "name": "DAS KLEEMANNs",
+      "google_place_id": "ChIJ-fFEeIKfnEcR5mziU8fkDdY",
+      "ortsteil": "Mittelberg",
+      "typ": "Unterkunft",
+      "adresse": "Im Hag 4, 6993 Mittelberg, Österreich",
+      "gps": {
+        "lat": 47.320085999999996,
+        "lng": 10.154684999999999
+      },
+      "website": "https://www.kleemanns.at/",
+      "business_status": "OPERATIONAL",
+      "google_rating": 4.9,
+      "google_reviews": 156,
+      "price_level": null,
+      "naechste_bergbahn": {
+        "name": "Walmendingerhorn-Bahn",
+        "typ": "Gondelbahn",
+        "distanz_m": 583,
+        "gehzeit_min": 10
+      },
+      "naechste_loipe": {
+        "name": "Loipe Baad (Baergunttal)",
+        "distanz_m": 1606,
+        "gehzeit_min": 22
+      },
+      "naechste_piste": {
+        "name": "Skiweg Heuberg Zaferna",
+        "distanz_m": 350
+      },
+      "naechste_loipe_osm": {
+        "name": "Unbenannt",
+        "distanz_m": 50
+      },
+      "ski_in_out": "nein",
+      "wellness": null,
+      "familie": null,
+      "adults_only": null,
+      "verpflegung": null,
+      "ai_description": null,
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=DAS%20KLEEMANNs%20Kleinwalsertal",
+      "datenquelle": {
+        "hotel_daten": "Google Places API",
+        "distanzen": "Google Routes API (echte Gehstrecke) + OSM Overpass (Pisten/Loipen)",
+        "rating": "Google",
+        "stand": "2026-03-19"
+      }
+    },
+    {
+      "name": "Pension Kleinwalsertal Privatvermietung",
+      "google_place_id": "ChIJQV6jbDWhnEcROGCsZuDhbs4",
+      "ortsteil": "Mittelberg",
+      "typ": "Pension",
+      "adresse": "Starzelweg 13, 6993 Mittelberg, Österreich",
+      "gps": {
+        "lat": 47.3120536,
+        "lng": 10.116032899999999
+      },
+      "website": "https://pension-kleinwalsertal.de/",
+      "business_status": "OPERATIONAL",
+      "google_rating": 4.6,
+      "google_reviews": 7,
+      "price_level": null,
+      "naechste_bergbahn": {
+        "name": "Walmendingerhorn-Bahn",
+        "typ": "Gondelbahn",
+        "distanz_m": 3487,
+        "gehzeit_min": 52
+      },
+      "naechste_loipe": {
+        "name": "Loipe Baad (Baergunttal)",
+        "distanz_m": 2021,
+        "gehzeit_min": 26
+      },
+      "naechste_piste": {
+        "name": "Talabfahrt Walmendingerhorn",
+        "distanz_m": 1078
+      },
+      "naechste_loipe_osm": {
+        "name": "Unbenannt",
+        "distanz_m": 201
+      },
+      "ski_in_out": "nein",
+      "wellness": null,
+      "familie": null,
+      "adults_only": null,
+      "verpflegung": null,
+      "ai_description": null,
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Pension%20Kleinwalsertal%20Privatvermietung%20Kleinwalsertal",
+      "datenquelle": {
+        "hotel_daten": "Google Places API",
+        "distanzen": "Google Routes API (echte Gehstrecke) + OSM Overpass (Pisten/Loipen)",
+        "rating": "Google",
+        "stand": "2026-03-19"
+      }
+    },
+    {
+      "name": "Landhaus Bromm",
+      "google_place_id": "ChIJ8ZFlcvqenEcRInRJv9OTSxk",
+      "ortsteil": "Riezlern",
+      "typ": "Unterkunft",
+      "adresse": "Eggstraße 27a, 6991 Riezlern, Österreich",
+      "gps": {
+        "lat": 47.360048,
+        "lng": 10.177251
+      },
+      "website": "http://www.ferienwohnung-kleinwalsertal.at/",
+      "business_status": "OPERATIONAL",
+      "google_rating": 4.8,
+      "google_reviews": 152,
+      "price_level": null,
+      "naechste_bergbahn": {
+        "name": "Parsenn-Schlepplift",
+        "typ": "Schlepplift",
+        "distanz_m": 580,
+        "gehzeit_min": 7
+      },
+      "naechste_loipe": {
+        "name": "Loipe Riezlern (Steinbogen)",
+        "distanz_m": 1023,
+        "gehzeit_min": 13
+      },
+      "naechste_piste": {
+        "name": "Parsenn-Abfahrt",
+        "distanz_m": 550
+      },
+      "naechste_loipe_osm": {
+        "name": "Egg Loipe",
+        "distanz_m": 43
+      },
+      "ski_in_out": "nein",
+      "wellness": null,
+      "familie": null,
+      "adults_only": null,
+      "verpflegung": null,
+      "ai_description": null,
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Landhaus%20Bromm%20Kleinwalsertal",
+      "datenquelle": {
+        "hotel_daten": "Google Places API",
+        "distanzen": "Google Routes API (echte Gehstrecke) + OSM Overpass (Pisten/Loipen)",
+        "rating": "Google",
+        "stand": "2026-03-19"
+      }
+    },
+    {
+      "name": "Walmendinger Haus",
+      "google_place_id": "ChIJqQGZ9lSenEcRPQghsD6s44c",
+      "ortsteil": "Hirschegg",
+      "typ": "Unterkunft",
+      "adresse": "Wäldelestraße 9, 6992 Hirschegg, Österreich",
+      "gps": {
+        "lat": 47.354272099999996,
+        "lng": 10.1627881
+      },
+      "website": "http://www.kleinwalsertal-pension.de/",
+      "business_status": "OPERATIONAL",
+      "google_rating": 4.3,
+      "google_reviews": 56,
+      "price_level": null,
+      "naechste_bergbahn": {
+        "name": "Parsenn-Schlepplift",
+        "typ": "Schlepplift",
+        "distanz_m": 1220,
+        "gehzeit_min": 16
+      },
+      "naechste_loipe": {
+        "name": "Loipe Riezlern (Steinbogen)",
+        "distanz_m": 1734,
+        "gehzeit_min": 24
+      },
+      "naechste_piste": {
+        "name": "Parsenn-Abfahrt",
+        "distanz_m": 464
+      },
+      "naechste_loipe_osm": {
+        "name": "Unbenannt",
+        "distanz_m": 56
+      },
+      "ski_in_out": "nein",
+      "wellness": null,
+      "familie": null,
+      "adults_only": null,
+      "verpflegung": null,
+      "ai_description": null,
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Walmendinger%20Haus%20Kleinwalsertal",
+      "datenquelle": {
+        "hotel_daten": "Google Places API",
+        "distanzen": "Google Routes API (echte Gehstrecke) + OSM Overpass (Pisten/Loipen)",
+        "rating": "Google",
+        "stand": "2026-03-19"
+      }
+    },
+    {
+      "name": "Haus Annelies - Ferienwohnungen & Zimmer",
+      "google_place_id": "ChIJk2KpFvyenEcR1mdVTxBYkTQ",
+      "ortsteil": "Riezlern",
+      "typ": "Ferienwohnung",
+      "adresse": "Sonnenhalde 1, 6991 Riezlern, Österreich",
+      "gps": {
+        "lat": 47.354968799999995,
+        "lng": 10.1747069
+      },
+      "website": "https://hausannelies-kwt.at/",
+      "business_status": "OPERATIONAL",
+      "google_rating": 4.9,
+      "google_reviews": 33,
+      "price_level": null,
+      "naechste_bergbahn": {
+        "name": "Parsenn-Schlepplift",
+        "typ": "Schlepplift",
+        "distanz_m": 379,
+        "gehzeit_min": 4
+      },
+      "naechste_loipe": {
+        "name": "Loipe Riezlern (Steinbogen)",
+        "distanz_m": 894,
+        "gehzeit_min": 12
+      },
+      "naechste_piste": {
+        "name": "Parsenn-Abfahrt",
+        "distanz_m": 119
+      },
+      "naechste_loipe_osm": {
+        "name": "Unbenannt",
+        "distanz_m": 217
+      },
+      "ski_in_out": "fast (unter 150m)",
+      "wellness": null,
+      "familie": null,
+      "adults_only": null,
+      "verpflegung": null,
+      "ai_description": null,
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Haus%20Annelies%20-%20Ferienwohnungen%20%26%20Zimmer%20Kleinwalsertal",
+      "datenquelle": {
+        "hotel_daten": "Google Places API",
+        "distanzen": "Google Routes API (echte Gehstrecke) + OSM Overpass (Pisten/Loipen)",
+        "rating": "Google",
+        "stand": "2026-03-19"
+      }
+    },
+    {
+      "name": "Gästehaus Brugger",
+      "google_place_id": "ChIJm_dbN-SenEcReA4Bryb-c_s",
+      "ortsteil": "Riezlern",
+      "typ": "Pension",
+      "adresse": "Walserstraße 69, 6991 Riezlern, Österreich",
+      "gps": {
+        "lat": 47.3568121,
+        "lng": 10.185549799999999
+      },
+      "website": "http://www.gaestehaus-brugger.de/",
+      "business_status": "OPERATIONAL",
+      "google_rating": 4.6,
+      "google_reviews": 26,
+      "price_level": null,
+      "naechste_bergbahn": {
+        "name": "Kanzelwandbahn",
+        "typ": "Gondelbahn",
+        "distanz_m": 152,
+        "gehzeit_min": 1
+      },
+      "naechste_loipe": {
+        "name": "Loipe Riezlern (Steinbogen)",
+        "distanz_m": 257,
+        "gehzeit_min": 3
+      },
+      "naechste_piste": {
+        "name": "Kessler-Hang",
+        "distanz_m": 97
+      },
+      "naechste_loipe_osm": {
+        "name": "Egg Loipe",
+        "distanz_m": 574
+      },
+      "ski_in_out": "fast (unter 150m)",
+      "wellness": null,
+      "familie": null,
+      "adults_only": null,
+      "verpflegung": null,
+      "ai_description": null,
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=G%C3%A4stehaus%20Brugger%20Kleinwalsertal",
+      "datenquelle": {
+        "hotel_daten": "Google Places API",
+        "distanzen": "Google Routes API (echte Gehstrecke) + OSM Overpass (Pisten/Loipen)",
+        "rating": "Google",
+        "stand": "2026-03-19"
+      }
+    },
+    {
+      "name": "Gästehaus Schönblick - Familie Jochum",
+      "google_place_id": "ChIJG6p346mfnEcR7jPW73zR8E8",
+      "ortsteil": "Hirschegg",
+      "typ": "Pension",
+      "adresse": "Am Berg 25, 6992 Hirschegg, Österreich",
+      "gps": {
+        "lat": 47.346246699999995,
+        "lng": 10.163959199999999
+      },
+      "website": "",
+      "business_status": "OPERATIONAL",
+      "google_rating": 4.9,
+      "google_reviews": 8,
+      "price_level": null,
+      "naechste_bergbahn": {
+        "name": "Heuberg-Arena",
+        "typ": "Sessellift/Schlepplift",
+        "distanz_m": 531,
+        "gehzeit_min": 8
+      },
+      "naechste_loipe": {
+        "name": "Loipe Hirschegg (Sportplatz)",
+        "distanz_m": 908,
+        "gehzeit_min": 15
+      },
+      "naechste_piste": {
+        "name": "Skiweg Parsenn Heuberg",
+        "distanz_m": 97
+      },
+      "naechste_loipe_osm": {
+        "name": "Unbenannt",
+        "distanz_m": 810
+      },
+      "ski_in_out": "fast (unter 150m)",
+      "wellness": null,
+      "familie": null,
+      "adults_only": null,
+      "verpflegung": null,
+      "ai_description": null,
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=G%C3%A4stehaus%20Sch%C3%B6nblick%20-%20Familie%20Jochum%20Kleinwalsertal",
+      "datenquelle": {
+        "hotel_daten": "Google Places API",
+        "distanzen": "Google Routes API (echte Gehstrecke) + OSM Overpass (Pisten/Loipen)",
+        "rating": "Google",
+        "stand": "2026-03-19"
+      }
+    },
+    {
+      "name": "Gästehaus Mathies",
+      "google_place_id": "ChIJLSGHeXafnEcR7qS1EdXqmGw",
+      "ortsteil": "Mittelberg",
+      "typ": "Pension",
+      "adresse": "Höflerweg 6, 6993 Mittelberg, Österreich",
+      "gps": {
+        "lat": 47.3273197,
+        "lng": 10.1598322
+      },
+      "website": "http://www.gaestehaus-mathies.at/",
+      "business_status": "OPERATIONAL",
+      "google_rating": 4.8,
+      "google_reviews": 113,
+      "price_level": null,
+      "naechste_bergbahn": {
+        "name": "Walmendingerhorn-Bahn",
+        "typ": "Gondelbahn",
+        "distanz_m": 876,
+        "gehzeit_min": 12
+      },
+      "naechste_loipe": {
+        "name": "Loipe Mittelberg (Waeldele)",
+        "distanz_m": 1726,
+        "gehzeit_min": 34
+      },
+      "naechste_piste": {
+        "name": "Skiweg Mittelberg Zaferna",
+        "distanz_m": 321
+      },
+      "naechste_loipe_osm": {
+        "name": "Unbenannt",
+        "distanz_m": 69
+      },
+      "ski_in_out": "nein",
+      "wellness": null,
+      "familie": null,
+      "adults_only": null,
+      "verpflegung": null,
+      "ai_description": null,
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=G%C3%A4stehaus%20Mathies%20Kleinwalsertal",
+      "datenquelle": {
+        "hotel_daten": "Google Places API",
+        "distanzen": "Google Routes API (echte Gehstrecke) + OSM Overpass (Pisten/Loipen)",
+        "rating": "Google",
+        "stand": "2026-03-19"
+      }
+    },
+    {
+      "name": "Gästehaus Amely, Kathrin Porep",
+      "google_place_id": "ChIJBQ-dF-aenEcRUF2_bivgvek",
+      "ortsteil": "Riezlern",
+      "typ": "Pension",
+      "adresse": "Walserstraße 38, 6991 Riezlern, Österreich",
+      "gps": {
+        "lat": 47.3589086,
+        "lng": 10.1890708
+      },
+      "website": "",
+      "business_status": "OPERATIONAL",
+      "google_rating": 4.9,
+      "google_reviews": 111,
+      "price_level": null,
+      "naechste_bergbahn": {
+        "name": "Kanzelwandbahn",
+        "typ": "Gondelbahn",
+        "distanz_m": 515,
+        "gehzeit_min": 6
+      },
+      "naechste_loipe": {
+        "name": "Loipe Riezlern (Steinbogen)",
+        "distanz_m": 620,
+        "gehzeit_min": 7
+      },
+      "naechste_piste": {
+        "name": "Schwandlift-Piste",
+        "distanz_m": 152
+      },
+      "naechste_loipe_osm": {
+        "name": "Egg Loipe",
+        "distanz_m": 518
+      },
+      "ski_in_out": "nein",
+      "wellness": null,
+      "familie": null,
+      "adults_only": null,
+      "verpflegung": null,
+      "ai_description": null,
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=G%C3%A4stehaus%20Amely%2C%20Kathrin%20Porep%20Kleinwalsertal",
+      "datenquelle": {
+        "hotel_daten": "Google Places API",
+        "distanzen": "Google Routes API (echte Gehstrecke) + OSM Overpass (Pisten/Loipen)",
+        "rating": "Google",
+        "stand": "2026-03-19"
+      }
+    },
+    {
+      "name": "Haus Weissert",
+      "google_place_id": "ChIJmRwIT_CenEcRjEEdclILjdo",
+      "ortsteil": "Riezlern",
+      "typ": "Unterkunft",
+      "adresse": "Eggstraße 46, 6991 Riezlern, Österreich",
+      "gps": {
+        "lat": 47.362392799999995,
+        "lng": 10.180264500000002
+      },
+      "website": "http://haus-weissert.at/",
+      "business_status": "OPERATIONAL",
+      "google_rating": 4.6,
+      "google_reviews": 38,
+      "price_level": null,
+      "naechste_bergbahn": {
+        "name": "Parsenn-Schlepplift",
+        "typ": "Schlepplift",
+        "distanz_m": 923,
+        "gehzeit_min": 12
+      },
+      "naechste_loipe": {
+        "name": "Loipe Riezlern (Steinbogen)",
+        "distanz_m": 1366,
+        "gehzeit_min": 18
+      },
+      "naechste_piste": {
+        "name": "Unbenannt",
+        "distanz_m": 806
+      },
+      "naechste_loipe_osm": {
+        "name": "Egg Loipe",
+        "distanz_m": 83
+      },
+      "ski_in_out": "nein",
+      "wellness": null,
+      "familie": null,
+      "adults_only": null,
+      "verpflegung": null,
+      "ai_description": null,
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Haus%20Weissert%20Kleinwalsertal",
+      "datenquelle": {
+        "hotel_daten": "Google Places API",
+        "distanzen": "Google Routes API (echte Gehstrecke) + OSM Overpass (Pisten/Loipen)",
+        "rating": "Google",
+        "stand": "2026-03-19"
+      }
+    },
+    {
+      "name": "Bergblick - Der Gasthof",
+      "google_place_id": "ChIJr6mfZJOenEcRx99GpxeBtxg",
+      "ortsteil": "Riezlern",
+      "typ": "Gasthof",
+      "adresse": "Außerschwende 36, 6991 Riezlern, Österreich",
+      "gps": {
+        "lat": 47.3711728,
+        "lng": 10.191764299999999
+      },
+      "website": "http://www.gasthof-bergblick.at/",
+      "business_status": "OPERATIONAL",
+      "google_rating": 4.7,
+      "google_reviews": 375,
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "naechste_bergbahn": {
+        "name": "Kanzelwandbahn",
+        "typ": "Gondelbahn",
+        "distanz_m": 2982,
+        "gehzeit_min": 41
+      },
+      "naechste_loipe": {
+        "name": "Loipe Riezlern (Steinbogen)",
+        "distanz_m": 3086,
+        "gehzeit_min": 42
+      },
+      "naechste_piste": {
+        "name": "Schwandlift-Piste",
+        "distanz_m": 1464
+      },
+      "naechste_loipe_osm": {
+        "name": "Unbenannt",
+        "distanz_m": 58
+      },
+      "ski_in_out": "nein",
+      "wellness": null,
+      "familie": null,
+      "adults_only": null,
+      "verpflegung": null,
+      "ai_description": null,
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Bergblick%20-%20Der%20Gasthof%20Kleinwalsertal",
+      "datenquelle": {
+        "hotel_daten": "Google Places API",
+        "distanzen": "Google Routes API (echte Gehstrecke) + OSM Overpass (Pisten/Loipen)",
+        "rating": "Google",
+        "stand": "2026-03-19"
+      }
+    },
+    {
+      "name": "Gasthof Sonnwinkl",
+      "google_place_id": "ChIJr1a0iYKfnEcR6wKHMvzlyAI",
+      "ortsteil": "Mittelberg",
+      "typ": "Gasthof",
+      "adresse": "Bödmerstraße 32, 6993 Mittelberg, Österreich",
+      "gps": {
+        "lat": 47.3207759,
+        "lng": 10.1542034
+      },
+      "website": "http://www.sonnwinkl.at/",
+      "business_status": "OPERATIONAL",
+      "google_rating": 4.8,
+      "google_reviews": 292,
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "naechste_bergbahn": {
+        "name": "Walmendingerhorn-Bahn",
+        "typ": "Gondelbahn",
+        "distanz_m": 495,
+        "gehzeit_min": 8
+      },
+      "naechste_loipe": {
+        "name": "Loipe Baad (Baergunttal)",
+        "distanz_m": 1599,
+        "gehzeit_min": 22
+      },
+      "naechste_piste": {
+        "name": "Skiweg Heuberg Zaferna",
+        "distanz_m": 265
+      },
+      "naechste_loipe_osm": {
+        "name": "Unbenannt",
+        "distanz_m": 135
+      },
+      "ski_in_out": "nein",
+      "wellness": null,
+      "familie": null,
+      "adults_only": null,
+      "verpflegung": null,
+      "ai_description": null,
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Gasthof%20Sonnwinkl%20Kleinwalsertal",
+      "datenquelle": {
+        "hotel_daten": "Google Places API",
+        "distanzen": "Google Routes API (echte Gehstrecke) + OSM Overpass (Pisten/Loipen)",
+        "rating": "Google",
+        "stand": "2026-03-19"
+      }
+    },
+    {
+      "name": "Wirtshaus Hoheneck",
+      "google_place_id": "ChIJcQKkPHafnEcR3CoqF8UEF0c",
+      "ortsteil": "Mittelberg",
+      "typ": "Unterkunft",
+      "adresse": "Walserstraße 365, 6993 Mittelberg, Österreich",
+      "gps": {
+        "lat": 47.326200799999995,
+        "lng": 10.1578665
+      },
+      "website": "http://www.hoheneck.at/",
+      "business_status": "OPERATIONAL",
+      "google_rating": 4.6,
+      "google_reviews": 910,
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "naechste_bergbahn": {
+        "name": "Walmendingerhorn-Bahn",
+        "typ": "Gondelbahn",
+        "distanz_m": 592,
+        "gehzeit_min": 8
+      },
+      "naechste_loipe": {
+        "name": "Loipe Mittelberg (Waeldele)",
+        "distanz_m": 1441,
+        "gehzeit_min": 29
+      },
+      "naechste_piste": {
+        "name": "Skiweg Mittelberg Zaferna",
+        "distanz_m": 142
+      },
+      "naechste_loipe_osm": {
+        "name": "Unbenannt",
+        "distanz_m": 242
+      },
+      "ski_in_out": "fast (unter 150m)",
+      "wellness": null,
+      "familie": null,
+      "adults_only": null,
+      "verpflegung": null,
+      "ai_description": null,
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Wirtshaus%20Hoheneck%20Kleinwalsertal",
+      "datenquelle": {
+        "hotel_daten": "Google Places API",
+        "distanzen": "Google Routes API (echte Gehstrecke) + OSM Overpass (Pisten/Loipen)",
+        "rating": "Google",
+        "stand": "2026-03-19"
+      }
+    },
+    {
+      "name": "Alpengasthof Hörnlepass – Hotel & Restaurant",
+      "google_place_id": "ChIJdaUp7YOenEcRCNGKk7fMDd4",
+      "ortsteil": "Riezlern",
+      "typ": "Gasthof",
+      "adresse": "Außerwald 1, 6991 Riezlern, Österreich",
+      "gps": {
+        "lat": 47.385077599999995,
+        "lng": 10.186102300000002
+      },
+      "website": "https://www.hoernlepass.at/",
+      "business_status": "OPERATIONAL",
+      "google_rating": 4.8,
+      "google_reviews": 609,
+      "price_level": null,
+      "naechste_bergbahn": {
+        "name": "Kanzelwandbahn",
+        "typ": "Gondelbahn",
+        "distanz_m": 4778,
+        "gehzeit_min": 64
+      },
+      "naechste_loipe": {
+        "name": "Loipe Riezlern (Steinbogen)",
+        "distanz_m": 4883,
+        "gehzeit_min": 65
+      },
+      "naechste_piste": {
+        "name": "Schwandlift-Piste",
+        "distanz_m": 3029
+      },
+      "naechste_loipe_osm": {
+        "name": "Unbenannt",
+        "distanz_m": 1222
+      },
+      "ski_in_out": "nein",
+      "wellness": null,
+      "familie": null,
+      "adults_only": null,
+      "verpflegung": null,
+      "ai_description": null,
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Alpengasthof%20H%C3%B6rnlepass%20%E2%80%93%20Hotel%20%26%20Restaurant%20Kleinwalsertal",
+      "datenquelle": {
+        "hotel_daten": "Google Places API",
+        "distanzen": "Google Routes API (echte Gehstrecke) + OSM Overpass (Pisten/Loipen)",
+        "rating": "Google",
+        "stand": "2026-03-19"
+      }
+    },
+    {
+      "name": "Hotel Garni Ingeborg",
+      "google_place_id": "ChIJRTlCgHifnEcRIgNz4iowzVQ",
+      "ortsteil": "Mittelberg",
+      "typ": "Garni",
+      "adresse": "Im Hag 3, 6993 Mittelberg, Österreich",
+      "gps": {
+        "lat": 47.320508000000004,
+        "lng": 10.155043
+      },
+      "website": "http://www.hotel-garni-ingeborg.de/",
+      "business_status": "OPERATIONAL",
+      "google_rating": 4.6,
+      "google_reviews": 70,
+      "price_level": null,
+      "naechste_bergbahn": {
+        "name": "Walmendingerhorn-Bahn",
+        "typ": "Gondelbahn",
+        "distanz_m": 625,
+        "gehzeit_min": 11
+      },
+      "naechste_loipe": {
+        "name": "Loipe Baad (Baergunttal)",
+        "distanz_m": 1648,
+        "gehzeit_min": 23
+      },
+      "naechste_piste": {
+        "name": "Skiweg Heuberg Zaferna",
+        "distanz_m": 326
+      },
+      "naechste_loipe_osm": {
+        "name": "Unbenannt",
+        "distanz_m": 83
+      },
+      "ski_in_out": "nein",
+      "wellness": null,
+      "familie": null,
+      "adults_only": null,
+      "verpflegung": null,
+      "ai_description": null,
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Hotel%20Garni%20Ingeborg%20Kleinwalsertal",
+      "datenquelle": {
+        "hotel_daten": "Google Places API",
+        "distanzen": "Google Routes API (echte Gehstrecke) + OSM Overpass (Pisten/Loipen)",
+        "rating": "Google",
+        "stand": "2026-03-19"
+      }
+    }
+  ]
+}
