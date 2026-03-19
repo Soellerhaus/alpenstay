@@ -844,10 +844,12 @@
         name,
         ortsteil: norm(raw.ortsteil),
         typ: norm(raw.typ),
+        sterne: safeNum(raw.sterne),
         website: norm(raw.website),
         booking_url: norm(raw.booking_url || ""),
         google_rating: safeNum(raw.google_rating),
         google_reviews: safeNum(raw.google_reviews),
+        google_editorial: norm(raw.google_editorial || ""),
         ski_in_out: norm(raw.ski_in_out),
         ai_description: norm(raw.ai_description || ""),
         adresse: norm(raw.adresse),
@@ -867,15 +869,30 @@
         loipe_name: loipe ? loipe.name : "",
         loipe_distance_m: loipe ? loipe.distanz_m : null,
 
-        wellness: norm(raw.wellness || ""),
-        familie: norm(raw.familie || ""),
-        adults_only: norm(raw.adults_only || ""),
+        // v3 enrichment fields
+        wellness: raw.wellness === true || raw.wellness === "true",
+        sauna: raw.sauna === true || raw.sauna === "true",
+        pool: raw.pool === true || raw.pool === "true",
+        familie: raw.familie === true || raw.familie === "true",
+        adults_only: raw.adults_only === true || raw.adults_only === "true",
+        verpflegung: norm(raw.verpflegung || ""),
+        haustiere: raw.haustiere,
+        parkplatz: raw.parkplatz,
+        preis_kategorie: norm(raw.preis_kategorie || ""),
+        besonderheiten: norm(raw.besonderheiten || ""),
+        review_highlights: norm(raw.review_highlights || ""),
       };
 
       // Build text blob for scoring
       h.textBlob = [h.name, h.ortsteil, h.typ, h.ai_description,
         h.nearest_lift_name, h.loipe_name, h.piste_name,
-        h.ski_in_out, h.wellness, h.familie, h.adults_only].filter(Boolean).join(" ");
+        h.ski_in_out, h.besonderheiten, h.review_highlights,
+        h.verpflegung, h.preis_kategorie,
+        h.wellness ? "wellness spa" : "",
+        h.sauna ? "sauna" : "",
+        h.pool ? "pool" : "",
+        h.familie ? "familie kinder familienhotel" : "",
+        h.adults_only ? "adults only erwachsenenhotel" : ""].filter(Boolean).join(" ");
 
       return h;
     }
@@ -924,7 +941,7 @@
     // FILTERS & SCORING
     // =====================================================================
     const isAdultsOnly = h =>
-      isYes(h.adults_only) ||
+      h.adults_only === true ||
       containsAny(lower(h.textBlob || ""), ["adults only", "nur erwachsene", "erwachsenenhotel"]);
 
     function scoreHotel(h, p) {
@@ -933,7 +950,7 @@
 
       // Party preference
       if (p.party === "family") {
-        if (containsAny(b, ["familie", "kinder", "familienhotel", "spiel", "kids"])) s += 20;
+        if (h.familie === true || containsAny(b, ["familie", "kinder", "familienhotel", "spiel", "kids"])) s += 20;
       } else if (p.party === "adults") {
         if (containsAny(b, ["adults only", "ruhe", "ruhig", "spa", "wellness", "erwachsenenhotel"])) s += 15;
         if (containsAny(b, ["kinder", "familie", "spiel"])) s -= 8;
@@ -966,7 +983,7 @@
       }
 
       // Wellness preference
-      const hasW = containsAny(b, ["wellness", "spa", "sauna", "dampfbad", "pool", "massage"]);
+      const hasW = h.wellness === true || h.sauna === true || h.pool === true || containsAny(b, ["wellness", "spa", "sauna", "dampfbad", "pool", "massage"]);
       if (p.wellness === "yes") {
         if (hasW) s += 18; else s -= 8;
       } else if (p.wellness === "no") {
@@ -1007,7 +1024,7 @@
     const filters = {
       alle: () => HOTELS.slice().sort((a, b) => (b.google_rating || 0) - (a.google_rating || 0)),
       familie: () => HOTELS.filter(h =>
-        containsAny(lower(h.textBlob || ""), ["familie", "kinder", "familienhotel", "spiel", "kids"]) &&
+        (h.familie === true || containsAny(lower(h.textBlob || ""), ["familie", "kinder", "familienhotel", "spiel", "kids"])) &&
         !isAdultsOnly(h)
       ),
       ski: () => HOTELS.filter(h =>
@@ -1022,6 +1039,7 @@
         containsAny(lower(h.textBlob || ""), ["ruhig", "abseits", "randlage", "natur", "still", "talende", "baad"])
       ),
       wellness: () => HOTELS.filter(h =>
+        h.wellness === true || h.sauna === true || h.pool === true ||
         containsAny(lower(h.textBlob || ""), ["wellness", "spa", "sauna", "pool", "massage"])
       ),
     };
@@ -1031,11 +1049,25 @@
     // =====================================================================
     function featureChips(h) {
       const c = [];
+      // Sterne
+      if (h.sterne && h.sterne > 0) {
+        c.push("\u2B50 " + h.sterne + (h.sterne === 1 ? " Stern" : " Sterne"));
+      }
       // Ski-in/out status
       if (h.ski_in_out === "ja") {
         c.push("\u26F7 Ski-in/out");
       } else if (h.ski_in_out && h.ski_in_out.includes("fast")) {
         c.push("\u26F7 Fast Ski-in/out");
+      }
+      // Wellness/Sauna/Pool
+      if (h.wellness) c.push("\u{1F9D6} Wellness");
+      if (h.pool && !h.wellness) c.push("\u{1F3CA} Pool");
+      // Familie / Adults only
+      if (h.familie) c.push("\u{1F46A} Familienfreundlich");
+      if (h.adults_only) c.push("\u{1F48E} Adults Only");
+      // Verpflegung
+      if (h.verpflegung && h.verpflegung !== "nur Uebernachtung") {
+        c.push("\u{1F37D} " + h.verpflegung);
       }
       // Nearest bergbahn with real walking distance
       if (h.nearest_lift_name && h.lift_distance_m != null) {
@@ -1049,7 +1081,7 @@
       if (h.loipe_distance_m != null) {
         c.push("\u{1F3FF} Loipe " + fmtDist(h.loipe_distance_m));
       }
-      return c.slice(0, 5);
+      return c.slice(0, 6);
     }
 
     function truncateDescription(text, maxSentences) {
@@ -1075,12 +1107,16 @@
         ? `<div class="card-rating">${ratingStars(h.google_rating)} ${h.google_rating.toFixed(1)} <span class="count">\u00B7 ${Math.round(h.google_reviews || 0)} Bewertungen</span></div>`
         : "";
 
+      const preisLabel = h.preis_kategorie ? {budget:"Budget",mittel:"Mittelklasse",gehoben:"Gehoben",luxus:"Luxus"}[h.preis_kategorie] || "" : "";
+      const locationParts = [h.ortsteil, h.typ, preisLabel].filter(Boolean);
+
       return `<article class="hotel-card">
         <div class="card-body">
-          <div class="card-location">${escapeHtml([h.ortsteil, h.typ].filter(Boolean).join(" \u00B7 "))}</div>
+          <div class="card-location">${escapeHtml(locationParts.join(" \u00B7 "))}</div>
           <h3 class="card-title">${escapeHtml(h.name)}</h3>
           ${ratingHtml}
           ${truncated ? `<p class="card-quote">\u201E${escapeHtml(truncated)}\u201C</p>` : ""}
+          ${h.review_highlights ? `<p class="card-review-hl" style="font-size:0.8rem;color:var(--text-muted);margin:0.25rem 0 0.5rem;font-style:italic;">\u{1F4AC} ${escapeHtml(h.review_highlights)}</p>` : ""}
           <div class="card-features">${chips.map(c => `<span class="feature-chip">${c}</span>`).join("")}</div>
           <div class="card-actions">
             <button class="btn-details" data-open="${escapeHtml(h.name)}">Details ansehen</button>
@@ -1154,6 +1190,7 @@
       // Facts grid
       const facts = [];
       if (h.ortsteil) facts.push(["Ortsteil", h.ortsteil]);
+      if (h.sterne) facts.push(["Kategorie", h.sterne + (h.sterne === 1 ? " Stern" : " Sterne")]);
       if (h.ski_in_out) facts.push(["Ski-in/Ski-out", h.ski_in_out === "ja" ? "Ja (Piste unter 50m)" : h.ski_in_out.includes("fast") ? "Fast (Piste unter 150m)" : "Nein"]);
       if (h.nearest_lift_name) {
         let liftVal = h.nearest_lift_name;
@@ -1168,6 +1205,24 @@
       if (h.loipe_name && h.loipe_distance_m != null) {
         facts.push(["N\u00E4chste Loipe", h.loipe_name + " \u2014 " + fmtDist(h.loipe_distance_m)]);
       }
+      // v3 enrichment facts
+      const amenities = [];
+      if (h.wellness) amenities.push("Wellness");
+      if (h.sauna) amenities.push("Sauna");
+      if (h.pool) amenities.push("Pool");
+      if (amenities.length) facts.push(["Ausstattung", amenities.join(", ")]);
+      if (h.verpflegung) facts.push(["Verpflegung", h.verpflegung]);
+      if (h.familie) facts.push(["Familienfreundlich", "Ja"]);
+      if (h.adults_only) facts.push(["Adults Only", "Ja"]);
+      if (h.haustiere === true) facts.push(["Haustiere", "Erlaubt"]);
+      else if (h.haustiere === false) facts.push(["Haustiere", "Nicht erlaubt"]);
+      if (h.parkplatz === true) facts.push(["Parkplatz", "Vorhanden"]);
+      if (h.preis_kategorie) {
+        const preisMap = {budget:"Budget",mittel:"Mittelklasse",gehoben:"Gehoben",luxus:"Luxus"};
+        facts.push(["Preiskategorie", preisMap[h.preis_kategorie] || h.preis_kategorie]);
+      }
+      if (h.besonderheiten) facts.push(["Besonderheiten", h.besonderheiten]);
+      if (h.review_highlights) facts.push(["G\u00E4ste loben", h.review_highlights]);
       if (h.adresse) facts.push(["Adresse", h.adresse]);
       el.mFacts.innerHTML = facts.map(([l, v]) =>
         `<div class="fact"><div class="fact-label">${escapeHtml(l)}</div><div class="fact-value">${escapeHtml(v)}</div></div>`
