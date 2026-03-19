@@ -1407,11 +1407,12 @@
       let scrapedHotels = [];
       let sheetLoaded = false;
 
-      // Load all three data sources in parallel
-      const [sheetResult, descriptionsResult, scrapedResult] = await Promise.allSettled([
+      // Load all data sources in parallel
+      const [sheetResult, descriptionsResult, scrapedResult, bookingResult] = await Promise.allSettled([
         loadSheetJSONP(),
         loadDescriptions(),
         loadScrapedHotels(),
+        fetch("data/booking_urls.json").then(r => r.ok ? r.json() : null).catch(() => null),
       ]);
 
       // Process descriptions
@@ -1442,6 +1443,19 @@
       // Enrich all hotels with descriptions.json
       if (Object.keys(DESCRIPTIONS).length > 0) {
         HOTELS = enrichWithDescriptions(HOTELS, DESCRIPTIONS);
+      }
+
+      // Enrich with Booking.com URLs
+      if (bookingResult.status === "fulfilled" && bookingResult.value?.hotels) {
+        const bmap = bookingResult.value.hotels;
+        HOTELS.forEach(h => {
+          if (h.booking_url) return; // already has one
+          // Try exact match and fuzzy match
+          const entry = bmap[h.name] || Object.values(bmap).find(b =>
+            b.booking_name && lower(b.booking_name) === lower(h.name)
+          );
+          if (entry?.booking_url) h.booking_url = entry.booking_url;
+        });
       }
 
       // Update status

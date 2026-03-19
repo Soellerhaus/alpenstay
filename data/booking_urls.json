@@ -1,0 +1,293 @@
+{
+  "_meta": {
+    "generated": "2026-03-19",
+    "method": "manual web search matching",
+    "notes": "Mapping of hotel names (from descriptions.json 54-hotel list) to Booking.com URLs. Hotels not found on Booking.com are listed with null.",
+    "found_count": 43,
+    "not_found_count": 11,
+    "total": 54
+  },
+  "hotels": {
+    "A-ROSA Ifen Hotel Kleinwalsertal": {
+      "booking_url": "https://www.booking.com/hotel/at/travel-charme-ifen.html",
+      "booking_name": "A-ROSA Ifen Hotel Kleinwalsertal",
+      "location": "Hirschegg"
+    },
+    "Almajur Ferienhotel": {
+      "booking_url": "https://www.booking.com/hotel/at/ferienhotel-almajur.html",
+      "booking_name": "Ferienhotel Almajur",
+      "location": "Mittelberg"
+    },
+    "Alpengasthof Hörnlepass": {
+      "booking_url": "https://www.booking.com/hotel/at/alpengasthof-hornlepass.html",
+      "booking_name": "Alpengasthof Hörnlepass",
+      "location": "Riezlern"
+    },
+    "Alpenhof Jäger": {
+      "booking_url": null,
+      "booking_name": null,
+      "location": "Riezlern",
+      "notes": "Not found as separate listing on Booking.com. May be listed under different name or not present."
+    },
+    "Alpenhotel Küren": {
+      "booking_url": "https://www.booking.com/hotel/at/alpenhotel-kuren-hirschegg.html",
+      "booking_name": "Alpenhotel DAS KÜREN",
+      "location": "Hirschegg"
+    },
+    "Alpenhotel Widderstein": {
+      "booking_url": "https://www.booking.com/hotel/at/alpenhotel-widderstein-mittelberg.html",
+      "booking_name": "Alpenhotel Widderstein",
+      "location": "Mittelberg"
+    },
+    "Alphotel": {
+      "booking_url": "https://www.booking.com/hotel/at/kinderhotel-alphotel.html",
+      "booking_name": "Familotel Alphotel",
+      "location": "Hirschegg"
+    },
+    "Aparthotel Kleinwalsertal": {
+      "booking_url": "https://www.booking.com/hotel/at/aparthotel-kleinwalsertal.html",
+      "booking_name": "Aparthotel Kleinwalsertal",
+      "location": "Mittelberg"
+    },
+    "Auenhütte": {
+      "booking_url": "https://www.booking.com/hotel/at/auenhutte.html",
+      "booking_name": "Auenhütte",
+      "location": "Hirschegg"
+    },
+    "Bio-Hotel Oswalda Hus - Familie Müller": {
+      "booking_url": "https://www.booking.com/hotel/at/oswalda-hus.html",
+      "booking_name": "Bio-Hotel Oswalda-Hus",
+      "location": "Riezlern"
+    },
+    "Biohotel Walserstuba": {
+      "booking_url": "https://www.booking.com/hotel/at/alpahotel-walser-stuba.html",
+      "booking_name": "Biohotel Walserstuba",
+      "location": "Riezlern"
+    },
+    "Breitachhus": {
+      "booking_url": "https://www.booking.com/hotel/at/breitachhus.html",
+      "booking_name": "Hotel Breitachhus",
+      "location": "Riezlern"
+    },
+    "Das KLEEMANNs": {
+      "booking_url": "https://www.booking.com/hotel/at/landhaus-ingrid.html",
+      "booking_name": "Das Kleemanns",
+      "location": "Mittelberg"
+    },
+    "Der Kleinwalsertaler Rosenhof": {
+      "booking_url": "https://www.booking.com/hotel/at/rosenhof.html",
+      "booking_name": "Der Kleinwalsertaler Rosenhof",
+      "location": "Mittelberg"
+    },
+    "Familienhotel Kleinwalsertal": {
+      "booking_url": "https://www.booking.com/hotel/at/sport-und-familienhotel-riezlern.html",
+      "booking_name": "Familienhotel Kleinwalsertal",
+      "location": "Riezlern"
+    },
+    "Gasthof Alpenblick": {
+      "booking_url": "https://www.booking.com/hotel/at/gasthof-alpenblick.html",
+      "booking_name": "Gasthof Alpenblick",
+      "location": "Mittelberg"
+    },
+    "Gasthof Alpenwald - Thorsten Hilbrand": {
+      "booking_url": null,
+      "booking_name": null,
+      "location": "Mittelberg",
+      "notes": "Not found on Booking.com. Remote mountain gasthof - guests cannot drive directly to property."
+    },
+    "Gasthof Bergblick": {
+      "booking_url": null,
+      "booking_name": null,
+      "location": "Riezlern",
+      "notes": "Not found as a distinct Booking.com listing."
+    },
+    "Genuss- & Aktivhotel Sonnenburg": {
+      "booking_url": "https://www.booking.com/hotel/at/gasthof-sonnenburg.html",
+      "booking_name": "Genuss- & Aktivhotel Sonnenburg",
+      "location": "Riezlern"
+    },
+    "Haller's Geniesserhotel": {
+      "booking_url": "https://www.booking.com/hotel/at/hallera-s-genuss.html",
+      "booking_name": "Haller's Geniesserhotel",
+      "location": "Mittelberg"
+    },
+    "Haller's Posthotel": {
+      "booking_url": "https://www.booking.com/hotel/at/zur-post-riezlern.html",
+      "booking_name": "Haller's Posthotel",
+      "location": "Riezlern"
+    },
+    "Haus Bergkranz": {
+      "booking_url": null,
+      "booking_name": null,
+      "location": "Hirschegg",
+      "notes": "University guesthouse (Goethe-Universität Frankfurt). Not publicly listed on Booking.com."
+    },
+    "Herzen`s Landhaus": {
+      "booking_url": null,
+      "booking_name": null,
+      "location": "Hirschegg",
+      "notes": "Not found as direct Booking.com listing. Note: Boutique Hotel Herzhof (different property, in Riezlern) exists on Booking.com."
+    },
+    "Hotel Adler": {
+      "booking_url": "https://www.booking.com/hotel/at/adler-hirschegg.html",
+      "booking_name": "Hotel Adler Garni",
+      "location": "Hirschegg"
+    },
+    "Hotel Alpensonne": {
+      "booking_url": "https://www.booking.com/hotel/at/alpensonne-riezlern.html",
+      "booking_name": "Hotel Alpensonne",
+      "location": "Riezlern"
+    },
+    "Hotel Alpenstüble Appartements": {
+      "booking_url": "https://www.booking.com/hotel/at/alpenstuble.html",
+      "booking_name": "Hotel Alpenstüble Appartements",
+      "location": "Mittelberg"
+    },
+    "Hotel Alte Krone": {
+      "booking_url": "https://www.booking.com/hotel/at/alte-krone.html",
+      "booking_name": "Hotel Alte Krone",
+      "location": "Mittelberg"
+    },
+    "Hotel Bellevue": {
+      "booking_url": "https://www.booking.com/hotel/at/bellevue-riezlern.html",
+      "booking_name": "Hotel Bellevue",
+      "location": "Riezlern"
+    },
+    "Hotel Birkenhöhe": {
+      "booking_url": "https://www.booking.com/hotel/at/birkenhohe.html",
+      "booking_name": "Hotel Birkenhöhe",
+      "location": "Hirschegg"
+    },
+    "Hotel Erlebach": {
+      "booking_url": "https://www.booking.com/hotel/at/erlebach.html",
+      "booking_name": "Hotel Erlebach 4-Sterne-Superior",
+      "location": "Riezlern"
+    },
+    "Hotel Garni Adler": {
+      "booking_url": "https://www.booking.com/hotel/at/adler-hirschegg.html",
+      "booking_name": "Hotel Adler Garni",
+      "location": "Hirschegg",
+      "notes": "Same Booking.com listing as 'Hotel Adler' - they are the same property."
+    },
+    "Hotel Garni Almenrausch - Familie Fischer": {
+      "booking_url": null,
+      "booking_name": null,
+      "location": "Riezlern",
+      "notes": "Not found on Booking.com."
+    },
+    "Hotel Garni Fels": {
+      "booking_url": "https://www.booking.com/hotel/at/fels.html",
+      "booking_name": "Hotel-Garni Fels",
+      "location": "Riezlern"
+    },
+    "Hotel Garni Ingeborg": {
+      "booking_url": "https://www.booking.com/hotel/at/garni-ingeborg-mittelberg.html",
+      "booking_name": "Hotel Garni Ingeborg",
+      "location": "Mittelberg"
+    },
+    "Hotel Garni Kasimir - Familie Hämmerle": {
+      "booking_url": null,
+      "booking_name": null,
+      "location": "Riezlern",
+      "notes": "Not found on Booking.com. Listed on kleinwalsertal.com and Tripadvisor but not Booking.com."
+    },
+    "Hotel Gemma (Adults Only)": {
+      "booking_url": "https://www.booking.com/hotel/at/gemma.html",
+      "booking_name": "Hotel Gemma- Adults only",
+      "location": "Hirschegg"
+    },
+    "Hotel Jagdhof": {
+      "booking_url": "https://www.booking.com/hotel/at/jagdhof-riezlern.html",
+      "booking_name": "Hotel Jagdhof",
+      "location": "Riezlern"
+    },
+    "Hotel Leitner": {
+      "booking_url": "https://www.booking.com/hotel/at/leitner.html",
+      "booking_name": "Hotel Leitner",
+      "location": "Mittelberg"
+    },
+    "Hotel Montana": {
+      "booking_url": "https://www.booking.com/hotel/at/montana.html",
+      "booking_name": "Hotel Montana",
+      "location": "Riezlern"
+    },
+    "Hotel Riezler Hof": {
+      "booking_url": "https://www.booking.com/hotel/at/riezler-hof.html",
+      "booking_name": "Hotel Riezler Hof",
+      "location": "Riezlern"
+    },
+    "Hotel Sonnenberg - Silke und Harald Zepper": {
+      "booking_url": null,
+      "booking_name": null,
+      "location": "Hirschegg",
+      "notes": "Not found on Booking.com. Small romantic hotel, may book direct only."
+    },
+    "Hotel Steinbock": {
+      "booking_url": "https://www.booking.com/hotel/at/steinbock.html",
+      "booking_name": "Hotel Steinbock",
+      "location": "Mittelberg"
+    },
+    "Hotel Tradizio": {
+      "booking_url": "https://www.booking.com/hotel/at/neue-krone.html",
+      "booking_name": "Hotel Tradizio",
+      "location": "Mittelberg"
+    },
+    "IFA Alpenhof Wildental": {
+      "booking_url": "https://www.booking.com/hotel/at/ifawellnesshotelalpenhofwildental.html",
+      "booking_name": "IFA Alpenhof Wildental Hotel Kleinwalsertal Adults only",
+      "location": "Mittelberg"
+    },
+    "IFA Alpenrose Hotel": {
+      "booking_url": "https://www.booking.com/hotel/at/ifahotelalpenrose.html",
+      "booking_name": "IFA Alpenrose Hotel Kleinwalsertal",
+      "location": "Mittelberg"
+    },
+    "Landhaus Bromm": {
+      "booking_url": "https://www.booking.com/hotel/at/landhaus-bromm-garni.html",
+      "booking_name": "Landhaus Bromm",
+      "location": "Riezlern"
+    },
+    "Marburger Haus - Familie Leißing": {
+      "booking_url": null,
+      "booking_name": null,
+      "location": "Hirschegg",
+      "notes": "Seminar house / educational facility of Marburg University. Not listed on Booking.com."
+    },
+    "Naturhotel Chesa Valisa": {
+      "booking_url": "https://www.booking.com/hotel/at/naturhotel-chesa-valisa.html",
+      "booking_name": "Naturhotel Chesa Valisa",
+      "location": "Hirschegg"
+    },
+    "Naturhotel Lärchenhof": {
+      "booking_url": "https://www.booking.com/hotel/at/naturhotel-la-rchenhof.html",
+      "booking_name": "Naturhotel Lärchenhof",
+      "location": "Mittelberg"
+    },
+    "Ski- und Aktivhotel Almhof Rupp": {
+      "booking_url": "https://www.booking.com/hotel/at/genieaerhotel-almhof-rupp.html",
+      "booking_name": "Hotel Almhof Rupp",
+      "location": "Riezlern"
+    },
+    "Sporthotel Walliser": {
+      "booking_url": "https://www.booking.com/hotel/at/sporthotel-walliser.html",
+      "booking_name": "Sporthotel Walliser",
+      "location": "Hirschegg"
+    },
+    "SuiteHOTEL Kleinwalsertal": {
+      "booking_url": "https://www.booking.com/hotel/at/suitehotel-kleinwalsertal.html",
+      "booking_name": "Suitehotel Kleinwalsertal",
+      "location": "Hirschegg"
+    },
+    "Walserkreuz (dasKREUZ)": {
+      "booking_url": null,
+      "booking_name": null,
+      "location": "Hirschegg",
+      "notes": "Holiday apartments with restaurant. Not found as Booking.com hotel listing."
+    },
+    "Wellnesshotel Walserhof": {
+      "booking_url": "https://www.booking.com/hotel/at/verwohn-wellnesshotel-walserhof.html",
+      "booking_name": "Verwöhn-Wellnesshotel Walserhof",
+      "location": "Hirschegg"
+    }
+  }
+}
