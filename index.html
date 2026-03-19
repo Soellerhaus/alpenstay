@@ -2,11 +2,40 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <title>AlpenStay | Dein Hotel im Kleinwalsertal finden</title>
+  <title>AlpenStay | Hotels &amp; Unterk&uuml;nfte im Kleinwalsertal finden</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Finde dein ideales Hotel im Kleinwalsertal – kuratiert, ehrlich, ohne Marketing-Blabla." />
+  <meta name="description" content="Finde dein perfektes Hotel im Kleinwalsertal — 118 Unterkünfte mit echten Google-Bewertungen, Ski-in/Ski-out Infos und ehrlichen Beschreibungen. Riezlern, Hirschegg, Mittelberg & Baad.">
+  <meta name="keywords" content="Kleinwalsertal Hotels, Unterkunft Kleinwalsertal, Ski Hotel Kleinwalsertal, Pension Kleinwalsertal, Ferienwohnung Kleinwalsertal, Riezlern Hotel, Hirschegg Hotel, Mittelberg Hotel, Baad Unterkunft, Ski-in Ski-out Kleinwalsertal, Wellness Hotel Kleinwalsertal, Familienhotel Kleinwalsertal">
+  <meta name="author" content="AlpenStay">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0a0e1a">
+  <link rel="canonical" href="https://www.alpenstay.de/">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⛰️</text></svg>">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.alpenstay.de/">
+  <meta property="og:title" content="AlpenStay | Hotels &amp; Unterk&uuml;nfte im Kleinwalsertal">
+  <meta property="og:description" content="Finde dein perfektes Hotel im Kleinwalsertal — 118 Unterkünfte mit echten Bewertungen, Ski-Distanzen und ehrlichen Beschreibungen.">
+  <meta property="og:image" content="https://www.alpenstay.de/images/hero-kwt.jpg">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:site_name" content="AlpenStay">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AlpenStay | Hotels im Kleinwalsertal">
+  <meta name="twitter:description" content="118 Unterkünfte mit echten Bewertungen und Ski-Distanzen">
+  <meta name="twitter:image" content="https://www.alpenstay.de/images/hero-kwt.jpg">
+
+  <!-- Geo tags for local SEO -->
+  <meta name="geo.region" content="AT-8">
+  <meta name="geo.placename" content="Kleinwalsertal">
+  <meta name="geo.position" content="47.34;10.17">
+  <meta name="ICBM" content="47.34, 10.17">
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://unpkg.com" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <style>
@@ -563,6 +592,42 @@
       .cards-grid { grid-template-columns: repeat(2, 1fr); }
     }
   </style>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "AlpenStay",
+    "url": "https://www.alpenstay.de",
+    "description": "Unabhängiger Hotel-Guide für das Kleinwalsertal mit 118 Unterkünften",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://www.alpenstay.de/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TouristDestination",
+    "name": "Kleinwalsertal",
+    "description": "Alpines Hochtal in Vorarlberg, Österreich — beliebtes Ski- und Wandergebiet",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 47.34,
+      "longitude": 10.17
+    },
+    "touristType": ["Skifahrer", "Wanderer", "Familien", "Wellness-Urlauber"],
+    "includesAttraction": [
+      {"@type": "SkiResort", "name": "Kanzelwand-Fellhorn"},
+      {"@type": "SkiResort", "name": "Walmendingerhorn"},
+      {"@type": "SkiResort", "name": "Ifen"},
+      {"@type": "SkiResort", "name": "Heuberg-Arena"}
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -575,7 +640,7 @@
         <div class="logo-mark">&#9968;</div>
         AlpenStay
       </a>
-      <nav class="nav-links">
+      <nav class="nav-links" aria-label="Hauptnavigation">
         <a href="#wizard">Finder</a>
         <a href="#karte">Karte</a>
         <a href="#empfehlungen">Hotels</a>
@@ -586,10 +651,11 @@
     </div>
   </header>
 
+  <main>
   <!-- ================================================================
        HERO with background image
        ================================================================ -->
-  <section class="hero" id="top">
+  <section class="hero" id="top" aria-label="Willkommen">
     <div class="hero-content">
       <h1>Dein perfektes Hotel im Kleinwalsertal</h1>
       <p class="hero-sub">Kuratiert. Ehrlich. Ohne Marketing-Blabla.</p>
@@ -604,7 +670,7 @@
   <!-- ================================================================
        LOCATION NAVIGATION (filter by Ortsteil)
        ================================================================ -->
-  <section id="karte" class="map-section">
+  <section id="karte" class="map-section" aria-label="Karte und Ortsteile">
     <div class="container">
       <div class="section-header" style="margin-bottom:0">
         <h2>Hotels nach Ort</h2>
@@ -626,7 +692,7 @@
   <!-- ================================================================
        WIZARD (5 Steps)
        ================================================================ -->
-  <section id="wizard" class="wizard-section">
+  <section id="wizard" class="wizard-section" aria-label="Hotel-Finder">
     <div class="container">
       <div class="wizard">
         <div class="wizard-progress-bar">
@@ -746,7 +812,7 @@
   <!-- ================================================================
        RESULTS (Wizard recommendations)
        ================================================================ -->
-  <section id="empfehlungen" class="results-section">
+  <section id="empfehlungen" class="results-section" aria-label="Empfehlungen">
     <div class="container">
       <div class="section-header">
         <h2>Deine Empfehlungen</h2>
@@ -759,7 +825,7 @@
   <!-- ================================================================
        CURATED LISTS
        ================================================================ -->
-  <section id="listen" class="curated-section">
+  <section id="listen" class="curated-section" aria-label="Kuratierte Listen">
     <div class="container">
       <div class="section-header">
         <h2>Kuratierte Listen</h2>
@@ -780,7 +846,7 @@
   <!-- ================================================================
        ABOUT
        ================================================================ -->
-  <section id="about" class="about-section">
+  <section id="about" class="about-section" aria-label="Über AlpenStay">
     <div class="container">
       <div class="about-inner">
         <h2>&Uuml;ber AlpenStay</h2>
@@ -795,6 +861,8 @@
       </div>
     </div>
   </section>
+
+  </main>
 
   <!-- ================================================================
        FOOTER
@@ -815,7 +883,7 @@
       Einige Links auf dieser Seite sind Partnerlinks. F&uuml;r dich entstehen dadurch keine Mehrkosten.
       Wir erhalten eine kleine Provision bei Buchungen &uuml;ber unsere Links.
     </div>
-    <div class="footer-copy">&copy; 2025 AlpenStay</div>
+    <div class="footer-copy">&copy; 2025&ndash;2026 AlpenStay</div>
   </footer>
 
   <!-- ================================================================
