@@ -2,7 +2,7 @@
   "destination": "Kleinwalsertal",
   "slug": "kleinwalsertal",
   "region": "Vorarlberg, Oesterreich",
-  "hotel_count": 122,
+  "hotel_count": 118,
   "datenquelle": "Google Places API + OSM Overpass API + Google Routes API + Website Scraping + Claude AI",
   "stand": "2026-03-19",
   "pipeline_version": "v3",
@@ -4980,50 +4980,6 @@
       "validated": true
     },
     {
-      "name": "Walserhaus",
-      "ortsteil": "Hirschegg",
-      "typ": "Unterkunft",
-      "sterne": null,
-      "adresse": "Walserstraße 264, 6992 Hirschegg, Österreich",
-      "gps": {
-        "lat": 47.3426354,
-        "lng": 10.1671709
-      },
-      "website": "https://www.walserhaus.com/",
-      "google_rating": 4.5,
-      "google_reviews": 195,
-      "google_editorial": "",
-      "naechste_bergbahn": {
-        "name": "Heubergbahn",
-        "typ": "Sessellift",
-        "distanz_m": 400,
-        "gehzeit_min": 6
-      },
-      "naechste_piste": {
-        "name": "Unbenannt",
-        "distanz_m": 31
-      },
-      "naechste_loipe": {
-        "name": "Unbenannt",
-        "distanz_m": 1240
-      },
-      "ski_in_out": "ja",
-      "wellness": false,
-      "sauna": false,
-      "pool": false,
-      "familie": true,
-      "adults_only": false,
-      "verpflegung": "nur Uebernachtung",
-      "haustiere": null,
-      "parkplatz": null,
-      "preis_kategorie": "mittel",
-      "besonderheiten": "Interaktive Stationen zu Natur und Geschichte des Tals",
-      "review_highlights": "Freundliches Personal, kinderfreundlich, Lernstationen",
-      "ai_description": "Das Walserhaus in Hirschegg ist mehr als nur eine Unterkunft – es fungiert als interaktives Erlebniszentrum mit Stationen zu Natur und Geschichte des Kleinwalsertals. Mit nur 400 Metern zur Heubergbahn und direktem Ski-in/Ski-out-Zugang sind die Pisten quasi vor der Haustür erreichbar. Familien schätzen besonders das herzliche Personal und die spielerischen Lernstationen, die Kindern das Tal auf unterhaltsame Weise näherbringen. Die 4,5-Sterne-Bewertung spiegelt wider, dass hier Gastfreundschaft und Bildung perfekt kombiniert werden.",
-      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Walserhaus%20Kleinwalsertal",
-      "validated": true
-    },
-    {
       "name": "Paul Hus",
       "ortsteil": "Mittelberg",
       "typ": "Unterkunft",
@@ -5112,94 +5068,6 @@
       "validated": true
     },
     {
-      "name": "OUTWARD BOUND Austria",
-      "ortsteil": "Mittelberg",
-      "typ": "Unterkunft",
-      "sterne": null,
-      "adresse": "Baad 20, 6993 Mittelberg, Österreich",
-      "gps": {
-        "lat": 47.3105106,
-        "lng": 10.1213491
-      },
-      "website": "https://www.outwardbound.de/de/standorte/baad",
-      "google_rating": 4,
-      "google_reviews": 192,
-      "google_editorial": "",
-      "naechste_bergbahn": {
-        "name": "Doppelsessellift Walmendingerhorn",
-        "typ": "Sessellift",
-        "distanz_m": 2815,
-        "gehzeit_min": 60
-      },
-      "naechste_piste": {
-        "name": "Talabfahrt Walmendingerhorn",
-        "distanz_m": 1036
-      },
-      "naechste_loipe": {
-        "name": "Unbenannt",
-        "distanz_m": 119
-      },
-      "ski_in_out": "nein",
-      "wellness": false,
-      "sauna": false,
-      "pool": false,
-      "familie": false,
-      "adults_only": false,
-      "verpflegung": "nur Uebernachtung",
-      "haustiere": null,
-      "parkplatz": null,
-      "preis_kategorie": "mittel",
-      "besonderheiten": "Outdoor-Bildungseinrichtung mit Teambuilding und Persönlichkeitsentwicklung",
-      "review_highlights": "Persönlichkeitsentwicklung, Teambuilding, schöne Lage, nette Betreuer",
-      "ai_description": "OUTWARD BOUND Austria in Mittelberg ist keine klassische Unterkunft, sondern eine Outdoor-Bildungseinrichtung, die sich auf Persönlichkeitsentwicklung und Teambuilding spezialisiert hat. Schülergruppen und Teams werden hier seit Jahren durch herausfordernde Programme aus ihrer Komfortzone geholt - die Gäste schwärmen besonders davon, wie schüchterne Jugendliche plötzlich an sich glauben. Die Lage in den Bergen ist traumhaft, allerdings ist man mit einer Stunde Gehzeit zum Walmendingerhorn relativ weit von den Skigebieten entfernt. Wer klassischen Hotelkomfort oder Wellness sucht, ist hier falsch - hier geht es um echte Outdoor-Erfahrungen und persönliches Wachstum.",
-      "booking_url": "https://www.booking.com/searchresults.de.html?ss=OUTWARD%20BOUND%20Austria%20Kleinwalsertal",
-      "validated": true
-    },
-    {
-      "name": "Bärgunt-Hütte",
-      "ortsteil": "Baad",
-      "typ": "Unterkunft",
-      "sterne": null,
-      "adresse": "Bärguntalpe, 6993 Baad, Österreich",
-      "gps": {
-        "lat": 47.2929367,
-        "lng": 10.1129965
-      },
-      "website": "http://www.baergunthuette.de/",
-      "google_rating": 4.7,
-      "google_reviews": 958,
-      "google_editorial": "",
-      "naechste_bergbahn": {
-        "name": "Doppelsessellift Walmendingerhorn",
-        "typ": "Sessellift",
-        "distanz_m": 5096,
-        "gehzeit_min": 91
-      },
-      "naechste_piste": {
-        "name": "Talabfahrt Walmendingerhorn",
-        "distanz_m": 3059
-      },
-      "naechste_loipe": {
-        "name": "Unbenannt",
-        "distanz_m": 1783
-      },
-      "ski_in_out": "nein",
-      "wellness": false,
-      "sauna": false,
-      "pool": false,
-      "familie": true,
-      "adults_only": false,
-      "verpflegung": "nur Uebernachtung",
-      "haustiere": null,
-      "parkplatz": null,
-      "preis_kategorie": "mittel",
-      "besonderheiten": "Alphütte am Fuße des Widderstein, hausgemachte Küche, keine Übernachtungen",
-      "review_highlights": "Atemberaubende Aussicht, hausgemachtes Essen, Kuchen und warme Suppen",
-      "ai_description": "Die Bärgunt-Hütte in Baad ist eine echte Almhütte am Fuße des imposanten Widdersteinmassivs, die als Tagesausflugsziel und nicht für Übernachtungen dient. Mit 4,7 Sternen schwärmen Gäste von der atemberaubenden Bergkulisse und der hausgemachten Küche - besonders die warmen Suppen und der selbstgebackene Kuchen sind legendär. Die Hütte liegt idyllisch im Tal und ist im Winter über präparierte Wege erreichbar, auch wenn die nächste Bergbahn am Walmendingerhorn gut 5 Kilometer entfernt ist. Ein perfekter Stopp für Wanderer und Familien, die authentische Almhüttenatmosphäre mit echter Kärntner Gastlichkeit erleben möchten.",
-      "booking_url": "https://www.booking.com/searchresults.de.html?ss=B%C3%A4rgunt-H%C3%BCtte%20Kleinwalsertal",
-      "validated": true
-    },
-    {
       "name": "KWT Lodge",
       "ortsteil": "Mittelberg",
       "typ": "Lodge",
@@ -5241,50 +5109,6 @@
       "review_highlights": "Freundliche Familie, schöne Lodge, tolle Lage",
       "ai_description": "Die KWT Lodge in Mittelberg ist eine gemütliche Familienunterkunft mit authentischem Lodge-Charakter und herrlichem Bergblick. Der hoteleigene Spa-Bereich mit Innenpool lädt nach Wanderungen oder Skitouren zum Entspannen ein, auch wenn die Bergbahnen etwa eine Stunde zu Fuß entfernt sind – dank kostenlosem Buspass aber problemlos erreichbar. Die herzliche Gastgeberfamilie sorgt für eine persönliche Atmosphäre, und mit der Steinbockloipe nur 126 Meter entfernt kommen auch Langläufer voll auf ihre Kosten. Bei 4,7 Sternen und über 100 Bewertungen schätzen Gäste besonders die familiäre Betreuung und die entspannte Lodge-Atmosphäre.",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=KWT%20Lodge%20Kleinwalsertal",
-      "validated": true
-    },
-    {
-      "name": "Vorderbodenhütte Kleinwalsertal",
-      "ortsteil": "Mittelberg",
-      "typ": "Unterkunft",
-      "sterne": null,
-      "adresse": "Vorderboden 2, 6993 Mittelberg, Österreich",
-      "gps": {
-        "lat": 47.3122225,
-        "lng": 10.131550899999999
-      },
-      "website": "http://www.vorderbodenhuette.at/",
-      "google_rating": 4.7,
-      "google_reviews": 28,
-      "google_editorial": "",
-      "naechste_bergbahn": {
-        "name": "Doppelsessellift Walmendingerhorn",
-        "typ": "Sessellift",
-        "distanz_m": 3717,
-        "gehzeit_min": 74
-      },
-      "naechste_piste": {
-        "name": "Talabfahrt Walmendingerhorn",
-        "distanz_m": 664
-      },
-      "naechste_loipe": {
-        "name": "Steinbockloipe",
-        "distanz_m": 88
-      },
-      "ski_in_out": "nein",
-      "wellness": false,
-      "sauna": false,
-      "pool": false,
-      "familie": true,
-      "adults_only": false,
-      "verpflegung": "nur Uebernachtung",
-      "haustiere": null,
-      "parkplatz": null,
-      "preis_kategorie": "mittel",
-      "besonderheiten": "600 Jahre altes Walser Haus, Selbstversorger-Hütte für bis zu 20 Personen",
-      "review_highlights": "Historische Atmosphäre, rustikaler Charme, ideal für Gruppen und Selbstversorger",
-      "ai_description": "Die Vorderbodenhütte ist ein authentisches 600 Jahre altes Walser Haus in Mittelberg, das bis zu 20 Personen als Selbstversorger-Unterkunft beherbergt. Das historische Gebäude strahlt eine besondere Atmosphäre aus und ermöglicht es Gästen, das ursprüngliche Leben im Kleinwalsertal zu spüren. Die nächste Loipe ist nur 88m entfernt, während die Talabfahrt Walmendingerhorn in 664m Entfernung liegt - der Sessellift selbst ist allerdings gut 1 Stunde zu Fuß entfernt. Mit einer Bewertung von 4,7 Sternen schätzen Gäste besonders den rustikalen Charme und die einmalige historische Atmosphäre dieser außergewöhnlichen Gruppenunterkunft.",
-      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Vorderbodenh%C3%BCtte%20Kleinwalsertal%20Kleinwalsertal",
       "validated": true
     },
     {
