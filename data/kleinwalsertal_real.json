@@ -1807,6 +1807,36 @@
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=Bergblick%20-%20Der%20Gasthof%20Kleinwalsertal"
     },
     {
+      "name": "Alpengasthof Hörnlepass – Hotel & Restaurant",
+      "ortsteil": "Riezlern",
+      "typ": "Gasthof",
+      "adresse": "Außerwald 1, 6991 Riezlern, Österreich",
+      "gps": {
+        "lat": 47.385077599999995,
+        "lng": 10.186102300000002
+      },
+      "website": "https://www.hoernlepass.at/",
+      "google_rating": 4.8,
+      "google_reviews": 609,
+      "naechste_bergbahn": {
+        "name": "Schwandlift",
+        "typ": "Bügellift",
+        "distanz_m": 4313,
+        "gehzeit_min": 59
+      },
+      "naechste_piste": {
+        "name": "Schwandlift-Piste",
+        "distanz_m": 3029
+      },
+      "naechste_loipe": {
+        "name": "Unbenannt",
+        "distanz_m": 1222
+      },
+      "ski_in_out": "nein",
+      "ai_description": "Der Hörnlepass sitzt wirklich perfekt oben über Riezlern – du hast von dort eine wahnsinnige Aussicht ins ganze Tal und auf die Bergkette rundherum, ohne dich mitten ins Getümmel quetschen zu müssen.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Alpengasthof%20H%C3%B6rnlepass%20%E2%80%93%20Hotel%20%26%20Restaurant%20Kleinwalsertal"
+    },
+    {
       "name": "Gasthof Sonnwinkl",
       "ortsteil": "Mittelberg",
       "typ": "Gasthof",
@@ -1865,36 +1895,6 @@
       "ski_in_out": "fast",
       "ai_description": null,
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=Wirtshaus%20Hoheneck%20Kleinwalsertal"
-    },
-    {
-      "name": "Alpengasthof Hörnlepass – Hotel & Restaurant",
-      "ortsteil": "Riezlern",
-      "typ": "Gasthof",
-      "adresse": "Außerwald 1, 6991 Riezlern, Österreich",
-      "gps": {
-        "lat": 47.385077599999995,
-        "lng": 10.186102300000002
-      },
-      "website": "https://www.hoernlepass.at/",
-      "google_rating": 4.8,
-      "google_reviews": 609,
-      "naechste_bergbahn": {
-        "name": "Schwandlift",
-        "typ": "Bügellift",
-        "distanz_m": 4313,
-        "gehzeit_min": 59
-      },
-      "naechste_piste": {
-        "name": "Schwandlift-Piste",
-        "distanz_m": 3029
-      },
-      "naechste_loipe": {
-        "name": "Unbenannt",
-        "distanz_m": 1222
-      },
-      "ski_in_out": "nein",
-      "ai_description": "Der Hörnlepass sitzt wirklich perfekt oben über Riezlern – du hast von dort eine wahnsinnige Aussicht ins ganze Tal und auf die Bergkette rundherum, ohne dich mitten ins Getümmel quetschen zu müssen.",
-      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Alpengasthof%20H%C3%B6rnlepass%20%E2%80%93%20Hotel%20%26%20Restaurant%20Kleinwalsertal"
     },
     {
       "name": "Hotel Garni Ingeborg",
