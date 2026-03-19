@@ -839,7 +839,6 @@
       const bergbahn = raw.naechste_bergbahn || null;
       const loipe = raw.naechste_loipe || null;
       const piste = raw.naechste_piste || null;
-      const loipeOsm = raw.naechste_loipe_osm || null;
 
       const h = {
         name,
@@ -854,24 +853,19 @@
         adresse: norm(raw.adresse),
         gps: raw.gps || null,
 
-        // Bergbahn (Google Routes real walking distance)
+        // Bergbahn (OSM lift + Google Routes walking distance)
         nearest_lift_name: bergbahn ? bergbahn.name : "",
         nearest_lift_type: bergbahn ? (bergbahn.typ || "") : "",
         lift_distance_m: bergbahn ? bergbahn.distanz_m : null,
         lift_walk_min: bergbahn ? bergbahn.gehzeit_min : null,
 
-        // Loipe (Google Routes real walking distance)
-        loipe_name: loipe ? loipe.name : "",
-        loipe_distance_m: loipe ? loipe.distanz_m : null,
-        loipe_walk_min: loipe ? loipe.gehzeit_min : null,
-
-        // OSM piste (Luftlinie)
+        // Piste (OSM Luftlinie)
         piste_name: piste ? piste.name : "",
         piste_distance_m: piste ? piste.distanz_m : null,
 
-        // OSM loipe (Luftlinie)
-        loipe_osm_name: loipeOsm ? loipeOsm.name : "",
-        loipe_osm_distance_m: loipeOsm ? loipeOsm.distanz_m : null,
+        // Loipe (OSM Luftlinie)
+        loipe_name: loipe ? loipe.name : "",
+        loipe_distance_m: loipe ? loipe.distanz_m : null,
 
         wellness: norm(raw.wellness || ""),
         familie: norm(raw.familie || ""),
@@ -880,7 +874,7 @@
 
       // Build text blob for scoring
       h.textBlob = [h.name, h.ortsteil, h.typ, h.ai_description,
-        h.nearest_lift_name, h.loipe_name, h.piste_name, h.loipe_osm_name,
+        h.nearest_lift_name, h.loipe_name, h.piste_name,
         h.ski_in_out, h.wellness, h.familie, h.adults_only].filter(Boolean).join(" ");
 
       return h;
@@ -905,7 +899,7 @@
         if (desc && (!h.ai_description || h.ai_description.length < desc.length)) {
           h.ai_description = desc;
           h.textBlob = [h.name, h.ortsteil, h.typ, h.ai_description,
-            h.nearest_lift_name, h.loipe_name, h.piste_name, h.loipe_osm_name,
+            h.nearest_lift_name, h.loipe_name, h.piste_name,
             h.ski_in_out, h.wellness, h.familie, h.adults_only].filter(Boolean).join(" ");
         }
         return h;
@@ -961,10 +955,10 @@
 
       // Focus preference (langlauf / wandern)
       if (p.focus === "langlauf") {
-        if (h.loipe_osm_distance_m != null && h.loipe_osm_distance_m <= 500) s += 25;
+        if (h.loipe_distance_m != null && h.loipe_distance_m <= 500) s += 25;
         else if (h.loipe_distance_m != null && h.loipe_distance_m <= 1200) s += 18;
         if (containsAny(b, ["loipe", "langlauf"])) s += 10;
-        if (h.loipe_osm_distance_m != null) s += Math.max(0, 15 - Math.min(15, h.loipe_osm_distance_m / 100));
+        if (h.loipe_distance_m != null) s += Math.max(0, 15 - Math.min(15, h.loipe_distance_m / 100));
       } else if (p.focus === "wandern") {
         if (containsAny(b, ["wandern", "wander", "berge", "trail", "ausgangspunkt", "natur", "panorama"])) s += 18;
       } else {
@@ -1021,9 +1015,9 @@
         (h.piste_distance_m != null && h.piste_distance_m <= 200)
       ).sort((a, b) => (a.piste_distance_m ?? 999999) - (b.piste_distance_m ?? 999999)),
       langlauf: () => HOTELS.filter(h =>
-        (h.loipe_osm_distance_m != null && h.loipe_osm_distance_m <= 800) ||
+        (h.loipe_distance_m != null && h.loipe_distance_m <= 800) ||
         containsAny(lower(h.textBlob || ""), ["langlauf", "loipe"])
-      ).sort((a, b) => (a.loipe_osm_distance_m ?? 999999) - (b.loipe_osm_distance_m ?? 999999)),
+      ).sort((a, b) => (a.loipe_distance_m ?? 999999) - (b.loipe_distance_m ?? 999999)),
       ruhig: () => HOTELS.filter(h =>
         containsAny(lower(h.textBlob || ""), ["ruhig", "abseits", "randlage", "natur", "still", "talende", "baad"])
       ),
@@ -1052,8 +1046,8 @@
         c.push("\u{1F3BF} Piste " + fmtDist(h.piste_distance_m));
       }
       // Nearest loipe (OSM)
-      if (h.loipe_osm_distance_m != null) {
-        c.push("\u{1F3FF} Loipe " + fmtDist(h.loipe_osm_distance_m));
+      if (h.loipe_distance_m != null) {
+        c.push("\u{1F3FF} Loipe " + fmtDist(h.loipe_distance_m));
       }
       return c.slice(0, 5);
     }
@@ -1171,11 +1165,8 @@
       if (h.piste_name && h.piste_distance_m != null) {
         facts.push(["N\u00E4chste Piste", h.piste_name + " \u2014 " + fmtDist(h.piste_distance_m)]);
       }
-      if (h.loipe_osm_name && h.loipe_osm_distance_m != null) {
-        facts.push(["N\u00E4chste Loipe", h.loipe_osm_name + " \u2014 " + fmtDist(h.loipe_osm_distance_m)]);
-      }
       if (h.loipe_name && h.loipe_distance_m != null) {
-        facts.push(["Loipen-Einstieg", h.loipe_name + " \u2014 " + fmtDist(h.loipe_distance_m) + " Gehweg"]);
+        facts.push(["N\u00E4chste Loipe", h.loipe_name + " \u2014 " + fmtDist(h.loipe_distance_m)]);
       }
       if (h.adresse) facts.push(["Adresse", h.adresse]);
       el.mFacts.innerHTML = facts.map(([l, v]) =>
