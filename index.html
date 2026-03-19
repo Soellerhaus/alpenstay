@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <style>
     /* ================================================================
        CSS VARIABLES & RESET
@@ -18,12 +19,14 @@
       --bg-card: #1a1f2e;
       --bg-card-hover: #1f2937;
       --accent: #14b8a6;
+      --accent-primary: #14b8a6;
       --accent-hover: #0d9488;
       --accent-soft: rgba(20, 184, 166, 0.08);
       --text-primary: #f8fafc;
       --text-secondary: #cbd5e1;
       --text-muted: #94a3b8;
       --border: rgba(255, 255, 255, 0.06);
+      --border-subtle: rgba(255, 255, 255, 0.08);
       --border-medium: rgba(255, 255, 255, 0.1);
       --radius-sm: 8px;
       --radius-md: 12px;
@@ -92,38 +95,31 @@
     .nav-cta:hover { background: var(--accent-hover); }
 
     /* ================================================================
-       DESTINATION NAV BAR
-       ================================================================ */
-    .dest-bar {
-      margin-top: 57px; /* below fixed header */
-      background: var(--bg-secondary);
-      border-bottom: 1px solid var(--border);
-      padding: 0.5rem 1.5rem;
-      text-align: center;
-      font-size: 0.8125rem;
-      color: var(--text-muted);
-      font-weight: 500;
-    }
-    .dest-bar strong { color: var(--text-secondary); }
-    .dest-bar span { opacity: 0.5; margin-left: 0.5rem; }
-
-    /* ================================================================
-       HERO
+       HERO with background image
        ================================================================ */
     .hero {
-      position: relative; min-height: 80vh; display: flex; align-items: center;
-      justify-content: center; text-align: center; overflow: hidden;
+      position: relative;
+      min-height: 80vh;
+      background: url('images/hero-kwt.jpg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
       padding: 5rem 1.5rem 4rem;
+      margin-top: 57px;
     }
-    .hero-bg {
-      position: absolute; inset: 0; z-index: 0;
-      background: linear-gradient(135deg, #0f1729 0%, #1a2744 50%, #0d3b4f 100%);
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(10,14,26,0.6) 0%, rgba(10,14,26,0.8) 100%);
     }
-    .hero-bg::after {
-      content: ''; position: absolute; inset: 0;
-      background: linear-gradient(180deg, rgba(10,14,26,0.5) 0%, rgba(10,14,26,0.85) 70%, var(--bg-primary) 100%);
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
     }
-    .hero-content { position: relative; z-index: 1; max-width: 700px; }
     .hero h1 { font-size: clamp(2.5rem, 5vw, 3.75rem); margin-bottom: 1.25rem; letter-spacing: -0.02em; }
     .hero-sub {
       font-size: 1.125rem; color: var(--text-muted); margin-bottom: 2.5rem;
@@ -150,6 +146,73 @@
     .status-bar.success { border-color: rgba(20,184,166,0.2); color: var(--accent); }
     .status-bar.warning { border-color: rgba(245,158,11,0.2); color: #f59e0b; }
     .status-bar.error { border-color: rgba(239,68,68,0.2); color: #ef4444; }
+
+    /* ================================================================
+       LOCATION NAV (pills/tabs)
+       ================================================================ */
+    .location-nav {
+      display: flex;
+      gap: 0.75rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 2rem 0;
+    }
+    .location-pill {
+      padding: 0.625rem 1.5rem;
+      border-radius: 999px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-muted);
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9375rem;
+      transition: all 0.2s;
+    }
+    .location-pill.active, .location-pill:hover {
+      background: var(--accent-primary);
+      color: var(--bg-primary);
+      border-color: var(--accent-primary);
+    }
+    .location-pill .pill-count {
+      font-size: 0.75rem;
+      opacity: 0.7;
+      margin-left: 0.25rem;
+    }
+
+    /* ================================================================
+       MAP
+       ================================================================ */
+    .map-section { padding: 0 0 2rem; }
+    #hotelMap {
+      height: 400px;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-medium);
+      z-index: 1;
+    }
+    .leaflet-popup-content-wrapper {
+      background: var(--bg-card) !important;
+      color: var(--text-secondary) !important;
+      border-radius: var(--radius-md) !important;
+      border: 1px solid var(--border-medium) !important;
+      box-shadow: var(--shadow-lg) !important;
+    }
+    .leaflet-popup-tip { background: var(--bg-card) !important; }
+    .leaflet-popup-content { margin: 0.75rem 1rem !important; font-family: var(--font-body) !important; font-size: 0.8125rem !important; }
+    .popup-name { font-family: var(--font-display); font-weight: 700; font-size: 0.9375rem; color: var(--text-primary); margin-bottom: 0.25rem; }
+    .popup-rating { color: #fbbf24; font-size: 0.8125rem; margin-bottom: 0.25rem; }
+    .popup-badge { display: inline-block; padding: 0.125rem 0.5rem; border-radius: 999px; background: #16a34a; color: #fff; font-size: 0.6875rem; font-weight: 600; margin-bottom: 0.375rem; }
+    .popup-details-btn {
+      display: block; width: 100%; padding: 0.375rem 0.75rem; margin-top: 0.5rem;
+      border-radius: var(--radius-sm); background: var(--accent); color: var(--bg-primary);
+      font-weight: 600; font-size: 0.75rem; text-align: center; cursor: pointer; border: none;
+      font-family: var(--font-body);
+    }
+    .popup-details-btn:hover { background: var(--accent-hover); }
+    .leaflet-control-zoom a {
+      background: var(--bg-card) !important;
+      color: var(--text-primary) !important;
+      border-color: var(--border-medium) !important;
+    }
 
     /* ================================================================
        WIZARD
@@ -295,6 +358,11 @@
       color: var(--text-secondary); line-height: 1.65; margin-bottom: 1.25rem;
       flex: 1;
     }
+    .card-review-hl {
+      font-size: 0.8rem; color: var(--text-muted); margin: 0.25rem 0 0.75rem;
+      padding: 0.5rem 0.75rem; background: var(--bg-secondary); border-radius: var(--radius-sm);
+      border: 1px solid var(--border); line-height: 1.5;
+    }
     .card-features {
       display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.25rem;
     }
@@ -302,6 +370,18 @@
       padding: 0.3125rem 0.75rem; border-radius: 999px;
       background: var(--bg-secondary); border: 1px solid var(--border);
       font-size: 0.75rem; color: var(--text-muted); font-weight: 500;
+    }
+    .feature-chip.ski-badge {
+      background: rgba(22, 163, 74, 0.15); border-color: rgba(22, 163, 74, 0.3);
+      color: #4ade80;
+    }
+    .feature-chip.family-badge {
+      background: rgba(59, 130, 246, 0.12); border-color: rgba(59, 130, 246, 0.25);
+      color: #93c5fd;
+    }
+    .feature-chip.adults-badge {
+      background: rgba(168, 85, 247, 0.12); border-color: rgba(168, 85, 247, 0.25);
+      color: #c4b5fd;
     }
     .card-actions {
       display: flex; gap: 0.625rem; padding-top: 1.25rem;
@@ -463,6 +543,7 @@
     @media (max-width: 768px) {
       .nav-links { display: none; }
       .hero { min-height: 70vh; padding: 4rem 1rem 3rem; }
+      #hotelMap { height: 300px; }
       .wizard { padding: 2rem 1.25rem; }
       .choice-grid { grid-template-columns: 1fr; }
       .choice { min-height: 56px; padding: 1.25rem 1rem; }
@@ -476,6 +557,7 @@
       .wizard-actions { flex-direction: column; }
       .wizard-actions > * { width: 100%; text-align: center; justify-content: center; min-height: 48px; }
       .btn-back, .btn-reset, .btn-show { min-height: 48px; display: inline-flex; align-items: center; justify-content: center; }
+      .location-pill { padding: 0.5rem 1rem; font-size: 0.8125rem; }
     }
     @media (min-width: 769px) and (max-width: 1023px) {
       .cards-grid { grid-template-columns: repeat(2, 1fr); }
@@ -495,6 +577,7 @@
       </a>
       <nav class="nav-links">
         <a href="#wizard">Finder</a>
+        <a href="#karte">Karte</a>
         <a href="#empfehlungen">Hotels</a>
         <a href="#listen">Listen</a>
         <a href="#about">Info</a>
@@ -504,18 +587,9 @@
   </header>
 
   <!-- ================================================================
-       DESTINATION NAV BAR
-       ================================================================ -->
-  <div class="dest-bar">
-    <strong>Kleinwalsertal</strong>
-    <span>| + weitere folgen</span>
-  </div>
-
-  <!-- ================================================================
-       HERO
+       HERO with background image
        ================================================================ -->
   <section class="hero" id="top">
-    <div class="hero-bg"></div>
     <div class="hero-content">
       <h1>Dein perfektes Hotel im Kleinwalsertal</h1>
       <p class="hero-sub">Kuratiert. Ehrlich. Ohne Marketing-Blabla.</p>
@@ -524,6 +598,28 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
       </button>
       <div class="status-bar" id="dataStatus">Daten werden geladen&hellip;</div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       LOCATION NAVIGATION (filter by Ortsteil)
+       ================================================================ -->
+  <section id="karte" class="map-section">
+    <div class="container">
+      <div class="section-header" style="margin-bottom:0">
+        <h2>Hotels nach Ort</h2>
+        <p>W&auml;hle einen Ortsteil oder sieh dir alle Hotels auf der Karte an.</p>
+      </div>
+      <div class="location-nav" id="locationNav">
+        <button class="location-pill active" data-location="alle">Alle</button>
+        <button class="location-pill" data-location="Riezlern">Riezlern</button>
+        <button class="location-pill" data-location="Hirschegg">Hirschegg</button>
+        <button class="location-pill" data-location="Mittelberg">Mittelberg</button>
+        <button class="location-pill" data-location="Baad">Baad</button>
+      </div>
+
+      <!-- Leaflet Map -->
+      <div id="hotelMap"></div>
     </div>
   </section>
 
@@ -746,6 +842,11 @@
   </div>
 
   <!-- ================================================================
+       LEAFLET JS
+       ================================================================ -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <!-- ================================================================
        JAVASCRIPT
        ================================================================ -->
   <script>
@@ -757,6 +858,16 @@
       DESCRIPTIONS_URL: "data/descriptions.json",
       AFFILIATE_ID: "DEIN_AFFILIATE_ID",
       DESTINATION: "Kleinwalsertal",
+      MAP_CENTER: [47.34, 10.17],
+      MAP_ZOOM: 13,
+      // Zoom targets for each Ortsteil
+      LOCATION_VIEWS: {
+        alle: { center: [47.34, 10.17], zoom: 13 },
+        Riezlern: { center: [47.36, 10.19], zoom: 14 },
+        Hirschegg: { center: [47.345, 10.17], zoom: 14 },
+        Mittelberg: { center: [47.325, 10.155], zoom: 14 },
+        Baad: { center: [47.305, 10.13], zoom: 15 },
+      },
     };
 
     // =====================================================================
@@ -786,10 +897,14 @@
       mFacts: $("mFacts"),
       mWebsite: $("mWebsite"),
       mBooking: $("mBooking"),
+      locationNav: $("locationNav"),
     };
 
     let HOTELS = [];
     let currentStep = 1;
+    let activeLocation = "alle";
+    let map = null;
+    let mapMarkers = [];
     const prefs = { party: null, ski: null, focus: null, wellness: null, lage: null };
 
     // =====================================================================
@@ -810,6 +925,17 @@
     const containsAny = (t, arr) => { const l = lower(t); return arr.some(a => l.includes(a)); };
     const safeUrl = u => { const s = norm(u); if (!s) return ""; return s.startsWith("http") ? s : "https://" + s; };
     const fmtDist = m => m >= 1000 ? (m / 1000).toFixed(1) + "km" : Math.round(m) + "m";
+
+    // Detect if a hotel is in Baad (part of Mittelberg)
+    function isBaad(h) {
+      return (h.adresse && lower(h.adresse).includes("baad")) ||
+             (h.name && lower(h.name).includes("baad"));
+    }
+
+    function getEffectiveOrtsteil(h) {
+      if (isBaad(h)) return "Baad";
+      return h.ortsteil || "";
+    }
 
     // =====================================================================
     // DATA LOADING: LOCAL JSON FILE
@@ -855,17 +981,17 @@
         adresse: norm(raw.adresse),
         gps: raw.gps || null,
 
-        // Bergbahn (OSM lift + Google Routes walking distance)
+        // Bergbahn
         nearest_lift_name: bergbahn ? bergbahn.name : "",
         nearest_lift_type: bergbahn ? (bergbahn.typ || "") : "",
         lift_distance_m: bergbahn ? bergbahn.distanz_m : null,
         lift_walk_min: bergbahn ? bergbahn.gehzeit_min : null,
 
-        // Piste (OSM Luftlinie)
+        // Piste
         piste_name: piste ? piste.name : "",
         piste_distance_m: piste ? piste.distanz_m : null,
 
-        // Loipe (OSM Luftlinie)
+        // Loipe
         loipe_name: loipe ? loipe.name : "",
         loipe_distance_m: loipe ? loipe.distanz_m : null,
 
@@ -938,6 +1064,135 @@
     }
 
     // =====================================================================
+    // MAP (Leaflet.js)
+    // =====================================================================
+    function initMap() {
+      map = L.map('hotelMap', {
+        scrollWheelZoom: false,
+      }).setView(CONFIG.MAP_CENTER, CONFIG.MAP_ZOOM);
+
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+        maxZoom: 18,
+      }).addTo(map);
+    }
+
+    function createMarkerIcon(color) {
+      const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 36" width="28" height="40">
+        <path d="M12 0C5.4 0 0 5.4 0 12c0 9 12 24 12 24s12-15 12-24C24 5.4 18.6 0 12 0z" fill="${color}" stroke="#fff" stroke-width="1.5"/>
+        <circle cx="12" cy="12" r="5" fill="#fff" opacity="0.9"/>
+      </svg>`;
+      return L.divIcon({
+        html: svg,
+        className: '',
+        iconSize: [28, 40],
+        iconAnchor: [14, 40],
+        popupAnchor: [0, -36],
+      });
+    }
+
+    function getMarkerColor(h) {
+      if (h.ski_in_out === "ja" || (h.ski_in_out && h.ski_in_out.includes("fast"))) return "#16a34a"; // green
+      const typLower = lower(h.typ);
+      if (typLower.includes("pension") || typLower.includes("gästehaus") || typLower.includes("gaestehaus") || typLower.includes("ferienwohnung") || typLower.includes("apartment")) return "#f97316"; // orange
+      return "#3b82f6"; // blue for hotels/lodges
+    }
+
+    function updateMapMarkers(filteredHotels) {
+      // Clear existing markers
+      mapMarkers.forEach(m => map.removeLayer(m));
+      mapMarkers = [];
+
+      filteredHotels.forEach(h => {
+        if (!h.gps || !h.gps.lat || !h.gps.lng) return;
+
+        const color = getMarkerColor(h);
+        const icon = createMarkerIcon(color);
+        const marker = L.marker([h.gps.lat, h.gps.lng], { icon }).addTo(map);
+
+        // Popup content
+        let popupHtml = `<div class="popup-name">${escapeHtml(h.name)}</div>`;
+        if (h.google_rating && h.google_rating > 0) {
+          popupHtml += `<div class="popup-rating">${ratingStars(h.google_rating)} ${h.google_rating.toFixed(1)} (${Math.round(h.google_reviews || 0)})</div>`;
+        }
+        if (h.ski_in_out === "ja") {
+          popupHtml += `<div><span class="popup-badge">Ski-in/Ski-out</span></div>`;
+        }
+        popupHtml += `<button class="popup-details-btn" data-hotel="${escapeHtml(h.name)}">Details ansehen</button>`;
+
+        marker.bindPopup(popupHtml, { maxWidth: 220, closeButton: true });
+        marker.on('popupopen', () => {
+          const btn = document.querySelector('.popup-details-btn[data-hotel="' + h.name.replace(/"/g, '&quot;') + '"]');
+          if (btn) {
+            btn.addEventListener('click', () => {
+              openModal(h);
+              map.closePopup();
+            });
+          }
+        });
+
+        mapMarkers.push(marker);
+      });
+    }
+
+    function filterByLocation(location) {
+      activeLocation = location;
+
+      // Update pills
+      el.locationNav.querySelectorAll('.location-pill').forEach(p =>
+        p.classList.toggle('active', p.dataset.location === location)
+      );
+
+      // Filter hotels
+      let filtered;
+      if (location === "alle") {
+        filtered = HOTELS;
+      } else if (location === "Baad") {
+        filtered = HOTELS.filter(h => isBaad(h));
+      } else {
+        filtered = HOTELS.filter(h => h.ortsteil === location && !isBaad(h));
+      }
+
+      // Update map
+      if (map) {
+        const view = CONFIG.LOCATION_VIEWS[location] || CONFIG.LOCATION_VIEWS.alle;
+        map.flyTo(view.center, view.zoom, { duration: 0.8 });
+        updateMapMarkers(filtered);
+      }
+
+      // Update curated cards to show filtered hotels
+      renderLocationCards(filtered);
+    }
+
+    function renderLocationCards(hotels) {
+      // This updates the curated section to reflect the location filter
+      const sorted = hotels.slice().sort((a, b) => (b.google_rating || 0) - (a.google_rating || 0));
+      renderCards(el.curatedCards, sorted.slice(0, 18));
+    }
+
+    // Update location pill counts
+    function updateLocationCounts() {
+      el.locationNav.querySelectorAll('.location-pill').forEach(pill => {
+        const loc = pill.dataset.location;
+        let count;
+        if (loc === "alle") {
+          count = HOTELS.length;
+        } else if (loc === "Baad") {
+          count = HOTELS.filter(h => isBaad(h)).length;
+        } else {
+          count = HOTELS.filter(h => h.ortsteil === loc && !isBaad(h)).length;
+        }
+        // Add count badge
+        const existing = pill.querySelector('.pill-count');
+        if (existing) existing.remove();
+        const span = document.createElement('span');
+        span.className = 'pill-count';
+        span.textContent = '(' + count + ')';
+        pill.appendChild(span);
+      });
+    }
+
+    // =====================================================================
     // FILTERS & SCORING
     // =====================================================================
     const isAdultsOnly = h =>
@@ -948,7 +1203,6 @@
       let s = 0;
       const b = lower(h.textBlob || "");
 
-      // Party preference
       if (p.party === "family") {
         if (h.familie === true || containsAny(b, ["familie", "kinder", "familienhotel", "spiel", "kids"])) s += 20;
       } else if (p.party === "adults") {
@@ -958,7 +1212,6 @@
         s += 3;
       }
 
-      // Ski-in/out preference (uses OSM piste distance)
       if (p.ski === "skiinout_yes") {
         if (h.ski_in_out === "ja") s += 30;
         else if (h.ski_in_out && h.ski_in_out.includes("fast")) s += 18;
@@ -970,7 +1223,6 @@
         s += 3;
       }
 
-      // Focus preference (langlauf / wandern)
       if (p.focus === "langlauf") {
         if (h.loipe_distance_m != null && h.loipe_distance_m <= 500) s += 25;
         else if (h.loipe_distance_m != null && h.loipe_distance_m <= 1200) s += 18;
@@ -982,7 +1234,6 @@
         s += 3;
       }
 
-      // Wellness preference
       const hasW = h.wellness === true || h.sauna === true || h.pool === true || containsAny(b, ["wellness", "spa", "sauna", "dampfbad", "pool", "massage"]);
       if (p.wellness === "yes") {
         if (hasW) s += 18; else s -= 8;
@@ -992,7 +1243,6 @@
         s += 3;
       }
 
-      // Location preference
       const isCentral = containsAny(b, ["zentral", "im ort", "zentrum", "dorf", "mitten"]);
       const isQuiet = containsAny(b, ["ruhig", "randlage", "natur", "baad", "talende", "abseits", "still"]);
       if (p.lage === "ruhig") {
@@ -1005,7 +1255,6 @@
         s += 3;
       }
 
-      // Bonus for rich data
       if (h.google_rating > 0) s += Math.round((h.google_rating - 3) * 3);
       if (h.ai_description) s += 5;
       if (h.website) s += 3;
@@ -1049,39 +1298,48 @@
     // =====================================================================
     function featureChips(h) {
       const c = [];
-      // Sterne
-      if (h.sterne && h.sterne > 0) {
-        c.push("\u2B50 " + h.sterne + (h.sterne === 1 ? " Stern" : " Sterne"));
-      }
-      // Ski-in/out status
+
+      // Ski-in/out status (green badge)
       if (h.ski_in_out === "ja") {
-        c.push("\u26F7 Ski-in/out");
+        c.push({ text: "\u26F7\uFE0F Ski-in/Ski-out", cls: "ski-badge" });
       } else if (h.ski_in_out && h.ski_in_out.includes("fast")) {
-        c.push("\u26F7 Fast Ski-in/out");
+        c.push({ text: "\u26F7\uFE0F Fast Ski-in/out", cls: "ski-badge" });
       }
-      // Wellness/Sauna/Pool
-      if (h.wellness) c.push("\u{1F9D6} Wellness");
-      if (h.pool && !h.wellness) c.push("\u{1F3CA} Pool");
+
       // Familie / Adults only
-      if (h.familie) c.push("\u{1F46A} Familienfreundlich");
-      if (h.adults_only) c.push("\u{1F48E} Adults Only");
+      if (h.familie) c.push({ text: "\uD83D\uDC68\u200D\uD83D\uDC69\u200D\uD83D\uDC67 Familie", cls: "family-badge" });
+      if (h.adults_only) c.push({ text: "\uD83D\uDC8E Adults Only", cls: "adults-badge" });
+
+      // Nearest bergbahn
+      if (h.nearest_lift_name && h.lift_distance_m != null) {
+        let chipText = "\uD83D\uDEA0 " + h.nearest_lift_name + " " + fmtDist(h.lift_distance_m);
+        if (h.lift_walk_min != null) chipText += " (" + h.lift_walk_min + " Min)";
+        c.push({ text: chipText, cls: "" });
+      }
+
+      // Nearest piste
+      if (h.piste_distance_m != null) {
+        c.push({ text: "\uD83C\uDFBF Piste " + fmtDist(h.piste_distance_m), cls: "" });
+      }
+
+      // Nearest loipe
+      if (h.loipe_distance_m != null) {
+        c.push({ text: "\u26F7 Loipe " + fmtDist(h.loipe_distance_m), cls: "" });
+      }
+
+      // Wellness/Sauna/Pool icons
+      const amenities = [];
+      if (h.wellness) amenities.push("\uD83E\uDDD6 Wellness");
+      if (h.sauna && !h.wellness) amenities.push("\uD83E\uDDD6 Sauna");
+      if (h.pool) amenities.push("\uD83C\uDFCA Pool");
+      amenities.forEach(a => c.push({ text: a, cls: "" }));
+
       // Verpflegung
       if (h.verpflegung && h.verpflegung !== "nur Uebernachtung") {
-        c.push("\u{1F37D} " + h.verpflegung);
+        c.push({ text: "\uD83C\uDF7D\uFE0F " + h.verpflegung, cls: "" });
       }
-      // Nearest bergbahn with real walking distance
-      if (h.nearest_lift_name && h.lift_distance_m != null) {
-        c.push("\u{1F6A0} " + h.nearest_lift_name + " " + fmtDist(h.lift_distance_m));
-      }
-      // Nearest piste (OSM)
-      if (h.piste_distance_m != null) {
-        c.push("\u{1F3BF} Piste " + fmtDist(h.piste_distance_m));
-      }
-      // Nearest loipe (OSM)
-      if (h.loipe_distance_m != null) {
-        c.push("\u{1F3FF} Loipe " + fmtDist(h.loipe_distance_m));
-      }
-      return c.slice(0, 6);
+
+      return c.slice(0, 8);
     }
 
     function truncateDescription(text, maxSentences) {
@@ -1098,6 +1356,11 @@
       return "\u2605".repeat(full) + (half ? "\u00BD" : "");
     }
 
+    function sterneDisplay(sterne) {
+      if (!sterne || sterne <= 0) return "";
+      return "\u2605".repeat(sterne);
+    }
+
     function cardHtml(h) {
       const desc = h.ai_description || "";
       const truncated = truncateDescription(desc, 2);
@@ -1107,20 +1370,22 @@
         ? `<div class="card-rating">${ratingStars(h.google_rating)} ${h.google_rating.toFixed(1)} <span class="count">\u00B7 ${Math.round(h.google_reviews || 0)} Bewertungen</span></div>`
         : "";
 
-      const preisLabel = h.preis_kategorie ? {budget:"Budget",mittel:"Mittelklasse",gehoben:"Gehoben",luxus:"Luxus"}[h.preis_kategorie] || "" : "";
-      const locationParts = [h.ortsteil, h.typ, preisLabel].filter(Boolean);
+      // Location line: Ortsteil + Typ + Sterne
+      const locationParts = [getEffectiveOrtsteil(h), h.typ];
+      if (h.sterne && h.sterne > 0) locationParts.push(sterneDisplay(h.sterne));
+      const locationLine = locationParts.filter(Boolean).join(" \u00B7 ");
 
-      return `<article class="hotel-card">
+      return `<article class="hotel-card" data-ortsteil="${escapeHtml(h.ortsteil)}" data-baad="${isBaad(h) ? '1' : '0'}">
         <div class="card-body">
-          <div class="card-location">${escapeHtml(locationParts.join(" \u00B7 "))}</div>
+          <div class="card-location">${escapeHtml(locationLine)}</div>
           <h3 class="card-title">${escapeHtml(h.name)}</h3>
           ${ratingHtml}
           ${truncated ? `<p class="card-quote">\u201E${escapeHtml(truncated)}\u201C</p>` : ""}
-          ${h.review_highlights ? `<p class="card-review-hl" style="font-size:0.8rem;color:var(--text-muted);margin:0.25rem 0 0.5rem;font-style:italic;">\u{1F4AC} ${escapeHtml(h.review_highlights)}</p>` : ""}
-          <div class="card-features">${chips.map(c => `<span class="feature-chip">${c}</span>`).join("")}</div>
+          ${h.review_highlights ? `<div class="card-review-hl">\uD83D\uDCAC ${escapeHtml(h.review_highlights)}</div>` : ""}
+          <div class="card-features">${chips.map(c => `<span class="feature-chip ${c.cls}">${c.text}</span>`).join("")}</div>
           <div class="card-actions">
             <button class="btn-details" data-open="${escapeHtml(h.name)}">Details ansehen</button>
-            <a class="btn-booking" href="${escapeHtml(bookUrl)}" target="_blank" rel="noopener sponsored">Bei Booking.com &rarr;</a>
+            <a class="btn-booking" href="${escapeHtml(bookUrl)}" target="_blank" rel="noopener sponsored">Bei Booking.com buchen &rarr;</a>
           </div>
         </div>
       </article>`;
@@ -1156,7 +1421,7 @@
       if (!HOTELS.length) return;
       listKey = listKey || "alle";
       const fn = filters[listKey] || filters.alle;
-      const hotels = fn().slice(0, 12);
+      const hotels = fn().slice(0, 18);
       renderCards(el.curatedCards, hotels);
     }
 
@@ -1164,10 +1429,9 @@
     // MODAL
     // =====================================================================
     function openModal(h) {
-      el.mLocation.textContent = [h.ortsteil, h.typ].filter(Boolean).join(" \u00B7 ");
+      el.mLocation.textContent = [getEffectiveOrtsteil(h), h.typ].filter(Boolean).join(" \u00B7 ");
       el.mTitle.textContent = h.name;
 
-      // Rating
       if (h.google_rating && h.google_rating > 0) {
         el.mRating.innerHTML = `${ratingStars(h.google_rating)} ${h.google_rating.toFixed(1)} <span class="count">\u00B7 ${Math.round(h.google_reviews || 0)} Google-Bewertungen</span>`;
         el.mRating.classList.remove("hidden");
@@ -1175,7 +1439,6 @@
         el.mRating.classList.add("hidden");
       }
 
-      // AI Description
       const desc = h.ai_description || "";
       if (desc) {
         el.mQuote.textContent = "\u201E" + desc + "\u201C";
@@ -1184,13 +1447,11 @@
         el.mQuote.classList.add("hidden");
       }
 
-      // No insider tip in new data format
       el.mInsider.classList.add("hidden");
 
-      // Facts grid
       const facts = [];
-      if (h.ortsteil) facts.push(["Ortsteil", h.ortsteil]);
-      if (h.sterne) facts.push(["Kategorie", h.sterne + (h.sterne === 1 ? " Stern" : " Sterne")]);
+      if (h.ortsteil) facts.push(["Ortsteil", getEffectiveOrtsteil(h)]);
+      if (h.sterne) facts.push(["Kategorie", sterneDisplay(h.sterne) + " (" + h.sterne + (h.sterne === 1 ? " Stern" : " Sterne") + ")"]);
       if (h.ski_in_out) facts.push(["Ski-in/Ski-out", h.ski_in_out === "ja" ? "Ja (Piste unter 50m)" : h.ski_in_out.includes("fast") ? "Fast (Piste unter 150m)" : "Nein"]);
       if (h.nearest_lift_name) {
         let liftVal = h.nearest_lift_name;
@@ -1205,7 +1466,6 @@
       if (h.loipe_name && h.loipe_distance_m != null) {
         facts.push(["N\u00E4chste Loipe", h.loipe_name + " \u2014 " + fmtDist(h.loipe_distance_m)]);
       }
-      // v3 enrichment facts
       const amenities = [];
       if (h.wellness) amenities.push("Wellness");
       if (h.sauna) amenities.push("Sauna");
@@ -1228,15 +1488,12 @@
         `<div class="fact"><div class="fact-label">${escapeHtml(l)}</div><div class="fact-value">${escapeHtml(v)}</div></div>`
       ).join("");
 
-      // Website button
       const url = safeUrl(h.website);
       el.mWebsite.onclick = () => { if (url) window.open(url, "_blank", "noopener"); };
       el.mWebsite.style.display = url ? "" : "none";
 
-      // Booking button
       el.mBooking.href = buildBookingUrl(h);
 
-      // Show modal
       el.modalBackdrop.classList.add("open");
       document.body.style.overflow = "hidden";
     }
@@ -1358,21 +1615,28 @@
       renderCurated(pill.dataset.list);
     });
 
+    // Location nav pills
+    el.locationNav.addEventListener("click", e => {
+      const pill = e.target.closest(".location-pill");
+      if (!pill) return;
+      filterByLocation(pill.dataset.location);
+    });
+
     // =====================================================================
     // BOOT
     // =====================================================================
     (async function boot() {
+      // Initialize map
+      initMap();
+
       try {
-        // Load hotel data and descriptions in parallel
         const [hotelsRaw, descriptions] = await Promise.all([
           loadHotelData(),
           loadDescriptions(),
         ]);
 
-        // Parse hotel objects
         HOTELS = hotelsRaw.map(parseHotel).filter(Boolean);
 
-        // Enrich with AI descriptions
         if (Object.keys(descriptions).length > 0) {
           HOTELS = enrichWithDescriptions(HOTELS, descriptions);
         }
@@ -1380,6 +1644,8 @@
         if (HOTELS.length > 0) {
           el.dataStatus.textContent = `${HOTELS.length} Hotels geladen (Google Places + OSM)`;
           el.dataStatus.classList.add("success");
+          updateLocationCounts();
+          updateMapMarkers(HOTELS);
           renderCurated("alle");
         } else {
           el.dataStatus.textContent = "Keine Hoteldaten gefunden.";
