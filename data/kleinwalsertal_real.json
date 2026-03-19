@@ -2,7 +2,7 @@
   "destination": "Kleinwalsertal",
   "slug": "kleinwalsertal",
   "region": "Vorarlberg, Oesterreich",
-  "hotel_count": 64,
+  "hotel_count": 122,
   "datenquelle": "Google Places API + OSM Overpass API + Google Routes API + Claude AI",
   "stand": "2026-03-19",
   "hotels": [
@@ -93,38 +93,8 @@
         "distanz_m": 99
       },
       "ski_in_out": "nein",
-      "ai_description": "Das Gästehaus Fritz in Mittelberg punktet mit seiner familiären Atmosphäre und der außergewöhnlich hohen Gästezufriedenheit - die 4,9 Sterne bei 93 Bewertungen sprechen eine klare Sprache. Die Pension liegt nur wenige Gehminuten von der Zafernabahn entfernt, sodass man in 8 Minuten am Sessellift steht und schnell ins Skigebiet kommt. Besonders praktisch für Langläufer ist die unmittelbare Nähe zur Loipe, die praktisch vor der Haustür beginnt. Hier erlebt man authentische Kleinwalsertaler Gastfreundschaft ohne Schnickschnack, dafür mit viel Herzlichkeit und fairem Preis-Leistungs-Verhältnis.",
+      "ai_description": "Das Gästehaus Fritz Kleinwalsertal ist eine kleine, familiär geführte Pension in Mittelberg, die ihre Gäste mit persönlicher Betreuung und der Top-Bewertung von 4.9 Sternen überzeugt. In nur 8 Gehminuten erreichen Sie die Zafernabahn, während Langläufer praktisch vor der Haustür auf die Loipe können - gerade mal 99 Meter sind es bis zur nächsten Spur. Die Skiabfahrt ist zwar nicht direkt vor der Tür, aber mit 264 Metern trotzdem sehr nah und schnell erreichbar. Hier erleben Sie authentische Kleinwalsertaler Gastfreundschaft abseits des großen Trubels, mit kurzen Wegen zu allen wichtigen Wintersportmöglichkeiten.",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=G%C3%A4stehaus%20Fritz%20Kleinwalsertal%20Kleinwalsertal"
-    },
-    {
-      "name": "Haller's Posthotel",
-      "ortsteil": "Riezlern",
-      "typ": "Hotel",
-      "adresse": "Walserstraße 48, 6991 Riezlern, Österreich",
-      "gps": {
-        "lat": 47.358326899999994,
-        "lng": 10.1882285
-      },
-      "website": "http://www.posthotel.cc/",
-      "google_rating": 4.5,
-      "google_reviews": 416,
-      "naechste_bergbahn": {
-        "name": "Schwandlift",
-        "typ": "Bügellift",
-        "distanz_m": 247,
-        "gehzeit_min": 4
-      },
-      "naechste_piste": {
-        "name": "Schwandlift-Piste",
-        "distanz_m": 170
-      },
-      "naechste_loipe": {
-        "name": "Egg Loipe",
-        "distanz_m": 548
-      },
-      "ski_in_out": "nein",
-      "ai_description": "Das Haller's Posthotel liegt mitten in Riezlern und punktet mit seiner zentralen Lage - zum Schwandlift sind es nur 4 Gehminuten. Das traditionsreiche Hotel verbindet gemütliche Atmosphäre mit solider Ausstattung, auch wenn man hier nicht direkt an der Piste steht. Die 170 Meter zur nächsten Skipiste sind schnell überwunden, und für Langläufer ist die Egg Loipe in gut 500 Metern Entfernung erreichbar. Ein ehrliches Familienhotel ohne Schnickschnack, das durch seine Lage und das gute Preis-Leistungs-Verhältnis überzeugt.",
-      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Haller%27s%20Posthotel%20Kleinwalsertal"
     },
     {
       "name": "Genuss- & Aktivhotel Sonnenburg",
@@ -157,6 +127,36 @@
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=Genuss-%20%26%20Aktivhotel%20Sonnenburg%20Kleinwalsertal"
     },
     {
+      "name": "Haller's Posthotel",
+      "ortsteil": "Riezlern",
+      "typ": "Hotel",
+      "adresse": "Walserstraße 48, 6991 Riezlern, Österreich",
+      "gps": {
+        "lat": 47.358326899999994,
+        "lng": 10.1882285
+      },
+      "website": "http://www.posthotel.cc/",
+      "google_rating": 4.5,
+      "google_reviews": 416,
+      "naechste_bergbahn": {
+        "name": "Schwandlift",
+        "typ": "Bügellift",
+        "distanz_m": 247,
+        "gehzeit_min": 4
+      },
+      "naechste_piste": {
+        "name": "Schwandlift-Piste",
+        "distanz_m": 170
+      },
+      "naechste_loipe": {
+        "name": "Egg Loipe",
+        "distanz_m": 548
+      },
+      "ski_in_out": "nein",
+      "ai_description": "Das Haller's Posthotel in Riezlern punktet mit seiner zentralen Lage nur 4 Gehminuten vom Schwandlift entfernt - perfekt für einen entspannten Start in den Skitag ohne lange Anmarschwege. Die soliden 4,5 Sterne bei über 400 Google-Bewertungen sprechen für sich und zeigen, dass hier Gäste wirklich zufrieden sind. Zwar ist es kein Ski-in/Ski-out Hotel, aber mit nur 170 Metern zur nächsten Piste ist man trotzdem schnell auf den Brettern. Für Langläufer liegt die Egg Loipe in gut erreichbarer Distanz, was das Hotel zu einer praktischen Basis für alle Wintersportarten macht.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Haller%27s%20Posthotel%20Kleinwalsertal"
+    },
+    {
       "name": "IFA Alpenrose Hotel Kleinwalsertal",
       "ortsteil": "Mittelberg",
       "typ": "Hotel",
@@ -185,66 +185,6 @@
       "ski_in_out": "nein",
       "ai_description": "Das Alpenrose ist wirklich das Rückgrat für Familien im Tal – großzügige Zimmer, Kinderbetreuung und ein Pool, der die Kleinen auch bei Schlechtwetter beschäftigt.",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=IFA%20Alpenrose%20Hotel%20Kleinwalsertal%20Kleinwalsertal"
-    },
-    {
-      "name": "Adler Hotel",
-      "ortsteil": "Hirschegg",
-      "typ": "Hotel",
-      "adresse": "Walserstraße 251, 6992 Hirschegg, Österreich",
-      "gps": {
-        "lat": 47.344638200000006,
-        "lng": 10.16779
-      },
-      "website": "https://www.adlerhirschegg.de/?utm_source=google%20places&utm_medium=organic",
-      "google_rating": 4.5,
-      "google_reviews": 137,
-      "naechste_bergbahn": {
-        "name": "Heubergbahn",
-        "typ": "Sessellift",
-        "distanz_m": 469,
-        "gehzeit_min": 8
-      },
-      "naechste_piste": {
-        "name": "Heuberg-Abfahrt",
-        "distanz_m": 224
-      },
-      "naechste_loipe": {
-        "name": "Unbenannt",
-        "distanz_m": 1059
-      },
-      "ski_in_out": "nein",
-      "ai_description": "Das Adler Hotel in Hirschegg punktet mit seiner entspannten Atmosphäre und der soliden 4,5-Sterne-Bewertung von Gästen, die die authentische Gastfreundschaft schätzen. In nur 8 Gehminuten erreicht man die Heubergbahn, während die nächste Piste bereits 224 Meter entfernt liegt - perfekt für alle, die morgens nicht ewig laufen wollen. Langläufer müssen etwa einen Kilometer zur nächsten Loipe zurücklegen, dafür liegt das Hotel ruhig abseits des Trubels. Ein ehrliches, gut geführtes Haus ohne Schnickschnack, das vor allem durch seine Lage und das faire Preis-Leistungs-Verhältnis überzeugt.",
-      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Adler%20Hotel%20Kleinwalsertal"
-    },
-    {
-      "name": "A-ROSA Ifen Hotel Kleinwalsertal",
-      "ortsteil": "Hirschegg",
-      "typ": "Hotel",
-      "adresse": "Oberseitestraße 6, 6992 Hirschegg, Österreich",
-      "gps": {
-        "lat": 47.3492896,
-        "lng": 10.171928099999999
-      },
-      "website": "https://arosahotels.de/hotels/kleinwalsertal.html",
-      "google_rating": 4.5,
-      "google_reviews": 1523,
-      "naechste_bergbahn": {
-        "name": "Hubertuslift",
-        "typ": "Schlepplift",
-        "distanz_m": 234,
-        "gehzeit_min": 3
-      },
-      "naechste_piste": {
-        "name": "Hubertus-Piste",
-        "distanz_m": 171
-      },
-      "naechste_loipe": {
-        "name": "Unbenannt",
-        "distanz_m": 568
-      },
-      "ski_in_out": "nein",
-      "ai_description": "Das A-ROSA in Hirschegg ist wirklich ein Wellness-Monster – der Spa-Bereich ist riesig und du hast von den Pools und der Sauna echte Bergblicke auf die umliegenden Gipfel, das ist nicht Standard im Tal.",
-      "booking_url": "https://www.booking.com/searchresults.de.html?ss=A-ROSA%20Ifen%20Hotel%20Kleinwalsertal%20Kleinwalsertal"
     },
     {
       "name": "Wellnesshotel Walserhof",
@@ -277,6 +217,66 @@
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=Wellnesshotel%20Walserhof%20Kleinwalsertal"
     },
     {
+      "name": "A-ROSA Ifen Hotel Kleinwalsertal",
+      "ortsteil": "Hirschegg",
+      "typ": "Hotel",
+      "adresse": "Oberseitestraße 6, 6992 Hirschegg, Österreich",
+      "gps": {
+        "lat": 47.3492896,
+        "lng": 10.171928099999999
+      },
+      "website": "https://arosahotels.de/hotels/kleinwalsertal.html",
+      "google_rating": 4.5,
+      "google_reviews": 1523,
+      "naechste_bergbahn": {
+        "name": "Hubertuslift",
+        "typ": "Schlepplift",
+        "distanz_m": 234,
+        "gehzeit_min": 3
+      },
+      "naechste_piste": {
+        "name": "Hubertus-Piste",
+        "distanz_m": 171
+      },
+      "naechste_loipe": {
+        "name": "Unbenannt",
+        "distanz_m": 568
+      },
+      "ski_in_out": "nein",
+      "ai_description": "Das A-ROSA in Hirschegg ist wirklich ein Wellness-Monster – der Spa-Bereich ist riesig und du hast von den Pools und der Sauna echte Bergblicke auf die umliegenden Gipfel, das ist nicht Standard im Tal.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=A-ROSA%20Ifen%20Hotel%20Kleinwalsertal%20Kleinwalsertal"
+    },
+    {
+      "name": "Adler Hotel",
+      "ortsteil": "Hirschegg",
+      "typ": "Hotel",
+      "adresse": "Walserstraße 251, 6992 Hirschegg, Österreich",
+      "gps": {
+        "lat": 47.344638200000006,
+        "lng": 10.16779
+      },
+      "website": "https://www.adlerhirschegg.de/?utm_source=google%20places&utm_medium=organic",
+      "google_rating": 4.5,
+      "google_reviews": 137,
+      "naechste_bergbahn": {
+        "name": "Heubergbahn",
+        "typ": "Sessellift",
+        "distanz_m": 469,
+        "gehzeit_min": 8
+      },
+      "naechste_piste": {
+        "name": "Heuberg-Abfahrt",
+        "distanz_m": 224
+      },
+      "naechste_loipe": {
+        "name": "Unbenannt",
+        "distanz_m": 1059
+      },
+      "ski_in_out": "nein",
+      "ai_description": "Das Adler Hotel in Hirschegg punktet mit seiner praktischen Lage nur 8 Gehminuten zur Heubergbahn, wodurch Sie morgens entspannt zum Skifahren starten können. Die Heuberg-Abfahrt liegt quasi vor der Haustür - nur 224 Meter Luftlinie entfernt. Mit 4,5 Sternen bei 137 Google-Bewertungen scheint das Hotel solide Gastfreundschaft zu bieten, auch wenn es kein direktes Ski-in/Ski-out ist. Für Langläufer ist die nächste Loipe allerdings etwa einen Kilometer entfernt, was eher den Alpinski-Fans entgegenkommt.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Adler%20Hotel%20Kleinwalsertal"
+    },
+    {
       "name": "Alpen Lodge Riezlern",
       "ortsteil": "Riezlern",
       "typ": "Lodge",
@@ -303,7 +303,7 @@
         "distanz_m": 96
       },
       "ski_in_out": "nein",
-      "ai_description": "Die Alpen Lodge Riezlern im Kleinwalsertal punktet mit ihrer familiären Atmosphäre und der perfekten Lage für Langläufer - die Egg Loipe liegt praktisch vor der Haustür, nur 96 Meter entfernt. Für Alpinski-Fans ist die Parsennbahn in 6 Gehminuten erreichbar, was morgens einen entspannten Start in den Skitag ermöglicht. Die durchweg begeisterten Gäste (5 Sterne bei 41 Bewertungen) schätzen besonders die herzliche Betreuung und das authentische Lodge-Feeling. Ein echter Geheimtipp für alle, die Gemütlichkeit und kurze Wege zu den Pisten suchen.",
+      "ai_description": "Die Alpen Lodge Riezlern ist eine kleine, aber feine Unterkunft mit perfekten 5-Sterne-Bewertungen von Gästen, die die familiäre Atmosphäre schätzen. Besonders für Langläufer ist die Lage ideal - die Egg Loipe liegt praktisch vor der Haustür, nur 96 Meter entfernt. Zur Parsennbahn sind es gemütliche 6 Gehminuten, was morgens entspannte Starts auf die Piste ermöglicht, ohne den Stress eines Ski-in/Ski-out Hotels. Die authentische Lodge-Atmosphäre und die hervorragenden Gästebewertungen sprechen für eine Unterkunft, die echte Alpentradition mit modernem Komfort verbindet.",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=Alpen%20Lodge%20Riezlern%20Kleinwalsertal"
     },
     {
@@ -363,7 +363,7 @@
         "distanz_m": 398
       },
       "ski_in_out": "nein",
-      "ai_description": "Das Haller's Genießerhotel in Mittelberg punktet vor allem mit seiner kulinarischen Ausrichtung und der gemütlichen Atmosphäre - die 4,6 Sterne bei über 300 Google-Bewertungen sprechen hier eine deutliche Sprache. Zum Skifahren müsst ihr zwar 20 Minuten zum Wildentallift laufen, dafür liegt der Skiweg Zaferna Heuberg praktisch vor der Haustür (470m). Wer gerne langlauft, findet schon nach knapp 400 Metern eine Loipe. Ein solides Hotel für Genießer, die Wert auf gutes Essen legen und das Kleinwalsertal abseits der großen Trubel erleben möchten.",
+      "ai_description": "Haller's Genießerhotel liegt ruhig in Mittelberg und punktet vor allem mit seiner ausgezeichneten Küche – der Name ist hier Programm. Die nächste Skipiste ist nur etwa 470 Meter entfernt, allerdings muss man zum Wildentallift rund 20 Minuten zu Fuß gehen, was das Hotel eher für entspannte Genießer als für Ski-in/Ski-out-Fans geeignet macht. Dafür überzeugt die Unterkunft mit einer sehr guten Bewertung von 4,6 Sternen und 330 Gästemeinungen, die besonders die Gastfreundschaft und das kulinarische Angebot loben. Für Langläufer ist eine Loipe in unmittelbarer Nähe – perfekt für den entspannten Start in den Wintertag.",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=Haller%27s%20Genie%C3%9Ferhotel%20Kleinwalsertal"
     },
     {
@@ -397,36 +397,6 @@
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=Das%20Naturhotel%20Chesa%20Valisa%20Kleinwalsertal"
     },
     {
-      "name": "Der Kleinwalsertaler Rosenhof",
-      "ortsteil": "Mittelberg",
-      "typ": "Unterkunft",
-      "adresse": "An der Halde 15, 6993 Mittelberg, Österreich",
-      "gps": {
-        "lat": 47.3176868,
-        "lng": 10.146284099999999
-      },
-      "website": "https://www.rosenhof.com/",
-      "google_rating": 4.8,
-      "google_reviews": 294,
-      "naechste_bergbahn": {
-        "name": "Jedermannlift",
-        "typ": "Tellerlift",
-        "distanz_m": 1144,
-        "gehzeit_min": 15
-      },
-      "naechste_piste": {
-        "name": "Unbenannt",
-        "distanz_m": 195
-      },
-      "naechste_loipe": {
-        "name": "Unbenannt",
-        "distanz_m": 239
-      },
-      "ski_in_out": "nein",
-      "ai_description": "Der Rosenhof ist ein klassisches Walsertaler Haus, wie es sein soll – mit echtem Charme statt moderner Designerhotels-Getue.",
-      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Der%20Kleinwalsertaler%20Rosenhof%20Kleinwalsertal"
-    },
-    {
       "name": "Hotel Birkenhöhe",
       "ortsteil": "Hirschegg",
       "typ": "Hotel",
@@ -455,6 +425,36 @@
       "ski_in_out": "ja",
       "ai_description": "Das Hotel Birkenhöhe ist wirklich ideal, wenn du morgens aus dem Zimmer direkt auf die Piste willst – der Parsennlift ist nur 30 Meter entfernt, da sparst du dir jeden Umweg.",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=Hotel%20Birkenh%C3%B6he%20Kleinwalsertal"
+    },
+    {
+      "name": "Der Kleinwalsertaler Rosenhof",
+      "ortsteil": "Mittelberg",
+      "typ": "Unterkunft",
+      "adresse": "An der Halde 15, 6993 Mittelberg, Österreich",
+      "gps": {
+        "lat": 47.3176868,
+        "lng": 10.146284099999999
+      },
+      "website": "https://www.rosenhof.com/",
+      "google_rating": 4.8,
+      "google_reviews": 294,
+      "naechste_bergbahn": {
+        "name": "Jedermannlift",
+        "typ": "Tellerlift",
+        "distanz_m": 1144,
+        "gehzeit_min": 15
+      },
+      "naechste_piste": {
+        "name": "Unbenannt",
+        "distanz_m": 195
+      },
+      "naechste_loipe": {
+        "name": "Unbenannt",
+        "distanz_m": 239
+      },
+      "ski_in_out": "nein",
+      "ai_description": "Der Rosenhof ist ein klassisches Walsertaler Haus, wie es sein soll – mit echtem Charme statt moderner Designerhotels-Getue.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Der%20Kleinwalsertaler%20Rosenhof%20Kleinwalsertal"
     },
     {
       "name": "Hotel Leitner",
@@ -517,34 +517,34 @@
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=Biohotel%20Walserstuba%20Kleinwalsertal"
     },
     {
-      "name": "Ski- und Aktivhotel Almhof Rupp",
-      "ortsteil": "Riezlern",
+      "name": "Aparthotel Kleinwalsertal",
+      "ortsteil": "Mittelberg",
       "typ": "Hotel",
-      "adresse": "Walserstraße 83, 6991 Riezlern, Österreich",
+      "adresse": "Wildentalstraße 3, 6993 Mittelberg, Österreich",
       "gps": {
-        "lat": 47.3550568,
-        "lng": 10.1839958
+        "lat": 47.3189831,
+        "lng": 10.1532918
       },
-      "website": "https://almhof-rupp.com/",
-      "google_rating": 4.4,
-      "google_reviews": 153,
+      "website": "https://www.aparthotel-kleinwalsertal.at/de/",
+      "google_rating": 4.2,
+      "google_reviews": 673,
       "naechste_bergbahn": {
-        "name": "Ideallift",
-        "typ": "Schlepplift",
-        "distanz_m": 166,
-        "gehzeit_min": 2
+        "name": "Jedermannlift",
+        "typ": "Tellerlift",
+        "distanz_m": 295,
+        "gehzeit_min": 4
       },
       "naechste_piste": {
-        "name": "Ideallift-Abfahrt",
-        "distanz_m": 22
+        "name": "Unbenannt",
+        "distanz_m": 229
       },
       "naechste_loipe": {
-        "name": "Egg Loipe",
-        "distanz_m": 683
+        "name": "Wildentalstraße",
+        "distanz_m": 54
       },
-      "ski_in_out": "ja",
-      "ai_description": "Das Almhof Rupp sitzt praktisch auf dem Grat zwischen Komfort und echter Skier-Freundlichkeit: Du bist morgens in 50 Metern an der Kanzelwandbahn und kannst mittags nach dem Essen direkt wieder fahren, ohne dich durch einen großen Ort zu schleppen.",
-      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Ski-%20und%20Aktivhotel%20Almhof%20Rupp%20Kleinwalsertal"
+      "ski_in_out": "nein",
+      "ai_description": "Das Aparthotel in Mittelberg ist perfekt, wenn du mit Familie oder Freunden anreisen möchtest – die vollausgestatteten Apartments geben dir Freiheit statt Hotelzimmer-Enge, und du sparst bei längeren Aufenthalten ordentlich Geld.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Aparthotel%20Kleinwalsertal%20Kleinwalsertal"
     },
     {
       "name": "Familienhotel Kleinwalsertal Hotelgesellschaft mbH",
@@ -575,6 +575,36 @@
       "ski_in_out": "nein",
       "ai_description": "Das Hotel liegt perfekt im Zentrum von Riezlern und ist wirklich auf kleine Kinder ausgerichtet – mit Kinderbetreuung, die dir auch mal ein paar Stunden Ruhe gönnt, und einem großen Spielbereich direkt im Haus.",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=Familienhotel%20Kleinwalsertal%20Hotelgesellschaft%20mbH%20Kleinwalsertal"
+    },
+    {
+      "name": "Ski- und Aktivhotel Almhof Rupp",
+      "ortsteil": "Riezlern",
+      "typ": "Hotel",
+      "adresse": "Walserstraße 83, 6991 Riezlern, Österreich",
+      "gps": {
+        "lat": 47.3550568,
+        "lng": 10.1839958
+      },
+      "website": "https://almhof-rupp.com/",
+      "google_rating": 4.4,
+      "google_reviews": 153,
+      "naechste_bergbahn": {
+        "name": "Ideallift",
+        "typ": "Schlepplift",
+        "distanz_m": 166,
+        "gehzeit_min": 2
+      },
+      "naechste_piste": {
+        "name": "Ideallift-Abfahrt",
+        "distanz_m": 22
+      },
+      "naechste_loipe": {
+        "name": "Egg Loipe",
+        "distanz_m": 683
+      },
+      "ski_in_out": "ja",
+      "ai_description": "Das Almhof Rupp sitzt praktisch auf dem Grat zwischen Komfort und echter Skier-Freundlichkeit: Du bist morgens in 50 Metern an der Kanzelwandbahn und kannst mittags nach dem Essen direkt wieder fahren, ohne dich durch einen großen Ort zu schleppen.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Ski-%20und%20Aktivhotel%20Almhof%20Rupp%20Kleinwalsertal"
     },
     {
       "name": "Hotel Jagdhof",
@@ -633,38 +663,8 @@
         "distanz_m": 183
       },
       "ski_in_out": "fast",
-      "ai_description": "Das Hotel Gemma in Hirschegg ist ein reines Erwachsenenhotel, das sich perfekt für einen ruhigen Skiurlaub ohne Kindertrubel eignet. Mit nur 61 Metern zur Parsenn-Abfahrt und 552 Metern zum Schlepplift Ski-Kuli Parsenn ist man praktisch direkt am Skigebiet - die Ski können fast vor der Haustür angeschnallt werden. Die sehr guten Google-Bewertungen von 4,5 Sternen sprechen für die entspannte Atmosphäre und den Service. Besonders praktisch: Auch die Loipe liegt nur wenige Gehminuten entfernt, falls man zwischendurch mal Langlaufen möchte.",
+      "ai_description": "Das Hotel Gemma liegt in einer traumhaften Lage direkt an der Parsenn-Abfahrt in Hirschegg - fast direkt vor der Hoteltür können Sie die Ski anschnallen. Der Ski-Kuli Parsenn ist in nur 9 Gehminuten zu erreichen, was morgens entspannte Skitage ohne Hektik ermöglicht. Als reines Erwachsenenhotel bietet das Gemma eine ruhige Atmosphäre abseits vom Familientrubel, was die sehr guten Bewertungen der Gäste widerspiegeln. Auch Langläufer kommen hier voll auf ihre Kosten, da die nächste Loipe praktisch um die Ecke liegt.",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=Hotel%20Gemma%20Erwachsenenhotel%20Kleinwalsertal"
-    },
-    {
-      "name": "Aparthotel Kleinwalsertal",
-      "ortsteil": "Mittelberg",
-      "typ": "Hotel",
-      "adresse": "Wildentalstraße 3, 6993 Mittelberg, Österreich",
-      "gps": {
-        "lat": 47.3189831,
-        "lng": 10.1532918
-      },
-      "website": "https://www.aparthotel-kleinwalsertal.at/de/",
-      "google_rating": 4.2,
-      "google_reviews": 673,
-      "naechste_bergbahn": {
-        "name": "Jedermannlift",
-        "typ": "Tellerlift",
-        "distanz_m": 295,
-        "gehzeit_min": 4
-      },
-      "naechste_piste": {
-        "name": "Unbenannt",
-        "distanz_m": 229
-      },
-      "naechste_loipe": {
-        "name": "Wildentalstraße",
-        "distanz_m": 54
-      },
-      "ski_in_out": "nein",
-      "ai_description": "Das Aparthotel in Mittelberg ist perfekt, wenn du mit Familie oder Freunden anreisen möchtest – die vollausgestatteten Apartments geben dir Freiheit statt Hotelzimmer-Enge, und du sparst bei längeren Aufenthalten ordentlich Geld.",
-      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Aparthotel%20Kleinwalsertal%20Kleinwalsertal"
     },
     {
       "name": "Hotel Bellevue",
@@ -723,7 +723,7 @@
         "distanz_m": 87
       },
       "ski_in_out": "nein",
-      "ai_description": "Das Gästehaus Boersch ist eine authentische Familienpension, die von Karin und Michael Jochum mit viel Herzlichkeit geführt wird. Die Lage in Riezlern ist ideal für Langläufer - die Egg Loipe liegt quasi vor der Haustür, nur 87 Meter entfernt. Für Skifahrer bedeutet der 11-minütige Weg zur Parsennbahn zwar einen kurzen Anmarsch, dafür genießt man hier die persönliche Atmosphäre eines echten Familienbetriebs. Mit 4,8 Sternen bei 84 Google-Bewertungen sprechen die Gäste eine klare Sprache über die Qualität der Betreuung.",
+      "ai_description": "Das Gästehaus Boersch liegt ruhig am Ortsrand von Riezlern und wird von der Familie Jochum mit viel Herzlichkeit geführt – das spiegelt sich auch in den hervorragenden 4,8 Sternen bei Google wider. Die Parsennbahn ist in gemütlichen 11 Gehminuten erreichbar, während Langläufer die Egg Loipe praktisch vor der Haustür haben. Die familiäre Atmosphäre und die persönliche Betreuung machen das Haus zu einer echten Alternative zu den großen Hotels im Tal. Hier übernachtet man authentisch bei Einheimischen, die das Kleinwalsertal wie ihre Westentasche kennen.",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=G%C3%A4stehaus%20Boersch%2C%20Familie%20Karin%20und%20Michael%20Jochum%2C%20Eggstra%C3%9Fe%2045%20in%20Riezlern/Kleinwalsertal%20Kleinwalsertal"
     },
     {
@@ -753,38 +753,8 @@
         "distanz_m": 67
       },
       "ski_in_out": "nein",
-      "ai_description": "Das Boutique Hotel Herzhof in Riezlern ist ein echter Geheimtipp mit beeindruckenden 4,8 Sternen bei Google – hier stimmt einfach alles. Die Lage ist perfekt für Langläufer, denn die Egg Loipe startet praktisch vor der Haustür, nur 67 Meter entfernt. Für Alpin-Skifahrer bedeutet die 22-minütige Fahrt zur Kanzelwandbahn zwar etwas Anreise, aber dafür erwartet Sie dort das traumhafte Skigebiet am Fellhorn. Das kleine, persönlich geführte Haus punktet offensichtlich mit authentischer Gastlichkeit und Liebe zum Detail – was bei so wenigen, aber durchweg begeisterten Bewertungen klar wird.",
+      "ai_description": "Das Boutique Hotel Herzhof in Riezlern punktet mit seiner außergewöhnlich hohen Gästezufriedenheit und der perfekten Lage für Langläufer - die Egg Loipe startet praktisch vor der Haustür. Alpinski-Fans erreichen die Kanzelwandbahn in gut 20 Minuten zu Fuß, was für das Kleinwalsertal durchaus akzeptabel ist. Das kleine, feine Hotel mit nur wenigen Zimmern bietet eine persönliche Atmosphäre abseits der großen Hotelketten. Die traumhafte Bewertung von 4,8 Sternen bei über 60 Rezensionen spricht für sich und deutet auf echte Gastfreundschaft und Liebe zum Detail hin.",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=Boutique%20Hotel%20Herzhof%20Kleinwalsertal"
-    },
-    {
-      "name": "Frühstückspension Breitach Hus",
-      "ortsteil": "Riezlern",
-      "typ": "Pension",
-      "adresse": "Eggstraße 14, 6991 Riezlern, Österreich",
-      "gps": {
-        "lat": 47.3577077,
-        "lng": 10.1777549
-      },
-      "website": "https://www.breitachhus.at/de",
-      "google_rating": 4.8,
-      "google_reviews": 59,
-      "naechste_bergbahn": {
-        "name": "Parsennbahn",
-        "typ": "Kombibahn",
-        "distanz_m": 314,
-        "gehzeit_min": 3
-      },
-      "naechste_piste": {
-        "name": "Parsenn-Abfahrt",
-        "distanz_m": 289
-      },
-      "naechste_loipe": {
-        "name": "Egg Loipe",
-        "distanz_m": 203
-      },
-      "ski_in_out": "nein",
-      "ai_description": "Die Frühstückspension Breitach Hus liegt mitten in Riezlern und ist perfekt für alle, die morgens entspannt in den Skitag starten möchten - die Parsennbahn ist nur 3 Gehminuten entfernt. Die kleine, familiär geführte Pension punktet mit einem richtig guten Frühstück und der persönlichen Atmosphäre, die man bei den hervorragenden Google-Bewertungen deutlich spürt. Auch Langläufer kommen auf ihre Kosten, denn zur Egg Loipe sind es nur wenige Schritte. Hier bekommt man authentische Kleinwalsertal-Gastfreundschaft ohne Schnickschnack, dafür mit kurzen Wegen zu allen wichtigen Skigebiets-Zugängen.",
-      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Fr%C3%BChst%C3%BCckspension%20Breitach%20Hus%20Kleinwalsertal"
     },
     {
       "name": "Hotel Alpensonne",
@@ -815,6 +785,36 @@
       "ski_in_out": "nein",
       "ai_description": "Das Alpensonne ist ein ehrlicher Familienbetrieb im Zentrum von Riezlern, nur knapp 900 Meter von der Kanzelwandbahn entfernt – der Skibus fährt direkt vorbei, wodurch du morgens nicht hetzen musst.",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=Hotel%20Alpensonne%20Kleinwalsertal"
+    },
+    {
+      "name": "Frühstückspension Breitach Hus",
+      "ortsteil": "Riezlern",
+      "typ": "Pension",
+      "adresse": "Eggstraße 14, 6991 Riezlern, Österreich",
+      "gps": {
+        "lat": 47.3577077,
+        "lng": 10.1777549
+      },
+      "website": "https://www.breitachhus.at/de",
+      "google_rating": 4.8,
+      "google_reviews": 59,
+      "naechste_bergbahn": {
+        "name": "Parsennbahn",
+        "typ": "Kombibahn",
+        "distanz_m": 314,
+        "gehzeit_min": 3
+      },
+      "naechste_piste": {
+        "name": "Parsenn-Abfahrt",
+        "distanz_m": 289
+      },
+      "naechste_loipe": {
+        "name": "Egg Loipe",
+        "distanz_m": 203
+      },
+      "ski_in_out": "nein",
+      "ai_description": "Die Frühstückspension Breitach Hus in Riezlern ist eine gemütliche, familiengeführte Unterkunft, die durch ihre persönliche Atmosphäre und das liebevoll zubereitete Frühstück besticht. Mit nur 3 Gehminuten zur Parsennbahn und weniger als 300 Metern zu den Pisten liegt man optimal für entspannte Skitage im Kleinwalsertal. Die durchweg positiven Bewertungen (4,8 Sterne) sprechen für die herzliche Betreuung und das faire Preis-Leistungs-Verhältnis. Auch Langläufer schätzen die Nähe zur Egg Loipe, die praktisch vor der Haustür beginnt.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Fr%C3%BChst%C3%BCckspension%20Breitach%20Hus%20Kleinwalsertal"
     },
     {
       "name": "Gasthof Alpenblick",
@@ -873,7 +873,7 @@
         "distanz_m": 83
       },
       "ski_in_out": "nein",
-      "ai_description": "Das LichterBerg in Hirschegg punktet mit seiner sehr ruhigen Lage abseits des Trubels, während die Parsenn-Abfahrt nur 161 Meter entfernt liegt. In 8 Gehminuten erreicht man den Ski-Kuli Parsenn Schlepplift, was für einen entspannten Start in den Skitag sorgt. Die außergewöhnlich guten Bewertungen von 4,9 Sternen bei 21 Gästen sprechen für die persönliche Betreuung und Atmosphäre der kleineren Unterkunft. Langläufer freuen sich über die Loipe praktisch vor der Haustür in nur 83 Metern Entfernung.",
+      "ai_description": "Das LichterBerg in Hirschegg punktet mit einer außergewöhnlich hohen Gästezufriedenheit - die 4,9-Sterne-Bewertung bei 21 Rezensionen spricht für sich. Die Lage ist für Wintersportler ideal: Die nächste Loipe liegt praktisch vor der Haustür (nur 83m), und auch zur Parsenn-Abfahrt sind es gerade mal 161m Luftlinie. Der 8-minütige Spaziergang zum Ski-Kuli Parsenn Schlepplift ist völlig entspannt und macht das morgendliche Anstehen an der Bergbahn stressfrei. Hier stimmt offensichtlich das Gesamtpaket aus Lage, Service und Atmosphäre.",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=LichterBerg%20Kleinwalsertal"
     },
     {
@@ -903,7 +903,7 @@
         "distanz_m": 1040
       },
       "ski_in_out": "nein",
-      "ai_description": "Das Herzen's Landhaus liegt nur 9 Gehminuten von der Heubergbahn entfernt und bietet sich als gemütliche Familienpension für Skifahrer an, die nicht direkt an der Piste übernachten müssen. Mit 4,7 Sternen bei Google-Bewertungen überzeugt die kleine Pension durch persönlichen Service und ein solides Frühstück. Die Heuberg-Abfahrt ist in etwa 5 Minuten zu Fuß erreichbar, während Langläufer einen kleinen Spaziergang von gut einem Kilometer zur nächsten Loipe einplanen sollten. Eine ehrliche, bodenständige Unterkunft ohne Schnickschnack, die vor allem durch ihre Lage zum Skigebiet punktet.",
+      "ai_description": "Das Herzen's Landhaus ist eine gemütliche Pension mit Frühstück, die nur 525 Meter von der Heubergbahn entfernt liegt - in knapp 9 Minuten zu Fuß erreichbar. Die Heuberg-Abfahrt ist praktisch vor der Haustür, nur 253 Meter Luftlinie entfernt, was morgens kurze Wege zum Skigebiet bedeutet. Mit 4,7 Sternen bei 35 Bewertungen schätzen Gäste offensichtlich die persönliche Atmosphäre und das solide Frühstück. Für Langläufer ist es etwas weniger optimal, da die nächste Loipe über einen Kilometer entfernt ist.",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=Herzen%27s%20Landhaus%20Pension%20mit%20Fr%C3%BChst%C3%BCck%20Kleinwalsertal"
     },
     {
@@ -933,7 +933,7 @@
         "distanz_m": 183
       },
       "ski_in_out": "nein",
-      "ai_description": "Das Landhaus Michl liegt mitten in Riezlern und überzeugt mit seiner familiären Atmosphäre – das spiegeln auch die außergewöhnlich hohen Google-Bewertungen wider. In nur 4 Gehminuten erreicht man die Parsennbahn, während die Parsenn-Abfahrt praktisch vor der Haustür beginnt. Besonders praktisch: Auch die nächste Loipe ist nur knapp 200 Meter entfernt, was sowohl Alpin- als auch Langläufern kurze Wege garantiert. Ein echtes Kleinod für alle, die authentische Gastfreundschaft und optimale Lage zum Skigebiet schätzen.",
+      "ai_description": "Das Landhaus Michl in Riezlern liegt ideal für Wintersportler - nur 4 Gehminuten zur Parsennbahn und keine 200 Meter zur nächsten Piste. Die außergewöhnlich hohe Google-Bewertung von 4,9 bei 59 Bewertungen spricht für sich und deutet auf eine sehr persönliche Betreuung hin. Auch Langläufer kommen auf ihre Kosten, da eine Loipe praktisch vor der Haustür verläuft. Zwar ist es kein echtes Ski-in/Ski-out Hotel, aber die kurzen Wege zu den Liften machen das mehr als wett.",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=Landhaus%20Michl%20Kleinwalsertal"
     },
     {
@@ -963,7 +963,7 @@
         "distanz_m": 706
       },
       "ski_in_out": "ja",
-      "ai_description": "Die Riezler Höhe liegt praktisch direkt an der Schwandlift-Piste – nur 50 Meter trennen Sie vom ersten Schwung des Tages. Als eines der wenigen echten Ski-in/Ski-out Hotels in Riezlern können Sie hier morgens die Skier vor die Tür schnallen und abends direkt bis zur Unterkunft abfahren. Der Schwandlift ist in 4 Minuten zu Fuß erreichbar und bringt Sie ins Skigebiet Ifen. Mit 4,8 Sternen bei Google-Bewertungen scheint die familiäre Atmosphäre und die unschlagbare Lage direkt am Hang die Gäste zu überzeugen.",
+      "ai_description": "Das Hotel Riezler Höhe in Riezlern ist ein echter Geheimtipp für Skifahrer, die direkt an der Piste übernachten möchten - die Schwandlift-Piste liegt praktisch vor der Haustür. Mit nur 4 Gehminuten zum Schwandlift und echtem Ski-in/Ski-out-Komfort sparst du dir morgens das lästige Anstehen an überfüllten Talstationen. Die hervorragenden 4,8 Sterne bei Google (54 Bewertungen) sprechen für die familiäre Atmosphäre und den persönlichen Service, den man in den großen Hotelketten oft vermisst. Perfekt für alle, die ihre Skier abends einfach vor der Tür abstellen und morgens direkt losfahren wollen.",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=Riezler%20H%C3%B6he%20Kleinwalsertal"
     },
     {
@@ -993,7 +993,7 @@
         "distanz_m": 1035
       },
       "ski_in_out": "ja",
-      "ai_description": "Das Haus Bergfelder in Hirschegg ist ein echtes Ski-in/Ski-out Hotel – die Piste Skiweg Zaferna Heuberg liegt praktisch vor der Haustür. Mit nur 20 Metern zur nächsten Abfahrt können Gäste morgens direkt vom Hotel auf die Bretter steigen, während der Schlösslellift in 10 Gehminuten erreichbar ist. Die hervorragenden Google-Bewertungen (4,9 bei 40 Bewertungen) sprechen für die familiäre Atmosphäre und den persönlichen Service. Für Langläufer ist die nächste Loipe allerdings etwas weiter entfernt (gut 1 Kilometer).",
+      "ai_description": "Das Haus Bergfelder in Hirschegg ist ein echtes Ski-in/Ski-out Juwel - die Piste liegt praktisch vor der Haustür, nur 20 Meter entfernt. In 10 Gehminuten erreicht man den Schlösslellift, während Langläufer etwa einen Kilometer zur nächsten Loipe zurücklegen müssen. Mit 4,9 Sternen bei 40 Google-Bewertungen zeigt sich hier die Zufriedenheit der Gäste, die die unschlagbare Lage direkt am Skigebiet zu schätzen wissen. Perfekt für alle, die morgens einfach die Skier anschnallen und direkt losfahren möchten.",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=Haus%20Bergfelder%20Kleinwalsertal"
     },
     {
@@ -1023,7 +1023,7 @@
         "distanz_m": 781
       },
       "ski_in_out": "fast",
-      "ai_description": "Das Gästehaus Felder liegt traumhaft direkt am Hubertuslift in Hirschegg - nach nur 3 Gehminuten stehen Sie am Schlepplift und die Hubertus-Piste ist sogar noch näher. Diese familiäre Pension bietet echtes Ski-in/out-Erlebnis, ohne die üblichen Hotelpreise dafür zahlen zu müssen. Die Gastgeber der Familie Lang-Steudler schaffen eine herzliche Atmosphäre, die sich in den durchweg begeisterten Gästebewertungen widerspiegelt. Perfekt für alle, die unkompliziert wohnen und morgens als erste auf der Piste sein möchten.",
+      "ai_description": "Das Gästehaus Felder liegt praktisch direkt an der Hubertus-Piste in Hirschegg - nur 116 Meter Luftlinie trennen Sie vom Schnee. Der Hubertuslift ist in drei Gehminuten erreicht, wodurch Sie morgens quasi direkt ins Skivergnügen starten können. Die 4,9-Sterne-Bewertung bei 72 Google-Rezensionen spricht für die herzliche Atmosphäre und den persönlichen Service der Familie Lang-Steudler. Hier übernachten Sie in einer echten Pension mit Charme, ohne die üblichen Hotelallüren, dafür mit der Nähe zur Piste, die Skifahrer schätzen.",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=G%C3%A4stehaus%20Felder%20-%20Lang-Steudler%20KG%20Kleinwalsertal"
     },
     {
@@ -1053,7 +1053,7 @@
         "distanz_m": 731
       },
       "ski_in_out": "fast",
-      "ai_description": "Der Berghof in Hirschegg punktet mit seiner fantastischen Lage nur 6 Gehminuten vom Hubertuslift entfernt - praktischer geht's kaum für Skifahrer. Mit einer Piste bereits in 100 Metern Entfernung ist man quasi direkt am Geschehen, ohne jedoch vom Trubel gestört zu werden. Die Gäste schätzen besonders die familiäre Atmosphäre und das gute Preis-Leistungs-Verhältnis, wie die soliden 4.4 Sterne bei Google zeigen. Für Langläufer ist die nächste Loipe zwar etwas weiter entfernt, dafür entschädigt die ruhige Ortsrandlage mit schönem Bergblick.",
+      "ai_description": "Der Berghof in Hirschegg liegt praktisch direkt an der Piste - mit nur 101 Metern zur nächsten Abfahrt ist das fast echtes Ski-in/Ski-out. Der Hubertuslift ist in 6 Gehminuten erreichbar, was morgens deutlich entspannter ist als das übliche Gedrängel um die Talstationen. Die Google-Bewertung von 4,4 bei 53 Rezensionen spricht für eine solide, familiengeführte Unterkunft ohne großen Schnickschnack. Perfekt für alle, die mehr Zeit auf der Piste als im Hotelzimmer verbringen wollen.",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=Der%20Berghof%20Kleinwalsertal"
     },
     {
@@ -1083,7 +1083,7 @@
         "distanz_m": 1322
       },
       "ski_in_out": "nein",
-      "ai_description": "Der Gasthof Hirsch in Hirschegg ist ein traditioneller Alpengasthof mit ausgezeichnetem Ruf - die 4,7 Sterne bei Google sprechen für sich. In nur 8 Gehminuten erreicht man den Schlösslellift, während die nächste Piste sogar nur 184 Meter entfernt liegt. Für Langläufer ist die nächste Loipe etwa 1,3 Kilometer entfernt, was einen schönen Spaziergang durch das Dorf bedeutet. Hier erlebt man authentische Tiroler Gastfreundschaft ohne den Trubel der großen Skihotels, aber mit perfekter Anbindung ans Skigebiet.",
+      "ai_description": "Der Gasthof Hirsch in Hirschegg ist ein gemütlicher, traditioneller Gasthof mit hervorragender Bewertung von 4.7 Sternen bei 34 Gästen. In nur 8 Gehminuten erreichen Sie den Schlösslellift, und die nächste Piste liegt praktische 184 Meter entfernt - ideal für einen entspannten Skitag ohne lange Anmarschwege. Hier erleben Sie authentische Gastlichkeit in familiärer Atmosphäre, fernab vom Massentourismus. Perfekt für alle, die das echte Kleinwalsertal und kurze Wege zu den Pisten schätzen.",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=Gasthof%20Hirsch%20Kleinwalsertal"
     },
     {
@@ -1263,7 +1263,7 @@
         "distanz_m": 331
       },
       "ski_in_out": "fast",
-      "ai_description": "Die alpen select apartments liegen praktisch direkt im Skigebiet – nur 92 Meter trennen Sie von der Piste und in 4 Gehminuten erreichen Sie die Zafernabahn. Die modernen Ferienwohnungen bieten echten Komfort mit hochwertiger Ausstattung und die meisten haben einen schönen Balkon mit Bergblick. Besonders praktisch ist die Lage in Mittelberg: Sie können morgens quasi vor der Haustür in die Ski steigen und abends gemütlich zur Unterkunft zurückfahren. Die durchweg positiven Bewertungen (4.8 Sterne) sprechen für sich – hier stimmt das Preis-Leistungs-Verhältnis und der Service.",
+      "ai_description": "Die alpen select apartments**** liegen praktisch direkt an der Piste in Mittelberg - mit nur 92 Metern Luftlinie zum Skiweg und 4 Gehminuten zur Zafernabahn ist man quasi ski-in/ski-out unterwegs. Die Ferienwohnungen bieten den Komfort eines 4-Sterne-Hauses mit der Flexibilität einer eigenen Küche, perfekt für Familien oder längere Aufenthalte. Mit 4,8 Sternen bei über 100 Google-Bewertungen scheint hier wirklich alles zu stimmen - von der Ausstattung bis zur Lage. Wer morgens die Ski vor die Tür schnallen und abends gemütlich selbst kochen möchte, findet hier im Kleinwalsertal seinen idealen Basecamp.",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=alpen%20select%20apartments%2A%2A%2A%2A%20Kleinwalsertal%20Kleinwalsertal"
     },
     {
@@ -1297,6 +1297,36 @@
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=Naturhotel%20L%C3%A4rchenhof%20Kleinwalsertal"
     },
     {
+      "name": "Hotel Garni Ingeborg",
+      "ortsteil": "Mittelberg",
+      "typ": "Garni",
+      "adresse": "Im Hag 3, 6993 Mittelberg, Österreich",
+      "gps": {
+        "lat": 47.320508000000004,
+        "lng": 10.155043
+      },
+      "website": "http://www.hotel-garni-ingeborg.de/",
+      "google_rating": 4.6,
+      "google_reviews": 70,
+      "naechste_bergbahn": {
+        "name": "Walmendingerhornbahn",
+        "typ": "Seilbahn",
+        "distanz_m": 707,
+        "gehzeit_min": 12
+      },
+      "naechste_piste": {
+        "name": "Skiweg Heuberg Zaferna",
+        "distanz_m": 326
+      },
+      "naechste_loipe": {
+        "name": "Unbenannt",
+        "distanz_m": 83
+      },
+      "ski_in_out": "nein",
+      "ai_description": "Das Ingeborg ist genau das, was ein solides Garni sein sollte: saubere Zimmer, ordentliches Frühstück, fertig.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Hotel%20Garni%20Ingeborg%20Kleinwalsertal"
+    },
+    {
       "name": "Pension Gatterhof",
       "ortsteil": "Riezlern",
       "typ": "Pension",
@@ -1323,7 +1353,7 @@
         "distanz_m": 335
       },
       "ski_in_out": "nein",
-      "ai_description": "Die Pension Gatterhof in Riezlern punktet mit ihrer familiären Atmosphäre und der außergewöhnlich hohen Gästezufriedenheit - 4,9 Sterne bei über 100 Bewertungen sprechen eine klare Sprache. Zum Kesslerlift sind es entspannte 8 Gehminuten, die Kessler-Piste liegt nur 326 Meter entfernt, sodass man morgens schnell auf der Piste steht. Auch Langläufer kommen auf ihre Kosten: Die Egg Loipe ist in wenigen Minuten erreichbar. Eine solide, herzlich geführte Unterkunft, die durch ihre Lage und das authentische Ambiente überzeugt - ohne den Trubel direkt an der Talstation.",
+      "ai_description": "Die Pension Gatterhof in Riezlern ist ein echter Geheimtipp für alle, die authentische Gastfreundschaft schätzen - das zeigen auch die hervorragenden 4,9 Sterne bei 114 Google-Bewertungen. In nur 8 Gehminuten erreicht man den Kesslerlift und die Kessler-Piste, perfekt für einen entspannten Start in den Skitag ohne Hektik. Auch Langläufer kommen auf ihre Kosten, denn die Egg Loipe liegt praktisch vor der Haustür. Hier erlebt man noch das ursprüngliche Kleinwalsertal mit persönlicher Betreuung in familiärer Atmosphäre.",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=Pension%20Gatterhof%20Kleinwalsertal"
     },
     {
@@ -1353,38 +1383,8 @@
         "distanz_m": 21
       },
       "ski_in_out": "nein",
-      "ai_description": "Das Gästehaus Susanne in Mittelberg ist eine kleine, familiär geführte Pension mit perfekten Google-Bewertungen, die ihre 44 Gäste restlos begeistert hat. Die Unterkunft liegt nur 3 Gehminuten vom Jedermannlift entfernt und bietet damit einen super Zugang zum Skigebiet, ohne direkt im Trubel zu stehen. Besonders praktisch für Langläufer: Die nächste Loipe ist gerade mal 21 Meter entfernt - fast vor der Haustür. Hier erwartet euch authentische Gastfreundschaft in ruhiger Lage, perfekt für alle, die das Kleinwalsertal abseits des Massentourismus erleben möchten.",
+      "ai_description": "Das Gästehaus Susanne in Mittelberg ist eine kleine, familiär geführte Pension mit perfekten 5-Sterne-Bewertungen von allen Gästen - ein seltenes Zeichen für echte Gastfreundschaft. Die Loipe verläuft praktisch direkt vor der Haustür (nur 21m entfernt), während der Jedermannlift in entspannten 3 Gehminuten zu erreichen ist. Hier erlebt man authentische Kleinwalser Gastlichkeit abseits des Massentourismus, mit der Nähe zu beiden Wintersportmöglichkeiten - Langlauf und Alpin. Die durchweg begeisterten Gästebewertungen sprechen für sich und versprechen einen persönlichen, herzlichen Aufenthalt.",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=G%C3%A4stehaus%20Susanne%20Kleinwalsertal"
-    },
-    {
-      "name": "Gästehaus Daheim - Familie Matt",
-      "ortsteil": "Riezlern",
-      "typ": "Pension",
-      "adresse": "Walserstraße 25, 6991 Riezlern, Österreich",
-      "gps": {
-        "lat": 47.3592989,
-        "lng": 10.1911071
-      },
-      "website": "http://www.gaestehaus-daheim.de/",
-      "google_rating": 4.8,
-      "google_reviews": 88,
-      "naechste_bergbahn": {
-        "name": "Schwandlift",
-        "typ": "Bügellift",
-        "distanz_m": 169,
-        "gehzeit_min": 2
-      },
-      "naechste_piste": {
-        "name": "Schwandlift-Piste",
-        "distanz_m": 144
-      },
-      "naechste_loipe": {
-        "name": "Egg Loipe",
-        "distanz_m": 578
-      },
-      "ski_in_out": "fast",
-      "ai_description": "Das Gästehaus Daheim liegt praktisch direkt an der Schwandlift-Piste in Riezlern - nur 144 Meter bis zum ersten Schwung und 169 Meter bis zum Bügellift. Familie Matt führt diese gemütliche Pension mit der persönlichen Note, die man nur in Familienbetrieben findet, was sich auch in den hervorragenden 4,8 Sternen bei Google widerspiegelt. Hier kannst du morgens quasi aus der Haustür auf die Ski steigen, ohne lästige Transfers oder Parkplatzsuche. Perfekt für alle, die authentische Gastfreundschaft und echtes Ski-in/Ski-out-Gefühl schätzen.",
-      "booking_url": "https://www.booking.com/searchresults.de.html?ss=G%C3%A4stehaus%20Daheim%20-%20Familie%20Matt%20Kleinwalsertal"
     },
     {
       "name": "Gästehaus Sonnenhof (Fam. Birschel)",
@@ -1413,8 +1413,38 @@
         "distanz_m": 114
       },
       "ski_in_out": "nein",
-      "ai_description": "Das Gästehaus Sonnenhof ist eine gemütliche Familienpension mitten in Mittelberg, die von Familie Birschel mit persönlicher Herzlichkeit geführt wird. Mit nur wenigen Gehminuten zur nächsten Loipe und einem kurzen Spaziergang zur Zafernabahn ist die Lage ideal für Langläufer und entspannte Skifahrer, die keine Ski-in/out-Situation brauchen. Die durchweg positiven Gästebewertungen sprechen für die familiäre Atmosphäre und das authentische Kleinwalsertal-Erlebnis abseits der großen Hotelketten. Perfekt für alle, die echte Gastfreundschaft und eine ruhige Lage mit guter Anbindung an die Pisten schätzen.",
+      "ai_description": "Das Gästehaus Sonnenhof ist eine gemütliche Familienpension in Mittelberg, die besonders bei Langläufern punktet - die Loipe liegt praktisch vor der Haustür. Für Alpinfahrer ist es ein kurzer 11-minütiger Spaziergang zur Zafernabahn, wobei man sogar über den nahegelegenen Skiweg Heuberg direkt zur Talstation gelangen kann. Familie Birschel führt das Haus mit persönlicher Note, was sich auch in den durchweg positiven Gästebewertungen widerspiegelt. Eine solide Wahl für alle, die authentische Gastfreundschaft und unkomplizierte Nähe zu den Pisten schätzen.",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=G%C3%A4stehaus%20Sonnenhof%20%28Fam.%20Birschel%29%20Kleinwalsertal"
+    },
+    {
+      "name": "Gästehaus Daheim - Familie Matt",
+      "ortsteil": "Riezlern",
+      "typ": "Pension",
+      "adresse": "Walserstraße 25, 6991 Riezlern, Österreich",
+      "gps": {
+        "lat": 47.3592989,
+        "lng": 10.1911071
+      },
+      "website": "http://www.gaestehaus-daheim.de/",
+      "google_rating": 4.8,
+      "google_reviews": 88,
+      "naechste_bergbahn": {
+        "name": "Schwandlift",
+        "typ": "Bügellift",
+        "distanz_m": 169,
+        "gehzeit_min": 2
+      },
+      "naechste_piste": {
+        "name": "Schwandlift-Piste",
+        "distanz_m": 144
+      },
+      "naechste_loipe": {
+        "name": "Egg Loipe",
+        "distanz_m": 578
+      },
+      "ski_in_out": "fast",
+      "ai_description": "Das Gästehaus Daheim der Familie Matt in Riezlern ist ein echter Geheimtipp für alle, die morgens direkt auf die Piste wollen – der Schwandlift ist nur 2 Gehminuten entfernt und die Piste praktisch vor der Haustür. Die familiäre Atmosphäre spürt man sofort, und mit 4,8 Sternen bei 88 Bewertungen zeigt sich, dass Gäste die persönliche Betreuung sehr schätzen. Perfekt für entspannte Skitage ohne lange Anfahrtswege, auch wenn es sich \"nur\" um eine Pension handelt – manchmal ist weniger eben mehr.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=G%C3%A4stehaus%20Daheim%20-%20Familie%20Matt%20Kleinwalsertal"
     },
     {
       "name": "Haus Bergidyll - Frau Hildegard Mayer",
@@ -1443,7 +1473,7 @@
         "distanz_m": 310
       },
       "ski_in_out": "fast",
-      "ai_description": "Das Haus Bergidyll von Frau Mayer liegt direkt am Wildentallift in Mittelberg - nur 46 Meter vom Tellerlift entfernt, sodass Sie praktisch vor der Haustür auf die Skier steigen können. Die kleine, familiär geführte Unterkunft punktet mit ihrer unschlagbaren Lage zur Wildentalpiste (68m) und wird von Gästen mit 4,6 Sternen bewertet. Hier bekommen Sie authentische Gastfreundschaft ohne Schnickschnack, dafür mit direktem Zugang zu den Pisten. Für Langläufer ist die nächste Loipe allerdings etwa 300 Meter entfernt.",
+      "ai_description": "Das Haus Bergidyll von Frau Hildegard Mayer liegt praktisch direkt am Wildentallift - nur 46 Meter bis zur Talstation und die Wildentalpiste ist quasi vor der Haustür. Perfekter geht Ski-in/Ski-out kaum, da sparst du dir morgens das lästige Anstehen und kannst mittags schnell mal rein zum Aufwärmen. Die 19 Google-Bewertungen mit 4,6 Sternen sprechen für eine solide, persönliche Betreuung in dieser kleinen Pension im Mittelberger Ortsteil. Für Langläufer ist die nächste Loipe zwar 310 Meter entfernt, aber als Skifahrer wirst du die Lage direkt am Lift richtig zu schätzen wissen.",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=Haus%20Bergidyll%20-%20Frau%20Hildegard%20Mayer%20Kleinwalsertal"
     },
     {
@@ -1473,7 +1503,7 @@
         "distanz_m": 743
       },
       "ski_in_out": "nein",
-      "ai_description": "Das Gästehaus Paradies ist eine kleine, familiär geführte Pension mit hervorragenden Gästebewertungen, die den persönlichen Service und die gemütliche Atmosphäre widerspiegeln. Skifahrer erreichen den Schlösslellift in 17 Minuten zu Fuß, was für eine ruhige Lage abseits des Trubels spricht. Die nächste Piste liegt nur 275 Meter entfernt, während Langläufer etwa 750 Meter zur Loipe zurücklegen müssen. Hier erwartet Gäste authentische Gastfreundschaft in einer entspannten Umgebung, perfekt für alle, die Wert auf persönliche Betreuung und eine ruhige Basis für ihre Bergaktivitäten legen.",
+      "ai_description": "Das Gästehaus Paradies ist eine gemütliche Pension mit hervorragender Bewertung von 4,8 Sternen, die vor allem durch ihre persönliche Atmosphäre überzeugt. Zur nächsten Piste sind es nur 275 Meter Luftlinie - allerdings erreichst du den Schlösslellift erst nach einem 17-minütigen Spaziergang bergauf. Die Lage ist ideal für Gäste, die morgens gerne einen kurzen Fußweg in Kauf nehmen und abends die Ruhe abseits des Pistentrubels schätzen. Für Langläufer ist die nächste Loipe in gut 10 Gehminuten erreichbar.",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=G%C3%A4stehaus%20Paradies%20Kleinwalsertal"
     },
     {
@@ -1533,8 +1563,38 @@
         "distanz_m": 201
       },
       "ski_in_out": "nein",
-      "ai_description": "Die Pension Kleinwalsertal in Mittelberg ist ein kleiner, privat geführter Betrieb mit nur wenigen aber durchweg positiven Gästebewertungen. Die Lage ist ideal für Langläufer, da eine Loipe praktisch vor der Haustür liegt, während die nächste Skipiste nur einen kurzen Spaziergang entfernt ist. Für Alpinfahrer bedeutet das allerdings einen längeren Anfahrtsweg zu den Bergbahnen - der Muttelberglift ist über eine Stunde zu Fuß entfernt. Hier bekommt man authentische Kleinwalsertaler Gastfreundschaft ohne Schnickschnack, dafür aber mit direktem Zugang zur Loipe.",
+      "ai_description": "Die Pension Kleinwalsertal Privatvermietung in Mittelberg bietet eine ruhige, familiäre Atmosphäre abseits des Trubels. Mit nur 201 Metern zur nächsten Loipe sind Langläufer hier bestens aufgehoben, während Alpinfahrer einen 20-minütigen Spaziergang zur Talabfahrt des Walmendingerhorns einplanen sollten. Die kleine Pension mit hervorragenden 4,6 Sternen bei Google überzeugt durch persönlichen Service und authentische Gastfreundschaft. Wer Ruhe sucht und nicht direkt an der Piste wohnen muss, findet hier eine charmante Alternative im Herzen des Kleinwalsertals.",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=Pension%20Kleinwalsertal%20Privatvermietung%20Kleinwalsertal"
+    },
+    {
+      "name": "Gästehaus Wildbach",
+      "ortsteil": "Mittelberg",
+      "typ": "Pension",
+      "adresse": "Höfle 19, 6993 Mittelberg, Österreich",
+      "gps": {
+        "lat": 47.329040000000006,
+        "lng": 10.1667018
+      },
+      "website": "http://www.gaestehaus-wildbach.at/",
+      "google_rating": 4.7,
+      "google_reviews": 119,
+      "naechste_bergbahn": {
+        "name": "Wildentallift",
+        "typ": "Tellerlift",
+        "distanz_m": 95,
+        "gehzeit_min": 1
+      },
+      "naechste_piste": {
+        "name": "Wildentalpiste",
+        "distanz_m": 101
+      },
+      "naechste_loipe": {
+        "name": "Unbenannt",
+        "distanz_m": 286
+      },
+      "ski_in_out": "fast",
+      "ai_description": "Das Gästehaus Wildbach in Mittelberg ist eine gemütliche Pension, die praktisch direkt an der Piste liegt - in nur einer Minute zu Fuß erreichen Sie den Wildentallift und die Wildentalpiste ist gerade mal 100 Meter entfernt. Diese Lage macht es zum idealen Quartier für alle, die morgens als erste auf der Piste stehen möchten, ohne lange Anmarschwege in Kauf nehmen zu müssen. Die sehr guten Bewertungen (4,7 Sterne bei 119 Bewertungen) sprechen für eine solide, gastfreundliche Führung. Für Langläufer ist die nächste Loipe zwar etwas weiter entfernt, aber die unschlagbare Nähe zu den Abfahrtspisten macht das mehr als wett.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=G%C3%A4stehaus%20Wildbach%20Kleinwalsertal"
     },
     {
       "name": "Landhaus Bromm",
@@ -1593,8 +1653,38 @@
         "distanz_m": 56
       },
       "ski_in_out": "nein",
-      "ai_description": "Das Walmendinger Haus liegt mitten in Hirschegg und ist ein solider Ausgangspunkt für Skifahrer, die das Kleinwalsertal erkunden wollen. Mit nur 15 Gehminuten zum Ski-Kuli Parsenn kommst du schnell auf die Piste, auch wenn es kein direkter Ski-in/out Zugang ist. Die Langläufer haben es noch einfacher - die nächste Loipe ist praktisch vor der Haustür in nur 56 Metern Entfernung. Die Google-Bewertung von 4.3 bei 56 Rezensionen spricht für eine ordentliche Unterkunft ohne große Überraschungen, aber mit dem Charme eines traditionellen Alpenhauses.",
+      "ai_description": "Das Walmendinger Haus in Hirschegg punktet vor allem bei Langläufern - die nächste Loipe liegt praktisch vor der Haustür, nur 56 Meter entfernt. Für Alpinski-Fans bedeutet das einen gemütlichen 15-minütigen Spaziergang zum Ski-Kuli Parsenn Schlepplift, wobei die Parsenn-Abfahrt schon deutlich näher liegt. Mit einer soliden 4,3-Sterne-Bewertung bei Google scheint das Haus eine verlässliche, bodenständige Unterkunft zu sein, die besonders für Gäste interessant ist, die das Kleinwalsertal zu Fuß erkunden möchten. Die Lage in Hirschegg bietet einen guten Ausgangspunkt für verschiedene Winteraktivitäten, ohne direkt im Trubel der Bergbahnen zu stehen.",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=Walmendinger%20Haus%20Kleinwalsertal"
+    },
+    {
+      "name": "Söllerhaus",
+      "ortsteil": "Hirschegg",
+      "typ": "Unterkunft",
+      "adresse": "Schöntalweg 10, 6992 Hirschegg, Österreich",
+      "gps": {
+        "lat": 47.3466241,
+        "lng": 10.159549
+      },
+      "website": "http://www.soellerhaus.at/",
+      "google_rating": 4.7,
+      "google_reviews": 175,
+      "naechste_bergbahn": {
+        "name": "Schöntallift",
+        "typ": "Bügellift",
+        "distanz_m": 317,
+        "gehzeit_min": 6
+      },
+      "naechste_piste": {
+        "name": "Unbenannt",
+        "distanz_m": 63
+      },
+      "naechste_loipe": {
+        "name": "Unbenannt",
+        "distanz_m": 515
+      },
+      "ski_in_out": "fast",
+      "ai_description": "Das Söllerhaus in Hirschegg liegt praktisch direkt an der Piste – nur 63 Meter trennen Sie vom Schneevergnügen. In 6 Minuten erreichen Sie zu Fuß den Schöntallift, was echtes Ski-in/Ski-out-Gefühl vermittelt ohne die üblichen Hotelpreise. Die 4,7-Sterne-Bewertung von 175 Gästen spricht für sich: hier stimmt das Preis-Leistungs-Verhältnis und die familiäre Atmosphäre. Perfekt für alle, die morgens als erste auf der Piste stehen wollen, ohne lange Wege in Kauf nehmen zu müssen.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=S%C3%B6llerhaus%20Kleinwalsertal"
     },
     {
       "name": "Haus Annelies - Ferienwohnungen & Zimmer",
@@ -1623,7 +1713,7 @@
         "distanz_m": 217
       },
       "ski_in_out": "fast",
-      "ai_description": "Das Haus Annelies in Riezlern ist ein echter Geheimtipp für alle, die ihre Skier praktisch vor der Haustür anschnallen wollen. Mit nur 119 Metern zur Parsenn-Abfahrt und 387 Metern zur Parsennbahn erlebt man hier echtes Ski-in/Ski-out-Feeling, ohne die üblichen Hotelpreise zu zahlen. Die familiär geführten Ferienwohnungen bieten die Flexibilität einer eigenen Küche und trotzdem den Komfort eines gut geführten Betriebs. Bei 4.9 Sternen aus 33 Google-Bewertungen spricht die Qualität für sich - hier stimmt einfach das Preis-Leistungs-Verhältnis.",
+      "ai_description": "Das Haus Annelies in Riezlern ist ein echter Geheimtipp für alle, die morgens praktisch direkt auf die Piste wollen - nur 119 Meter Luftlinie zur Parsenn-Abfahrt und 5 Gehminuten zur Parsennbahn. Die familiär geführten Ferienwohnungen und Zimmer überzeugen mit ihrer herzlichen Atmosphäre, was sich auch in den durchweg begeisterten Gästebewertungen widerspiegelt. Hier stimmt einfach das Gesamtpaket: authentische Gastfreundschaft, perfekte Lage für Skifahrer und Langläufer, und das Gefühl, bei Freunden zu übernachten statt in einem anonymen Hotel.",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=Haus%20Annelies%20-%20Ferienwohnungen%20%26%20Zimmer%20Kleinwalsertal"
     },
     {
@@ -1653,7 +1743,7 @@
         "distanz_m": 574
       },
       "ski_in_out": "fast",
-      "ai_description": "Das Gästehaus Brugger in Riezlern ist eine gemütliche Familienpension, die praktisch direkt an der Piste liegt - der Kesslerlift ist nur 122 Meter entfernt und in einer Minute zu Fuß erreichbar. Die Lage ist ideal für Skifahrer, da man quasi vor der Haustür auf die Ski steigen kann und der Kessler-Hang nur knapp 100 Meter entfernt beginnt. Die sehr guten Google-Bewertungen (4.6 Sterne) sprechen für die herzliche Betreuung und das gute Preis-Leistungs-Verhältnis. Für Langläufer ist die Egg Loipe in etwa 6-7 Gehminuten erreichbar.",
+      "ai_description": "Das Gästehaus Brugger in Riezlern ist ein echter Geheimtipp für alle, die direkt an der Piste wohnen möchten. Mit nur 122 Metern zum Kesslerlift und 97 Metern zur nächsten Piste am Kessler-Hang kommst du morgens praktisch mit den Skiern vor die Haustür - echtes Ski-in/Ski-out ohne Umwege. Die kleine, familiäre Pension punktet mit ihrer persönlichen Atmosphäre und den durchweg positiven Gästebewertungen. Perfekt für unkomplizierte Skifahrer, die mehr Zeit auf der Piste als im Hotelzimmer verbringen wollen.",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=G%C3%A4stehaus%20Brugger%20Kleinwalsertal"
     },
     {
@@ -1683,7 +1773,7 @@
         "distanz_m": 810
       },
       "ski_in_out": "fast",
-      "ai_description": "Das Gästehaus Schönblick liegt in ruhiger Lage in Hirschegg und wird von der Familie Jochum mit viel persönlicher Aufmerksamkeit geführt. Mit nur wenigen Minuten Fußweg zur Heubergbahn und direktem Zugang zu den Skiabfahrten ist die Lage für Skifahrer nahezu perfekt - man kann praktisch von der Haustür auf die Piste. Die familiäre Atmosphäre und die außergewöhnlich guten Gästebewertungen sprechen für eine herzliche Betreuung abseits des großen Hoteltrubels. Wer eine gemütliche, authentische Unterkunft mit kurzen Wegen zum Skigebiet sucht, ist hier goldrichtig.",
+      "ai_description": "Das Gästehaus Schönblick der Familie Jochum in Hirschegg ist ein echter Geheimtipp für Skifahrer – hier startet man praktisch direkt vor der Haustür auf die Piste, da der Skiweg Parsenn Heuberg nur knapp 100 Meter entfernt liegt. Die gemütliche Familienpension liegt ideal am Hang, sodass man morgens entspannt zur nur 8 Gehminuten entfernten Heubergbahn spazieren kann. Mit 4,9 Sternen bei Google spricht die kleine aber feine Bewertung für die persönliche Betreuung durch Familie Jochum. Wer das authentische Kleinwalsertal-Erlebnis ohne großen Hotelrummel sucht, ist hier goldrichtig.",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=G%C3%A4stehaus%20Sch%C3%B6nblick%20-%20Familie%20Jochum%20Kleinwalsertal"
     },
     {
@@ -1713,8 +1803,38 @@
         "distanz_m": 69
       },
       "ski_in_out": "nein",
-      "ai_description": "Das Gästehaus Mathies in Mittelberg punktet mit seiner familiären Atmosphäre und der ausgezeichneten Bewertung von 4,8 Sternen - hier stimmt einfach der Service. Die Lage ist perfekt für Langläufer, denn zur nächsten Loipe sind es nur wenige Schritte, während Alpin-Skifahrer einen kurzen 9-minütigen Spaziergang zur Zafernabahn in Kauf nehmen müssen. Die Pension bietet authentische Gemütlichkeit abseits des Trubels, ideal für alle, die das echte Kleinwalsertal erleben möchten. Wer Wert auf persönliche Betreuung und faire Preise legt, ist hier goldrichtig.",
+      "ai_description": "Das Gästehaus Mathies liegt zentral in Mittelberg und ist ein echtes Kleinod für alle, die authentische Gastfreundschaft schätzen – das zeigt auch die hervorragende Bewertung von 4,8 Sternen. Die Pension punktet mit ihrer idealen Lage für Langläufer: Eine Loipe verläuft praktisch vor der Haustür, nur 69 Meter entfernt. Für Abfahrtsfahrer ist die Zafernabahn in entspannten 9 Gehminuten erreichbar, was morgens einen gemütlichen Start in den Skitag ermöglicht. Hier erlebt man das ursprüngliche Kleinwalsertal abseits vom Hoteltrubel, mit dem gewissen familiären Charme, der kleine Pensionen so besonders macht.",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=G%C3%A4stehaus%20Mathies%20Kleinwalsertal"
+    },
+    {
+      "name": "Gästehaus Etschmann",
+      "ortsteil": "Riezlern",
+      "typ": "Pension",
+      "adresse": "Alte Schwendestraße 12, 6991 Riezlern, Österreich",
+      "gps": {
+        "lat": 47.360048,
+        "lng": 10.188018999999999
+      },
+      "website": "https://newstay.eu/gaestehaus-etschmann-riezlern/",
+      "google_rating": 3.6,
+      "google_reviews": 50,
+      "naechste_bergbahn": {
+        "name": "Schwandlift",
+        "typ": "Bügellift",
+        "distanz_m": 587,
+        "gehzeit_min": 9
+      },
+      "naechste_piste": {
+        "name": "Schwandlift-Piste",
+        "distanz_m": 299
+      },
+      "naechste_loipe": {
+        "name": "Egg Loipe",
+        "distanz_m": 369
+      },
+      "ski_in_out": "nein",
+      "ai_description": "Das Gästehaus Etschmann in Riezlern ist eine einfache Pension, die vor allem durch ihre Nähe zum Skigebiet punktet - in nur 9 Gehminuten erreicht man den Schwandlift und die gleichnamige Piste ist praktisch vor der Haustür. Die Unterkunft bietet solide Grundausstattung ohne großen Schnickschnack, was sich auch in den gemischten Gästebewertungen widerspiegelt. Für Langläufer ist die Egg Loipe ebenfalls schnell erreichbar, allerdings sollte man sich auf eher rustikalen Komfort einstellen. Wer eine günstige Übernachtung mit kurzen Wegen zur Piste sucht, ist hier richtig.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=G%C3%A4stehaus%20Etschmann%20Kleinwalsertal"
     },
     {
       "name": "Gästehaus Amely, Kathrin Porep",
@@ -1743,38 +1863,1208 @@
         "distanz_m": 518
       },
       "ski_in_out": "nein",
-      "ai_description": "Das Gästehaus Amely liegt mitten in Riezlern, nur 2 Gehminuten vom Schwandlift entfernt - perfekt für Familien mit Kindern, die das Skifahren lernen wollen. Die herzliche Gastgeberin Kathrin Porep führt ihre kleine Pension mit viel persönlicher Aufmerksamkeit, was sich in den außergewöhnlich guten 4,9-Sterne-Bewertungen widerspiegelt. Auch Langläufer kommen auf ihre Kosten: Die Egg Loipe ist in wenigen Minuten zu Fuß erreichbar. Hier bekommst du authentische Kleinwalser Gastfreundschaft ohne Schnickschnack, dafür mit dem Charme eines echten Familienprojekts.",
+      "ai_description": "Das Gästehaus Amely in Riezlern ist eine familiär geführte Pension, die sich durch ihre herzliche Gastgeberin Kathrin Porep und die außergewöhnlich hohe Gästezufriedenheit auszeichnet - 4,9 von 5 Sternen bei über 100 Bewertungen sprechen für sich. Der Schwandlift ist praktisch vor der Haustür, nur 2 Gehminuten oder 157 Meter entfernt, was besonders für Familien mit Kindern ideal ist. Obwohl es kein klassisches Ski-in/Ski-out Hotel ist, kommst du morgens entspannt zu den Pisten und kannst abends gemütlich zurücklaufen. Die persönliche Betreuung und die perfekte Lage machen dieses Gästehaus zu einer echten Perle im Kleinwalsertal.",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=G%C3%A4stehaus%20Amely%2C%20Kathrin%20Porep%20Kleinwalsertal"
     },
     {
-      "name": "Haus Weissert",
+      "name": "Altes Doktorhaus -Gästehaus und Ferienwohnungen- Familie Adomeit",
       "ortsteil": "Riezlern",
-      "typ": "Unterkunft",
-      "adresse": "Eggstraße 46, 6991 Riezlern, Österreich",
+      "typ": "Ferienwohnung",
+      "adresse": "Walserstraße 33, 6991 Riezlern, Österreich",
       "gps": {
-        "lat": 47.362392799999995,
-        "lng": 10.180264500000002
+        "lat": 47.3584792,
+        "lng": 10.1895408
       },
-      "website": "http://haus-weissert.at/",
-      "google_rating": 4.6,
-      "google_reviews": 38,
+      "website": "https://www.altes-doktorhaus.at/",
+      "google_rating": 4.8,
+      "google_reviews": 114,
       "naechste_bergbahn": {
-        "name": "Kanzelwandbahn",
-        "typ": "Gondelbahn",
-        "distanz_m": 1497,
-        "gehzeit_min": 20
+        "name": "Schwandlift",
+        "typ": "Bügellift",
+        "distanz_m": 223,
+        "gehzeit_min": 3
       },
       "naechste_piste": {
-        "name": "Unbenannt",
-        "distanz_m": 806
+        "name": "Schwandlift-Piste",
+        "distanz_m": 94
       },
       "naechste_loipe": {
         "name": "Egg Loipe",
-        "distanz_m": 83
+        "distanz_m": 577
+      },
+      "ski_in_out": "fast",
+      "ai_description": "Das Alte Doktorhaus in Riezlern ist ein charmantes Gästehaus mit Ferienwohnungen, das von der Familie Adomeit mit viel Herzblut geführt wird. Die Lage ist perfekt für Wintersportler - in nur 3 Minuten erreicht man zu Fuß den Schwandlift, und die Piste liegt praktisch vor der Haustür, nur 94 Meter entfernt. Die ausgezeichneten Bewertungen (4.8 Sterne) sprechen für die familiäre Atmosphäre und den persönlichen Service der Gastgeberfamilie. Wer morgens direkt auf die Bretter steigen möchte, ist hier goldrichtig - echtes Ski-in/Ski-out-Feeling im Kleinwalsertal.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Altes%20Doktorhaus%20-G%C3%A4stehaus%20und%20Ferienwohnungen-%20Familie%20Adomeit%20Kleinwalsertal"
+    },
+    {
+      "name": "Gästehaus Walserheimat",
+      "ortsteil": "Riezlern",
+      "typ": "Pension",
+      "adresse": "Westeggweg 3, 6991 Riezlern, Österreich",
+      "gps": {
+        "lat": 47.359089,
+        "lng": 10.1920097
+      },
+      "website": "http://www.walserheimat.at/",
+      "google_rating": 4.8,
+      "google_reviews": 66,
+      "naechste_bergbahn": {
+        "name": "Schwandlift",
+        "typ": "Bügellift",
+        "distanz_m": 251,
+        "gehzeit_min": 4
+      },
+      "naechste_piste": {
+        "name": "Schwandlift-Piste",
+        "distanz_m": 140
+      },
+      "naechste_loipe": {
+        "name": "Egg Loipe",
+        "distanz_m": 644
+      },
+      "ski_in_out": "fast",
+      "ai_description": "Das Gästehaus Walserheimat in Riezlern ist ein echter Geheimtipp für alle, die morgens praktisch direkt auf die Piste wollen – die Schwandlift-Piste liegt nur 140 Meter entfernt. Mit dem Schwandlift erreicht ihr in nur 4 Gehminuten euren ersten Lift des Tages, was besonders für Familien mit Kindern unschlagbar ist. Die 4,8-Sterne-Bewertung bei Google spricht für sich: Hier stimmt das Preis-Leistungs-Verhältnis und die herzliche Betreuung. Für Langläufer ist die Egg Loipe zwar etwas weiter weg, aber die skinahe Lage macht dieses Gästehaus zur perfekten Basis für entspannte Skitage im Kleinwalsertal.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=G%C3%A4stehaus%20Walserheimat%20Kleinwalsertal"
+    },
+    {
+      "name": "Gästehaus Panorama - Familie Schuster",
+      "ortsteil": "Hirschegg",
+      "typ": "Pension",
+      "adresse": "Am Sonnenbühl 35, 6992 Hirschegg, Österreich",
+      "gps": {
+        "lat": 47.346339,
+        "lng": 10.16569
+      },
+      "website": "http://www.gaestehaus-panorama.de/",
+      "google_rating": 4.7,
+      "google_reviews": 20,
+      "naechste_bergbahn": {
+        "name": "Heubergbahn",
+        "typ": "Sessellift",
+        "distanz_m": 994,
+        "gehzeit_min": 14
+      },
+      "naechste_piste": {
+        "name": "Hubertus-Piste",
+        "distanz_m": 159
+      },
+      "naechste_loipe": {
+        "name": "Unbenannt",
+        "distanz_m": 841
       },
       "ski_in_out": "nein",
-      "ai_description": "Das Haus Weissert in Riezlern punktet mit seiner ruhigen Lage und dem freundlichen, familiären Service, was sich auch in den durchweg positiven Gästebewertungen widerspiegelt. Besonders praktisch ist die Nähe zur Egg Loipe, die praktisch vor der Haustür beginnt – perfekt für Langläufer, die morgens direkt in die Spur einsteigen möchten. Für Alpinskifahrer bedeutet die 20-minütige Fahrt zur Kanzelwandbahn zwar etwas Anfahrt, dafür erreicht man aber eines der schönsten Skigebiete im Kleinwalsertal. Die Unterkunft eignet sich besonders für Gäste, die eine persönliche Atmosphäre schätzen und gerne verschiedene Wintersportarten ausprobieren möchten.",
-      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Haus%20Weissert%20Kleinwalsertal"
+      "ai_description": "Das Gästehaus Panorama liegt ruhig in Hirschegg und wird von der Familie Schuster mit der persönlichen Note geführt, die sich in den durchweg positiven Gästebewertungen widerspiegelt. Die Hubertus-Piste ist praktisch vor der Haustür erreichbar, während ihr in knapp 15 Minuten gemütlich zur Heubergbahn spaziert. Für Langläufer ist eine Loipe gut erreichbar, auch wenn ein kurzer Weg dorthin nötig ist. Die familiäre Atmosphäre und die skinahe Lage machen das Haus zu einer soliden Wahl für entspannte Skitage im Kleinwalsertal.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=G%C3%A4stehaus%20Panorama%20-%20Familie%20Schuster%20Kleinwalsertal"
+    },
+    {
+      "name": "Gästehaus Romy",
+      "ortsteil": "Hirschegg",
+      "typ": "Pension",
+      "adresse": "Dürenbodenstraße 14, 6992 Hirschegg, Österreich",
+      "gps": {
+        "lat": 47.338468999999996,
+        "lng": 10.167475999999999
+      },
+      "website": "http://www.haus-romy.de/",
+      "google_rating": 4.7,
+      "google_reviews": 7,
+      "naechste_bergbahn": {
+        "name": "Schlösslellift",
+        "typ": "Schlepplift",
+        "distanz_m": 1017,
+        "gehzeit_min": 16
+      },
+      "naechste_piste": {
+        "name": "Unbenannt",
+        "distanz_m": 278
+      },
+      "naechste_loipe": {
+        "name": "Unbenannt",
+        "distanz_m": 920
+      },
+      "ski_in_out": "nein",
+      "ai_description": "Das Gästehaus Romy in Hirschegg ist eine gemütliche kleine Pension, die bei ihren wenigen Gästen mit persönlicher Betreuung punktet - das zeigen auch die durchweg positiven Bewertungen. Die Lage ist ideal für entspannte Skifahrer: In knapp 16 Minuten erreicht man zu Fuß den Schlösslellift, und die nächste Piste liegt sogar nur 278 Meter Luftlinie entfernt. Für Langläufer ist die nächste Loipe in gut einem Kilometer erreichbar. Ein authentisches Alpendomizil ohne Schnickschnack, dafür mit der herzlichen Atmosphäre einer echten Familienpension.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=G%C3%A4stehaus%20Romy%20Kleinwalsertal"
+    },
+    {
+      "name": "Gästehaus Thaler",
+      "ortsteil": "Mittelberg",
+      "typ": "Pension",
+      "adresse": "Wildentalstraße 1, 6993 Mittelberg, Österreich",
+      "gps": {
+        "lat": 47.3181217,
+        "lng": 10.152190100000002
+      },
+      "website": "https://www.gaestehaus-thaler.at/",
+      "google_rating": 4.6,
+      "google_reviews": 45,
+      "naechste_bergbahn": {
+        "name": "Jedermannlift",
+        "typ": "Tellerlift",
+        "distanz_m": 162,
+        "gehzeit_min": 2
+      },
+      "naechste_piste": {
+        "name": "Unbenannt",
+        "distanz_m": 124
+      },
+      "naechste_loipe": {
+        "name": "Steinbockloipe",
+        "distanz_m": 51
+      },
+      "ski_in_out": "fast",
+      "ai_description": "Das Gästehaus Thaler liegt praktisch direkt im Skigebiet von Mittelberg – in nur 2 Gehminuten erreichen Sie den Jedermannlift und können quasi vor der Haustür auf die Skier steigen. Die familiäre Pension punktet mit ihrer unschlagbaren Lage zur Steinbockloipe (nur 51 Meter entfernt) und bietet damit ideale Bedingungen für Langläufer und alpine Skifahrer gleichermaßen. Mit 4,6 Sternen bei Google-Bewertungen scheinen die Gäste besonders die unkomplizierte, herzliche Atmosphäre und die perfekte Anbindung an die Pisten zu schätzen. Hier übernachten Sie nicht nur günstig, sondern sparen sich auch das lästige Hin- und Herfahren zum Skigebiet.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=G%C3%A4stehaus%20Thaler%20Kleinwalsertal"
+    },
+    {
+      "name": "Gästehaus Widderstein",
+      "ortsteil": "Mittelberg",
+      "typ": "Pension",
+      "adresse": "Walserstraße 394, 6993 Mittelberg, Österreich",
+      "gps": {
+        "lat": 47.323181399999996,
+        "lng": 10.154252099999999
+      },
+      "website": "https://www.gaestehaus-widderstein.at/",
+      "google_rating": 4.9,
+      "google_reviews": 40,
+      "naechste_bergbahn": {
+        "name": "Förderband Schützabühl",
+        "typ": "Förderband",
+        "distanz_m": 211,
+        "gehzeit_min": 3
+      },
+      "naechste_piste": {
+        "name": "Skiweg Mittelberg Zaferna",
+        "distanz_m": 121
+      },
+      "naechste_loipe": {
+        "name": "Unbenannt",
+        "distanz_m": 251
+      },
+      "ski_in_out": "fast",
+      "ai_description": "Das Gästehaus Widderstein in Mittelberg ist eine echte Perle für Skifahrer - nur 3 Gehminuten vom Förderband Schützabühl entfernt und praktisch direkt an der Piste gelegen. Die familiäre Pension punktet mit ihrer unschlagbaren Lage und dem herzlichen Service, was sich in den außergewöhnlich guten Bewertungen (4,9 Sterne) widerspiegelt. Hier können Sie morgens wirklich fast direkt vor der Haustür die Skier anschnallen und abends nach dem letzten Schwung entspannt \"heimfahren\". Eine perfekte Adresse für alle, die das Skigebiet intensiv nutzen möchten, ohne lange Wege in Kauf nehmen zu müssen.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=G%C3%A4stehaus%20Widderstein%20Kleinwalsertal"
+    },
+    {
+      "name": "Gästehaus Tannegg",
+      "ortsteil": "Mittelberg",
+      "typ": "Pension",
+      "adresse": "Höfle 9, 6993 Mittelberg, Österreich",
+      "gps": {
+        "lat": 47.328330199999996,
+        "lng": 10.167448
+      },
+      "website": "http://www.haus-tannegg.at/",
+      "google_rating": 4.8,
+      "google_reviews": 63,
+      "naechste_bergbahn": {
+        "name": "Wildentallift",
+        "typ": "Tellerlift",
+        "distanz_m": 6,
+        "gehzeit_min": 0
+      },
+      "naechste_piste": {
+        "name": "Wildentalpiste",
+        "distanz_m": 31
+      },
+      "naechste_loipe": {
+        "name": "Unbenannt",
+        "distanz_m": 349
+      },
+      "ski_in_out": "ja",
+      "ai_description": "Das Gästehaus Tannegg in Mittelberg ist ein echtes Ski-in/Ski-out Juwel – der Wildentallift ist nur 6 Meter entfernt, sodass Sie praktisch direkt vom Haus auf die Piste gelangen. Die familiäre Pension überzeugt mit ihrer unschlagbaren Lage zur Wildentalpiste (31m) und der persönlichen Atmosphäre, was sich in den hervorragenden 4,8 Sternen bei Google widerspiegelt. Hier erleben Sie authentische Gastfreundschaft ohne Schnickschnack, dafür mit dem Komfort, morgens die Ski anzuschnallen und abends müde, aber glücklich direkt ins warme Haus zu fallen. Für Langläufer liegt die nächste Loipe etwa 350 Meter entfernt – ein kurzer Spaziergang durch die verschneite Landschaft.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=G%C3%A4stehaus%20Tannegg%20Kleinwalsertal"
+    },
+    {
+      "name": "Gästehaus Willam",
+      "ortsteil": "Mittelberg",
+      "typ": "Pension",
+      "adresse": "Lärchenweg 5, 6993 Mittelberg, Österreich",
+      "gps": {
+        "lat": 47.321922799999996,
+        "lng": 10.152687199999999
+      },
+      "website": "https://gaestehaus-willam.at/",
+      "google_rating": 5,
+      "google_reviews": 41,
+      "naechste_bergbahn": {
+        "name": "Walmendingerhornbahn",
+        "typ": "Seilbahn",
+        "distanz_m": 213,
+        "gehzeit_min": 3
+      },
+      "naechste_piste": {
+        "name": "Skiweg Heuberg Zaferna",
+        "distanz_m": 102
+      },
+      "naechste_loipe": {
+        "name": "Unbenannt",
+        "distanz_m": 271
+      },
+      "ski_in_out": "fast",
+      "ai_description": "Das Gästehaus Willam in Mittelberg ist eine kleine, familiäre Pension mit perfekter Lage für Skifahrer - die Walmendingerhornbahn erreicht ihr in nur 3 Gehminuten, und die nächste Piste liegt praktisch vor der Haustür. Die durchweg begeisterten Gästebewertungen (5 Sterne bei 41 Rezensionen) sprechen für die herzliche Gastfreundschaft und den persönlichen Service, den man in größeren Hotels oft vermisst. Morgens schnell die Ski angeschnallt und schon seid ihr auf der Piste - abends gemütlich zurück ins warme Gästehaus. Hier stimmt einfach das Preis-Leistungs-Verhältnis und die authentische Atmosphäre eines echten Kleinwalsertaler Familienbetriebs.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=G%C3%A4stehaus%20Willam%20Kleinwalsertal"
+    },
+    {
+      "name": "Tannhof Pension",
+      "ortsteil": "Mittelberg",
+      "typ": "Pension",
+      "adresse": "Lärchenweg 7, 6993 Mittelberg, Österreich",
+      "gps": {
+        "lat": 47.321914500000005,
+        "lng": 10.1531634
+      },
+      "website": "",
+      "google_rating": 4.6,
+      "google_reviews": 5,
+      "naechste_bergbahn": {
+        "name": "Walmendingerhornbahn",
+        "typ": "Seilbahn",
+        "distanz_m": 181,
+        "gehzeit_min": 2
+      },
+      "naechste_piste": {
+        "name": "Skiweg Heuberg Zaferna",
+        "distanz_m": 117
+      },
+      "naechste_loipe": {
+        "name": "Unbenannt",
+        "distanz_m": 236
+      },
+      "ski_in_out": "fast",
+      "ai_description": "Die Tannhof Pension in Mittelberg ist ein echter Geheimtipp für alle, die es unkompliziert mögen - mit nur 5 Google-Bewertungen aber starken 4,6 Sternen spricht das für sich. In nur 2 Gehminuten erreichen Sie die Walmendingerhornbahn, und die nächste Piste liegt praktisch vor der Haustür, was echtes Ski-in/Ski-out-Gefühl vermittelt. Die kleine, familiäre Pension punktet mit ihrer perfekten Lage direkt im Skigebiet, ohne den Trubel der großen Hotels. Hier übernachten Sie authentisch und preiswert, mit kurzen Wegen zu allem was das Wintersportherz begehrt.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Tannhof%20Pension%20Kleinwalsertal"
+    },
+    {
+      "name": "Landhaus Almrausch",
+      "ortsteil": "Mittelberg",
+      "typ": "Unterkunft",
+      "adresse": "Wildentalstraße 4, 6993 Mittelberg, Österreich",
+      "gps": {
+        "lat": 47.3178203,
+        "lng": 10.152208199999999
+      },
+      "website": "http://www.landhaus-almrausch.at/",
+      "google_rating": 4.7,
+      "google_reviews": 85,
+      "naechste_bergbahn": {
+        "name": "Jedermannlift",
+        "typ": "Tellerlift",
+        "distanz_m": 150,
+        "gehzeit_min": 2
+      },
+      "naechste_piste": {
+        "name": "Unbenannt",
+        "distanz_m": 130
+      },
+      "naechste_loipe": {
+        "name": "Steinbockloipe",
+        "distanz_m": 19
+      },
+      "ski_in_out": "fast",
+      "ai_description": "Das Landhaus Almrausch in Mittelberg ist ein echtes Ski-in/Ski-out Juwel - nur 19 Meter von der Steinbockloipe und 130 Meter von der Piste entfernt. Der Jedermannlift ist in 2 Minuten zu Fuß erreichbar, sodass ihr morgens praktisch direkt vor der Haustür in die Bindung steigt. Mit 4,7 Sternen bei 85 Google-Bewertungen scheint das familiär geführte Haus seine Gäste zu überzeugen. Die Lage ist wirklich unschlagbar für alle, die keine Lust auf lange Wege zum Skigebiet haben.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Landhaus%20Almrausch%20Kleinwalsertal"
+    },
+    {
+      "name": "Gasthof Sonnwinkl",
+      "ortsteil": "Mittelberg",
+      "typ": "Gasthof",
+      "adresse": "Bödmerstraße 32, 6993 Mittelberg, Österreich",
+      "gps": {
+        "lat": 47.3207759,
+        "lng": 10.1542034
+      },
+      "website": "http://www.sonnwinkl.at/",
+      "google_rating": 4.8,
+      "google_reviews": 292,
+      "naechste_bergbahn": {
+        "name": "Walmendingerhornbahn",
+        "typ": "Seilbahn",
+        "distanz_m": 577,
+        "gehzeit_min": 9
+      },
+      "naechste_piste": {
+        "name": "Skiweg Heuberg Zaferna",
+        "distanz_m": 265
+      },
+      "naechste_loipe": {
+        "name": "Unbenannt",
+        "distanz_m": 135
+      },
+      "ski_in_out": "nein",
+      "ai_description": "Der Gasthof Sonnwinkl in Mittelberg ist ein authentischer Gasthof mit hervorragenden 4,8 Sternen bei knapp 300 Bewertungen - das spricht für konstant gute Qualität über die Jahre. Die Lage ist praktisch: nur 9 Gehminuten zur Walmendingerhornbahn und die nächste Piste liegt keine 300 Meter entfernt. Besonders Langläufer schätzen die unmittelbare Nähe zur Loipe, die praktisch vor der Haustür beginnt. Hier bekommst du solide Gastlichkeit ohne Schnickschnack, dafür aber mit der Herzlichkeit eines traditionellen Kleinwalsertaler Gasthofs.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Gasthof%20Sonnwinkl%20Kleinwalsertal"
+    },
+    {
+      "name": "Fewo Gästehaus Ott",
+      "ortsteil": "Mittelberg",
+      "typ": "Pension",
+      "adresse": "Am Höhenweg 2, 6993 Mittelberg, Österreich",
+      "gps": {
+        "lat": 47.3109592,
+        "lng": 10.120768199999999
+      },
+      "website": "http://www.gaestehaus-ott.de/",
+      "google_rating": 4.9,
+      "google_reviews": 21,
+      "naechste_bergbahn": {
+        "name": "Doppelsessellift Walmendingerhorn",
+        "typ": "Sessellift",
+        "distanz_m": 2689,
+        "gehzeit_min": 58
+      },
+      "naechste_piste": {
+        "name": "Talabfahrt Walmendingerhorn",
+        "distanz_m": 1006
+      },
+      "naechste_loipe": {
+        "name": "Unbenannt",
+        "distanz_m": 104
+      },
+      "ski_in_out": "nein",
+      "ai_description": "Das Fewo Gästehaus Ott in Mittelberg ist eine kleine, familiär geführte Pension mit hervorragenden Bewertungen, die vor allem Langläufer begeistert - die nächste Loipe liegt praktisch vor der Haustür, nur 104 Meter entfernt. Für Alpinskifahrer bedeutet der Weg zum Walmendingerhorn allerdings eine gute Stunde Fußmarsch oder die Nutzung des Skibusses, da die Bergbahn knapp 2,7 Kilometer entfernt ist. Die authentische Atmosphäre und die persönliche Betreuung machen das kleine Gästehaus zu einer echten Alternative zu den großen Hotels, besonders für Gäste, die Ruhe und eine ursprüngliche Kleinwalsertaler Atmosphäre schätzen. Wer hauptsächlich zum Langlaufen kommt oder gerne wandert, findet hier eine perfekte, ruhige Basis.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Fewo%20G%C3%A4stehaus%20Ott%20Kleinwalsertal"
+    },
+    {
+      "name": "Gästehaus Martina - Familie Kessler",
+      "ortsteil": "Hirschegg",
+      "typ": "Pension",
+      "adresse": "Schwarzwassertalstraße 33, 6992 Hirschegg, Österreich",
+      "gps": {
+        "lat": 47.3533902,
+        "lng": 10.1698054
+      },
+      "website": "http://www.gaestehaus-martina.com/",
+      "google_rating": 4.6,
+      "google_reviews": 34,
+      "naechste_bergbahn": {
+        "name": "Ski-Kuli Parsenn",
+        "typ": "Schlepplift",
+        "distanz_m": 324,
+        "gehzeit_min": 5
+      },
+      "naechste_piste": {
+        "name": "Parsenn-Abfahrt",
+        "distanz_m": 142
+      },
+      "naechste_loipe": {
+        "name": "Unbenannt",
+        "distanz_m": 85
+      },
+      "ski_in_out": "fast",
+      "ai_description": "Das Gästehaus Martina in Hirschegg ist ein gemütlicher Familienbetrieb, der vor allem durch seine perfekte Lage für Wintersportler punktet. Mit nur 85 Metern zur nächsten Loipe und 142 Metern zur Parsenn-Abfahrt können Sie praktisch direkt vor der Haustür auf die Skier steigen. Der Ski-Kuli Parsenn ist in entspannten 5 Gehminuten erreichbar, was morgendliche Hektik überflüssig macht. Die solide Bewertung von 4.6 Sternen spricht für die herzliche Betreuung der Familie Kessler und das gute Preis-Leistungs-Verhältnis dieser bodenständigen Pension.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=G%C3%A4stehaus%20Martina%20-%20Familie%20Kessler%20Kleinwalsertal"
+    },
+    {
+      "name": "Gästehaus Claudia - Familie Bereuter",
+      "ortsteil": "Riezlern",
+      "typ": "Pension",
+      "adresse": "Zwerwaldstraße 12, 6991 Riezlern, Österreich",
+      "gps": {
+        "lat": 47.353502399999996,
+        "lng": 10.181228500000001
+      },
+      "website": "http://www.gaestehaus-claudia.de/",
+      "google_rating": 4.7,
+      "google_reviews": 41,
+      "naechste_bergbahn": {
+        "name": "Ideallift",
+        "typ": "Schlepplift",
+        "distanz_m": 291,
+        "gehzeit_min": 4
+      },
+      "naechste_piste": {
+        "name": "Ideallift-Abfahrt",
+        "distanz_m": 130
+      },
+      "naechste_loipe": {
+        "name": "Unbenannt",
+        "distanz_m": 661
+      },
+      "ski_in_out": "fast",
+      "ai_description": "Das Gästehaus Claudia in Riezlern ist eine familiär geführte Pension, die praktisch direkt an der Piste liegt - nur 130 Meter Luftlinie zur Ideallift-Abfahrt und 4 Gehminuten zum Schlepplift. Familie Bereuter führt das Haus mit der herzlichen Art, die man sich von einer Kleinwalser Familienpension wünscht, was sich auch in den sehr guten Bewertungen widerspiegelt. Hier übernachtest du quasi mit den Skiern vor der Haustür und kannst morgens entspannt zum Lift spazieren, ohne dich um Parkplätze oder lange Anfahrten kümmern zu müssen. Eine solide, unkomplizierte Unterkunft für alle, die das Skigebiet voll auskosten wollen.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=G%C3%A4stehaus%20Claudia%20-%20Familie%20Bereuter%20Kleinwalsertal"
+    },
+    {
+      "name": "Gästehaus am Berg",
+      "ortsteil": "Hirschegg",
+      "typ": "Pension",
+      "adresse": "Am Berg 17, 6992 Hirschegg, Österreich",
+      "gps": {
+        "lat": 47.3441356,
+        "lng": 10.164429400000001
+      },
+      "website": "http://www.gaestehaus-am-berg.com/",
+      "google_rating": 4.6,
+      "google_reviews": 36,
+      "naechste_bergbahn": {
+        "name": "Heubergbahn",
+        "typ": "Sessellift",
+        "distanz_m": 366,
+        "gehzeit_min": 5
+      },
+      "naechste_piste": {
+        "name": "Heuberg-Abfahrt",
+        "distanz_m": 129
+      },
+      "naechste_loipe": {
+        "name": "Unbenannt",
+        "distanz_m": 975
+      },
+      "ski_in_out": "fast",
+      "ai_description": "Das Gästehaus am Berg in Hirschegg punktet mit seiner perfekten Lage für Skifahrer – in nur 5 Gehminuten erreicht man die Heubergbahn und die Pisten liegen praktisch vor der Haustür. Die kleine, familiäre Pension mit 4,6 Sternen bei Google wird von Gästen für ihre persönliche Atmosphäre und das gute Preis-Leistungs-Verhältnis geschätzt. Wer Langlauf bevorzugt, muss allerdings knapp einen Kilometer zur nächsten Loipe laufen. Hier übernachtet man authentisch und unkompliziert, ohne Schnickschnack, dafür aber mit direktem Zugang zum Skigebiet.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=G%C3%A4stehaus%20am%20Berg%20Kleinwalsertal"
+    },
+    {
+      "name": "Gästehaus Wiesengrund",
+      "ortsteil": "Riezlern",
+      "typ": "Pension",
+      "adresse": "Michaela Heim, Köpfleweg 19, 6991 Riezlern, Österreich",
+      "gps": {
+        "lat": 47.356667699999996,
+        "lng": 10.1896379
+      },
+      "website": "https://gaestehaus-wiesengrund.at/",
+      "google_rating": 4.9,
+      "google_reviews": 89,
+      "naechste_bergbahn": {
+        "name": "Schwandlift",
+        "typ": "Bügellift",
+        "distanz_m": 789,
+        "gehzeit_min": 11
+      },
+      "naechste_piste": {
+        "name": "Schwandlift-Piste",
+        "distanz_m": 118
+      },
+      "naechste_loipe": {
+        "name": "Egg Loipe",
+        "distanz_m": 760
+      },
+      "ski_in_out": "fast",
+      "ai_description": "Das Gästehaus Wiesengrund in Riezlern ist ein echter Geheimtipp für Skifahrer - mit nur 118 Metern zur Schwandlift-Piste kommst du praktisch direkt von der Haustür auf die Bretter. Die kleine Pension mit ihrer Traumwertung von 4,9 Sternen punktet vor allem durch die familiäre Atmosphäre und die perfekte Lage am Fuße der Pisten. Der kurze, 11-minütige Spaziergang zum Schwandlift ist selbst mit Skiausrüstung entspannt machbar. Hier wohnst du nicht in einem anonymen Hotelkomplex, sondern erlebst echte Kleinwalsertaler Gastfreundschaft mit direktem Pistenzugang.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=G%C3%A4stehaus%20Wiesengrund%20Kleinwalsertal"
+    },
+    {
+      "name": "Gästehaus Alpina",
+      "ortsteil": "Riezlern",
+      "typ": "Pension",
+      "adresse": "Bürsteggweg 9, 6991 Riezlern, Österreich",
+      "gps": {
+        "lat": 47.3594431,
+        "lng": 10.1926182
+      },
+      "website": "https://www.alpina-riezlern.at/",
+      "google_rating": 4.9,
+      "google_reviews": 53,
+      "naechste_bergbahn": {
+        "name": "Schwandlift",
+        "typ": "Bügellift",
+        "distanz_m": 311,
+        "gehzeit_min": 5
+      },
+      "naechste_piste": {
+        "name": "Schwandlift-Piste",
+        "distanz_m": 187
+      },
+      "naechste_loipe": {
+        "name": "Egg Loipe",
+        "distanz_m": 648
+      },
+      "ski_in_out": "nein",
+      "ai_description": "Das Gästehaus Alpina in Riezlern ist eine gemütliche Pension mit hervorragenden 4,9 Sternen bei Google - hier stimmt einfach das Preis-Leistungs-Verhältnis. In nur 5 Gehminuten erreicht man den Schwandlift, und die Piste liegt praktisch vor der Haustür (187m Luftlinie). Für Langläufer ist die Egg Loipe in etwa 650m erreichbar. Eine ehrliche, familiäre Unterkunft ohne Schnickschnack, die besonders bei Gästen punktet, die authentische Gastfreundschaft und kurze Wege zum Skigebiet schätzen.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=G%C3%A4stehaus%20Alpina%20Kleinwalsertal"
+    },
+    {
+      "name": "Gästehaus Otto Fritz",
+      "ortsteil": "Mittelberg",
+      "typ": "Pension",
+      "adresse": "Höflerweg 14, 6993 Mittelberg, Österreich",
+      "gps": {
+        "lat": 47.327809699999996,
+        "lng": 10.161148899999999
+      },
+      "website": "http://www.gaestehaus-kleinwalsertal.de/",
+      "google_rating": 4.8,
+      "google_reviews": 17,
+      "naechste_bergbahn": {
+        "name": "Zafernabahn",
+        "typ": "Sessellift",
+        "distanz_m": 692,
+        "gehzeit_min": 11
+      },
+      "naechste_piste": {
+        "name": "Skiweg Mittelberg Zaferna",
+        "distanz_m": 435
+      },
+      "naechste_loipe": {
+        "name": "Unbenannt",
+        "distanz_m": 49
+      },
+      "ski_in_out": "nein",
+      "ai_description": "Das Gästehaus Otto Fritz in Mittelberg ist eine gemütliche Pension mit hervorragender Bewertung (4,8 Sterne), die besonders Langläufer begeistert - die nächste Loipe liegt praktisch vor der Haustür, nur 49 Meter entfernt. Für Alpinski-Fans bedeutet das 11 Minuten Fußmarsch zur Zafernabahn, was in den Bergen völlig normal und akzeptabel ist. Die familiäre Atmosphäre und die Nähe zu den Langlaufloipen machen das Gästehaus zu einer authentischen Wahl für einen entspannten Winterurlaub ohne großen Trubel. Wer Ruhe und direkten Zugang zum Langlaufnetz sucht, ist hier goldrichtig.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=G%C3%A4stehaus%20Otto%20Fritz%20Kleinwalsertal"
+    },
+    {
+      "name": "Ferienwohnung Gästehaus Büchele Kleinwalsertal",
+      "ortsteil": "Hirschegg",
+      "typ": "Ferienwohnung",
+      "adresse": "In den Hägen 1, 6992 Hirschegg, Österreich",
+      "gps": {
+        "lat": 47.350310699999994,
+        "lng": 10.1726621
+      },
+      "website": "http://www.gaestehaus-buechele.de/",
+      "google_rating": 4.9,
+      "google_reviews": 41,
+      "naechste_bergbahn": {
+        "name": "Ski-Kuli Parsenn",
+        "typ": "Schlepplift",
+        "distanz_m": 736,
+        "gehzeit_min": 12
+      },
+      "naechste_piste": {
+        "name": "Unbenannt",
+        "distanz_m": 140
+      },
+      "naechste_loipe": {
+        "name": "Unbenannt",
+        "distanz_m": 488
+      },
+      "ski_in_out": "fast",
+      "ai_description": "Das Gästehaus Büchele in Hirschegg ist eine echte Perle für alle, die authentischen Kleinwalsertaler Charme suchen - die hervorragenden 4,9 Sterne bei Google sprechen Bände. Mit nur 140 Metern zur nächsten Piste und 12 Gehminuten zum Parsenn-Lift ist man praktisch direkt im Skigebiet und kann morgens entspannt mit den Skiern vor die Tür. Die familiär geführte Ferienwohnung bietet das perfekte Basislager für Wintersportler, die abends in ruhiger Atmosphäre entspannen möchten, aber tagsüber schnell auf der Piste oder Loipe sein wollen. Hier stimmt das Preis-Leistungs-Verhältnis und man spürt die herzliche Gastfreundschaft der Kleinwalsertaler.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Ferienwohnung%20G%C3%A4stehaus%20B%C3%BCchele%20Kleinwalsertal%20Kleinwalsertal"
+    },
+    {
+      "name": "Gästehaus Jasmin - Familie Jahn",
+      "ortsteil": "Riezlern",
+      "typ": "Pension",
+      "adresse": "Walserstraße 18, 6991 Riezlern, Österreich",
+      "gps": {
+        "lat": 47.3609839,
+        "lng": 10.191747099999999
+      },
+      "website": "http://www.gaestehaus-jasmin.de/",
+      "google_rating": 4.7,
+      "google_reviews": 46,
+      "naechste_bergbahn": {
+        "name": "Schwandlift",
+        "typ": "Bügellift",
+        "distanz_m": 392,
+        "gehzeit_min": 5
+      },
+      "naechste_piste": {
+        "name": "Schwandlift-Piste",
+        "distanz_m": 337
+      },
+      "naechste_loipe": {
+        "name": "Egg Loipe",
+        "distanz_m": 466
+      },
+      "ski_in_out": "nein",
+      "ai_description": "Das Gästehaus Jasmin wird von Familie Jahn mit viel Herzlichkeit geführt und bietet eine gemütliche, familiäre Atmosphäre in Riezlern. Mit nur 5 Gehminuten zum Schwandlift sind Sie schnell auf der Piste, ohne direkt im Trubel zu stehen. Die sehr guten Google-Bewertungen (4.7 Sterne) sprechen für die persönliche Betreuung und das gute Preis-Leistungs-Verhältnis dieser kleinen Pension. Ideal für Gäste, die authentische Gastfreundschaft schätzen und trotzdem kurze Wege zum Skigebiet haben möchten.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=G%C3%A4stehaus%20Jasmin%20-%20Familie%20Jahn%20Kleinwalsertal"
+    },
+    {
+      "name": "Gästehaus Strasser",
+      "ortsteil": "Riezlern",
+      "typ": "Pension",
+      "adresse": "Eggstraße 63, 6991 Riezlern, Österreich",
+      "gps": {
+        "lat": 47.3639708,
+        "lng": 10.1820621
+      },
+      "website": "http://www.gaestehaus-strasser.com/",
+      "google_rating": 4.4,
+      "google_reviews": 15,
+      "naechste_bergbahn": {
+        "name": "Schwandlift",
+        "typ": "Bügellift",
+        "distanz_m": 1614,
+        "gehzeit_min": 28
+      },
+      "naechste_piste": {
+        "name": "Kessler-Hang",
+        "distanz_m": 921
+      },
+      "naechste_loipe": {
+        "name": "Egg Loipe",
+        "distanz_m": 55
+      },
+      "ski_in_out": "nein",
+      "ai_description": "Das Gästehaus Strasser in Riezlern ist eine gemütliche Pension, die besonders Langläufer begeistert - die Egg Loipe startet praktisch vor der Haustür. Für Alpinskifahrer bedeutet es einen 28-minütigen Spaziergang zum Schwandlift, was durchaus sportlich ist, aber den authentischen Dorfcharakter unterstreicht. Die kleine Pension mit 4,4 Sternen bei Google punktet bei Gästen offenbar mit persönlicher Betreuung und dem ruhigen Standort abseits des Trubels. Wer das ursprüngliche Kleinwalsertal erleben möchte und nicht unbedingt Ski-in/Ski-out braucht, findet hier eine ehrliche Alternative zu den größeren Hotels.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=G%C3%A4stehaus%20Strasser%20Kleinwalsertal"
+    },
+    {
+      "name": "Gästehaus Annette",
+      "ortsteil": "Riezlern",
+      "typ": "Pension",
+      "adresse": "Zwerwaldstraße 11, 6991 Riezlern, Österreich",
+      "gps": {
+        "lat": 47.3533445,
+        "lng": 10.1823013
+      },
+      "website": "http://www.gaestehaus-annette.at/",
+      "google_rating": 4.5,
+      "google_reviews": 29,
+      "naechste_bergbahn": {
+        "name": "Ideallift",
+        "typ": "Schlepplift",
+        "distanz_m": 234,
+        "gehzeit_min": 3
+      },
+      "naechste_piste": {
+        "name": "Ideallift-Abfahrt",
+        "distanz_m": 129
+      },
+      "naechste_loipe": {
+        "name": "Unbenannt",
+        "distanz_m": 737
+      },
+      "ski_in_out": "fast",
+      "ai_description": "Das Gästehaus Annette in Riezlern ist eine gemütliche Pension, die praktisch direkt an der Piste liegt - in nur 3 Gehminuten erreicht man den Ideallift und die Abfahrt ist gerade mal 129 Meter entfernt. Diese Nähe zu den Skipisten macht es zu einer idealen Unterkunft für alle, die morgens schnell auf die Bretter wollen, ohne lange Anmarschwege. Die familiäre Atmosphäre und die solide Bewertung von 4,5 Sternen sprechen für eine ehrliche, unkomplizierte Gastfreundschaft. Hier übernachtet man authentisch und pragmatisch - perfekt für Skifahrer, die Wert auf kurze Wege und ein gutes Preis-Leistungs-Verhältnis legen.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=G%C3%A4stehaus%20Annette%20Kleinwalsertal"
+    },
+    {
+      "name": "Gästehaus Schuler",
+      "ortsteil": "Riezlern",
+      "typ": "Pension",
+      "adresse": "Söllerweg 7, 6991 Riezlern, Österreich",
+      "gps": {
+        "lat": 47.365680399999995,
+        "lng": 10.199180499999999
+      },
+      "website": "https://www.gaestehaus-schuler.de/",
+      "google_rating": 4.7,
+      "google_reviews": 6,
+      "naechste_bergbahn": {
+        "name": "Schwandlift",
+        "typ": "Bügellift",
+        "distanz_m": 1269,
+        "gehzeit_min": 18
+      },
+      "naechste_piste": {
+        "name": "Schwandlift-Piste",
+        "distanz_m": 1017
+      },
+      "naechste_loipe": {
+        "name": "Unbenannt",
+        "distanz_m": 511
+      },
+      "ski_in_out": "nein",
+      "ai_description": "Das Gästehaus Schuler in Riezlern ist eine gemütliche Pension, die vor allem bei Gästen punktet, die das authentische Kleinwalsertal abseits des Trubels erleben möchten - die wenigen, aber durchwegs positiven Bewertungen sprechen für sich. Bis zur nächsten Langlaufloipe sind es nur wenige Gehminuten, während Alpinskifahrer etwa 18 Minuten zum Schwandlift einplanen sollten. Die ruhige Lage macht das Gästehaus zu einem idealen Ausgangspunkt für alle, die morgens gerne gemütlich in den Skitag starten und abends die Stille der Berge genießen möchten. Perfekt für Gäste, die Wert auf persönliche Betreuung und eine entspannte Atmosphäre legen.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=G%C3%A4stehaus%20Schuler%20Kleinwalsertal"
+    },
+    {
+      "name": "Haus Andrea",
+      "ortsteil": "Riezlern",
+      "typ": "Unterkunft",
+      "adresse": "Walserstraße 104, 6991 Riezlern, Österreich",
+      "gps": {
+        "lat": 47.3523778,
+        "lng": 10.177675800000001
+      },
+      "website": "https://www.haus-andrea.com/ferienwohnungen",
+      "google_rating": 4.9,
+      "google_reviews": 81,
+      "naechste_bergbahn": {
+        "name": "Parsennbahn",
+        "typ": "Kombibahn",
+        "distanz_m": 459,
+        "gehzeit_min": 6
+      },
+      "naechste_piste": {
+        "name": "Sonnenhang Piste",
+        "distanz_m": 196
+      },
+      "naechste_loipe": {
+        "name": "Unbenannt",
+        "distanz_m": 575
+      },
+      "ski_in_out": "nein",
+      "ai_description": "Das Haus Andrea in Riezlern punktet mit seiner perfekten Lage nur 6 Gehminuten zur Parsennbahn und gerade mal 200 Meter zur Sonnenhang Piste. Die durchweg begeisterten Gäste (4.9 Sterne bei 81 Bewertungen) schätzen die familiäre Atmosphäre und die unkomplizierte Art der Gastgeber. Zwar ist es kein direktes Ski-in/Ski-out Hotel, aber der kurze Weg zur Piste macht das mehr als wett. Hier bekommt man authentische Kleinwalsertaler Gastfreundschaft ohne Schnickschnack, dafür mit viel Herzlichkeit.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Haus%20Andrea%20Kleinwalsertal"
+    },
+    {
+      "name": "Gästehaus Matt",
+      "ortsteil": "Hirschegg",
+      "typ": "Pension",
+      "adresse": "Dürenbodenstraße 21, 6992 Hirschegg, Österreich",
+      "gps": {
+        "lat": 47.3383344,
+        "lng": 10.168996
+      },
+      "website": "http://www.gaestehaus-matt.at/",
+      "google_rating": 4.9,
+      "google_reviews": 26,
+      "naechste_bergbahn": {
+        "name": "Schlösslellift",
+        "typ": "Schlepplift",
+        "distanz_m": 910,
+        "gehzeit_min": 14
+      },
+      "naechste_piste": {
+        "name": "Unbenannt",
+        "distanz_m": 351
+      },
+      "naechste_loipe": {
+        "name": "Unbenannt",
+        "distanz_m": 951
+      },
+      "ski_in_out": "nein",
+      "ai_description": "Das Gästehaus Matt in Hirschegg punktet mit seiner familiären Atmosphäre und einer beeindruckenden Bewertung von 4.9 Sternen – hier stimmt einfach der persönliche Service. Die nächste Piste ist nur einen kurzen Spaziergang von 350 Metern entfernt, zum Schlösslellift sind es gemütliche 14 Minuten zu Fuß. Zwar ist es kein Ski-in/Ski-out Hotel, aber dafür genießt man hier die Ruhe abseits des Trubels und trotzdem eine sehr gute Anbindung an das Skigebiet. Eine solide Adresse für alle, die authentische Gastfreundschaft und unkomplizierte Nähe zu den Pisten schätzen.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=G%C3%A4stehaus%20Matt%20Kleinwalsertal"
+    },
+    {
+      "name": "Gästehaus Windegge - Familie Schuster",
+      "ortsteil": "Hirschegg",
+      "typ": "Pension",
+      "adresse": "Windegge 5, 6992 Hirschegg, Österreich",
+      "gps": {
+        "lat": 47.3501416,
+        "lng": 10.167649899999999
+      },
+      "website": "",
+      "google_rating": 4.9,
+      "google_reviews": 7,
+      "naechste_bergbahn": {
+        "name": "Hubertuslift",
+        "typ": "Schlepplift",
+        "distanz_m": 1019,
+        "gehzeit_min": 14
+      },
+      "naechste_piste": {
+        "name": "Unbenannt",
+        "distanz_m": 19
+      },
+      "naechste_loipe": {
+        "name": "Unbenannt",
+        "distanz_m": 459
+      },
+      "ski_in_out": "ja",
+      "ai_description": "Das Gästehaus Windegge liegt praktisch direkt an der Piste - nur 19 Meter Luftlinie trennen Sie vom Skivergnügen, was echtes Ski-in/Ski-out ermöglicht. Familie Schuster führt diese gemütliche Pension in Hirschegg mit viel Herzlichkeit, was sich in der ausgezeichneten Bewertung von 4.9 Sternen widerspiegelt. Der Hubertuslift ist in knapp 15 Minuten zu Fuß erreichbar, und auch Langläufer finden in unter 500 Metern Entfernung ihre Loipe. Eine authentische Familienpension für alle, die morgens direkt vor der Haustür auf die Bretter steigen möchten.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=G%C3%A4stehaus%20Windegge%20-%20Familie%20Schuster%20Kleinwalsertal"
+    },
+    {
+      "name": "Gästehaus Brenner",
+      "ortsteil": "Hirschegg",
+      "typ": "Pension",
+      "adresse": "Dürenbodenstraße 10, 6992 Hirschegg, Österreich",
+      "gps": {
+        "lat": 47.339243700000004,
+        "lng": 10.1683442
+      },
+      "website": "https://www.haus-brenner.com/",
+      "google_rating": 4.9,
+      "google_reviews": 23,
+      "naechste_bergbahn": {
+        "name": "Schlösslellift",
+        "typ": "Schlepplift",
+        "distanz_m": 796,
+        "gehzeit_min": 13
+      },
+      "naechste_piste": {
+        "name": "Unbenannt",
+        "distanz_m": 244
+      },
+      "naechste_loipe": {
+        "name": "Unbenannt",
+        "distanz_m": 1024
+      },
+      "ski_in_out": "nein",
+      "ai_description": "Das Gästehaus Brenner in Hirschegg ist eine charmante kleine Pension mit hervorragenden 4,9 Sternen bei Google – hier stimmt offensichtlich der persönliche Service. Die nächste Piste liegt nur 244 Meter Luftlinie entfernt, zum Schlösslellift sind es entspannte 13 Gehminuten durch den Ort. Perfekt für alle, die die gemütliche Atmosphäre einer familiären Pension schätzen und trotzdem schnell auf der Piste sein wollen. Ein echter Geheimtipp für authentischen Kleinwalsertal-Urlaub ohne Hoteltrubel.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=G%C3%A4stehaus%20Brenner%20Kleinwalsertal"
+    },
+    {
+      "name": "Gästehaus Herz",
+      "ortsteil": "Mittelberg",
+      "typ": "Pension",
+      "adresse": "Walserstraße 319, 6993 Mittelberg, Österreich",
+      "gps": {
+        "lat": 47.332368599999995,
+        "lng": 10.1612039
+      },
+      "website": "http://www.gaestehaus-herz.at/",
+      "google_rating": 3.9,
+      "google_reviews": 17,
+      "naechste_bergbahn": {
+        "name": "Wildentallift",
+        "typ": "Tellerlift",
+        "distanz_m": 1060,
+        "gehzeit_min": 16
+      },
+      "naechste_piste": {
+        "name": "Skiweg Zaferna Heuberg",
+        "distanz_m": 414
+      },
+      "naechste_loipe": {
+        "name": "Unbenannt",
+        "distanz_m": 229
+      },
+      "ski_in_out": "nein",
+      "ai_description": "Das Gästehaus Herz in Mittelberg ist eine einfache, familiengeführte Pension mit solidem 3,9-Sterne-Rating, die vor allem durch ihre Nähe zu den Langlaufloipen punktet – die nächste ist nur 230 Meter entfernt. Zum Wildentallift sind es etwa 16 Gehminuten, was für eine gemütliche Morgenwanderung völlig in Ordnung ist, aber definitiv kein Ski-in/Ski-out. Die Unterkunft eignet sich besonders gut für Langläufer und Gäste, die eine ruhige, authentische Atmosphäre abseits der großen Skizirkusse schätzen. Bei nur 17 Bewertungen ist es noch ein echter Geheimtipp im Kleinwalsertal.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=G%C3%A4stehaus%20Herz%20Kleinwalsertal"
+    },
+    {
+      "name": "Gästehaus Wildenblick",
+      "ortsteil": "Mittelberg",
+      "typ": "Pension",
+      "adresse": "Walserstraße 336, 6993 Mittelberg, Österreich",
+      "gps": {
+        "lat": 47.33140110000001,
+        "lng": 10.1604397
+      },
+      "website": "http://www.gaestehaus-wildenblick.at/",
+      "google_rating": 4.7,
+      "google_reviews": 23,
+      "naechste_bergbahn": {
+        "name": "Wildentallift",
+        "typ": "Tellerlift",
+        "distanz_m": 946,
+        "gehzeit_min": 15
+      },
+      "naechste_piste": {
+        "name": "Skiweg Heuberg Zaferna",
+        "distanz_m": 384
+      },
+      "naechste_loipe": {
+        "name": "Unbenannt",
+        "distanz_m": 163
+      },
+      "ski_in_out": "nein",
+      "ai_description": "Das Gästehaus Wildenblick in Mittelberg ist eine gemütliche kleine Pension mit nur 23 Google-Bewertungen, aber dafür beeindruckenden 4,7 Sternen - das spricht für persönliche Betreuung abseits des Massentourismus. Die Lage ist ideal für Langläufer, denn zur nächsten Loipe sind es nur 163 Meter, während Skifahrer einen kurzen 15-minütigen Spaziergang zum Wildentallift einplanen müssen. Wer die ruhige Atmosphäre einer authentischen Kleinwalser Pension schätzt und nicht unbedingt direkt an der Piste wohnen muss, findet hier ein ehrliches Preis-Leistungs-Verhältnis. Die Nähe zu den Langlaufloipen macht es besonders für Nordische Skifahrer interessant.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=G%C3%A4stehaus%20Wildenblick%20Kleinwalsertal"
+    },
+    {
+      "name": "Gästehaus Mathias Heim",
+      "ortsteil": "Mittelberg",
+      "typ": "Pension",
+      "adresse": "Bödmerstraße 81, 6993 Mittelberg, Österreich",
+      "gps": {
+        "lat": 47.3148766,
+        "lng": 10.1450443
+      },
+      "website": "http://www.gaestehaus-heim.at/",
+      "google_rating": 4.6,
+      "google_reviews": 10,
+      "naechste_bergbahn": {
+        "name": "Jedermannlift",
+        "typ": "Tellerlift",
+        "distanz_m": 543,
+        "gehzeit_min": 6
+      },
+      "naechste_piste": {
+        "name": "Unbenannt",
+        "distanz_m": 464
+      },
+      "naechste_loipe": {
+        "name": "Unbenannt",
+        "distanz_m": 78
+      },
+      "ski_in_out": "nein",
+      "ai_description": "Das Gästehaus Mathias Heim in Mittelberg ist eine gemütliche Familienpension, die vor allem Langläufer begeistern wird - die Loipe verläuft praktisch vor der Haustür in nur 78 Metern Entfernung. Für Alpin-Skifahrer bedeutet das einen entspannten 6-minütigen Spaziergang zum Jedermannlift, was gerade für Familien mit Kindern sehr angenehm ist. Die kleine Pension mit ihren durchweg positiven Gästebewertungen (4,6 Sterne) bietet eine persönliche, herzliche Atmosphäre fernab vom Massentourismus. Wer authentische Kleinwalser Gastfreundschaft in ruhiger Lage schätzt und nicht direkt an der Piste wohnen muss, ist hier goldrichtig.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=G%C3%A4stehaus%20Mathias%20Heim%20Kleinwalsertal"
+    },
+    {
+      "name": "Alp-Chalet Ferienwohnungen",
+      "ortsteil": "",
+      "typ": "Ferienwohnung",
+      "adresse": "Walserstraße 257, 6992, Österreich",
+      "gps": {
+        "lat": 47.3440282,
+        "lng": 10.167256300000002
+      },
+      "website": "http://www.alp-chalet-kleinwalsertal.de/",
+      "google_rating": 4.9,
+      "google_reviews": 57,
+      "naechste_bergbahn": {
+        "name": "Heubergbahn",
+        "typ": "Sessellift",
+        "distanz_m": 381,
+        "gehzeit_min": 6
+      },
+      "naechste_piste": {
+        "name": "Heuberg-Abfahrt",
+        "distanz_m": 145
+      },
+      "naechste_loipe": {
+        "name": "Unbenannt",
+        "distanz_m": 1123
+      },
+      "ski_in_out": "fast",
+      "ai_description": "Das Alp-Chalet liegt praktisch direkt an der Piste – nur 145 Meter Luftlinie zur Heuberg-Abfahrt und 6 Gehminuten zur Heubergbahn. Die Ferienwohnungen sind zwar einfach ausgestattet, aber die Lage ist für Skifahrer kaum zu toppen: Morgens die Skier anschnallen und fast direkt zur Piste. Mit 4.9 Sternen bei 57 Bewertungen scheinen die Gäste vor allem die unkomplizierte Atmosphäre und die perfekte Anbindung ans Skigebiet zu schätzen. Wer authentisches Wohnen direkt am Berg sucht, ist hier richtig.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Alp-Chalet%20Ferienwohnungen%20Kleinwalsertal"
+    },
+    {
+      "name": "Walser Berg Chalets - Ferienhaus Riezlern Kleinwalsertal",
+      "ortsteil": "Riezlern",
+      "typ": "Unterkunft",
+      "adresse": "Walserstraße 5/a & b, 6991 Riezlern, Österreich",
+      "gps": {
+        "lat": 47.3618386,
+        "lng": 10.1959775
+      },
+      "website": "http://www.walser-berg-chalets.at/",
+      "google_rating": 4.6,
+      "google_reviews": 32,
+      "naechste_bergbahn": {
+        "name": "Schwandlift",
+        "typ": "Bügellift",
+        "distanz_m": 787,
+        "gehzeit_min": 11
+      },
+      "naechste_piste": {
+        "name": "Schwandlift-Piste",
+        "distanz_m": 526
+      },
+      "naechste_loipe": {
+        "name": "Egg Loipe",
+        "distanz_m": 624
+      },
+      "ski_in_out": "nein",
+      "ai_description": "Die Walser Berg Chalets in Riezlern bieten gemütliche Ferienhäuser in ruhiger Lage, etwa 11 Gehminuten vom Schwandlift entfernt. Perfekt für Familien, die das authentische Kleinwalsertal abseits des Trubels erleben möchten, aber trotzdem schnell auf der Piste sein wollen. Die Egg Loipe für Langläufer ist nur wenige hundert Meter entfernt, und mit 4.6 Sternen bei Google sprechen die Gäste eine klare Sprache. Hier wohnt man in typisch Walser Atmosphäre mit dem Komfort eines ganzen Chalets für sich.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Walser%20Berg%20Chalets%20-%20Ferienhaus%20Riezlern%20Kleinwalsertal%20Kleinwalsertal"
+    },
+    {
+      "name": "Ahorn Chalet Mittelberg",
+      "ortsteil": "Mittelberg",
+      "typ": "Unterkunft",
+      "adresse": "Ahornweg 1, 6993 Mittelberg, Österreich",
+      "gps": {
+        "lat": 47.333036899999996,
+        "lng": 10.162183599999999
+      },
+      "website": "https://www.ahorn-chalet.at/",
+      "google_rating": 4.7,
+      "google_reviews": 28,
+      "naechste_bergbahn": {
+        "name": "Wildentallift",
+        "typ": "Tellerlift",
+        "distanz_m": 1204,
+        "gehzeit_min": 18
+      },
+      "naechste_piste": {
+        "name": "Skiweg Zaferna Heuberg",
+        "distanz_m": 442
+      },
+      "naechste_loipe": {
+        "name": "Unbenannt",
+        "distanz_m": 268
+      },
+      "ski_in_out": "nein",
+      "ai_description": "Das Ahorn Chalet Mittelberg liegt ruhig im Ortsteil und punktet mit seiner sehr guten Bewertung von 4,7 Sternen bei Gästen. Zur nächsten Piste sind es nur 442 Meter Luftlinie, allerdings müsst ihr zum Wildentallift etwa 18 Minuten zu Fuß gehen - also definitiv kein Ski-in/Ski-out. Dafür ist die Langlaufloipe praktisch vor der Haustür in nur 268 Metern Entfernung. Ein solides Chalet für alle, die es etwas ruhiger mögen und den kurzen Weg zur Piste nicht scheuen.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Ahorn%20Chalet%20Mittelberg%20Kleinwalsertal"
+    },
+    {
+      "name": "Chalet Wäldele",
+      "ortsteil": "Hirschegg",
+      "typ": "Unterkunft",
+      "adresse": "Wäldelestraße 38, 6992 Hirschegg, Österreich",
+      "gps": {
+        "lat": 47.3527784,
+        "lng": 10.1498749
+      },
+      "website": "https://www.ferienhaus-riezler.at/",
+      "google_rating": 5,
+      "google_reviews": 27,
+      "naechste_bergbahn": {
+        "name": "Schöntallift",
+        "typ": "Bügellift",
+        "distanz_m": 2232,
+        "gehzeit_min": 38
+      },
+      "naechste_piste": {
+        "name": "Ski-Gleitweg Küren",
+        "distanz_m": 738
+      },
+      "naechste_loipe": {
+        "name": "Unbenannt",
+        "distanz_m": 99
+      },
+      "ski_in_out": "nein",
+      "ai_description": "Das Chalet Wäldele in Hirschegg überzeugt mit seiner familiären Atmosphäre und der perfekten 5-Sterne-Bewertung seiner Gäste - ein Zeichen für echte Gastfreundschaft. Langläufer haben es hier besonders gut, denn die Loipe verläuft praktisch vor der Haustür in nur 99 Metern Entfernung. Für Alpinski-Fans liegt die nächste Piste etwa 740 Meter entfernt, während der Schöntallift in rund 40 Gehminuten erreichbar ist - ideal für alle, die morgens gerne gemütlich starten. Ein charmantes Chalet abseits des Trubels, das besonders Naturliebhaber und Genuss-Skifahrer anspricht.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Chalet%20W%C3%A4ldele%20Kleinwalsertal"
+    },
+    {
+      "name": "Spycher - Chalets für 2",
+      "ortsteil": "Riezlern",
+      "typ": "Unterkunft",
+      "adresse": "Eggstraße 12b, 6991 Riezlern, Österreich",
+      "gps": {
+        "lat": 47.3573818,
+        "lng": 10.1780413
+      },
+      "website": "https://www.spycher.at/",
+      "google_rating": 4.9,
+      "google_reviews": 15,
+      "naechste_bergbahn": {
+        "name": "Parsennbahn",
+        "typ": "Kombibahn",
+        "distanz_m": 283,
+        "gehzeit_min": 3
+      },
+      "naechste_piste": {
+        "name": "Parsenn-Abfahrt",
+        "distanz_m": 255
+      },
+      "naechste_loipe": {
+        "name": "Egg Loipe",
+        "distanz_m": 238
+      },
+      "ski_in_out": "nein",
+      "ai_description": "Das Spycher bietet gemütliche Chalets für zwei Personen in Riezlern, nur wenige Schritte von der Parsennbahn entfernt. In drei Minuten erreicht ihr zu Fuß die Kombibahn, die euch direkt ins Skigebiet bringt - die Parsenn-Abfahrt liegt praktisch vor der Haustür. Auch Langläufer kommen auf ihre Kosten, denn die Egg Loipe ist nur 238 Meter entfernt. Die durchweg exzellenten Bewertungen (4.9 von 5 Sternen) sprechen für sich und zeigen, dass hier Gemütlichkeit und perfekte Lage für einen gelungenen Alpinurlaub sorgen.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Spycher%20-%20Chalets%20f%C3%BCr%202%20Kleinwalsertal"
+    },
+    {
+      "name": "Bergchalet Baad",
+      "ortsteil": "Mittelberg",
+      "typ": "Unterkunft",
+      "adresse": "Baad 14, 6993 Mittelberg, Österreich",
+      "gps": {
+        "lat": 47.3098428,
+        "lng": 10.121611099999999
+      },
+      "website": "http://www.bergchalet-baad.at/",
+      "google_rating": 4.7,
+      "google_reviews": 33,
+      "naechste_bergbahn": {
+        "name": "Doppelsessellift Walmendingerhorn",
+        "typ": "Sessellift",
+        "distanz_m": 2874,
+        "gehzeit_min": 61
+      },
+      "naechste_piste": {
+        "name": "Talabfahrt Walmendingerhorn",
+        "distanz_m": 1087
+      },
+      "naechste_loipe": {
+        "name": "Steinbockloipe",
+        "distanz_m": 72
+      },
+      "ski_in_out": "nein",
+      "ai_description": "Das Bergchalet Baad liegt ruhig in Mittelberg und ist mit seiner Bewertung von 4.7 Sternen ein echter Geheimtipp für alle, die authentische Bergromantik suchen. Während der Doppelsessellift Walmendingerhorn in gut einer Stunde Fußweg erreichbar ist, punktet die Unterkunft vor allem bei Langläufern – die Steinbockloipe startet praktisch vor der Haustür. Die familiäre Atmosphäre und die ruhige Lage fernab des Trubels machen das Chalet zu einem perfekten Rückzugsort nach einem Tag in den Bergen. Hier erlebt man noch das ursprüngliche Kleinwalsertal, ohne auf Komfort verzichten zu müssen.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Bergchalet%20Baad%20Kleinwalsertal"
+    },
+    {
+      "name": "Tinn Naturchalet",
+      "ortsteil": "Mittelberg",
+      "typ": "Unterkunft",
+      "adresse": "Walserstraße 373/a, 6993 Mittelberg, Österreich",
+      "gps": {
+        "lat": 47.3247235,
+        "lng": 10.156436200000002
+      },
+      "website": "http://tinn.at/",
+      "google_rating": 5,
+      "google_reviews": 22,
+      "naechste_bergbahn": {
+        "name": "Zafernabahn",
+        "typ": "Sessellift",
+        "distanz_m": 264,
+        "gehzeit_min": 4
+      },
+      "naechste_piste": {
+        "name": "Skiweg Mittelberg Zaferna",
+        "distanz_m": 148
+      },
+      "naechste_loipe": {
+        "name": "Unbenannt",
+        "distanz_m": 230
+      },
+      "ski_in_out": "fast",
+      "ai_description": "Das Tinn Naturchalet in Mittelberg ist ein echter Geheimtipp für alle, die authentisches Alpenflair suchen - die perfekte 5-Sterne-Bewertung von 22 Gästen spricht für sich. Mit nur 264 Metern zur Zafernabahn und dem Skiweg quasi vor der Haustür erlebst du hier echtes Ski-in/Ski-out-Feeling ohne die üblichen Hotelkomplexe. Die familiäre Atmosphäre und die Nähe zu den Loipen machen es zum idealen Ausgangspunkt für Ski- und Langlauftouren. Ein Chalet, das hält was es verspricht - pure Gemütlichkeit in den Bergen, nur 4 Gehminuten vom Lift entfernt.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Tinn%20Naturchalet%20Kleinwalsertal"
+    },
+    {
+      "name": "Walser Chalet - Familie Schuster",
+      "ortsteil": "Hirschegg",
+      "typ": "Unterkunft",
+      "adresse": "Am Berg 2, 6692 Hirschegg, Österreich",
+      "gps": {
+        "lat": 47.3438369,
+        "lng": 10.1666393
+      },
+      "website": "http://www.walser-chalet.at/",
+      "google_rating": 5,
+      "google_reviews": 6,
+      "naechste_bergbahn": {
+        "name": "Heubergbahn",
+        "typ": "Sessellift",
+        "distanz_m": 352,
+        "gehzeit_min": 6
+      },
+      "naechste_piste": {
+        "name": "Heuberg-Abfahrt",
+        "distanz_m": 107
+      },
+      "naechste_loipe": {
+        "name": "Unbenannt",
+        "distanz_m": 1126
+      },
+      "ski_in_out": "fast",
+      "ai_description": "Das Walser Chalet der Familie Schuster liegt perfekt für Skifahrer - nur 352 Meter von der Heubergbahn entfernt und praktisch direkt an der Heuberg-Abfahrt. In 6 Minuten zu Fuß erreicht man den Sessellift, die Piste ist sogar nur 107 Meter Luftlinie entfernt - echtes Ski-in/Ski-out Feeling. Die familiäre Atmosphäre spiegelt sich in den durchweg perfekten Google-Bewertungen wider, auch wenn diese auf einer kleinen aber feinen Gästeschar basieren. Für Langläufer ist allerdings ein kleiner Spaziergang nötig, da die nächste Loipe gut einen Kilometer entfernt liegt.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Walser%20Chalet%20-%20Familie%20Schuster%20Kleinwalsertal"
+    },
+    {
+      "name": "Dorfchalet Riezlern Kleinwalsertal",
+      "ortsteil": "Riezlern",
+      "typ": "Unterkunft",
+      "adresse": "Engelbert-Kessler-Straße 4b, 6991 Riezlern, Österreich",
+      "gps": {
+        "lat": 47.3597763,
+        "lng": 10.185517400000002
+      },
+      "website": "http://dorfchalet.com/",
+      "google_rating": 4.8,
+      "google_reviews": 5,
+      "naechste_bergbahn": {
+        "name": "Schwandlift",
+        "typ": "Bügellift",
+        "distanz_m": 578,
+        "gehzeit_min": 9
+      },
+      "naechste_piste": {
+        "name": "Kessler-Hang",
+        "distanz_m": 424
+      },
+      "naechste_loipe": {
+        "name": "Egg Loipe",
+        "distanz_m": 311
+      },
+      "ski_in_out": "nein",
+      "ai_description": "Das Dorfchalet Riezlern liegt mitten im Kleinwalsertal und bietet eine gemütliche Alternative zu den großen Hotels der Region. In nur 9 Gehminuten erreicht man den Schwandlift, während die Kessler-Hang Piste praktisch vor der Haustür liegt - ideal für Familien mit Kindern oder alle, die es entspannt angehen möchten. Langläufer freuen sich über die nahegelegene Egg Loipe in nur 311 Metern Entfernung. Die hervorragenden Google-Bewertungen sprechen für die persönliche Betreuung, die man in diesem kleineren Chalet erwarten kann.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Dorfchalet%20Riezlern%20Kleinwalsertal%20Kleinwalsertal"
+    },
+    {
+      "name": "Gastler Chalet Ferienwohnungen",
+      "ortsteil": "Riezlern",
+      "typ": "Ferienwohnung",
+      "adresse": "Eggstraße 14a, 6991 Riezlern, Österreich",
+      "gps": {
+        "lat": 47.357613199999996,
+        "lng": 10.1782323
+      },
+      "website": "http://gastler-chalet.at/",
+      "google_rating": 5,
+      "google_reviews": 6,
+      "naechste_bergbahn": {
+        "name": "Parsennbahn",
+        "typ": "Kombibahn",
+        "distanz_m": 308,
+        "gehzeit_min": 3
+      },
+      "naechste_piste": {
+        "name": "Parsenn-Abfahrt",
+        "distanz_m": 282
+      },
+      "naechste_loipe": {
+        "name": "Egg Loipe",
+        "distanz_m": 240
+      },
+      "ski_in_out": "nein",
+      "ai_description": "Das Gastler Chalet in Riezlern liegt perfekt für Skifahrer - in nur 3 Gehminuten erreichen Sie die Parsennbahn und die Piste ist praktisch vor der Haustür. Die modernen Ferienwohnungen bieten echte Gemütlichkeit nach einem Tag auf der Parsenn-Abfahrt, und auch Langläufer finden mit der Egg Loipe gleich um die Ecke ideale Bedingungen. Mit 6 perfekten 5-Sterne-Bewertungen spricht die Qualität für sich - hier stimmt offensichtlich das Preis-Leistungs-Verhältnis und der persönliche Service. Ein ehrlicher Tipp für alle, die authentische Alpengastfreundschaft ohne Schnickschnack suchen.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Gastler%20Chalet%20Ferienwohnungen%20Kleinwalsertal"
     },
     {
       "name": "Bergblick - Der Gasthof",
@@ -1803,8 +3093,38 @@
         "distanz_m": 58
       },
       "ski_in_out": "nein",
-      "ai_description": "Der Bergblick in Riezlern ist ein traditioneller Gasthof mit familiärer Atmosphäre, der durch seine authentische Alpenküche und herzliche Gastfreundschaft besticht. Die Lage ist ideal für Langläufer - die nächste Loipe liegt praktisch vor der Haustür, nur 58 Meter entfernt. Für Alpinski-Fans bedeutet es allerdings eine 36-minütige Fahrt zum Schwandlift, was den Gasthof eher zu einer ruhigen Alternative abseits der Pisten macht. Mit 4,7 Sternen bei 375 Google-Bewertungen schätzen Gäste besonders die gemütliche Stube und die bodenständige Küche.",
+      "ai_description": "Das Bergblick in Riezlern ist ein solider Gasthof mit ausgezeichnetem Ruf - die 4,7 Sterne bei 375 Bewertungen sprechen für sich. Besonders praktisch für Langläufer: Die nächste Loipe liegt quasi vor der Haustür, nur 58 Meter entfernt. Für Alpin-Skifahrer bedeutet es dagegen eine gute halbe Stunde Fußmarsch zum Schwandlift, was aber bei der gemütlichen Gasthof-Atmosphäre durchaus verkraftbar ist. Ein typischer Kleinwalsertal-Gasthof ohne Schnickschnack, dafür mit authentischem Charme und perfekter Lage für Langlauf-Enthusiasten.",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=Bergblick%20-%20Der%20Gasthof%20Kleinwalsertal"
+    },
+    {
+      "name": "Wirtshaus Hoheneck",
+      "ortsteil": "Mittelberg",
+      "typ": "Unterkunft",
+      "adresse": "Walserstraße 365, 6993 Mittelberg, Österreich",
+      "gps": {
+        "lat": 47.326200799999995,
+        "lng": 10.1578665
+      },
+      "website": "http://www.hoheneck.at/",
+      "google_rating": 4.6,
+      "google_reviews": 910,
+      "naechste_bergbahn": {
+        "name": "Zafernabahn",
+        "typ": "Sessellift",
+        "distanz_m": 323,
+        "gehzeit_min": 5
+      },
+      "naechste_piste": {
+        "name": "Skiweg Mittelberg Zaferna",
+        "distanz_m": 142
+      },
+      "naechste_loipe": {
+        "name": "Unbenannt",
+        "distanz_m": 242
+      },
+      "ski_in_out": "fast",
+      "ai_description": "Das Wirtshaus Hoheneck in Mittelberg ist ein authentisches Berghotel mit einer starken 4,6-Sterne-Bewertung von über 900 Gästen, das vor allem durch seine perfekte Lage für Wintersportler überzeugt. Mit nur 323 Metern zur Zafernabahn und 142 Metern zur nächsten Piste bietet es praktisch Ski-in/Ski-out-Komfort – morgens einfach die Skier anschnallen und direkt losfahren. Die Kombination aus traditionellem Wirtshaus-Charme und der unmittelbaren Nähe zu Pisten und Loipen macht es zu einer idealen Basis für einen entspannten Skiurlaub im Kleinwalsertal. Besonders praktisch: Nach dem Skifahren ist man in wenigen Minuten zurück im warmen Wirtshaus.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Wirtshaus%20Hoheneck%20Kleinwalsertal"
     },
     {
       "name": "Alpengasthof Hörnlepass – Hotel & Restaurant",
@@ -1837,94 +3157,514 @@
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=Alpengasthof%20H%C3%B6rnlepass%20%E2%80%93%20Hotel%20%26%20Restaurant%20Kleinwalsertal"
     },
     {
-      "name": "Gasthof Sonnwinkl",
-      "ortsteil": "Mittelberg",
-      "typ": "Gasthof",
-      "adresse": "Bödmerstraße 32, 6993 Mittelberg, Österreich",
+      "name": "Haus Waldesruh",
+      "ortsteil": "Hirschegg",
+      "typ": "Unterkunft",
+      "adresse": "Haus Waldesruh, Oberwäldele 6, 6992 Hirschegg, Österreich",
       "gps": {
-        "lat": 47.3207759,
-        "lng": 10.1542034
+        "lat": 47.346101,
+        "lng": 10.1458953
       },
-      "website": "http://www.sonnwinkl.at/",
-      "google_rating": 4.8,
-      "google_reviews": 292,
+      "website": "https://www.waldesruh-kleinwalsertal.de/",
+      "google_rating": 5,
+      "google_reviews": 44,
       "naechste_bergbahn": {
-        "name": "Walmendingerhornbahn",
-        "typ": "Seilbahn",
-        "distanz_m": 577,
-        "gehzeit_min": 9
+        "name": "Gaisbühllift",
+        "typ": "Tellerlift",
+        "distanz_m": 1544,
+        "gehzeit_min": 21
       },
       "naechste_piste": {
-        "name": "Skiweg Heuberg Zaferna",
-        "distanz_m": 265
+        "name": "Unbenannt",
+        "distanz_m": 278
       },
       "naechste_loipe": {
         "name": "Unbenannt",
-        "distanz_m": 135
+        "distanz_m": 200
       },
       "ski_in_out": "nein",
-      "ai_description": "Der Gasthof Sonnwinkl in Mittelberg punktet mit seiner authentischen Atmosphäre und der beeindruckenden Bewertung von 4,8 Sternen - ein Zeichen für echte Gastfreundschaft im Kleinwalsertal. Die Walmendingerhornbahn ist in nur 9 Gehminuten erreichbar, während Langläufer die Loipe praktisch vor der Haustür haben. Besonders praktisch: Skifahrer erreichen den Skiweg Heuberg Zaferna in wenigen Minuten zu Fuß. Ein traditioneller Gasthof, der durch seine zentrale aber ruhige Lage in Mittelberg überzeugt und als perfekte Basis für alle Winteraktivitäten dient.",
-      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Gasthof%20Sonnwinkl%20Kleinwalsertal"
+      "ai_description": "Das Haus Waldesruh in Hirschegg punktet mit seiner ruhigen Lage abseits des Trubels - der Name ist hier Programm. Mit einer perfekten Google-Bewertung von 5 Sternen bei 44 Bewertungen scheint die familiäre Atmosphäre die Gäste zu begeistern. Für Skifahrer ist der 21-minütige Spaziergang zum Gaisbühllift durchaus machbar, wobei man sich auf einen gemütlichen Winterspaziergang einstellen sollte. Langläufer haben es deutlich komfortabler - die Loipe liegt praktisch vor der Haustür, nur 200 Meter entfernt.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Haus%20Waldesruh%20Kleinwalsertal"
     },
     {
-      "name": "Wirtshaus Hoheneck",
-      "ortsteil": "Mittelberg",
-      "typ": "Unterkunft",
-      "adresse": "Walserstraße 365, 6993 Mittelberg, Österreich",
+      "name": "Ferienwohnungen Kessler",
+      "ortsteil": "Riezlern",
+      "typ": "Ferienwohnung",
+      "adresse": "Alte Schwendestraße 11, 6991 Riezlern, Österreich",
       "gps": {
-        "lat": 47.326200799999995,
-        "lng": 10.1578665
+        "lat": 47.3609301,
+        "lng": 10.1863919
       },
-      "website": "http://www.hoheneck.at/",
-      "google_rating": 4.6,
-      "google_reviews": 910,
+      "website": "http://www.ferienhaus-kessler.de/",
+      "google_rating": 4.7,
+      "google_reviews": 18,
       "naechste_bergbahn": {
-        "name": "Zafernabahn",
-        "typ": "Sessellift",
-        "distanz_m": 323,
-        "gehzeit_min": 5
+        "name": "Schwandlift",
+        "typ": "Bügellift",
+        "distanz_m": 653,
+        "gehzeit_min": 11
       },
       "naechste_piste": {
-        "name": "Skiweg Mittelberg Zaferna",
-        "distanz_m": 142
+        "name": "Schwandlift-Piste",
+        "distanz_m": 454
+      },
+      "naechste_loipe": {
+        "name": "Egg Loipe",
+        "distanz_m": 229
+      },
+      "ski_in_out": "nein",
+      "ai_description": "Die Ferienwohnungen Kessler in Riezlern bieten eine entspannte Alternative zu den großen Hotels, mit individuellen Apartments für Familien und kleine Gruppen. Der Schwandlift ist nur 11 Gehminuten entfernt, was morgens einen gemütlichen Spaziergang zum Skigebiet bedeutet - perfekt für alle, die nicht direkt im Trubel wohnen möchten. Besonders praktisch für Langläufer: Die Egg Loipe verläuft quasi vor der Haustür, nur 200 Meter entfernt. Mit 4,7 Sternen bei Google zeigt sich, dass Gäste die familiäre Atmosphäre und die ruhige Lage zwischen Skipiste und Loipe zu schätzen wissen.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Ferienwohnungen%20Kessler%20Kleinwalsertal"
+    },
+    {
+      "name": "Haus Albrechtshöhe - Familie Müller",
+      "ortsteil": "Riezlern",
+      "typ": "Unterkunft",
+      "adresse": "Schwarzwassertalstraße 2, 6991 Riezlern, Österreich",
+      "gps": {
+        "lat": 47.3554209,
+        "lng": 10.1781591
+      },
+      "website": "http://www.haus-albrechtshoehe.de/",
+      "google_rating": 4.7,
+      "google_reviews": 42,
+      "naechste_bergbahn": {
+        "name": "Parsennbahn",
+        "typ": "Kombibahn",
+        "distanz_m": 59,
+        "gehzeit_min": 0
+      },
+      "naechste_piste": {
+        "name": "Parsenn-Abfahrt",
+        "distanz_m": 51
       },
       "naechste_loipe": {
         "name": "Unbenannt",
-        "distanz_m": 242
+        "distanz_m": 349
       },
       "ski_in_out": "fast",
-      "ai_description": "Das Wirtshaus Hoheneck liegt praktisch direkt an der Piste in Mittelberg - in nur 142 Metern erreicht man den Skiweg Mittelberg Zaferna und die Zafernabahn ist keine 5 Gehminuten entfernt. Das traditionelle Wirtshaus punktet mit seiner authentischen Atmosphäre und der unschlagbaren Lage für Skifahrer, die morgens quasi vor die Haustür schnallen können. Mit 4,6 Sternen bei über 900 Google-Bewertungen scheinen die Gäste besonders die herzliche Gastfreundschaft und die solide Küche zu schätzen. Wer unkomplizierte Gemütlichkeit direkt am Hang sucht, ist hier goldrichtig.",
-      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Wirtshaus%20Hoheneck%20Kleinwalsertal"
+      "ai_description": "Das Haus Albrechtshöhe liegt praktisch direkt an der Parsennbahn in Riezlern - mit nur 59 Metern Entfernung ist man quasi ski-in/ski-out unterwegs. Familie Müller führt die Unterkunft persönlich und sorgt dafür, dass sich die Gäste wie zu Hause fühlen, was sich auch in den sehr guten 4,7 Sternen bei Google widerspiegelt. Die Lage ist für Skifahrer perfekt: Man schnallt die Ski vor der Haustür an und ist in wenigen Schritten an der Bergbahn. Wer morgens als Erster auf der Piste sein möchte, ist hier goldrichtig - während andere noch zum Lift laufen, fährt man bereits die ersten Schwünge.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Haus%20Albrechtsh%C3%B6he%20-%20Familie%20M%C3%BCller%20Kleinwalsertal"
     },
     {
-      "name": "Hotel Garni Ingeborg",
+      "name": "Haus Derra, Baad Mittelberg",
       "ortsteil": "Mittelberg",
-      "typ": "Garni",
-      "adresse": "Im Hag 3, 6993 Mittelberg, Österreich",
+      "typ": "Unterkunft",
+      "adresse": "Baad 5, 6993 Mittelberg, Österreich",
       "gps": {
-        "lat": 47.320508000000004,
-        "lng": 10.155043
+        "lat": 47.3096549,
+        "lng": 10.1198687
       },
-      "website": "http://www.hotel-garni-ingeborg.de/",
-      "google_rating": 4.6,
-      "google_reviews": 70,
+      "website": "https://haus-derra-mittelberg.hotelescuatroestrellas.website/",
+      "google_rating": 4.1,
+      "google_reviews": 42,
       "naechste_bergbahn": {
-        "name": "Walmendingerhornbahn",
-        "typ": "Seilbahn",
-        "distanz_m": 707,
-        "gehzeit_min": 12
+        "name": "Doppelsessellift Walmendingerhorn",
+        "typ": "Sessellift",
+        "distanz_m": 2919,
+        "gehzeit_min": 62
       },
       "naechste_piste": {
-        "name": "Skiweg Heuberg Zaferna",
-        "distanz_m": 326
+        "name": "Talabfahrt Walmendingerhorn",
+        "distanz_m": 1166
       },
       "naechste_loipe": {
         "name": "Unbenannt",
-        "distanz_m": 83
+        "distanz_m": 14
       },
       "ski_in_out": "nein",
-      "ai_description": "Das Ingeborg ist genau das, was ein solides Garni sein sollte: saubere Zimmer, ordentliches Frühstück, fertig.",
-      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Hotel%20Garni%20Ingeborg%20Kleinwalsertal"
+      "ai_description": "Das Haus Derra in Mittelberg liegt ideal für Langläufer - die Loipe startet praktisch vor der Haustür. Alpinski-Fans müssen hingegen eine gute Stunde zu Fuß zum Walmendingerhorn einplanen oder das Auto nehmen, da die Bergbahn knapp 3 Kilometer entfernt ist. Die Unterkunft punktet mit ihrer ruhigen Lage abseits des Trubels, auch wenn die Google-Bewertungen mit 4.1 von 5 Sternen durchaus solide, aber nicht überragend sind. Perfekt für alle, die das Kleinwalsertal entspannt erkunden möchten.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Haus%20Derra%2C%20Baad%20Mittelberg%20Kleinwalsertal"
+    },
+    {
+      "name": "Haus Erika",
+      "ortsteil": "Mittelberg",
+      "typ": "Unterkunft",
+      "adresse": "Baad 2, 6993 Mittelberg, Österreich",
+      "gps": {
+        "lat": 47.310793399999994,
+        "lng": 10.1246681
+      },
+      "website": "http://www.haus-erika-kleinwalsertal.at/",
+      "google_rating": 4.2,
+      "google_reviews": 18,
+      "naechste_bergbahn": {
+        "name": "Doppelsessellift Walmendingerhorn",
+        "typ": "Sessellift",
+        "distanz_m": 3277,
+        "gehzeit_min": 67
+      },
+      "naechste_piste": {
+        "name": "Talabfahrt Walmendingerhorn",
+        "distanz_m": 887
+      },
+      "naechste_loipe": {
+        "name": "Steinbockloipe",
+        "distanz_m": 89
+      },
+      "ski_in_out": "nein",
+      "ai_description": "Das Haus Erika in Mittelberg ist eine solide Unterkunft für Langläufer, die praktisch direkt an der Steinbockloipe wohnen möchten - nur 89 Meter Luftlinie trennen Sie vom Loipeneinstieg. Für Alpinskifahrer ist es eher weniger praktisch, da der nächste Lift über eine Stunde Fußmarsch entfernt liegt und kein Skibus-Anschluss in direkter Nähe ist. Die 4,2-Sterne-Bewertung bei 18 Google-Rezensionen deutet auf eine ordentliche, aber nicht außergewöhnliche Ausstattung hin. Wer das ruhige Mittelberg schätzt und hauptsächlich zum Langlaufen kommt, findet hier eine praktische Basis.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Haus%20Erika%20Kleinwalsertal"
+    },
+    {
+      "name": "Ferienwohnungen Haus Brunelle",
+      "ortsteil": "Mittelberg",
+      "typ": "Ferienwohnung",
+      "adresse": "Starzelweg 5, 6993 Mittelberg, Österreich",
+      "gps": {
+        "lat": 47.311051299999995,
+        "lng": 10.1190559
+      },
+      "website": "http://www.fewo-brunelle.at/",
+      "google_rating": 4,
+      "google_reviews": 4,
+      "naechste_bergbahn": {
+        "name": "Doppelsessellift Walmendingerhorn",
+        "typ": "Sessellift",
+        "distanz_m": 2877,
+        "gehzeit_min": 61
+      },
+      "naechste_piste": {
+        "name": "Talabfahrt Walmendingerhorn",
+        "distanz_m": 1048
+      },
+      "naechste_loipe": {
+        "name": "Unbenannt",
+        "distanz_m": 101
+      },
+      "ski_in_out": "nein",
+      "ai_description": "Die Ferienwohnungen Haus Brunelle in Mittelberg bieten eine ruhige Unterkunft abseits des Trubels, mit einer Langlaufloipe praktisch vor der Haustür in nur 100 Metern Entfernung. Für Alpinskifahrer bedeutet das allerdings eine gute Stunde Fußmarsch zum Walmendingerhorn-Lift, weshalb ein Auto oder die Nutzung des Skibusses empfehlenswert ist. Die kleine Pension mit nur vier Google-Bewertungen (Durchschnitt 4,0) scheint ein eher unbekannter Geheimtipp zu sein. Wer die Nähe zu Loipen und eine persönliche Atmosphäre schätzt, wird sich hier wohlfühlen.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Ferienwohnungen%20Haus%20Brunelle%20Kleinwalsertal"
+    },
+    {
+      "name": "Paul Hus",
+      "ortsteil": "Mittelberg",
+      "typ": "Unterkunft",
+      "adresse": "Starzelweg 7, 6993 Mittelberg, Österreich",
+      "gps": {
+        "lat": 47.311202699999996,
+        "lng": 10.1186338
+      },
+      "website": "https://www.fewo-brunelle.at/",
+      "google_rating": 5,
+      "google_reviews": 2,
+      "naechste_bergbahn": {
+        "name": "Doppelsessellift Walmendingerhorn",
+        "typ": "Sessellift",
+        "distanz_m": 2908,
+        "gehzeit_min": 62
+      },
+      "naechste_piste": {
+        "name": "Talabfahrt Walmendingerhorn",
+        "distanz_m": 1048
+      },
+      "naechste_loipe": {
+        "name": "Unbenannt",
+        "distanz_m": 122
+      },
+      "ski_in_out": "nein",
+      "ai_description": "Das Hotel Paul Hus liegt mitten in Mittelberg und ist ein echter Geheimtipp für alle, die es ruhig mögen - mit nur 2 Google-Bewertungen, aber dafür 5 Sterne. Langläufer haben es hier besonders gut, denn die nächste Loipe ist praktisch vor der Haustür in nur 122 Metern Entfernung. Für Alpinfahrer bedeutet das Walmendingerhorn zwar einen Fußmarsch von gut einer Stunde, aber dafür erlebt man das authentische Kleinwalsertal abseits der Massen. Eine Unterkunft für Gäste, die die Ruhe schätzen und gerne zu Fuß die Umgebung erkunden.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Paul%20Hus%20Kleinwalsertal"
+    },
+    {
+      "name": "KWT Lodge",
+      "ortsteil": "Mittelberg",
+      "typ": "Lodge",
+      "adresse": "Baad 18, 6993 Mittelberg, Österreich",
+      "gps": {
+        "lat": 47.3104228,
+        "lng": 10.122280499999999
+      },
+      "website": "http://www.kleinwalsertallodge.com/",
+      "google_rating": 4.7,
+      "google_reviews": 104,
+      "naechste_bergbahn": {
+        "name": "Doppelsessellift Walmendingerhorn",
+        "typ": "Sessellift",
+        "distanz_m": 2922,
+        "gehzeit_min": 62
+      },
+      "naechste_piste": {
+        "name": "Talabfahrt Walmendingerhorn",
+        "distanz_m": 1005
+      },
+      "naechste_loipe": {
+        "name": "Steinbockloipe",
+        "distanz_m": 126
+      },
+      "ski_in_out": "nein",
+      "ai_description": "Die KWT Lodge in Mittelberg ist eine kleine, feine Unterkunft mit hervorragenden Bewertungen (4.7 Sterne), die besonders bei Langläufern punktet - die Steinbockloipe liegt praktisch vor der Haustür, nur 126 Meter entfernt. Für Alpinskifahrer bedeutet es zwar einen 62-minütigen Spaziergang zum Doppelsessellift Walmendingerhorn, dafür ist man aber abseits des Trubels untergebracht und kann die ruhige Atmosphäre des Kleinwalsertals genießen. Die Lodge bietet authentische Gemütlichkeit ohne Schnickschnack - ideal für alle, die das ursprüngliche Alpengefühl suchen und nicht direkt an der Piste übernachten müssen.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=KWT%20Lodge%20Kleinwalsertal"
+    },
+    {
+      "name": "Walserhaus",
+      "ortsteil": "Hirschegg",
+      "typ": "Unterkunft",
+      "adresse": "Walserstraße 264, 6992 Hirschegg, Österreich",
+      "gps": {
+        "lat": 47.3426354,
+        "lng": 10.1671709
+      },
+      "website": "https://www.walserhaus.com/",
+      "google_rating": 4.5,
+      "google_reviews": 195,
+      "naechste_bergbahn": {
+        "name": "Heubergbahn",
+        "typ": "Sessellift",
+        "distanz_m": 400,
+        "gehzeit_min": 6
+      },
+      "naechste_piste": {
+        "name": "Unbenannt",
+        "distanz_m": 31
+      },
+      "naechste_loipe": {
+        "name": "Unbenannt",
+        "distanz_m": 1240
+      },
+      "ski_in_out": "ja",
+      "ai_description": "Das Walserhaus in Hirschegg ist ein echtes Ski-in/Ski-out Hotel - die nächste Piste liegt praktisch vor der Haustür, nur 31 Meter entfernt. Die Heubergbahn erreichen Sie bequem in 6 Minuten zu Fuß, was morgens entspannte Starts in den Skitag ermöglicht. Mit 4,5 Sternen bei knapp 200 Google-Bewertungen scheinen die Gäste besonders die direkte Pistenlage zu schätzen. Für Langläufer ist die nächste Loipe allerdings etwas weiter entfernt - hier sollte man gut 15 Minuten Anfahrt einplanen.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Walserhaus%20Kleinwalsertal"
+    },
+    {
+      "name": "Bärgunt-Hütte",
+      "ortsteil": "Baad",
+      "typ": "Unterkunft",
+      "adresse": "Bärguntalpe, 6993 Baad, Österreich",
+      "gps": {
+        "lat": 47.2929367,
+        "lng": 10.1129965
+      },
+      "website": "http://www.baergunthuette.de/",
+      "google_rating": 4.7,
+      "google_reviews": 958,
+      "naechste_bergbahn": {
+        "name": "Doppelsessellift Walmendingerhorn",
+        "typ": "Sessellift",
+        "distanz_m": 5096,
+        "gehzeit_min": 91
+      },
+      "naechste_piste": {
+        "name": "Talabfahrt Walmendingerhorn",
+        "distanz_m": 3059
+      },
+      "naechste_loipe": {
+        "name": "Unbenannt",
+        "distanz_m": 1783
+      },
+      "ski_in_out": "nein",
+      "ai_description": "Die Bärgunt-Hütte in Baad ist eine authentische Bergunterkunft, die sich perfekt für Wanderer und Naturliebhaber eignet, aber weniger für Skifahrer, die direkte Pistennähe suchen. Mit ihrer Lage abseits der Hauptverkehrswege bietet sie echte Ruhe und Bergromantik – allerdings bedeutet das auch, dass der nächste Lift am Walmendingerhorn gut 90 Gehminuten entfernt ist. Die hervorragenden 4,7 Sterne bei fast 1000 Bewertungen sprechen für die gemütliche Atmosphäre und gute Bewirtung, die Gäste hier schätzen. Wer das ursprüngliche Kleinwalsertal abseits des Trubels erleben möchte, ist hier goldrichtig.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=B%C3%A4rgunt-H%C3%BCtte%20Kleinwalsertal"
+    },
+    {
+      "name": "OUTWARD BOUND Austria",
+      "ortsteil": "Mittelberg",
+      "typ": "Unterkunft",
+      "adresse": "Baad 20, 6993 Mittelberg, Österreich",
+      "gps": {
+        "lat": 47.3105106,
+        "lng": 10.1213491
+      },
+      "website": "https://www.outwardbound.de/de/standorte/baad",
+      "google_rating": 4,
+      "google_reviews": 192,
+      "naechste_bergbahn": {
+        "name": "Doppelsessellift Walmendingerhorn",
+        "typ": "Sessellift",
+        "distanz_m": 2815,
+        "gehzeit_min": 60
+      },
+      "naechste_piste": {
+        "name": "Talabfahrt Walmendingerhorn",
+        "distanz_m": 1036
+      },
+      "naechste_loipe": {
+        "name": "Unbenannt",
+        "distanz_m": 119
+      },
+      "ski_in_out": "nein",
+      "ai_description": "Das OUTWARD BOUND Austria in Mittelberg ist eine einfache, zweckmäßige Unterkunft, die hauptsächlich für Gruppen und Outdoor-Programme genutzt wird. Mit einer Gehzeit von einer Stunde zum Doppelsessellift Walmendingerhorn ist es kein klassisches Ski-Hotel, sondern eher eine Basis für verschiedene Aktivitäten im Kleinwalsertal. Die Langlaufloipe liegt praktisch vor der Haustür (119m), was für Langläufer ein echter Pluspunkt ist. Wer authentisches Gruppenleben und eine ungezwungene Atmosphäre abseits des typischen Hotelkomforts sucht, findet hier eine ehrliche Alternative.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=OUTWARD%20BOUND%20Austria%20Kleinwalsertal"
+    },
+    {
+      "name": "Ferienhaus Kanzelwand",
+      "ortsteil": "Riezlern",
+      "typ": "Unterkunft",
+      "adresse": "Köpfleweg 16, 6991 Riezlern, Österreich",
+      "gps": {
+        "lat": 47.3559251,
+        "lng": 10.1881861
+      },
+      "website": "http://www.ferienhaus-kanzelwand.at/",
+      "google_rating": 5,
+      "google_reviews": 11,
+      "naechste_bergbahn": {
+        "name": "Kesslerlift",
+        "typ": "Schlepplift",
+        "distanz_m": 548,
+        "gehzeit_min": 7
+      },
+      "naechste_piste": {
+        "name": "Funpark Crystal Ground",
+        "distanz_m": 48
+      },
+      "naechste_loipe": {
+        "name": "Egg Loipe",
+        "distanz_m": 763
+      },
+      "ski_in_out": "ja",
+      "ai_description": "Das Ferienhaus Kanzelwand in Riezlern ist ein echter Geheimtipp für alle, die direkt am Funpark Crystal Ground wohnen möchten - nur 48 Meter Luftlinie trennen Sie von den Obstacles und Kickern. Als echte Ski-in/Ski-out Unterkunft können Sie morgens direkt vor der Haustür die Ski anschnallen und abends entspannt zurückgleiten. Der Kesslerlift ist in gemütlichen 7 Gehminuten erreichbar, falls Sie doch mal höher hinaus wollen. Mit perfekten 5 Sternen bei Google zeigt sich hier eine kleine, aber feine Adresse, die besonders Freestyle-Fans und Familien schätzen.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Ferienhaus%20Kanzelwand%20Kleinwalsertal"
+    },
+    {
+      "name": "Vorderbodenhütte Kleinwalsertal",
+      "ortsteil": "Mittelberg",
+      "typ": "Unterkunft",
+      "adresse": "Vorderboden 2, 6993 Mittelberg, Österreich",
+      "gps": {
+        "lat": 47.3122225,
+        "lng": 10.131550899999999
+      },
+      "website": "http://www.vorderbodenhuette.at/",
+      "google_rating": 4.7,
+      "google_reviews": 28,
+      "naechste_bergbahn": {
+        "name": "Doppelsessellift Walmendingerhorn",
+        "typ": "Sessellift",
+        "distanz_m": 3717,
+        "gehzeit_min": 74
+      },
+      "naechste_piste": {
+        "name": "Talabfahrt Walmendingerhorn",
+        "distanz_m": 664
+      },
+      "naechste_loipe": {
+        "name": "Steinbockloipe",
+        "distanz_m": 88
+      },
+      "ski_in_out": "nein",
+      "ai_description": "Die Vorderbodenhütte liegt idyllisch in Mittelberg und ist ein echter Geheimtipp für Langläufer – die Steinbockloipe startet praktisch vor der Haustür, nur 88 Meter entfernt. Für Alpinfahrer bedeutet das allerdings eine gute Stunde Fußmarsch zum Doppelsessellift Walmendingerhorn, was die Hütte eher zur Basis für gemütliche Langlauftage macht. Die hervorragenden Bewertungen (4,7 Sterne) sprechen für die herzliche Atmosphäre und authentische Kleinwalsertaler Gastfreundschaft abseits des Pistentrubels. Wer Ruhe sucht und gerne auf schmalen Brettern unterwegs ist, findet hier sein perfektes Winterquartier.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Vorderbodenh%C3%BCtte%20Kleinwalsertal%20Kleinwalsertal"
+    },
+    {
+      "name": "Ferienwohnung Heidi im Tal",
+      "ortsteil": "Mittelberg",
+      "typ": "Ferienwohnung",
+      "adresse": "Starzelweg 1, 6993 Mittelberg, Österreich",
+      "gps": {
+        "lat": 47.3109775,
+        "lng": 10.1195054
+      },
+      "website": "http://www.heidi-im-tal.at/",
+      "google_rating": 5,
+      "google_reviews": 4,
+      "naechste_bergbahn": {
+        "name": "Doppelsessellift Walmendingerhorn",
+        "typ": "Sessellift",
+        "distanz_m": 2838,
+        "gehzeit_min": 61
+      },
+      "naechste_piste": {
+        "name": "Talabfahrt Walmendingerhorn",
+        "distanz_m": 1041
+      },
+      "naechste_loipe": {
+        "name": "Unbenannt",
+        "distanz_m": 80
+      },
+      "ski_in_out": "nein",
+      "ai_description": "Die Ferienwohnung Heidi im Tal liegt ruhig in Mittelberg und ist perfekt für Langläufer - die nächste Loipe ist nur 80 Meter entfernt. Für Alpinski-Fans bedeutet das einen längeren Anmarsch: Der Doppelsessellift Walmendingerhorn ist gut eine Stunde zu Fuß entfernt, weshalb ein Auto oder Skibus empfehlenswert ist. Die wenigen Gäste sind begeistert (5 Sterne bei 4 Bewertungen), was für eine sehr persönliche und liebevolle Betreuung spricht. Eine solide Wahl für alle, die das authentische Kleinwalsertal abseits des Trubels erleben möchten.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Ferienwohnung%20Heidi%20im%20Tal%20Kleinwalsertal"
+    },
+    {
+      "name": "Kleinwalsertal Tourismus",
+      "ortsteil": "Hirschegg",
+      "typ": "Unterkunft",
+      "adresse": "Walserstraße 264 a, 6992 Hirschegg, Österreich",
+      "gps": {
+        "lat": 47.342449099999996,
+        "lng": 10.167104700000001
+      },
+      "website": "https://www.kleinwalsertal.com/",
+      "google_rating": 4.6,
+      "google_reviews": 514,
+      "naechste_bergbahn": {
+        "name": "Schlösslellift",
+        "typ": "Schlepplift",
+        "distanz_m": 418,
+        "gehzeit_min": 6
+      },
+      "naechste_piste": {
+        "name": "Unbenannt",
+        "distanz_m": 32
+      },
+      "naechste_loipe": {
+        "name": "Unbenannt",
+        "distanz_m": 1249
+      },
+      "ski_in_out": "ja",
+      "ai_description": "Das Kleinwalsertal Tourismus in Hirschegg liegt perfekt für Skifahrer - mit direktem Ski-in/Ski-out Zugang bist du praktisch sofort auf der Piste, die nur 32 Meter entfernt ist. Der Schlösslellift ist in entspannten 6 Minuten zu Fuß erreichbar, sodass du morgens ohne Hektik auf die Pisten kommst. Die sehr guten Google-Bewertungen von 4.6 Sternen sprechen für sich und zeigen, dass hier Gäste wirklich zufrieden sind. Für Langläufer ist es allerdings weniger optimal - die nächste Loipe ist über einen Kilometer entfernt.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Kleinwalsertal%20Tourismus%20Kleinwalsertal"
+    },
+    {
+      "name": "Ferienwohnungen Lorenz",
+      "ortsteil": "Hirschegg",
+      "typ": "Ferienwohnung",
+      "adresse": "Am Sonnenbühl 6, 6992 Hirschegg, Österreich",
+      "gps": {
+        "lat": 47.3458215,
+        "lng": 10.167892199999999
+      },
+      "website": "http://www.ferienwohnung-lorenz.de/",
+      "google_rating": 4.8,
+      "google_reviews": 4,
+      "naechste_bergbahn": {
+        "name": "Hubertuslift",
+        "typ": "Schlepplift",
+        "distanz_m": 404,
+        "gehzeit_min": 6
+      },
+      "naechste_piste": {
+        "name": "Hubertus-Piste",
+        "distanz_m": 249
+      },
+      "naechste_loipe": {
+        "name": "Unbenannt",
+        "distanz_m": 928
+      },
+      "ski_in_out": "nein",
+      "ai_description": "Die Ferienwohnungen Lorenz in Hirschegg liegen nur 6 Gehminuten vom Hubertuslift entfernt – ideal für entspannte Skitage ohne lange Anmarschwege. Mit 4,8 Sternen bei Google zeigt sich hier die familiäre Atmosphäre, auch wenn erst wenige Gäste bewertet haben. Die Hubertus-Piste ist praktisch um die Ecke, sodass ihr morgens schnell auf die Bretter kommt. Echtes Ski-in/Ski-out gibt's zwar nicht, aber die kurzen Wege machen das Kleinwalsertal-Erlebnis trotzdem sehr komfortabel.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Ferienwohnungen%20Lorenz%20Kleinwalsertal"
+    },
+    {
+      "name": "Haus Alma",
+      "ortsteil": "Mittelberg",
+      "typ": "Unterkunft",
+      "adresse": "Walserstraße 217, 6992 Mittelberg, Österreich",
+      "gps": {
+        "lat": 47.3459418,
+        "lng": 10.1693298
+      },
+      "website": "",
+      "google_rating": null,
+      "google_reviews": 0,
+      "naechste_bergbahn": {
+        "name": "Hubertuslift",
+        "typ": "Schlepplift",
+        "distanz_m": 530,
+        "gehzeit_min": 8
+      },
+      "naechste_piste": {
+        "name": "Unbenannt",
+        "distanz_m": 260
+      },
+      "naechste_loipe": {
+        "name": "Unbenannt",
+        "distanz_m": 907
+      },
+      "ski_in_out": "nein",
+      "ai_description": "Das Haus Alma in Mittelberg ist eine solide Unterkunft für alle, die morgens nicht direkt vor der Haustür auf die Ski steigen müssen. In nur 8 Gehminuten erreicht ihr den Hubertuslift, und die nächste Piste ist gerade mal 260 Meter entfernt – also wirklich keine große Sache. Die Lage ist praktisch genug, um schnell auf die Piste zu kommen, aber ihr habt abends auch die Ruhe eines typischen Kleinwaldertaler Ortsteils. Wer gerne langlauft, muss allerdings knapp einen Kilometer bis zur nächsten Loipe laufen.",
+      "booking_url": "https://www.booking.com/searchresults.de.html?ss=Haus%20Alma%20Kleinwalsertal"
     }
   ]
 }

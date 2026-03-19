@@ -144,16 +144,35 @@ def search_places(query, max_results=20):
 def find_all_hotels():
     """Find all hotels/accommodations in Kleinwalsertal."""
     queries = [
+        # Hotels
         "Hotels Kleinwalsertal Vorarlberg",
         "Hotel Riezlern Kleinwalsertal",
         "Hotel Hirschegg Kleinwalsertal",
         "Hotel Mittelberg Kleinwalsertal",
-        "Pension Kleinwalsertal",
-        "Gasthof Kleinwalsertal",
-        "Ferienwohnung Kleinwalsertal",
+        "Hotel Baad Kleinwalsertal",
         "Garni Hotel Kleinwalsertal",
         "Aparthotel Kleinwalsertal",
-        "Hotel Baad Kleinwalsertal",
+        # Pensionen & Gaestehaeuser
+        "Pension Kleinwalsertal",
+        "Pension Riezlern",
+        "Pension Hirschegg Vorarlberg",
+        "Pension Mittelberg Vorarlberg",
+        "Gästehaus Kleinwalsertal",
+        "Gästehaus Riezlern",
+        "Gästehaus Hirschegg Kleinwalsertal",
+        "Gästehaus Mittelberg Kleinwalsertal",
+        # Ferienwohnungen & Chalets
+        "Ferienwohnung Kleinwalsertal",
+        "Ferienwohnung Riezlern",
+        "Ferienwohnung Hirschegg",
+        "Ferienwohnung Mittelberg",
+        "Chalet Kleinwalsertal",
+        "Appartement Kleinwalsertal",
+        # Gasthoeffe & sonstige
+        "Gasthof Kleinwalsertal",
+        "Unterkunft Kleinwalsertal",
+        "Zimmer Kleinwalsertal",
+        "Haus Baad Kleinwalsertal",
     ]
     seen_ids = set()
     all_places = []
