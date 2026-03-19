@@ -9,6 +9,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
+    /* ================================================================
+       CSS VARIABLES & RESET
+       ================================================================ */
     :root {
       --bg-primary: #0a0e1a;
       --bg-secondary: #111827;
@@ -34,6 +37,7 @@
       --transition: 200ms cubic-bezier(0.4, 0, 0.2, 1);
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
     body {
       font-family: var(--font-body);
       line-height: 1.6;
@@ -41,19 +45,25 @@
       background: var(--bg-primary);
       min-height: 100vh;
       -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
     h1, h2, h3 { font-family: var(--font-display); color: var(--text-primary); font-weight: 700; line-height: 1.2; }
     a { text-decoration: none; color: inherit; }
     button { font-family: var(--font-body); border: none; cursor: pointer; }
     img { display: block; max-width: 100%; }
 
-    /* ── Layout ── */
+    /* ================================================================
+       LAYOUT
+       ================================================================ */
     .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
 
-    /* ── Header ── */
+    /* ================================================================
+       HEADER (sticky, blurred)
+       ================================================================ */
     header {
       position: fixed; top: 0; left: 0; right: 0; z-index: 50;
       backdrop-filter: blur(16px) saturate(180%);
+      -webkit-backdrop-filter: blur(16px) saturate(180%);
       background: rgba(10, 14, 26, 0.85);
       border-bottom: 1px solid var(--border);
     }
@@ -69,7 +79,7 @@
     .logo-mark {
       width: 32px; height: 32px; border-radius: 50%;
       background: var(--accent); display: flex; align-items: center;
-      justify-content: center; font-size: 1rem;
+      justify-content: center; font-size: 1rem; color: var(--bg-primary);
     }
     .nav-links { display: flex; gap: 2rem; font-size: 0.875rem; font-weight: 500; }
     .nav-links a { color: var(--text-muted); transition: color var(--transition); }
@@ -81,11 +91,29 @@
     }
     .nav-cta:hover { background: var(--accent-hover); }
 
-    /* ── Hero ── */
+    /* ================================================================
+       DESTINATION NAV BAR
+       ================================================================ */
+    .dest-bar {
+      margin-top: 57px; /* below fixed header */
+      background: var(--bg-secondary);
+      border-bottom: 1px solid var(--border);
+      padding: 0.5rem 1.5rem;
+      text-align: center;
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+    .dest-bar strong { color: var(--text-secondary); }
+    .dest-bar span { opacity: 0.5; margin-left: 0.5rem; }
+
+    /* ================================================================
+       HERO
+       ================================================================ */
     .hero {
-      position: relative; min-height: 85vh; display: flex; align-items: center;
+      position: relative; min-height: 80vh; display: flex; align-items: center;
       justify-content: center; text-align: center; overflow: hidden;
-      padding: 6rem 1.5rem 4rem;
+      padding: 5rem 1.5rem 4rem;
     }
     .hero-bg {
       position: absolute; inset: 0; z-index: 0;
@@ -110,7 +138,22 @@
     .hero-cta:hover { background: var(--accent-hover); transform: translateY(-2px); }
     .hero-cta svg { width: 18px; height: 18px; }
 
-    /* ── Wizard ── */
+    /* ================================================================
+       STATUS BAR
+       ================================================================ */
+    .status-bar {
+      padding: 0.75rem 1rem; border-radius: var(--radius-md);
+      background: var(--bg-card); border: 1px solid var(--border);
+      font-size: 0.8125rem; color: var(--text-muted); text-align: center;
+      max-width: 500px; margin: 2rem auto 0;
+    }
+    .status-bar.success { border-color: rgba(20,184,166,0.2); color: var(--accent); }
+    .status-bar.warning { border-color: rgba(245,158,11,0.2); color: #f59e0b; }
+    .status-bar.error { border-color: rgba(239,68,68,0.2); color: #ef4444; }
+
+    /* ================================================================
+       WIZARD
+       ================================================================ */
     .wizard-section { padding: 5rem 0; }
     .wizard {
       max-width: 800px; margin: 0 auto; padding: 3rem 2.5rem;
@@ -145,18 +188,21 @@
       gap: 1rem; margin-bottom: 2rem;
     }
     .choice {
-      padding: 1.75rem 1.25rem; border-radius: var(--radius-lg);
+      padding: 2rem 1.5rem; border-radius: var(--radius-lg);
       background: var(--bg-secondary); border: 1px solid var(--border);
       color: var(--text-secondary); text-align: center; cursor: pointer;
       transition: all var(--transition); display: flex; flex-direction: column;
-      align-items: center; gap: 0.5rem;
+      align-items: center; gap: 0.625rem; min-height: 100px;
     }
     .choice:hover {
       border-color: var(--accent); background: var(--accent-soft);
       transform: translateY(-3px);
     }
-    .choice-label { font-weight: 600; font-size: 0.9375rem; color: var(--text-primary); }
-    .choice-desc { font-size: 0.8125rem; color: var(--text-muted); }
+    .choice.selected {
+      border-color: var(--accent); background: var(--accent-soft);
+    }
+    .choice-label { font-weight: 600; font-size: 1rem; color: var(--text-primary); }
+    .choice-desc { font-size: 0.8125rem; color: var(--text-muted); line-height: 1.5; }
     .wizard-actions {
       display: flex; justify-content: space-between; gap: 1rem;
       padding-top: 1.5rem; border-top: 1px solid var(--border);
@@ -180,7 +226,9 @@
     }
     .wizard-summary strong { color: var(--accent); }
 
-    /* ── Section Headers ── */
+    /* ================================================================
+       SECTION HEADERS
+       ================================================================ */
     .section-header { text-align: center; margin-bottom: 3rem; }
     .section-header h2 {
       font-size: clamp(1.75rem, 3vw, 2.5rem); margin-bottom: 0.75rem;
@@ -188,7 +236,9 @@
     }
     .section-header p { font-size: 1rem; color: var(--text-muted); max-width: 500px; margin: 0 auto; }
 
-    /* ── Curated List Pills ── */
+    /* ================================================================
+       CURATED LIST PILLS
+       ================================================================ */
     .curated-section { padding: 4rem 0; }
     .curated-pills {
       display: flex; gap: 0.625rem; flex-wrap: wrap; justify-content: center;
@@ -205,12 +255,20 @@
       border-color: var(--accent);
     }
 
-    /* ── Hotel Cards Grid ── */
+    /* ================================================================
+       HOTEL CARDS GRID
+       ================================================================ */
     .results-section { padding: 4rem 0; }
     .cards-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      grid-template-columns: 1fr;
       gap: 1.5rem;
+    }
+    @media (min-width: 640px) {
+      .cards-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 1024px) {
+      .cards-grid { grid-template-columns: repeat(3, 1fr); }
     }
     .hotel-card {
       border-radius: var(--radius-xl); background: var(--bg-card);
@@ -218,19 +276,10 @@
       transition: all var(--transition); display: flex; flex-direction: column;
     }
     .hotel-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: var(--border-medium); }
-    .card-image {
-      width: 100%; aspect-ratio: 16/9; object-fit: cover;
-      background: var(--bg-secondary);
-    }
-    .card-image-placeholder {
-      width: 100%; aspect-ratio: 16/9; background: var(--bg-secondary);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 2.5rem; color: var(--text-muted); opacity: 0.3;
-    }
-    .card-body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
+    .card-body { padding: 1.75rem; flex: 1; display: flex; flex-direction: column; }
     .card-location {
       font-size: 0.75rem; font-weight: 600; color: var(--text-muted);
-      text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.5rem;
+      text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.625rem;
     }
     .card-title {
       font-family: var(--font-display); font-size: 1.375rem; font-weight: 700;
@@ -238,7 +287,7 @@
     }
     .card-rating {
       display: inline-flex; align-items: center; gap: 0.375rem;
-      font-size: 0.8125rem; color: #fbbf24; font-weight: 600; margin-bottom: 0.875rem;
+      font-size: 0.8125rem; color: #fbbf24; font-weight: 600; margin-bottom: 1rem;
     }
     .card-rating .count { color: var(--text-muted); font-weight: 400; }
     .card-quote {
@@ -246,13 +295,11 @@
       color: var(--text-secondary); line-height: 1.65; margin-bottom: 1.25rem;
       flex: 1;
     }
-    .card-quote::before { content: '\201E'; }
-    .card-quote::after { content: '\201C'; }
     .card-features {
       display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.25rem;
     }
     .feature-chip {
-      padding: 0.3125rem 0.625rem; border-radius: 999px;
+      padding: 0.3125rem 0.75rem; border-radius: 999px;
       background: var(--bg-secondary); border: 1px solid var(--border);
       font-size: 0.75rem; color: var(--text-muted); font-weight: 500;
     }
@@ -265,6 +312,7 @@
       background: transparent; border: 1px solid var(--border-medium);
       color: var(--text-secondary); font-weight: 600; font-size: 0.8125rem;
       text-align: center; transition: all var(--transition); cursor: pointer;
+      min-height: 48px; display: inline-flex; align-items: center; justify-content: center;
     }
     .btn-details:hover { border-color: var(--accent); color: var(--accent); }
     .btn-booking {
@@ -272,32 +320,29 @@
       background: var(--accent); color: var(--bg-primary); font-weight: 600;
       font-size: 0.8125rem; text-align: center; transition: all var(--transition);
       display: inline-flex; align-items: center; justify-content: center; gap: 0.375rem;
+      min-height: 48px;
     }
     .btn-booking:hover { background: var(--accent-hover); }
 
-    /* ── Modal ── */
+    /* ================================================================
+       MODAL
+       ================================================================ */
     .modal-backdrop {
       position: fixed; inset: 0; background: rgba(0,0,0,0.75);
-      backdrop-filter: blur(8px); display: none; align-items: center;
+      backdrop-filter: blur(8px); display: none; align-items: flex-start;
       justify-content: center; padding: 1.5rem; z-index: 100;
+      overflow-y: auto;
     }
     .modal-backdrop.open { display: flex; }
     .modal {
-      width: 100%; max-width: 760px; max-height: 90vh; overflow-y: auto;
+      width: 100%; max-width: 760px; margin: 2rem auto;
+      max-height: 90vh; overflow-y: auto;
       border-radius: var(--radius-xl); background: var(--bg-card);
       border: 1px solid var(--border); animation: modalIn 200ms ease;
     }
     @keyframes modalIn {
-      from { opacity: 0; transform: scale(0.96) translateY(12px); }
+      from { opacity: 0; transform: scale(0.95) translateY(12px); }
       to { opacity: 1; transform: scale(1) translateY(0); }
-    }
-    .modal-image {
-      width: 100%; aspect-ratio: 16/9; object-fit: cover; background: var(--bg-secondary);
-    }
-    .modal-image-placeholder {
-      width: 100%; aspect-ratio: 16/9; background: var(--bg-secondary);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 3rem; color: var(--text-muted); opacity: 0.2;
     }
     .modal-content { padding: 2rem; }
     .modal-location {
@@ -319,8 +364,6 @@
       padding: 1.25rem 1.5rem; border-left: 3px solid var(--accent);
       background: var(--accent-soft); border-radius: 0 var(--radius-md) var(--radius-md) 0;
     }
-    .modal-quote::before { content: '\201E'; }
-    .modal-quote::after { content: '\201C'; }
     .modal-insider {
       padding: 1rem 1.25rem; border-radius: var(--radius-md);
       background: var(--bg-secondary); border: 1px solid var(--border);
@@ -343,7 +386,8 @@
     .modal-btn {
       flex: 1; padding: 0.875rem; border-radius: var(--radius-md);
       font-weight: 600; font-size: 0.875rem; text-align: center;
-      transition: all var(--transition); cursor: pointer;
+      transition: all var(--transition); cursor: pointer; min-height: 48px;
+      display: inline-flex; align-items: center; justify-content: center;
     }
     .modal-btn-website {
       background: transparent; border: 1px solid var(--border-medium);
@@ -360,12 +404,14 @@
     }
     .modal-close {
       background: none; border: none; color: var(--text-muted);
-      font-size: 0.8125rem; cursor: pointer; padding: 0.375rem 0.75rem;
+      font-size: 0.8125rem; cursor: pointer; padding: 0.5rem 0.75rem;
       border-radius: var(--radius-sm); transition: color var(--transition);
     }
     .modal-close:hover { color: var(--text-primary); }
 
-    /* ── About ── */
+    /* ================================================================
+       ABOUT
+       ================================================================ */
     .about-section { padding: 5rem 0 3rem; }
     .about-inner {
       max-width: 640px; margin: 0 auto; text-align: center;
@@ -373,7 +419,9 @@
     .about-inner h2 { font-size: 1.75rem; margin-bottom: 1rem; }
     .about-inner p { color: var(--text-muted); margin-bottom: 1rem; line-height: 1.7; font-size: 0.9375rem; }
 
-    /* ── Footer ── */
+    /* ================================================================
+       FOOTER
+       ================================================================ */
     footer {
       padding: 2.5rem 0; border-top: 1px solid var(--border); margin-top: 3rem;
     }
@@ -382,7 +430,15 @@
       display: flex; justify-content: space-between; align-items: center;
       gap: 1.5rem; flex-wrap: wrap;
     }
-    .footer-brand { font-family: var(--font-display); font-weight: 700; color: var(--text-primary); font-size: 1rem; }
+    .footer-brand {
+      font-family: var(--font-display); font-weight: 700; color: var(--text-primary);
+      font-size: 1rem; display: flex; align-items: center; gap: 0.5rem;
+    }
+    .footer-brand .logo-mark-sm {
+      width: 24px; height: 24px; border-radius: 50%;
+      background: var(--accent); display: inline-flex; align-items: center;
+      justify-content: center; font-size: 0.7rem; color: var(--bg-primary);
+    }
     .footer-links { display: flex; gap: 1.5rem; }
     .footer-links a { font-size: 0.8125rem; color: var(--text-muted); transition: color var(--transition); }
     .footer-links a:hover { color: var(--text-primary); }
@@ -391,40 +447,46 @@
       border-top: 1px solid var(--border); font-size: 0.75rem; color: var(--text-muted);
       max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.6;
     }
-
-    /* ── Status ── */
-    .status-bar {
-      padding: 0.75rem 1rem; border-radius: var(--radius-md);
-      background: var(--bg-card); border: 1px solid var(--border);
-      font-size: 0.8125rem; color: var(--text-muted); text-align: center;
-      max-width: 500px; margin: 2rem auto 0;
+    .footer-copy {
+      width: 100%; text-align: center; margin-top: 1rem;
+      font-size: 0.75rem; color: var(--text-muted); opacity: 0.6;
     }
-    .status-bar.success { border-color: rgba(20,184,166,0.2); color: var(--accent); }
-    .status-bar.warning { border-color: rgba(245,158,11,0.2); color: #f59e0b; }
-    .status-bar.error { border-color: rgba(239,68,68,0.2); color: #ef4444; }
 
-    /* ── Responsive ── */
+    /* ================================================================
+       UTILITY
+       ================================================================ */
+    .hidden { display: none !important; }
+
+    /* ================================================================
+       RESPONSIVE
+       ================================================================ */
     @media (max-width: 768px) {
       .nav-links { display: none; }
-      .hero { min-height: 70vh; padding: 5rem 1rem 3rem; }
+      .hero { min-height: 70vh; padding: 4rem 1rem 3rem; }
       .wizard { padding: 2rem 1.25rem; }
       .choice-grid { grid-template-columns: 1fr; }
-      .cards-grid { grid-template-columns: 1fr; }
-      .modal { max-height: 100vh; border-radius: 0; }
+      .choice { min-height: 56px; padding: 1.25rem 1rem; }
+      .modal {
+        max-width: 100%; margin: 0; border-radius: 0;
+        min-height: 100vh;
+      }
+      .modal-backdrop { padding: 0; }
       .modal-facts { grid-template-columns: 1fr; }
       .modal-ctas { flex-direction: column; }
       .wizard-actions { flex-direction: column; }
-      .wizard-actions > * { width: 100%; text-align: center; justify-content: center; }
+      .wizard-actions > * { width: 100%; text-align: center; justify-content: center; min-height: 48px; }
+      .btn-back, .btn-reset, .btn-show { min-height: 48px; display: inline-flex; align-items: center; justify-content: center; }
     }
-    @media (min-width: 769px) and (max-width: 1024px) {
+    @media (min-width: 769px) and (max-width: 1023px) {
       .cards-grid { grid-template-columns: repeat(2, 1fr); }
     }
-    .hidden { display: none !important; }
   </style>
 </head>
 <body>
 
-  <!-- Header -->
+  <!-- ================================================================
+       HEADER
+       ================================================================ -->
   <header>
     <div class="header-inner">
       <a href="#" class="logo">
@@ -441,7 +503,17 @@
     </div>
   </header>
 
-  <!-- Hero -->
+  <!-- ================================================================
+       DESTINATION NAV BAR
+       ================================================================ -->
+  <div class="dest-bar">
+    <strong>Kleinwalsertal</strong>
+    <span>| + weitere folgen</span>
+  </div>
+
+  <!-- ================================================================
+       HERO
+       ================================================================ -->
   <section class="hero" id="top">
     <div class="hero-bg"></div>
     <div class="hero-content">
@@ -455,7 +527,9 @@
     </div>
   </section>
 
-  <!-- Wizard -->
+  <!-- ================================================================
+       WIZARD (5 Steps)
+       ================================================================ -->
   <section id="wizard" class="wizard-section">
     <div class="container">
       <div class="wizard">
@@ -463,8 +537,9 @@
           <div class="wizard-progress-fill" id="progressFill" style="width:20%"></div>
         </div>
 
+        <!-- Step 1: Mit Kindern oder ohne? -->
         <div class="wizard-step active" data-step="1">
-          <div class="wizard-step-indicator">Schritt <span id="stepNum">1</span> von 5</div>
+          <div class="wizard-step-indicator">Schritt <span class="stepNumSync">1</span> von 5</div>
           <h2 class="step-question">Mit Kindern oder ohne?</h2>
           <div class="choice-grid">
             <button class="choice" data-key="party" data-val="family">
@@ -482,6 +557,7 @@
           </div>
         </div>
 
+        <!-- Step 2: Ski-in/Ski-out -->
         <div class="wizard-step" data-step="2">
           <div class="wizard-step-indicator">Schritt <span class="stepNumSync">2</span> von 5</div>
           <h2 class="step-question">Ski-in/Ski-out wichtig?</h2>
@@ -501,6 +577,7 @@
           </div>
         </div>
 
+        <!-- Step 3: Langlauf oder Wandern -->
         <div class="wizard-step" data-step="3">
           <div class="wizard-step-indicator">Schritt <span class="stepNumSync">3</span> von 5</div>
           <h2 class="step-question">Langlauf oder Wandern?</h2>
@@ -520,6 +597,7 @@
           </div>
         </div>
 
+        <!-- Step 4: Wellness -->
         <div class="wizard-step" data-step="4">
           <div class="wizard-step-indicator">Schritt <span class="stepNumSync">4</span> von 5</div>
           <h2 class="step-question">Wellness wichtig?</h2>
@@ -539,6 +617,7 @@
           </div>
         </div>
 
+        <!-- Step 5: Ruhig oder zentral -->
         <div class="wizard-step" data-step="5">
           <div class="wizard-step-indicator">Schritt <span class="stepNumSync">5</span> von 5</div>
           <h2 class="step-question">Ruhig oder zentral?</h2>
@@ -568,7 +647,9 @@
     </div>
   </section>
 
-  <!-- Results -->
+  <!-- ================================================================
+       RESULTS (Wizard recommendations)
+       ================================================================ -->
   <section id="empfehlungen" class="results-section">
     <div class="container">
       <div class="section-header">
@@ -579,7 +660,9 @@
     </div>
   </section>
 
-  <!-- Curated Lists -->
+  <!-- ================================================================
+       CURATED LISTS
+       ================================================================ -->
   <section id="listen" class="curated-section">
     <div class="container">
       <div class="section-header">
@@ -588,17 +671,19 @@
       </div>
       <div class="curated-pills" id="curatedPills">
         <button class="curated-pill active" data-list="alle">Alle Hotels</button>
-        <button class="curated-pill" data-list="familie">Familien mit Kindern</button>
-        <button class="curated-pill" data-list="ski">Ski-in/Ski-out</button>
-        <button class="curated-pill" data-list="langlauf">Langlauf</button>
-        <button class="curated-pill" data-list="ruhig">Ruhige Lage</button>
-        <button class="curated-pill" data-list="wellness">Wellness</button>
+        <button class="curated-pill" data-list="familie">F&uuml;r Familien mit Kindern</button>
+        <button class="curated-pill" data-list="ski">Ski-in/Ski-out direkt</button>
+        <button class="curated-pill" data-list="ruhig">Ruhige Lage, abseits</button>
+        <button class="curated-pill" data-list="wellness">Wellness &amp; Erholung</button>
+        <button class="curated-pill" data-list="langlauf">Langlauf-Paradies</button>
       </div>
       <div class="cards-grid" id="curatedCards"></div>
     </div>
   </section>
 
-  <!-- About -->
+  <!-- ================================================================
+       ABOUT
+       ================================================================ -->
   <section id="about" class="about-section">
     <div class="container">
       <div class="about-inner">
@@ -615,29 +700,36 @@
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- ================================================================
+       FOOTER
+       ================================================================ -->
   <footer>
     <div class="footer-inner">
-      <div class="footer-brand">AlpenStay</div>
+      <div class="footer-brand">
+        <span class="logo-mark-sm">&#9968;</span>
+        AlpenStay
+      </div>
       <div class="footer-links">
-        <a href="#wizard">Finder</a>
-        <a href="#listen">Listen</a>
-        <a href="#about">&Uuml;ber uns</a>
+        <a href="#about">&Uuml;ber alpenstay</a>
+        <a href="#">Impressum</a>
+        <a href="#">Datenschutz</a>
       </div>
     </div>
     <div class="footer-disclosure">
-      Wir verdienen eine kleine Provision bei Buchungen &uuml;ber unsere Links.
-      Das &auml;ndert nichts an unserer unabh&auml;ngigen Meinung.
+      Einige Links auf dieser Seite sind Partnerlinks. F&uuml;r dich entstehen dadurch keine Mehrkosten.
+      Wir erhalten eine kleine Provision bei Buchungen &uuml;ber unsere Links.
     </div>
+    <div class="footer-copy">&copy; 2025 AlpenStay</div>
   </footer>
 
-  <!-- Modal -->
+  <!-- ================================================================
+       MODAL
+       ================================================================ -->
   <div class="modal-backdrop" id="modalBackdrop">
     <div class="modal">
       <div class="modal-close-row">
         <button class="modal-close" id="mClose">&times; Schlie&szlig;en</button>
       </div>
-      <div id="mImageWrap"></div>
       <div class="modal-content">
         <div class="modal-location" id="mLocation"></div>
         <h2 class="modal-title" id="mTitle"></h2>
@@ -653,17 +745,18 @@
     </div>
   </div>
 
+  <!-- ================================================================
+       JAVASCRIPT
+       ================================================================ -->
   <script>
     // =====================================================================
     // CONFIG
     // =====================================================================
     const CONFIG = {
+      SHEET_ID: "1RD9N9OPMHMCa-AQNbWffqwbRIKTFZH-5H5I7l5hw6wU",
+      SHEET_TAB: "hotels",
       AFFILIATE_ID: "DEIN_AFFILIATE_ID",
-      DEFAULT_DESTINATION: "kleinwalsertal",
-      DESTINATIONS: {
-        "kleinwalsertal": "Kleinwalsertal",
-        // Add more: "oberstdorf": "Oberstdorf", "lech": "Lech am Arlberg"
-      }
+      DESTINATION: "Kleinwalsertal",
     };
 
     // =====================================================================
@@ -671,20 +764,32 @@
     // =====================================================================
     const $ = id => document.getElementById(id);
     const el = {
-      dataStatus: $("dataStatus"), stepNum: $("stepNum"),
-      progressFill: $("progressFill"), btnBack: $("btnBack"),
-      btnReset: $("btnReset"), btnShow: $("btnShow"),
-      wizardSummary: $("wizardSummary"), resultCards: $("resultCards"),
-      resultSub: $("resultSub"), curatedCards: $("curatedCards"),
-      curatedPills: $("curatedPills"), navStart: $("navStart"),
-      btnStart: $("btnStart"), modalBackdrop: $("modalBackdrop"),
-      mClose: $("mClose"), mTitle: $("mTitle"), mLocation: $("mLocation"),
-      mRating: $("mRating"), mQuote: $("mQuote"), mInsider: $("mInsider"),
-      mFacts: $("mFacts"), mWebsite: $("mWebsite"), mBooking: $("mBooking"),
-      mImageWrap: $("mImageWrap"),
+      dataStatus: $("dataStatus"),
+      progressFill: $("progressFill"),
+      btnBack: $("btnBack"),
+      btnReset: $("btnReset"),
+      btnShow: $("btnShow"),
+      wizardSummary: $("wizardSummary"),
+      resultCards: $("resultCards"),
+      resultSub: $("resultSub"),
+      curatedCards: $("curatedCards"),
+      curatedPills: $("curatedPills"),
+      navStart: $("navStart"),
+      btnStart: $("btnStart"),
+      modalBackdrop: $("modalBackdrop"),
+      mClose: $("mClose"),
+      mTitle: $("mTitle"),
+      mLocation: $("mLocation"),
+      mRating: $("mRating"),
+      mQuote: $("mQuote"),
+      mInsider: $("mInsider"),
+      mFacts: $("mFacts"),
+      mWebsite: $("mWebsite"),
+      mBooking: $("mBooking"),
     };
 
     let HOTELS = [];
+    let DESCRIPTIONS = {};
     let currentStep = 1;
     const prefs = { party: null, ski: null, focus: null, wellness: null, lage: null };
 
@@ -693,167 +798,388 @@
     // =====================================================================
     const norm = v => (v ?? "").toString().trim();
     const lower = v => norm(v).toLowerCase();
-    const escapeHtml = s => (s ?? "").toString().replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
-    const safeNum = v => { const n = Number(String(v).replace(",",".").replace(/[^\d.]/g,"")); return Number.isFinite(n) ? n : null; };
-    const isYes = v => ["ja","yes","true","1"].includes(lower(v));
+    const escapeHtml = s => (s ?? "").toString()
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+    const safeNum = v => {
+      const n = Number(String(v).replace(",", ".").replace(/[^\d.\-]/g, ""));
+      return Number.isFinite(n) ? n : null;
+    };
+    const isYes = v => ["ja", "yes", "true", "1"].includes(lower(v));
     const containsAny = (t, arr) => { const l = lower(t); return arr.some(a => l.includes(a)); };
-    const safeUrl = u => { const s = norm(u); if (!s) return ""; return s.startsWith("http") ? s : "https://"+s; };
-    const splitTags = s => { const t = norm(s); return t ? t.split(",").map(x=>x.trim()).filter(Boolean) : []; };
+    const safeUrl = u => { const s = norm(u); if (!s) return ""; return s.startsWith("http") ? s : "https://" + s; };
+    const splitTags = s => { const t = norm(s); return t ? t.split(",").map(x => x.trim()).filter(Boolean) : []; };
 
     // =====================================================================
-    // DESTINATION ROUTING
+    // DATA LOADING: GOOGLE SHEETS VIA JSONP (primary)
     // =====================================================================
-    function getDestinationSlug() {
-      // Try URL path: /kleinwalsertal or /oberstdorf
-      const path = window.location.pathname.replace(/^\/|\/$/g, "").toLowerCase();
-      if (path && CONFIG.DESTINATIONS[path]) return path;
-      // Try query param: ?d=kleinwalsertal
-      const params = new URLSearchParams(window.location.search);
-      const d = (params.get("d") || "").toLowerCase();
-      if (d && CONFIG.DESTINATIONS[d]) return d;
-      return CONFIG.DEFAULT_DESTINATION;
+    function loadSheetJSONP() {
+      return new Promise((resolve, reject) => {
+        const callbackName = "__sheetCB_" + Date.now();
+        const url = "https://docs.google.com/spreadsheets/d/" + CONFIG.SHEET_ID +
+          "/gviz/tq?tqx=out:json;responseHandler:" + callbackName +
+          "&sheet=" + encodeURIComponent(CONFIG.SHEET_TAB);
+
+        const timeout = setTimeout(() => {
+          cleanup();
+          reject(new Error("Google Sheet Timeout"));
+        }, 10000);
+
+        function cleanup() {
+          clearTimeout(timeout);
+          delete window[callbackName];
+          const s = document.getElementById("__sheetScript");
+          if (s) s.remove();
+        }
+
+        window[callbackName] = function(response) {
+          cleanup();
+          try {
+            const table = response.table;
+            if (!table || !table.rows || !table.cols) {
+              reject(new Error("Leere Tabelle"));
+              return;
+            }
+            const headers = table.cols.map(c => (c.label || "").trim());
+            const hotels = [];
+            for (const row of table.rows) {
+              const obj = {};
+              for (let i = 0; i < headers.length; i++) {
+                const cell = row.c && row.c[i];
+                obj[headers[i]] = cell ? (cell.v ?? "") : "";
+              }
+              if (norm(obj.name || obj.Name || obj.hotel_name)) {
+                hotels.push(obj);
+              }
+            }
+            resolve(hotels);
+          } catch (e) {
+            reject(e);
+          }
+        };
+
+        const script = document.createElement("script");
+        script.id = "__sheetScript";
+        script.src = url;
+        script.onerror = () => { cleanup(); reject(new Error("Google Sheet Netzwerkfehler")); };
+        document.head.appendChild(script);
+      });
     }
 
-    let CURRENT_DEST = getDestinationSlug();
+    // =====================================================================
+    // PARSE SHEET ROWS INTO HOTEL OBJECTS
+    // =====================================================================
+    function parseSheetHotel(raw) {
+      // Flexible column mapping: try common column name variations
+      const get = (...keys) => {
+        for (const k of keys) {
+          if (raw[k] !== undefined && raw[k] !== "") return raw[k];
+          // case-insensitive fallback
+          const lk = k.toLowerCase();
+          for (const rk of Object.keys(raw)) {
+            if (rk.toLowerCase() === lk && raw[rk] !== undefined && raw[rk] !== "") return raw[rk];
+          }
+        }
+        return "";
+      };
 
-    function getHotelImage(h) {
-      if (h.image_url) return safeUrl(h.image_url);
-      return "";
+      const name = norm(get("name", "Name", "hotel_name", "Hotel"));
+      if (!name) return null;
+
+      const tags = typeof get("tags", "Tags") === "string"
+        ? splitTags(get("tags", "Tags"))
+        : [];
+
+      const h = {
+        name,
+        ortsteil: norm(get("ortsteil", "Ortsteil", "ort", "Ort", "location")),
+        typ: norm(get("typ", "Typ", "type", "Type", "kategorie", "Kategorie")),
+        website: norm(get("website", "Website", "url", "URL")),
+        booking_url: norm(get("booking_url", "Booking_URL", "booking")),
+        short_pitch: norm(get("short_pitch", "Short_Pitch", "pitch", "Pitch")),
+        insider_tip: norm(get("insider_tip", "Insider_Tip", "insider", "Insider", "tipp", "Tipp")),
+        tags,
+        ski_in_out: norm(get("ski_in_out", "Ski_in_out", "ski_in_ski_out", "SkiInOut")),
+        ski_in_out_note: norm(get("ski_in_out_note", "Ski_in_out_note")),
+        nearest_lift_name: norm(get("nearest_lift_name", "naechster_lift", "Naechster_Lift", "lift_name")),
+        nearest_lift_type: norm(get("nearest_lift_type", "lift_type")),
+        lift_distance_m: safeNum(get("lift_distance_m", "Lift_Distance_m", "lift_entfernung", "lift_distanz")),
+        piste_distance_m: safeNum(get("piste_distance_m", "Piste_Distance_m")),
+        loipe_distance_m: safeNum(get("loipe_distance_m", "Loipe_Distance_m", "loipe_distanz")),
+        loipe_name: norm(get("loipe_name", "Loipe_Name", "naechste_loipe")),
+        google_rating: safeNum(get("google_rating", "Google_Rating", "rating", "Rating")),
+        google_reviews: safeNum(get("google_reviews", "Google_Reviews", "reviews", "Reviews")),
+        ai_description: norm(get("ai_description", "AI_Description", "beschreibung", "Beschreibung", "description")),
+        image_url: norm(get("image_url", "Image_URL", "bild", "Bild")),
+        wellness: norm(get("wellness", "Wellness")),
+      };
+
+      // Build text blob for scoring
+      h.textBlob = [h.name, h.ortsteil, h.typ, h.short_pitch, h.insider_tip,
+        h.tags.join(" "), h.ski_in_out_note, h.loipe_name, h.nearest_lift_name,
+        h.ai_description].filter(Boolean).join(" ");
+
+      return h;
     }
 
+    // =====================================================================
+    // LOAD DESCRIPTIONS.JSON (enrichment)
+    // =====================================================================
+    async function loadDescriptions() {
+      try {
+        const resp = await fetch("data/descriptions.json");
+        if (resp.ok) return await resp.json();
+      } catch (e) { /* silent */ }
+      return {};
+    }
+
+    // =====================================================================
+    // LOAD SCRAPED FALLBACK DATA
+    // =====================================================================
+    async function loadScrapedHotels() {
+      try {
+        const resp = await fetch("data/kleinwalsertal/hotels.json");
+        if (!resp.ok) return [];
+        const data = await resp.json();
+        return (data.hotels || []).map(h => {
+          const name = norm(h.name || "");
+          if (!name) return null;
+          const tags = typeof h.tags === "string" ? splitTags(h.tags) : (h.tags || []);
+          const textBlob = [name, h.ortsteil, h.typ, h.short_pitch, h.insider_tip,
+            tags.join(" "), h.ski_in_out_note, h.loipe_name, h.nearest_lift_name,
+            h.ai_description].filter(Boolean).join(" ");
+          return {
+            name,
+            ortsteil: norm(h.ortsteil),
+            typ: norm(h.typ),
+            website: norm(h.website),
+            booking_url: norm(h.booking_url || ""),
+            short_pitch: norm(h.short_pitch),
+            insider_tip: norm(h.insider_tip),
+            tags,
+            ski_in_out: norm(h.ski_in_out),
+            ski_in_out_note: norm(h.ski_in_out_note || ""),
+            nearest_lift_name: norm(h.nearest_lift_name || ""),
+            nearest_lift_type: norm(h.nearest_lift_type || ""),
+            lift_distance_m: safeNum(h.lift_distance_m),
+            piste_distance_m: safeNum(h.piste_distance_m),
+            loipe_distance_m: safeNum(h.loipe_distance_m),
+            loipe_name: norm(h.loipe_name || ""),
+            google_rating: safeNum(h.google_rating),
+            google_reviews: safeNum(h.google_reviews),
+            ai_description: norm(h.ai_description),
+            image_url: norm(h.image_url || ""),
+            wellness: norm(h.wellness || ""),
+            textBlob,
+          };
+        }).filter(Boolean);
+      } catch (e) { return []; }
+    }
+
+    // =====================================================================
+    // MERGE & ENRICH DATA
+    // =====================================================================
+    function enrichWithDescriptions(hotels, descriptions) {
+      if (!descriptions || !Object.keys(descriptions).length) return hotels;
+      return hotels.map(h => {
+        // Try exact match first, then fuzzy
+        let desc = descriptions[h.name];
+        if (!desc) {
+          // Try partial matching
+          const lowerName = lower(h.name);
+          for (const [key, val] of Object.entries(descriptions)) {
+            if (lower(key) === lowerName || lowerName.includes(lower(key)) || lower(key).includes(lowerName)) {
+              desc = val;
+              break;
+            }
+          }
+        }
+        if (desc && (!h.ai_description || h.ai_description.length < desc.length)) {
+          h.ai_description = desc;
+          // Rebuild textBlob
+          h.textBlob = [h.name, h.ortsteil, h.typ, h.short_pitch, h.insider_tip,
+            h.tags.join(" "), h.ski_in_out_note, h.loipe_name, h.nearest_lift_name,
+            h.ai_description].filter(Boolean).join(" ");
+        }
+        return h;
+      });
+    }
+
+    function mergeHotelSets(sheetHotels, scrapedHotels) {
+      // Sheet hotels are primary. Add scraped hotels that are not already in sheet.
+      const nameSet = new Set(sheetHotels.map(h => lower(h.name)));
+      const extra = scrapedHotels.filter(h => !nameSet.has(lower(h.name)));
+      return [...sheetHotels, ...extra];
+    }
+
+    // =====================================================================
+    // BOOKING URL
+    // =====================================================================
     function buildBookingUrl(h) {
       if (h.booking_url) {
         const url = safeUrl(h.booking_url);
         if (url && !url.includes("aid=")) return url + (url.includes("?") ? "&" : "?") + "aid=" + CONFIG.AFFILIATE_ID;
         return url;
       }
-      return "https://www.booking.com/searchresults.de.html?ss=" + encodeURIComponent(h.name) + "&aid=" + CONFIG.AFFILIATE_ID;
+      return "https://www.booking.com/searchresults.de.html?ss=" +
+        encodeURIComponent(h.name + " " + CONFIG.DESTINATION) +
+        "&aid=" + CONFIG.AFFILIATE_ID;
     }
 
     // =====================================================================
-    // DATA LOADER (JSON files from discover.py)
+    // FILTERS & SCORING
     // =====================================================================
-    async function loadHotels(slug) {
-      const resp = await fetch(`data/${slug}/hotels.json`);
-      if (!resp.ok) throw new Error(`Destination "${slug}" nicht gefunden`);
-      const data = await resp.json();
-      return (data.hotels || []).map(h => {
-        const name = norm(h.name || "");
-        if (!name) return null;
-        const tags = typeof h.tags === "string" ? splitTags(h.tags) : (h.tags || []);
-        const textBlob = [name, h.ortsteil, h.typ, h.short_pitch, h.insider_tip,
-          tags.join(" "), h.ski_in_out_note, h.loipe_name, h.nearest_lift_name].filter(Boolean).join(" ");
-        return {
-          name,
-          ortsteil: norm(h.ortsteil),
-          typ: norm(h.typ),
-          website: norm(h.website),
-          booking_url: norm(h.booking_url),
-          short_pitch: norm(h.short_pitch),
-          insider_tip: norm(h.insider_tip),
-          tags,
-          ski_in_out: norm(h.ski_in_out),
-          ski_in_out_note: norm(h.ski_in_out_note || ""),
-          nearest_lift_name: norm(h.nearest_lift_name),
-          nearest_lift_type: norm(h.nearest_lift_type || ""),
-          lift_distance_m: safeNum(h.lift_distance_m),
-          piste_distance_m: safeNum(h.piste_distance_m),
-          loipe_distance_m: safeNum(h.loipe_distance_m),
-          loipe_name: norm(h.loipe_name || ""),
-          google_rating: safeNum(h.google_rating),
-          google_reviews: safeNum(h.google_reviews),
-          ai_description: norm(h.ai_description),
-          image_url: norm(h.image_url || ""),
-          wellness: norm(h.wellness || ""),
-          textBlob,
-        };
-      }).filter(Boolean);
-    }
-
-    // =====================================================================
-    // FILTERS & SCORING (unchanged logic)
-    // =====================================================================
-    const hasTag = (h, tag) => (h.tags||[]).some(x => lower(x) === lower(tag));
-    const isAdultsOnly = h => hasTag(h,"adults_only") || hasTag(h,"paare") || containsAny(lower(h.textBlob), ["adults only","nur erwachsene"]);
+    const hasTag = (h, tag) => (h.tags || []).some(x => lower(x) === lower(tag));
+    const isAdultsOnly = h =>
+      hasTag(h, "adults_only") ||
+      hasTag(h, "paare") ||
+      containsAny(lower(h.textBlob || ""), ["adults only", "nur erwachsene"]);
 
     function scoreHotel(h, p) {
-      let s = 0; const b = lower(h.textBlob);
-      if (p.party==="family") { if (containsAny(b,["familie","kinder","familienhotel","spiel","kids"])) s+=20; }
-      else if (p.party==="adults") { if (containsAny(b,["adults only","ruhe","ruhig","spa","wellness"])) s+=15; if (containsAny(b,["kinder","familie","spiel"])) s-=8; }
-      else s+=3;
-      const hasSkiIO = isYes(h.ski_in_out) || containsAny(b,["ski-in","ski in","ski in/out","piste direkt","direkt am lift"]);
-      if (p.ski==="skiinout_yes") { if (hasSkiIO) s+=25; if (h.lift_distance_m!=null) s+=Math.max(0,15-Math.min(15,h.lift_distance_m/100)); if (h.piste_distance_m!=null) s+=Math.max(0,12-Math.min(12,h.piste_distance_m/100)); }
-      else if (p.ski==="skiinout_no") s+=5; else s+=3;
-      if (p.focus==="langlauf") { if ((h.loipe_distance_m!=null&&h.loipe_distance_m<=1200)||containsAny(b,["loipe","langlauf"])) s+=22; if (h.loipe_distance_m!=null) s+=Math.max(0,15-Math.min(15,h.loipe_distance_m/100)); }
-      else if (p.focus==="wandern") { if (containsAny(b,["wandern","wander","berge","trail","ausgangspunkt","natur","panorama"])) s+=18; }
-      else s+=3;
-      const hasW = containsAny(b,["wellness","spa","sauna","dampfbad","pool","massage"]);
-      if (p.wellness==="yes") { if (hasW) s+=18; else s-=8; } else if (p.wellness==="no") s+=5; else s+=3;
-      const isCentral = containsAny(b,["zentral","im ort","zentrum","dorf","mitten"]);
-      const isQuiet = containsAny(b,["ruhig","randlage","natur","baad","talende","abseits","still"]);
-      if (p.lage==="ruhig") { if (isQuiet) s+=15; if (isCentral) s-=5; }
-      else if (p.lage==="zentral") { if (isCentral) s+=15; if (isQuiet) s-=3; }
-      else s+=3;
-      if (h.google_rating>0) s+=Math.round((h.google_rating-3)*3);
-      if (h.short_pitch) s+=4; if (h.insider_tip) s+=4; if (h.website) s+=3;
+      let s = 0;
+      const b = lower(h.textBlob || "");
+
+      // Party preference
+      if (p.party === "family") {
+        if (containsAny(b, ["familie", "kinder", "familienhotel", "spiel", "kids"])) s += 20;
+      } else if (p.party === "adults") {
+        if (containsAny(b, ["adults only", "ruhe", "ruhig", "spa", "wellness"])) s += 15;
+        if (containsAny(b, ["kinder", "familie", "spiel"])) s -= 8;
+      } else {
+        s += 3;
+      }
+
+      // Ski-in/out preference
+      const hasSkiIO = isYes(h.ski_in_out) ||
+        containsAny(b, ["ski-in", "ski in", "ski in/out", "piste direkt", "direkt am lift"]);
+      if (p.ski === "skiinout_yes") {
+        if (hasSkiIO) s += 25;
+        if (h.lift_distance_m != null) s += Math.max(0, 15 - Math.min(15, h.lift_distance_m / 100));
+        if (h.piste_distance_m != null) s += Math.max(0, 12 - Math.min(12, h.piste_distance_m / 100));
+      } else if (p.ski === "skiinout_no") {
+        s += 5;
+      } else {
+        s += 3;
+      }
+
+      // Focus preference (langlauf / wandern)
+      if (p.focus === "langlauf") {
+        if ((h.loipe_distance_m != null && h.loipe_distance_m <= 1200) ||
+            containsAny(b, ["loipe", "langlauf"])) s += 22;
+        if (h.loipe_distance_m != null) s += Math.max(0, 15 - Math.min(15, h.loipe_distance_m / 100));
+      } else if (p.focus === "wandern") {
+        if (containsAny(b, ["wandern", "wander", "berge", "trail", "ausgangspunkt", "natur", "panorama"])) s += 18;
+      } else {
+        s += 3;
+      }
+
+      // Wellness preference
+      const hasW = containsAny(b, ["wellness", "spa", "sauna", "dampfbad", "pool", "massage"]);
+      if (p.wellness === "yes") {
+        if (hasW) s += 18; else s -= 8;
+      } else if (p.wellness === "no") {
+        s += 5;
+      } else {
+        s += 3;
+      }
+
+      // Location preference
+      const isCentral = containsAny(b, ["zentral", "im ort", "zentrum", "dorf", "mitten"]);
+      const isQuiet = containsAny(b, ["ruhig", "randlage", "natur", "baad", "talende", "abseits", "still"]);
+      if (p.lage === "ruhig") {
+        if (isQuiet) s += 15;
+        if (isCentral) s -= 5;
+      } else if (p.lage === "zentral") {
+        if (isCentral) s += 15;
+        if (isQuiet) s -= 3;
+      } else {
+        s += 3;
+      }
+
+      // Bonus for rich data
+      if (h.google_rating > 0) s += Math.round((h.google_rating - 3) * 3);
+      if (h.short_pitch) s += 4;
+      if (h.insider_tip) s += 4;
+      if (h.website) s += 3;
+
       return s;
     }
 
-    function topMatches(p, n=6) {
-      const filtered = HOTELS.filter(h => !(p.party==="family" && isAdultsOnly(h)));
-      return filtered.map(h=>({h, score: scoreHotel(h,p)}))
-        .sort((a,b)=>b.score-a.score||a.h.name.localeCompare(b.h.name,"de"))
-        .slice(0,n);
+    function topMatches(p, n = 6) {
+      const filtered = HOTELS.filter(h => !(p.party === "family" && isAdultsOnly(h)));
+      return filtered.map(h => ({ h, score: scoreHotel(h, p) }))
+        .sort((a, b) => b.score - a.score || a.h.name.localeCompare(b.h.name, "de"))
+        .slice(0, n);
     }
 
     // Curated filters
     const filters = {
       alle: () => HOTELS,
-      familie: () => HOTELS.filter(h => containsAny(lower(h.textBlob),["familie","kinder","familienhotel","spiel","kids"]) && !isAdultsOnly(h)),
-      ski: () => HOTELS.filter(h => isYes(h.ski_in_out) || containsAny(lower(h.textBlob),["ski-in","ski in/out","direkt am lift","piste direkt"]) || (h.lift_distance_m!=null&&h.lift_distance_m<=150))
-        .sort((a,b)=>(a.lift_distance_m??999999)-(b.lift_distance_m??999999)),
-      langlauf: () => HOTELS.filter(h => (h.loipe_distance_m!=null&&h.loipe_distance_m<=900) || containsAny(lower(h.textBlob),["langlauf","loipe"]))
-        .sort((a,b)=>(a.loipe_distance_m??999999)-(b.loipe_distance_m??999999)),
-      ruhig: () => HOTELS.filter(h => containsAny(lower(h.textBlob),["ruhig","abseits","randlage","natur","still","talende","baad"])),
-      wellness: () => HOTELS.filter(h => containsAny(lower(h.textBlob),["wellness","spa","sauna","pool","massage"])),
+      familie: () => HOTELS.filter(h =>
+        containsAny(lower(h.textBlob || ""), ["familie", "kinder", "familienhotel", "spiel", "kids"]) &&
+        !isAdultsOnly(h)
+      ),
+      ski: () => HOTELS.filter(h =>
+        isYes(h.ski_in_out) ||
+        containsAny(lower(h.textBlob || ""), ["ski-in", "ski in/out", "direkt am lift", "piste direkt"]) ||
+        (h.lift_distance_m != null && h.lift_distance_m <= 150)
+      ).sort((a, b) => (a.lift_distance_m ?? 999999) - (b.lift_distance_m ?? 999999)),
+      langlauf: () => HOTELS.filter(h =>
+        (h.loipe_distance_m != null && h.loipe_distance_m <= 900) ||
+        containsAny(lower(h.textBlob || ""), ["langlauf", "loipe"])
+      ).sort((a, b) => (a.loipe_distance_m ?? 999999) - (b.loipe_distance_m ?? 999999)),
+      ruhig: () => HOTELS.filter(h =>
+        containsAny(lower(h.textBlob || ""), ["ruhig", "abseits", "randlage", "natur", "still", "talende", "baad"])
+      ),
+      wellness: () => HOTELS.filter(h =>
+        containsAny(lower(h.textBlob || ""), ["wellness", "spa", "sauna", "pool", "massage"])
+      ),
     };
 
     // =====================================================================
     // RENDERING
     // =====================================================================
     function featureChips(h) {
-      const c = []; const b = lower(h.textBlob);
+      const c = [];
+      const b = lower(h.textBlob || "");
       if (isYes(h.ski_in_out)) c.push("Ski-in/out");
-      else if (h.lift_distance_m!=null) c.push("Lift "+Math.round(h.lift_distance_m)+"m");
-      if (h.loipe_distance_m!=null) c.push("Loipe "+Math.round(h.loipe_distance_m)+"m");
-      if (containsAny(b,["wellness","spa","sauna"])) c.push("Wellness");
-      if (containsAny(b,["familie","kinder"])) c.push("Familie");
-      return c.slice(0,4);
+      else if (h.lift_distance_m != null) c.push("Lift " + Math.round(h.lift_distance_m) + "m");
+      if (h.loipe_distance_m != null) c.push("Loipe " + Math.round(h.loipe_distance_m) + "m");
+      if (containsAny(b, ["wellness", "spa", "sauna"])) c.push("Wellness");
+      if (containsAny(b, ["familie", "kinder"])) c.push("Familie");
+      if (isAdultsOnly(h)) c.push("Adults only");
+      return c.slice(0, 4);
+    }
+
+    function truncateDescription(text, maxSentences) {
+      if (!text) return "";
+      // Split by sentence-ending punctuation
+      const sentences = text.match(/[^.!?]+[.!?]+/g);
+      if (!sentences) return text;
+      return sentences.slice(0, maxSentences || 4).join(" ").trim();
     }
 
     function cardHtml(h) {
-      const img = getHotelImage(h);
       const desc = h.ai_description || h.short_pitch || h.insider_tip || "";
+      const truncated = truncateDescription(desc, 3);
       const chips = featureChips(h);
       const bookUrl = buildBookingUrl(h);
       const ratingHtml = (h.google_rating && h.google_rating > 0)
-        ? `<div class="card-rating">\u2605 ${h.google_rating.toFixed(1)} <span class="count">\u00B7 ${Math.round(h.google_reviews||0)} Bewertungen</span></div>`
-        : "";
-      const imgHtml = img
-        ? `<img class="card-image" src="${escapeHtml(img)}" alt="${escapeHtml(h.name)}" loading="lazy" onerror="this.style.display='none'"/>`
+        ? `<div class="card-rating">\u2B50 ${h.google_rating.toFixed(1)} <span class="count">\u00B7 ${Math.round(h.google_reviews || 0)} Bewertungen</span></div>`
         : "";
 
       return `<article class="hotel-card">
-        ${imgHtml}
         <div class="card-body">
           <div class="card-location">${escapeHtml([h.ortsteil, h.typ].filter(Boolean).join(" \u00B7 "))}</div>
           <h3 class="card-title">${escapeHtml(h.name)}</h3>
           ${ratingHtml}
-          ${desc ? `<p class="card-quote">${escapeHtml(desc)}</p>` : ""}
-          <div class="card-features">${chips.map(c=>`<span class="feature-chip">${escapeHtml(c)}</span>`).join("")}</div>
+          ${truncated ? `<p class="card-quote">\u201E${escapeHtml(truncated)}\u201C</p>` : ""}
+          <div class="card-features">${chips.map(c => `<span class="feature-chip">${escapeHtml(c)}</span>`).join("")}</div>
           <div class="card-actions">
             <button class="btn-details" data-open="${escapeHtml(h.name)}">Details ansehen</button>
-            <a class="btn-booking" href="${escapeHtml(bookUrl)}" target="_blank" rel="noopener sponsored">Bei Booking &rarr;</a>
+            <a class="btn-booking" href="${escapeHtml(bookUrl)}" target="_blank" rel="noopener sponsored">Booking.com &rarr;</a>
           </div>
         </div>
       </article>`;
@@ -870,16 +1196,24 @@
     }
 
     function renderRecommendations() {
-      if (!HOTELS.length) { el.resultSub.textContent = "Daten werden noch geladen\u2026"; return; }
+      if (!HOTELS.length) {
+        el.resultSub.textContent = "Daten werden noch geladen\u2026";
+        return;
+      }
       const scored = topMatches(prefs, 6);
-      if (!scored.length) { el.resultSub.textContent = "Keine passenden Hotels gefunden."; el.resultCards.innerHTML = ""; return; }
+      if (!scored.length) {
+        el.resultSub.textContent = "Keine passenden Hotels gefunden.";
+        el.resultCards.innerHTML = "";
+        return;
+      }
       el.resultSub.textContent = summarizePrefs();
-      renderCards(el.resultCards, scored.map(s=>s.h));
+      renderCards(el.resultCards, scored.map(s => s.h));
       document.getElementById("empfehlungen").scrollIntoView({ behavior: "smooth", block: "start" });
     }
 
-    function renderCurated(listKey = "alle") {
+    function renderCurated(listKey) {
       if (!HOTELS.length) return;
+      listKey = listKey || "alle";
       const fn = filters[listKey] || filters.alle;
       const hotels = fn().slice(0, 12);
       renderCards(el.curatedCards, hotels);
@@ -889,54 +1223,92 @@
     // MODAL
     // =====================================================================
     function openModal(h) {
-      const img = getHotelImage(h);
-      el.mImageWrap.innerHTML = img
-        ? `<img class="modal-image" src="${escapeHtml(img)}" alt="${escapeHtml(h.name)}" onerror="this.style.display='none'"/>`
-        : "";
       el.mLocation.textContent = [h.ortsteil, h.typ].filter(Boolean).join(" \u00B7 ");
       el.mTitle.textContent = h.name;
 
+      // Rating
       if (h.google_rating && h.google_rating > 0) {
-        el.mRating.innerHTML = `\u2605 ${h.google_rating.toFixed(1)} <span class="count">\u00B7 ${Math.round(h.google_reviews||0)} Bewertungen</span>`;
+        el.mRating.innerHTML = `\u2B50 ${h.google_rating.toFixed(1)} <span class="count">\u00B7 ${Math.round(h.google_reviews || 0)} Bewertungen</span>`;
         el.mRating.classList.remove("hidden");
-      } else { el.mRating.classList.add("hidden"); }
+      } else {
+        el.mRating.classList.add("hidden");
+      }
 
+      // AI Description
       const desc = h.ai_description || h.short_pitch || "";
-      if (desc) { el.mQuote.textContent = desc; el.mQuote.classList.remove("hidden"); }
-      else { el.mQuote.classList.add("hidden"); }
+      if (desc) {
+        el.mQuote.textContent = "\u201E" + desc + "\u201C";
+        el.mQuote.classList.remove("hidden");
+      } else {
+        el.mQuote.classList.add("hidden");
+      }
 
+      // Insider Tip
       if (h.insider_tip) {
-        el.mInsider.innerHTML = `<strong>Insider-Tipp</strong>${escapeHtml(h.insider_tip)}`;
+        el.mInsider.innerHTML = `<strong>\uD83D\uDD0D Insider-Tipp</strong>${escapeHtml(h.insider_tip)}`;
         el.mInsider.classList.remove("hidden");
-      } else { el.mInsider.classList.add("hidden"); }
+      } else {
+        el.mInsider.classList.add("hidden");
+      }
 
+      // Facts grid
       const facts = [];
       if (h.ortsteil) facts.push(["Ortsteil", h.ortsteil]);
-      if (h.nearest_lift_name) facts.push(["N\u00E4chster Lift", h.nearest_lift_name + (h.nearest_lift_type ? " \u00B7 "+h.nearest_lift_type : "")]);
-      if (h.lift_distance_m != null) facts.push(["Lift-Distanz", Math.round(h.lift_distance_m)+" m"]);
-      if (h.loipe_name) facts.push(["Loipe", h.loipe_name]);
-      if (h.loipe_distance_m != null) facts.push(["Loipe-Distanz", Math.round(h.loipe_distance_m)+" m"]);
+      if (h.nearest_lift_name) {
+        facts.push(["N\u00E4chster Lift", h.nearest_lift_name + (h.nearest_lift_type ? " \u00B7 " + h.nearest_lift_type : "")]);
+      }
+      if (h.lift_distance_m != null) facts.push(["Lift-Distanz", Math.round(h.lift_distance_m) + " m"]);
+      if (h.loipe_name) facts.push(["N\u00E4chste Loipe", h.loipe_name]);
+      if (h.loipe_distance_m != null) facts.push(["Loipe-Distanz", Math.round(h.loipe_distance_m) + " m"]);
       if (h.ski_in_out) facts.push(["Ski-in/out", h.ski_in_out]);
-      el.mFacts.innerHTML = facts.map(([l,v])=>`<div class="fact"><div class="fact-label">${escapeHtml(l)}</div><div class="fact-value">${escapeHtml(v)}</div></div>`).join("");
+      if (h.wellness) facts.push(["Wellness", h.wellness]);
+      el.mFacts.innerHTML = facts.map(([l, v]) =>
+        `<div class="fact"><div class="fact-label">${escapeHtml(l)}</div><div class="fact-value">${escapeHtml(v)}</div></div>`
+      ).join("");
 
+      // Website button
       const url = safeUrl(h.website);
       el.mWebsite.onclick = () => { if (url) window.open(url, "_blank", "noopener"); };
+      el.mWebsite.style.display = url ? "" : "none";
+
+      // Booking button
       el.mBooking.href = buildBookingUrl(h);
+
+      // Show modal
       el.modalBackdrop.classList.add("open");
+      document.body.style.overflow = "hidden";
     }
 
-    function closeModal() { el.modalBackdrop.classList.remove("open"); }
+    function closeModal() {
+      el.modalBackdrop.classList.remove("open");
+      document.body.style.overflow = "";
+    }
 
     // =====================================================================
     // WIZARD
     // =====================================================================
     function setStep(step) {
       currentStep = Math.max(1, Math.min(5, step));
-      document.querySelectorAll(".wizard-step").forEach(s => s.classList.toggle("active", +s.dataset.step === currentStep));
-      el.stepNum.textContent = currentStep;
-      el.progressFill.style.width = (currentStep/5*100)+"%";
+      document.querySelectorAll(".wizard-step").forEach(s =>
+        s.classList.toggle("active", +s.dataset.step === currentStep)
+      );
+      document.querySelectorAll(".stepNumSync").forEach(el => el.textContent = currentStep);
+      el.progressFill.style.width = (currentStep / 5 * 100) + "%";
       el.btnBack.disabled = currentStep === 1;
       el.btnBack.style.opacity = currentStep === 1 ? 0.4 : 1;
+      updateSelectedStates();
+    }
+
+    function updateSelectedStates() {
+      // Highlight previously selected choices in current step
+      const activeStep = document.querySelector(".wizard-step.active");
+      if (!activeStep) return;
+      const choices = activeStep.querySelectorAll(".choice");
+      choices.forEach(c => {
+        const key = c.dataset.key;
+        const val = c.dataset.val;
+        c.classList.toggle("selected", prefs[key] === val);
+      });
     }
 
     function resetWizard() {
@@ -945,18 +1317,27 @@
       setStep(1);
       el.resultCards.innerHTML = "";
       el.resultSub.textContent = "Starte den Finder \u2013 dann erscheinen hier passende Hotels.";
+      // Clear all selected states
+      document.querySelectorAll(".choice.selected").forEach(c => c.classList.remove("selected"));
     }
 
     function summarizePrefs() {
-      const m = { party:{family:"Mit Kindern",adults:"Ohne Kinder",egal:"Egal"},
-        ski:{skiinout_yes:"Ski-in/out",skiinout_no:"Kein Ski-in/out",egal:"Ski egal"},
-        focus:{langlauf:"Langlauf",wandern:"Wandern",egal:"Aktivit\u00E4t egal"},
-        wellness:{yes:"Wellness",no:"Ohne Wellness",egal:"Wellness egal"},
-        lage:{ruhig:"Ruhige Lage",zentral:"Zentral",egal:"Lage egal"} };
-      return Object.keys(prefs).filter(k=>prefs[k]).map(k=>m[k][prefs[k]]||prefs[k]).join(" \u00B7 ");
+      const m = {
+        party: { family: "Mit Kindern", adults: "Ohne Kinder", egal: "Egal" },
+        ski: { skiinout_yes: "Ski-in/out", skiinout_no: "Kein Ski-in/out", egal: "Ski egal" },
+        focus: { langlauf: "Langlauf", wandern: "Wandern", egal: "Aktivit\u00E4t egal" },
+        wellness: { yes: "Wellness", no: "Ohne Wellness", egal: "Wellness egal" },
+        lage: { ruhig: "Ruhige Lage", zentral: "Zentral", egal: "Lage egal" },
+      };
+      return Object.keys(prefs)
+        .filter(k => prefs[k])
+        .map(k => m[k][prefs[k]] || prefs[k])
+        .join(" \u00B7 ");
     }
 
-    function allAnswered() { return prefs.party && prefs.ski && prefs.focus && prefs.wellness && prefs.lage; }
+    function allAnswered() {
+      return prefs.party && prefs.ski && prefs.focus && prefs.wellness && prefs.lage;
+    }
 
     // =====================================================================
     // EVENTS
@@ -966,26 +1347,48 @@
         const { key, val } = btn.dataset;
         if (!key || !val) return;
         prefs[key] = val;
+
+        // Update selected state in current step
+        const step = btn.closest(".wizard-step");
+        if (step) {
+          step.querySelectorAll(".choice").forEach(c => c.classList.remove("selected"));
+          btn.classList.add("selected");
+        }
+
         el.wizardSummary.classList.remove("hidden");
         el.wizardSummary.innerHTML = `<strong>Deine Auswahl:</strong> ${summarizePrefs()}`;
-        if (currentStep < 5) setStep(currentStep + 1);
-        else if (allAnswered()) renderRecommendations();
+
+        if (currentStep < 5) {
+          setStep(currentStep + 1);
+        } else if (allAnswered()) {
+          renderRecommendations();
+        }
       });
     });
 
     el.btnBack.addEventListener("click", () => setStep(currentStep - 1));
     el.btnReset.addEventListener("click", resetWizard);
     el.btnShow.addEventListener("click", () => {
-      if (allAnswered()) renderRecommendations();
-      else { el.wizardSummary.classList.remove("hidden"); el.wizardSummary.innerHTML = "<strong>Hinweis:</strong> Bitte beantworte alle Fragen."; }
+      if (allAnswered()) {
+        renderRecommendations();
+      } else {
+        el.wizardSummary.classList.remove("hidden");
+        el.wizardSummary.innerHTML = "<strong>Hinweis:</strong> Bitte beantworte alle Fragen.";
+      }
     });
 
     const scrollTo = id => document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
     el.navStart.addEventListener("click", () => scrollTo("wizard"));
     el.btnStart.addEventListener("click", () => scrollTo("wizard"));
+
+    // Modal events
     el.mClose.addEventListener("click", closeModal);
-    el.modalBackdrop.addEventListener("click", e => { if (e.target === el.modalBackdrop) closeModal(); });
-    window.addEventListener("keydown", e => { if (e.key === "Escape") closeModal(); });
+    el.modalBackdrop.addEventListener("click", e => {
+      if (e.target === el.modalBackdrop) closeModal();
+    });
+    window.addEventListener("keydown", e => {
+      if (e.key === "Escape") closeModal();
+    });
 
     // Curated pills
     el.curatedPills.addEventListener("click", e => {
@@ -1000,21 +1403,59 @@
     // BOOT
     // =====================================================================
     (async function boot() {
-      try {
-        const destName = CONFIG.DESTINATIONS[CURRENT_DEST] || CURRENT_DEST;
-        // Update page title and hero
-        document.querySelector(".hero h1").textContent = `Dein perfektes Hotel in ${destName}`;
-        document.title = `AlpenStay | Hotels in ${destName}`;
+      let sheetHotels = [];
+      let scrapedHotels = [];
+      let sheetLoaded = false;
 
-        HOTELS = await loadHotels(CURRENT_DEST);
-        el.dataStatus.textContent = `${HOTELS.length} Hotels in ${destName} geladen`;
+      // Load all three data sources in parallel
+      const [sheetResult, descriptionsResult, scrapedResult] = await Promise.allSettled([
+        loadSheetJSONP(),
+        loadDescriptions(),
+        loadScrapedHotels(),
+      ]);
+
+      // Process descriptions
+      if (descriptionsResult.status === "fulfilled") {
+        DESCRIPTIONS = descriptionsResult.value || {};
+      }
+
+      // Process scraped fallback
+      if (scrapedResult.status === "fulfilled") {
+        scrapedHotels = scrapedResult.value || [];
+      }
+
+      // Process Google Sheet (primary)
+      if (sheetResult.status === "fulfilled" && sheetResult.value.length > 0) {
+        sheetHotels = sheetResult.value.map(parseSheetHotel).filter(Boolean);
+        sheetLoaded = true;
+      }
+
+      // Build final hotel list
+      if (sheetHotels.length > 0) {
+        // Sheet is primary, merge with scraped for additional hotels
+        HOTELS = mergeHotelSets(sheetHotels, scrapedHotels);
+      } else if (scrapedHotels.length > 0) {
+        // Fallback to scraped data
+        HOTELS = scrapedHotels;
+      }
+
+      // Enrich all hotels with descriptions.json
+      if (Object.keys(DESCRIPTIONS).length > 0) {
+        HOTELS = enrichWithDescriptions(HOTELS, DESCRIPTIONS);
+      }
+
+      // Update status
+      if (HOTELS.length > 0) {
+        const source = sheetLoaded ? "Google Sheet" : "Fallback-Daten";
+        el.dataStatus.textContent = `${HOTELS.length} Hotels geladen (${source})`;
         el.dataStatus.classList.add("success");
         renderCurated("alle");
-        resetWizard();
-      } catch (err) {
-        el.dataStatus.textContent = "Fehler: " + err.message;
+      } else {
+        el.dataStatus.textContent = "Keine Hoteldaten verf\u00FCgbar. Bitte sp\u00E4ter erneut versuchen.";
         el.dataStatus.classList.add("error");
       }
+
+      resetWizard();
     })();
   </script>
 </body>
