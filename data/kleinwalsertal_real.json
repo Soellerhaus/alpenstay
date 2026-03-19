@@ -93,7 +93,7 @@
         "distanz_m": 99
       },
       "ski_in_out": "nein",
-      "ai_description": null,
+      "ai_description": "Das Gästehaus Fritz in Mittelberg punktet mit seiner familiären Atmosphäre und der außergewöhnlich hohen Gästezufriedenheit - die 4,9 Sterne bei 93 Bewertungen sprechen eine klare Sprache. Die Pension liegt nur wenige Gehminuten von der Zafernabahn entfernt, sodass man in 8 Minuten am Sessellift steht und schnell ins Skigebiet kommt. Besonders praktisch für Langläufer ist die unmittelbare Nähe zur Loipe, die praktisch vor der Haustür beginnt. Hier erlebt man authentische Kleinwalsertaler Gastfreundschaft ohne Schnickschnack, dafür mit viel Herzlichkeit und fairem Preis-Leistungs-Verhältnis.",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=G%C3%A4stehaus%20Fritz%20Kleinwalsertal%20Kleinwalsertal"
     },
     {
@@ -123,7 +123,7 @@
         "distanz_m": 548
       },
       "ski_in_out": "nein",
-      "ai_description": null,
+      "ai_description": "Das Haller's Posthotel liegt mitten in Riezlern und punktet mit seiner zentralen Lage - zum Schwandlift sind es nur 4 Gehminuten. Das traditionsreiche Hotel verbindet gemütliche Atmosphäre mit solider Ausstattung, auch wenn man hier nicht direkt an der Piste steht. Die 170 Meter zur nächsten Skipiste sind schnell überwunden, und für Langläufer ist die Egg Loipe in gut 500 Metern Entfernung erreichbar. Ein ehrliches Familienhotel ohne Schnickschnack, das durch seine Lage und das gute Preis-Leistungs-Verhältnis überzeugt.",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=Haller%27s%20Posthotel%20Kleinwalsertal"
     },
     {
@@ -213,7 +213,7 @@
         "distanz_m": 1059
       },
       "ski_in_out": "nein",
-      "ai_description": null,
+      "ai_description": "Das Adler Hotel in Hirschegg punktet mit seiner entspannten Atmosphäre und der soliden 4,5-Sterne-Bewertung von Gästen, die die authentische Gastfreundschaft schätzen. In nur 8 Gehminuten erreicht man die Heubergbahn, während die nächste Piste bereits 224 Meter entfernt liegt - perfekt für alle, die morgens nicht ewig laufen wollen. Langläufer müssen etwa einen Kilometer zur nächsten Loipe zurücklegen, dafür liegt das Hotel ruhig abseits des Trubels. Ein ehrliches, gut geführtes Haus ohne Schnickschnack, das vor allem durch seine Lage und das faire Preis-Leistungs-Verhältnis überzeugt.",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=Adler%20Hotel%20Kleinwalsertal"
     },
     {
@@ -303,7 +303,7 @@
         "distanz_m": 96
       },
       "ski_in_out": "nein",
-      "ai_description": null,
+      "ai_description": "Die Alpen Lodge Riezlern im Kleinwalsertal punktet mit ihrer familiären Atmosphäre und der perfekten Lage für Langläufer - die Egg Loipe liegt praktisch vor der Haustür, nur 96 Meter entfernt. Für Alpinski-Fans ist die Parsennbahn in 6 Gehminuten erreichbar, was morgens einen entspannten Start in den Skitag ermöglicht. Die durchweg begeisterten Gäste (5 Sterne bei 41 Bewertungen) schätzen besonders die herzliche Betreuung und das authentische Lodge-Feeling. Ein echter Geheimtipp für alle, die Gemütlichkeit und kurze Wege zu den Pisten suchen.",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=Alpen%20Lodge%20Riezlern%20Kleinwalsertal"
     },
     {
@@ -363,7 +363,7 @@
         "distanz_m": 398
       },
       "ski_in_out": "nein",
-      "ai_description": null,
+      "ai_description": "Das Haller's Genießerhotel in Mittelberg punktet vor allem mit seiner kulinarischen Ausrichtung und der gemütlichen Atmosphäre - die 4,6 Sterne bei über 300 Google-Bewertungen sprechen hier eine deutliche Sprache. Zum Skifahren müsst ihr zwar 20 Minuten zum Wildentallift laufen, dafür liegt der Skiweg Zaferna Heuberg praktisch vor der Haustür (470m). Wer gerne langlauft, findet schon nach knapp 400 Metern eine Loipe. Ein solides Hotel für Genießer, die Wert auf gutes Essen legen und das Kleinwalsertal abseits der großen Trubel erleben möchten.",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=Haller%27s%20Genie%C3%9Ferhotel%20Kleinwalsertal"
     },
     {
@@ -633,7 +633,7 @@
         "distanz_m": 183
       },
       "ski_in_out": "fast",
-      "ai_description": null,
+      "ai_description": "Das Hotel Gemma in Hirschegg ist ein reines Erwachsenenhotel, das sich perfekt für einen ruhigen Skiurlaub ohne Kindertrubel eignet. Mit nur 61 Metern zur Parsenn-Abfahrt und 552 Metern zum Schlepplift Ski-Kuli Parsenn ist man praktisch direkt am Skigebiet - die Ski können fast vor der Haustür angeschnallt werden. Die sehr guten Google-Bewertungen von 4,5 Sternen sprechen für die entspannte Atmosphäre und den Service. Besonders praktisch: Auch die Loipe liegt nur wenige Gehminuten entfernt, falls man zwischendurch mal Langlaufen möchte.",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=Hotel%20Gemma%20Erwachsenenhotel%20Kleinwalsertal"
     },
     {
@@ -723,7 +723,7 @@
         "distanz_m": 87
       },
       "ski_in_out": "nein",
-      "ai_description": null,
+      "ai_description": "Das Gästehaus Boersch ist eine authentische Familienpension, die von Karin und Michael Jochum mit viel Herzlichkeit geführt wird. Die Lage in Riezlern ist ideal für Langläufer - die Egg Loipe liegt quasi vor der Haustür, nur 87 Meter entfernt. Für Skifahrer bedeutet der 11-minütige Weg zur Parsennbahn zwar einen kurzen Anmarsch, dafür genießt man hier die persönliche Atmosphäre eines echten Familienbetriebs. Mit 4,8 Sternen bei 84 Google-Bewertungen sprechen die Gäste eine klare Sprache über die Qualität der Betreuung.",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=G%C3%A4stehaus%20Boersch%2C%20Familie%20Karin%20und%20Michael%20Jochum%2C%20Eggstra%C3%9Fe%2045%20in%20Riezlern/Kleinwalsertal%20Kleinwalsertal"
     },
     {
@@ -753,7 +753,7 @@
         "distanz_m": 67
       },
       "ski_in_out": "nein",
-      "ai_description": null,
+      "ai_description": "Das Boutique Hotel Herzhof in Riezlern ist ein echter Geheimtipp mit beeindruckenden 4,8 Sternen bei Google – hier stimmt einfach alles. Die Lage ist perfekt für Langläufer, denn die Egg Loipe startet praktisch vor der Haustür, nur 67 Meter entfernt. Für Alpin-Skifahrer bedeutet die 22-minütige Fahrt zur Kanzelwandbahn zwar etwas Anreise, aber dafür erwartet Sie dort das traumhafte Skigebiet am Fellhorn. Das kleine, persönlich geführte Haus punktet offensichtlich mit authentischer Gastlichkeit und Liebe zum Detail – was bei so wenigen, aber durchweg begeisterten Bewertungen klar wird.",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=Boutique%20Hotel%20Herzhof%20Kleinwalsertal"
     },
     {
@@ -783,7 +783,7 @@
         "distanz_m": 203
       },
       "ski_in_out": "nein",
-      "ai_description": null,
+      "ai_description": "Die Frühstückspension Breitach Hus liegt mitten in Riezlern und ist perfekt für alle, die morgens entspannt in den Skitag starten möchten - die Parsennbahn ist nur 3 Gehminuten entfernt. Die kleine, familiär geführte Pension punktet mit einem richtig guten Frühstück und der persönlichen Atmosphäre, die man bei den hervorragenden Google-Bewertungen deutlich spürt. Auch Langläufer kommen auf ihre Kosten, denn zur Egg Loipe sind es nur wenige Schritte. Hier bekommt man authentische Kleinwalsertal-Gastfreundschaft ohne Schnickschnack, dafür mit kurzen Wegen zu allen wichtigen Skigebiets-Zugängen.",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=Fr%C3%BChst%C3%BCckspension%20Breitach%20Hus%20Kleinwalsertal"
     },
     {
@@ -873,7 +873,7 @@
         "distanz_m": 83
       },
       "ski_in_out": "nein",
-      "ai_description": null,
+      "ai_description": "Das LichterBerg in Hirschegg punktet mit seiner sehr ruhigen Lage abseits des Trubels, während die Parsenn-Abfahrt nur 161 Meter entfernt liegt. In 8 Gehminuten erreicht man den Ski-Kuli Parsenn Schlepplift, was für einen entspannten Start in den Skitag sorgt. Die außergewöhnlich guten Bewertungen von 4,9 Sternen bei 21 Gästen sprechen für die persönliche Betreuung und Atmosphäre der kleineren Unterkunft. Langläufer freuen sich über die Loipe praktisch vor der Haustür in nur 83 Metern Entfernung.",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=LichterBerg%20Kleinwalsertal"
     },
     {
@@ -903,7 +903,7 @@
         "distanz_m": 1040
       },
       "ski_in_out": "nein",
-      "ai_description": null,
+      "ai_description": "Das Herzen's Landhaus liegt nur 9 Gehminuten von der Heubergbahn entfernt und bietet sich als gemütliche Familienpension für Skifahrer an, die nicht direkt an der Piste übernachten müssen. Mit 4,7 Sternen bei Google-Bewertungen überzeugt die kleine Pension durch persönlichen Service und ein solides Frühstück. Die Heuberg-Abfahrt ist in etwa 5 Minuten zu Fuß erreichbar, während Langläufer einen kleinen Spaziergang von gut einem Kilometer zur nächsten Loipe einplanen sollten. Eine ehrliche, bodenständige Unterkunft ohne Schnickschnack, die vor allem durch ihre Lage zum Skigebiet punktet.",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=Herzen%27s%20Landhaus%20Pension%20mit%20Fr%C3%BChst%C3%BCck%20Kleinwalsertal"
     },
     {
@@ -933,7 +933,7 @@
         "distanz_m": 183
       },
       "ski_in_out": "nein",
-      "ai_description": null,
+      "ai_description": "Das Landhaus Michl liegt mitten in Riezlern und überzeugt mit seiner familiären Atmosphäre – das spiegeln auch die außergewöhnlich hohen Google-Bewertungen wider. In nur 4 Gehminuten erreicht man die Parsennbahn, während die Parsenn-Abfahrt praktisch vor der Haustür beginnt. Besonders praktisch: Auch die nächste Loipe ist nur knapp 200 Meter entfernt, was sowohl Alpin- als auch Langläufern kurze Wege garantiert. Ein echtes Kleinod für alle, die authentische Gastfreundschaft und optimale Lage zum Skigebiet schätzen.",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=Landhaus%20Michl%20Kleinwalsertal"
     },
     {
@@ -963,7 +963,7 @@
         "distanz_m": 706
       },
       "ski_in_out": "ja",
-      "ai_description": null,
+      "ai_description": "Die Riezler Höhe liegt praktisch direkt an der Schwandlift-Piste – nur 50 Meter trennen Sie vom ersten Schwung des Tages. Als eines der wenigen echten Ski-in/Ski-out Hotels in Riezlern können Sie hier morgens die Skier vor die Tür schnallen und abends direkt bis zur Unterkunft abfahren. Der Schwandlift ist in 4 Minuten zu Fuß erreichbar und bringt Sie ins Skigebiet Ifen. Mit 4,8 Sternen bei Google-Bewertungen scheint die familiäre Atmosphäre und die unschlagbare Lage direkt am Hang die Gäste zu überzeugen.",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=Riezler%20H%C3%B6he%20Kleinwalsertal"
     },
     {
@@ -993,7 +993,7 @@
         "distanz_m": 1035
       },
       "ski_in_out": "ja",
-      "ai_description": null,
+      "ai_description": "Das Haus Bergfelder in Hirschegg ist ein echtes Ski-in/Ski-out Hotel – die Piste Skiweg Zaferna Heuberg liegt praktisch vor der Haustür. Mit nur 20 Metern zur nächsten Abfahrt können Gäste morgens direkt vom Hotel auf die Bretter steigen, während der Schlösslellift in 10 Gehminuten erreichbar ist. Die hervorragenden Google-Bewertungen (4,9 bei 40 Bewertungen) sprechen für die familiäre Atmosphäre und den persönlichen Service. Für Langläufer ist die nächste Loipe allerdings etwas weiter entfernt (gut 1 Kilometer).",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=Haus%20Bergfelder%20Kleinwalsertal"
     },
     {
@@ -1023,7 +1023,7 @@
         "distanz_m": 781
       },
       "ski_in_out": "fast",
-      "ai_description": null,
+      "ai_description": "Das Gästehaus Felder liegt traumhaft direkt am Hubertuslift in Hirschegg - nach nur 3 Gehminuten stehen Sie am Schlepplift und die Hubertus-Piste ist sogar noch näher. Diese familiäre Pension bietet echtes Ski-in/out-Erlebnis, ohne die üblichen Hotelpreise dafür zahlen zu müssen. Die Gastgeber der Familie Lang-Steudler schaffen eine herzliche Atmosphäre, die sich in den durchweg begeisterten Gästebewertungen widerspiegelt. Perfekt für alle, die unkompliziert wohnen und morgens als erste auf der Piste sein möchten.",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=G%C3%A4stehaus%20Felder%20-%20Lang-Steudler%20KG%20Kleinwalsertal"
     },
     {
@@ -1053,7 +1053,7 @@
         "distanz_m": 731
       },
       "ski_in_out": "fast",
-      "ai_description": null,
+      "ai_description": "Der Berghof in Hirschegg punktet mit seiner fantastischen Lage nur 6 Gehminuten vom Hubertuslift entfernt - praktischer geht's kaum für Skifahrer. Mit einer Piste bereits in 100 Metern Entfernung ist man quasi direkt am Geschehen, ohne jedoch vom Trubel gestört zu werden. Die Gäste schätzen besonders die familiäre Atmosphäre und das gute Preis-Leistungs-Verhältnis, wie die soliden 4.4 Sterne bei Google zeigen. Für Langläufer ist die nächste Loipe zwar etwas weiter entfernt, dafür entschädigt die ruhige Ortsrandlage mit schönem Bergblick.",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=Der%20Berghof%20Kleinwalsertal"
     },
     {
@@ -1083,7 +1083,7 @@
         "distanz_m": 1322
       },
       "ski_in_out": "nein",
-      "ai_description": null,
+      "ai_description": "Der Gasthof Hirsch in Hirschegg ist ein traditioneller Alpengasthof mit ausgezeichnetem Ruf - die 4,7 Sterne bei Google sprechen für sich. In nur 8 Gehminuten erreicht man den Schlösslellift, während die nächste Piste sogar nur 184 Meter entfernt liegt. Für Langläufer ist die nächste Loipe etwa 1,3 Kilometer entfernt, was einen schönen Spaziergang durch das Dorf bedeutet. Hier erlebt man authentische Tiroler Gastfreundschaft ohne den Trubel der großen Skihotels, aber mit perfekter Anbindung ans Skigebiet.",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=Gasthof%20Hirsch%20Kleinwalsertal"
     },
     {
@@ -1263,7 +1263,7 @@
         "distanz_m": 331
       },
       "ski_in_out": "fast",
-      "ai_description": null,
+      "ai_description": "Die alpen select apartments liegen praktisch direkt im Skigebiet – nur 92 Meter trennen Sie von der Piste und in 4 Gehminuten erreichen Sie die Zafernabahn. Die modernen Ferienwohnungen bieten echten Komfort mit hochwertiger Ausstattung und die meisten haben einen schönen Balkon mit Bergblick. Besonders praktisch ist die Lage in Mittelberg: Sie können morgens quasi vor der Haustür in die Ski steigen und abends gemütlich zur Unterkunft zurückfahren. Die durchweg positiven Bewertungen (4.8 Sterne) sprechen für sich – hier stimmt das Preis-Leistungs-Verhältnis und der Service.",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=alpen%20select%20apartments%2A%2A%2A%2A%20Kleinwalsertal%20Kleinwalsertal"
     },
     {
@@ -1323,7 +1323,7 @@
         "distanz_m": 335
       },
       "ski_in_out": "nein",
-      "ai_description": null,
+      "ai_description": "Die Pension Gatterhof in Riezlern punktet mit ihrer familiären Atmosphäre und der außergewöhnlich hohen Gästezufriedenheit - 4,9 Sterne bei über 100 Bewertungen sprechen eine klare Sprache. Zum Kesslerlift sind es entspannte 8 Gehminuten, die Kessler-Piste liegt nur 326 Meter entfernt, sodass man morgens schnell auf der Piste steht. Auch Langläufer kommen auf ihre Kosten: Die Egg Loipe ist in wenigen Minuten erreichbar. Eine solide, herzlich geführte Unterkunft, die durch ihre Lage und das authentische Ambiente überzeugt - ohne den Trubel direkt an der Talstation.",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=Pension%20Gatterhof%20Kleinwalsertal"
     },
     {
@@ -1353,7 +1353,7 @@
         "distanz_m": 21
       },
       "ski_in_out": "nein",
-      "ai_description": null,
+      "ai_description": "Das Gästehaus Susanne in Mittelberg ist eine kleine, familiär geführte Pension mit perfekten Google-Bewertungen, die ihre 44 Gäste restlos begeistert hat. Die Unterkunft liegt nur 3 Gehminuten vom Jedermannlift entfernt und bietet damit einen super Zugang zum Skigebiet, ohne direkt im Trubel zu stehen. Besonders praktisch für Langläufer: Die nächste Loipe ist gerade mal 21 Meter entfernt - fast vor der Haustür. Hier erwartet euch authentische Gastfreundschaft in ruhiger Lage, perfekt für alle, die das Kleinwalsertal abseits des Massentourismus erleben möchten.",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=G%C3%A4stehaus%20Susanne%20Kleinwalsertal"
     },
     {
@@ -1383,7 +1383,7 @@
         "distanz_m": 578
       },
       "ski_in_out": "fast",
-      "ai_description": null,
+      "ai_description": "Das Gästehaus Daheim liegt praktisch direkt an der Schwandlift-Piste in Riezlern - nur 144 Meter bis zum ersten Schwung und 169 Meter bis zum Bügellift. Familie Matt führt diese gemütliche Pension mit der persönlichen Note, die man nur in Familienbetrieben findet, was sich auch in den hervorragenden 4,8 Sternen bei Google widerspiegelt. Hier kannst du morgens quasi aus der Haustür auf die Ski steigen, ohne lästige Transfers oder Parkplatzsuche. Perfekt für alle, die authentische Gastfreundschaft und echtes Ski-in/Ski-out-Gefühl schätzen.",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=G%C3%A4stehaus%20Daheim%20-%20Familie%20Matt%20Kleinwalsertal"
     },
     {
@@ -1413,7 +1413,7 @@
         "distanz_m": 114
       },
       "ski_in_out": "nein",
-      "ai_description": null,
+      "ai_description": "Das Gästehaus Sonnenhof ist eine gemütliche Familienpension mitten in Mittelberg, die von Familie Birschel mit persönlicher Herzlichkeit geführt wird. Mit nur wenigen Gehminuten zur nächsten Loipe und einem kurzen Spaziergang zur Zafernabahn ist die Lage ideal für Langläufer und entspannte Skifahrer, die keine Ski-in/out-Situation brauchen. Die durchweg positiven Gästebewertungen sprechen für die familiäre Atmosphäre und das authentische Kleinwalsertal-Erlebnis abseits der großen Hotelketten. Perfekt für alle, die echte Gastfreundschaft und eine ruhige Lage mit guter Anbindung an die Pisten schätzen.",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=G%C3%A4stehaus%20Sonnenhof%20%28Fam.%20Birschel%29%20Kleinwalsertal"
     },
     {
@@ -1443,7 +1443,7 @@
         "distanz_m": 310
       },
       "ski_in_out": "fast",
-      "ai_description": null,
+      "ai_description": "Das Haus Bergidyll von Frau Mayer liegt direkt am Wildentallift in Mittelberg - nur 46 Meter vom Tellerlift entfernt, sodass Sie praktisch vor der Haustür auf die Skier steigen können. Die kleine, familiär geführte Unterkunft punktet mit ihrer unschlagbaren Lage zur Wildentalpiste (68m) und wird von Gästen mit 4,6 Sternen bewertet. Hier bekommen Sie authentische Gastfreundschaft ohne Schnickschnack, dafür mit direktem Zugang zu den Pisten. Für Langläufer ist die nächste Loipe allerdings etwa 300 Meter entfernt.",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=Haus%20Bergidyll%20-%20Frau%20Hildegard%20Mayer%20Kleinwalsertal"
     },
     {
@@ -1473,7 +1473,7 @@
         "distanz_m": 743
       },
       "ski_in_out": "nein",
-      "ai_description": null,
+      "ai_description": "Das Gästehaus Paradies ist eine kleine, familiär geführte Pension mit hervorragenden Gästebewertungen, die den persönlichen Service und die gemütliche Atmosphäre widerspiegeln. Skifahrer erreichen den Schlösslellift in 17 Minuten zu Fuß, was für eine ruhige Lage abseits des Trubels spricht. Die nächste Piste liegt nur 275 Meter entfernt, während Langläufer etwa 750 Meter zur Loipe zurücklegen müssen. Hier erwartet Gäste authentische Gastfreundschaft in einer entspannten Umgebung, perfekt für alle, die Wert auf persönliche Betreuung und eine ruhige Basis für ihre Bergaktivitäten legen.",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=G%C3%A4stehaus%20Paradies%20Kleinwalsertal"
     },
     {
@@ -1533,7 +1533,7 @@
         "distanz_m": 201
       },
       "ski_in_out": "nein",
-      "ai_description": null,
+      "ai_description": "Die Pension Kleinwalsertal in Mittelberg ist ein kleiner, privat geführter Betrieb mit nur wenigen aber durchweg positiven Gästebewertungen. Die Lage ist ideal für Langläufer, da eine Loipe praktisch vor der Haustür liegt, während die nächste Skipiste nur einen kurzen Spaziergang entfernt ist. Für Alpinfahrer bedeutet das allerdings einen längeren Anfahrtsweg zu den Bergbahnen - der Muttelberglift ist über eine Stunde zu Fuß entfernt. Hier bekommt man authentische Kleinwalsertaler Gastfreundschaft ohne Schnickschnack, dafür aber mit direktem Zugang zur Loipe.",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=Pension%20Kleinwalsertal%20Privatvermietung%20Kleinwalsertal"
     },
     {
@@ -1593,7 +1593,7 @@
         "distanz_m": 56
       },
       "ski_in_out": "nein",
-      "ai_description": null,
+      "ai_description": "Das Walmendinger Haus liegt mitten in Hirschegg und ist ein solider Ausgangspunkt für Skifahrer, die das Kleinwalsertal erkunden wollen. Mit nur 15 Gehminuten zum Ski-Kuli Parsenn kommst du schnell auf die Piste, auch wenn es kein direkter Ski-in/out Zugang ist. Die Langläufer haben es noch einfacher - die nächste Loipe ist praktisch vor der Haustür in nur 56 Metern Entfernung. Die Google-Bewertung von 4.3 bei 56 Rezensionen spricht für eine ordentliche Unterkunft ohne große Überraschungen, aber mit dem Charme eines traditionellen Alpenhauses.",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=Walmendinger%20Haus%20Kleinwalsertal"
     },
     {
@@ -1623,7 +1623,7 @@
         "distanz_m": 217
       },
       "ski_in_out": "fast",
-      "ai_description": null,
+      "ai_description": "Das Haus Annelies in Riezlern ist ein echter Geheimtipp für alle, die ihre Skier praktisch vor der Haustür anschnallen wollen. Mit nur 119 Metern zur Parsenn-Abfahrt und 387 Metern zur Parsennbahn erlebt man hier echtes Ski-in/Ski-out-Feeling, ohne die üblichen Hotelpreise zu zahlen. Die familiär geführten Ferienwohnungen bieten die Flexibilität einer eigenen Küche und trotzdem den Komfort eines gut geführten Betriebs. Bei 4.9 Sternen aus 33 Google-Bewertungen spricht die Qualität für sich - hier stimmt einfach das Preis-Leistungs-Verhältnis.",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=Haus%20Annelies%20-%20Ferienwohnungen%20%26%20Zimmer%20Kleinwalsertal"
     },
     {
@@ -1653,7 +1653,7 @@
         "distanz_m": 574
       },
       "ski_in_out": "fast",
-      "ai_description": null,
+      "ai_description": "Das Gästehaus Brugger in Riezlern ist eine gemütliche Familienpension, die praktisch direkt an der Piste liegt - der Kesslerlift ist nur 122 Meter entfernt und in einer Minute zu Fuß erreichbar. Die Lage ist ideal für Skifahrer, da man quasi vor der Haustür auf die Ski steigen kann und der Kessler-Hang nur knapp 100 Meter entfernt beginnt. Die sehr guten Google-Bewertungen (4.6 Sterne) sprechen für die herzliche Betreuung und das gute Preis-Leistungs-Verhältnis. Für Langläufer ist die Egg Loipe in etwa 6-7 Gehminuten erreichbar.",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=G%C3%A4stehaus%20Brugger%20Kleinwalsertal"
     },
     {
@@ -1683,7 +1683,7 @@
         "distanz_m": 810
       },
       "ski_in_out": "fast",
-      "ai_description": null,
+      "ai_description": "Das Gästehaus Schönblick liegt in ruhiger Lage in Hirschegg und wird von der Familie Jochum mit viel persönlicher Aufmerksamkeit geführt. Mit nur wenigen Minuten Fußweg zur Heubergbahn und direktem Zugang zu den Skiabfahrten ist die Lage für Skifahrer nahezu perfekt - man kann praktisch von der Haustür auf die Piste. Die familiäre Atmosphäre und die außergewöhnlich guten Gästebewertungen sprechen für eine herzliche Betreuung abseits des großen Hoteltrubels. Wer eine gemütliche, authentische Unterkunft mit kurzen Wegen zum Skigebiet sucht, ist hier goldrichtig.",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=G%C3%A4stehaus%20Sch%C3%B6nblick%20-%20Familie%20Jochum%20Kleinwalsertal"
     },
     {
@@ -1713,7 +1713,7 @@
         "distanz_m": 69
       },
       "ski_in_out": "nein",
-      "ai_description": null,
+      "ai_description": "Das Gästehaus Mathies in Mittelberg punktet mit seiner familiären Atmosphäre und der ausgezeichneten Bewertung von 4,8 Sternen - hier stimmt einfach der Service. Die Lage ist perfekt für Langläufer, denn zur nächsten Loipe sind es nur wenige Schritte, während Alpin-Skifahrer einen kurzen 9-minütigen Spaziergang zur Zafernabahn in Kauf nehmen müssen. Die Pension bietet authentische Gemütlichkeit abseits des Trubels, ideal für alle, die das echte Kleinwalsertal erleben möchten. Wer Wert auf persönliche Betreuung und faire Preise legt, ist hier goldrichtig.",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=G%C3%A4stehaus%20Mathies%20Kleinwalsertal"
     },
     {
@@ -1743,7 +1743,7 @@
         "distanz_m": 518
       },
       "ski_in_out": "nein",
-      "ai_description": null,
+      "ai_description": "Das Gästehaus Amely liegt mitten in Riezlern, nur 2 Gehminuten vom Schwandlift entfernt - perfekt für Familien mit Kindern, die das Skifahren lernen wollen. Die herzliche Gastgeberin Kathrin Porep führt ihre kleine Pension mit viel persönlicher Aufmerksamkeit, was sich in den außergewöhnlich guten 4,9-Sterne-Bewertungen widerspiegelt. Auch Langläufer kommen auf ihre Kosten: Die Egg Loipe ist in wenigen Minuten zu Fuß erreichbar. Hier bekommst du authentische Kleinwalser Gastfreundschaft ohne Schnickschnack, dafür mit dem Charme eines echten Familienprojekts.",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=G%C3%A4stehaus%20Amely%2C%20Kathrin%20Porep%20Kleinwalsertal"
     },
     {
@@ -1773,7 +1773,7 @@
         "distanz_m": 83
       },
       "ski_in_out": "nein",
-      "ai_description": null,
+      "ai_description": "Das Haus Weissert in Riezlern punktet mit seiner ruhigen Lage und dem freundlichen, familiären Service, was sich auch in den durchweg positiven Gästebewertungen widerspiegelt. Besonders praktisch ist die Nähe zur Egg Loipe, die praktisch vor der Haustür beginnt – perfekt für Langläufer, die morgens direkt in die Spur einsteigen möchten. Für Alpinskifahrer bedeutet die 20-minütige Fahrt zur Kanzelwandbahn zwar etwas Anfahrt, dafür erreicht man aber eines der schönsten Skigebiete im Kleinwalsertal. Die Unterkunft eignet sich besonders für Gäste, die eine persönliche Atmosphäre schätzen und gerne verschiedene Wintersportarten ausprobieren möchten.",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=Haus%20Weissert%20Kleinwalsertal"
     },
     {
@@ -1803,7 +1803,7 @@
         "distanz_m": 58
       },
       "ski_in_out": "nein",
-      "ai_description": null,
+      "ai_description": "Der Bergblick in Riezlern ist ein traditioneller Gasthof mit familiärer Atmosphäre, der durch seine authentische Alpenküche und herzliche Gastfreundschaft besticht. Die Lage ist ideal für Langläufer - die nächste Loipe liegt praktisch vor der Haustür, nur 58 Meter entfernt. Für Alpinski-Fans bedeutet es allerdings eine 36-minütige Fahrt zum Schwandlift, was den Gasthof eher zu einer ruhigen Alternative abseits der Pisten macht. Mit 4,7 Sternen bei 375 Google-Bewertungen schätzen Gäste besonders die gemütliche Stube und die bodenständige Küche.",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=Bergblick%20-%20Der%20Gasthof%20Kleinwalsertal"
     },
     {
@@ -1863,7 +1863,7 @@
         "distanz_m": 135
       },
       "ski_in_out": "nein",
-      "ai_description": null,
+      "ai_description": "Der Gasthof Sonnwinkl in Mittelberg punktet mit seiner authentischen Atmosphäre und der beeindruckenden Bewertung von 4,8 Sternen - ein Zeichen für echte Gastfreundschaft im Kleinwalsertal. Die Walmendingerhornbahn ist in nur 9 Gehminuten erreichbar, während Langläufer die Loipe praktisch vor der Haustür haben. Besonders praktisch: Skifahrer erreichen den Skiweg Heuberg Zaferna in wenigen Minuten zu Fuß. Ein traditioneller Gasthof, der durch seine zentrale aber ruhige Lage in Mittelberg überzeugt und als perfekte Basis für alle Winteraktivitäten dient.",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=Gasthof%20Sonnwinkl%20Kleinwalsertal"
     },
     {
@@ -1893,7 +1893,7 @@
         "distanz_m": 242
       },
       "ski_in_out": "fast",
-      "ai_description": null,
+      "ai_description": "Das Wirtshaus Hoheneck liegt praktisch direkt an der Piste in Mittelberg - in nur 142 Metern erreicht man den Skiweg Mittelberg Zaferna und die Zafernabahn ist keine 5 Gehminuten entfernt. Das traditionelle Wirtshaus punktet mit seiner authentischen Atmosphäre und der unschlagbaren Lage für Skifahrer, die morgens quasi vor die Haustür schnallen können. Mit 4,6 Sternen bei über 900 Google-Bewertungen scheinen die Gäste besonders die herzliche Gastfreundschaft und die solide Küche zu schätzen. Wer unkomplizierte Gemütlichkeit direkt am Hang sucht, ist hier goldrichtig.",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=Wirtshaus%20Hoheneck%20Kleinwalsertal"
     },
     {

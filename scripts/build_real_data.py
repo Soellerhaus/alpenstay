@@ -410,7 +410,7 @@ def generate_ai_descriptions(hotels, existing_descriptions):
 
         try:
             response = client.messages.create(
-                model="claude-3-5-haiku-latest",
+                model="claude-sonnet-4-20250514",
                 max_tokens=300,
                 system=system_prompt,
                 messages=[{"role": "user", "content": prompt}]
