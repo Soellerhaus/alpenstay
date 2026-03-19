@@ -4860,7 +4860,7 @@
       "website": "http://www.soellerhaus.at/",
       "google_rating": 4.7,
       "google_reviews": 175,
-      "google_editorial": "Relaxed guesthouse offering a playground & a basketball court, as well as a patio & a piano lounge.",
+      "google_editorial": "",
       "naechste_bergbahn": {
         "name": "Schöntallift",
         "typ": "Buegellift",
@@ -4868,14 +4868,14 @@
         "gehzeit_min": 6
       },
       "naechste_piste": {
-        "name": "Unbenannt",
-        "distanz_m": 63
+        "name": "Schöntallift-Piste",
+        "distanz_m": 10
       },
       "naechste_loipe": {
         "name": "Unbenannt",
         "distanz_m": 515
       },
-      "ski_in_out": "fast",
+      "ski_in_out": "ja",
       "wellness": false,
       "sauna": false,
       "pool": false,
@@ -4885,9 +4885,9 @@
       "haustiere": null,
       "parkplatz": true,
       "preis_kategorie": "budget",
-      "besonderheiten": "Gästehaus mit Spielplatz, Basketballplatz und Klavierlounge nahe Skipisten",
-      "review_highlights": "Ideale Lage, gemütliche Atmosphäre, gutes Essen und bezahlbare Preise",
-      "ai_description": "Das Söllerhaus in Hirschegg ist ein entspanntes Gästehaus mit unschlagbarer Lage - nur 6 Gehminuten zum Schöntallift und quasi direkt an der Piste. Die gemütliche Atmosphäre mit Klavierlounge und die sehr guten 4,7 Sterne bei Google sprechen für sich, während Familien den hauseigenen Spielplatz und Basketballplatz schätzen. Besonders beliebt bei Studenten und preisbewussten Gästen, die trotzdem nicht auf Komfort verzichten möchten. Mit solider Verpflegung und der perfekten Kombination aus günstigen Preisen und idealer Ski-Nähe ist es ein echter Geheimtipp für unkomplizierte Kleinwalsertal-Aufenthalte.",
+      "besonderheiten": "Gemütliches Gästehaus direkt an der Piste mit Klavierlounge und Spielplatz",
+      "review_highlights": "Gäste loben die perfekte Lage direkt an der Piste, die gemütliche Atmosphäre und das gute Preis-Leistungs-Verhältnis",
+      "ai_description": "Das Söllerhaus in Hirschegg ist ein echtes Ski-in/Ski-out-Erlebnis — die Piste liegt buchstäblich 10 Meter vor der Haustür. Das gemütliche Gästehaus mit Klavierlounge und Spielplatz bietet solides Frühstück und eine familiäre Atmosphäre. Mit 4,7 Sternen bei Google und nur 6 Gehminuten zum Schöntallift ist es ein ehrlicher Geheimtipp für alle, die unkomplizierten Skiurlaub in perfekter Lage suchen.",
       "booking_url": "https://www.booking.com/searchresults.de.html?ss=S%C3%B6llerhaus%20Kleinwalsertal",
       "validated": true
     },
