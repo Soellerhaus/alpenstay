@@ -671,7 +671,7 @@
         Hotel finden
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
       </button>
-      <div class="status-bar" id="dataStatus" style="display:none"></div>
+      <!-- Status removed - no debug info for visitors -->
     </div>
   </section>
 
@@ -883,8 +883,8 @@
       </div>
       <div class="footer-links">
         <a href="#about">&Uuml;ber alpenstay</a>
-        <a href="#">Impressum</a>
-        <a href="#">Datenschutz</a>
+        <a href="#" onclick="openLegalModal('impressum');return false;">Impressum</a>
+        <a href="#" onclick="openLegalModal('datenschutz');return false;">Datenschutz</a>
       </div>
     </div>
     <div class="footer-disclosure">
@@ -893,6 +893,116 @@
     </div>
     <div class="footer-copy">&copy; 2025&ndash;2026 AlpenStay</div>
   </footer>
+
+  <!-- ================================================================
+       LEGAL MODAL (Impressum / Datenschutz)
+       ================================================================ -->
+  <div class="modal-backdrop" id="legalBackdrop" style="display:none">
+    <div class="modal" style="max-width:700px;">
+      <div class="modal-close-row">
+        <button class="modal-close" onclick="document.getElementById('legalBackdrop').style.display='none'">&times; Schlie&szlig;en</button>
+      </div>
+      <div class="modal-body" id="legalContent" style="padding:2rem;line-height:1.8;font-size:0.9375rem;color:var(--text-secondary);"></div>
+    </div>
+  </div>
+  <script>
+  const LEGAL = {
+    impressum: `
+      <h2 style="color:var(--text-primary);margin-bottom:1rem;">Impressum</h2>
+      <p><strong>Angaben gem&auml;&szlig; &sect; 5 ECG (E-Commerce-Gesetz)</strong></p>
+      <p>
+        Claudio Reto Scheiwiller<br>
+        Sch&ouml;ntalweg 10<br>
+        6992 Hirschegg<br>
+        &Ouml;sterreich
+      </p>
+      <p>
+        <strong>Kontakt:</strong><br>
+        E-Mail: info@alpenstay.de<br>
+        Telefon: +43 676 3326819
+      </p>
+      <p>
+        <strong>Umsatzsteuer-ID:</strong><br>
+        Gem&auml;&szlig; Kleinunternehmerregelung wird keine Umsatzsteuer ausgewiesen.
+      </p>
+      <h3 style="color:var(--text-primary);margin:1.5rem 0 0.75rem;">Haftungsausschluss</h3>
+      <p>
+        Die Inhalte dieser Website werden mit gr&ouml;&szlig;tm&ouml;glicher Sorgfalt erstellt.
+        Der Anbieter &uuml;bernimmt jedoch keine Gew&auml;hr f&uuml;r die Richtigkeit, Vollst&auml;ndigkeit
+        und Aktualit&auml;t der bereitgestellten Inhalte. Die Nutzung der Inhalte erfolgt auf eigene Gefahr.
+      </p>
+      <h3 style="color:var(--text-primary);margin:1.5rem 0 0.75rem;">Affiliate-Links</h3>
+      <p>
+        Diese Website enth&auml;lt Affiliate-Links zu Booking.com und anderen Partnern.
+        Bei einer Buchung &uuml;ber diese Links erhalten wir eine kleine Provision.
+        F&uuml;r den Nutzer entstehen dadurch keine Mehrkosten.
+        Unsere Empfehlungen werden davon nicht beeinflusst.
+      </p>
+      <h3 style="color:var(--text-primary);margin:1.5rem 0 0.75rem;">Datenquellen</h3>
+      <p>
+        Hotel-Informationen stammen aus &ouml;ffentlich zug&auml;nglichen Quellen:
+        Google Places API (Bewertungen, Adressen), OpenStreetMap (Ski-Distanzen, Bergbahnen)
+        und den Webseiten der Hotels. KI-gest&uuml;tzte Beschreibungen basieren auf diesen
+        &ouml;ffentlichen Daten und werden als solche gekennzeichnet.
+      </p>
+    `,
+    datenschutz: `
+      <h2 style="color:var(--text-primary);margin-bottom:1rem;">Datenschutzerkl&auml;rung</h2>
+      <h3 style="color:var(--text-primary);margin:1.5rem 0 0.75rem;">1. Verantwortlicher</h3>
+      <p>
+        Claudio Reto Scheiwiller<br>
+        Sch&ouml;ntalweg 10, 6992 Hirschegg, &Ouml;sterreich<br>
+        E-Mail: info@alpenstay.de
+      </p>
+      <h3 style="color:var(--text-primary);margin:1.5rem 0 0.75rem;">2. Erhobene Daten</h3>
+      <p>
+        Diese Website erhebt und verarbeitet folgende Daten:<br>
+        &bull; <strong>Server-Logfiles:</strong> IP-Adresse, Browsertyp, Zugriffszeit (durch den Hosting-Anbieter Vercel)<br>
+        &bull; <strong>Google Analytics 4:</strong> Anonymisierte Nutzungsstatistiken (Seitenaufrufe, Verweildauer, Ger&auml;tetyp)
+      </p>
+      <h3 style="color:var(--text-primary);margin:1.5rem 0 0.75rem;">3. Google Analytics</h3>
+      <p>
+        Diese Website nutzt Google Analytics 4 (Measurement ID: G-TQYZD31SX8) zur Analyse des Nutzerverhaltens.
+        Google Analytics verwendet Cookies. Die durch das Cookie erzeugten Informationen &uuml;ber Ihre
+        Benutzung dieser Website werden an einen Server von Google in den USA &uuml;bertragen und dort gespeichert.
+        Die IP-Anonymisierung ist aktiviert, sodass Ihre IP-Adresse von Google innerhalb der EU gek&uuml;rzt wird.
+      </p>
+      <p>
+        Sie k&ouml;nnen die Erfassung durch Google Analytics verhindern, indem Sie
+        das <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener" style="color:var(--accent-primary);">Browser-Add-on zur Deaktivierung von Google Analytics</a> installieren.
+      </p>
+      <h3 style="color:var(--text-primary);margin:1.5rem 0 0.75rem;">4. Cookies</h3>
+      <p>
+        Diese Website verwendet technisch notwendige Cookies sowie Analyse-Cookies (Google Analytics).
+        Sie k&ouml;nnen Cookies in Ihren Browsereinstellungen jederzeit deaktivieren.
+      </p>
+      <h3 style="color:var(--text-primary);margin:1.5rem 0 0.75rem;">5. Externe Links</h3>
+      <p>
+        Diese Website enth&auml;lt Links zu externen Webseiten (Booking.com, Hotel-Webseiten).
+        F&uuml;r deren Inhalte und Datenschutzpraktiken sind die jeweiligen Betreiber verantwortlich.
+      </p>
+      <h3 style="color:var(--text-primary);margin:1.5rem 0 0.75rem;">6. Ihre Rechte</h3>
+      <p>
+        Gem&auml;&szlig; DSGVO haben Sie das Recht auf Auskunft, Berichtigung, L&ouml;schung und
+        Einschr&auml;nkung der Verarbeitung Ihrer personenbezogenen Daten.
+        Kontaktieren Sie uns unter info@alpenstay.de.
+      </p>
+      <h3 style="color:var(--text-primary);margin:1.5rem 0 0.75rem;">7. Hosting</h3>
+      <p>
+        Diese Website wird bei Vercel Inc. (San Francisco, USA) gehostet.
+        Vercel verarbeitet Zugriffsdaten (IP-Adresse, Zugriffszeit) im Rahmen der Bereitstellung der Website.
+        Weitere Informationen: <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener" style="color:var(--accent-primary);">Vercel Datenschutz</a>.
+      </p>
+    `
+  };
+  function openLegalModal(type) {
+    document.getElementById('legalContent').innerHTML = LEGAL[type] || '';
+    document.getElementById('legalBackdrop').style.display = 'flex';
+  }
+  document.getElementById('legalBackdrop').addEventListener('click', function(e) {
+    if (e.target === this) this.style.display = 'none';
+  });
+  </script>
 
   <!-- ================================================================
        MODAL
@@ -1718,19 +1828,12 @@
         }
 
         if (HOTELS.length > 0) {
-          el.dataStatus.textContent = `${HOTELS.length} Hotels geladen (Google Places + OSM)`;
-          el.dataStatus.classList.add("success");
           updateLocationCounts();
           updateMapMarkers(HOTELS);
           renderCurated("alle");
-        } else {
-          el.dataStatus.textContent = "Keine Hoteldaten gefunden.";
-          el.dataStatus.classList.add("error");
         }
       } catch (e) {
         console.error("Fehler beim Laden:", e);
-        el.dataStatus.textContent = "Fehler beim Laden der Hoteldaten: " + e.message;
-        el.dataStatus.classList.add("error");
       }
 
       resetWizard();
