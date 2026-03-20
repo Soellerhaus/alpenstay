@@ -45,7 +45,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preconnect" href="https://unpkg.com" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <!-- Leaflet removed - map not on homepage -->
   <style>
     /* ================================================================
        CSS VARIABLES & RESET
@@ -797,11 +797,11 @@
   <!-- ================================================================
        LOCATION NAVIGATION (filter by Ortsteil)
        ================================================================ -->
-  <section id="karte" class="map-section" aria-label="Karte und Ortsteile">
+  <section id="karte" class="map-section" aria-label="Hotels nach Ort" style="padding:2rem 0 1rem;">
     <div class="container">
       <div class="section-header" style="margin-bottom:0">
         <h2>Hotels nach Ort</h2>
-        <p>W&auml;hle einen Ortsteil oder sieh dir alle Hotels auf der Karte an.</p>
+        <p>W&auml;hle einen Ortsteil oder sieh dir alle Hotels an.</p>
       </div>
       <div class="location-nav" id="locationNav">
         <button class="location-pill active" data-location="alle">Alle</button>
@@ -810,9 +810,6 @@
         <button class="location-pill" data-location="Mittelberg">Mittelberg</button>
         <button class="location-pill" data-location="Baad">Baad</button>
       </div>
-
-      <!-- Leaflet Map -->
-      <div id="hotelMap"></div>
     </div>
   </section>
 
@@ -1149,7 +1146,7 @@
   <!-- ================================================================
        LEAFLET JS
        ================================================================ -->
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <!-- Leaflet JS removed -->
 
   <!-- ================================================================
        JAVASCRIPT
@@ -1388,14 +1385,7 @@
     // MAP (Leaflet.js)
     // =====================================================================
     function initMap() {
-      map = L.map('hotelMap', {
-        scrollWheelZoom: false,
-      }).setView(CONFIG.MAP_CENTER, CONFIG.MAP_ZOOM);
-
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-        maxZoom: 18,
-      }).addTo(map);
+      // Map removed from homepage
     }
 
     function createMarkerIcon(color) {
@@ -1472,13 +1462,6 @@
         filtered = HOTELS.filter(h => isBaad(h));
       } else {
         filtered = HOTELS.filter(h => h.ortsteil === location && !isBaad(h));
-      }
-
-      // Update map
-      if (map) {
-        const view = CONFIG.LOCATION_VIEWS[location] || CONFIG.LOCATION_VIEWS.alle;
-        map.flyTo(view.center, view.zoom, { duration: 0.8 });
-        updateMapMarkers(filtered);
       }
 
       // Update curated cards to show filtered hotels
