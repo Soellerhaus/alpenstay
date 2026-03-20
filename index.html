@@ -599,6 +599,85 @@
     @media (min-width: 769px) and (max-width: 1023px) {
       .cards-grid { grid-template-columns: repeat(2, 1fr); }
     }
+
+    /* ================================================================
+       TRAVEL BAR (date & guest picker)
+       ================================================================ */
+    .travel-bar {
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border);
+      padding: 1.25rem 0;
+      position: relative;
+      z-index: 10;
+    }
+    .travel-bar-inner {
+      display: flex;
+      align-items: flex-end;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .travel-field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+    .travel-field label {
+      font-size: 0.6875rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .travel-field input[type="date"],
+    .travel-field select {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-sm);
+      color: var(--text-primary);
+      font-family: var(--font-body);
+      font-size: 0.875rem;
+      padding: 0.5rem 0.75rem;
+      min-width: 140px;
+      transition: border-color var(--transition);
+      appearance: auto;
+      -webkit-appearance: auto;
+    }
+    .travel-field input[type="date"]:focus,
+    .travel-field select:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 2px rgba(20, 184, 166, 0.15);
+    }
+    .travel-field input[type="date"]::-webkit-calendar-picker-indicator {
+      filter: invert(0.7);
+      cursor: pointer;
+    }
+    .travel-hint {
+      width: 100%;
+      text-align: center;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 0.5rem;
+      transition: color var(--transition);
+    }
+    .travel-hint.active {
+      color: var(--accent);
+    }
+    @media (max-width: 768px) {
+      .travel-bar-inner {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .travel-field {
+        width: 100%;
+      }
+      .travel-field input[type="date"],
+      .travel-field select {
+        width: 100%;
+        min-width: unset;
+      }
+    }
   </style>
 
   <!-- Structured Data -->
@@ -672,6 +751,46 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
       </button>
       <!-- Status removed - no debug info for visitors -->
+    </div>
+  </section>
+
+  <!-- ================================================================
+       TRAVEL BAR (date & guest picker)
+       ================================================================ -->
+  <section class="travel-bar" id="travelBar">
+    <div class="container">
+      <div class="travel-bar-inner">
+        <div class="travel-field">
+          <label for="tCheckin">Check-in</label>
+          <input type="date" id="tCheckin" />
+        </div>
+        <div class="travel-field">
+          <label for="tCheckout">Check-out</label>
+          <input type="date" id="tCheckout" />
+        </div>
+        <div class="travel-field">
+          <label for="tAdults">Erwachsene</label>
+          <select id="tAdults">
+            <option value="1">1</option>
+            <option value="2" selected>2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+        <div class="travel-field">
+          <label for="tChildren">Kinder</label>
+          <select id="tChildren">
+            <option value="0" selected>0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </div>
+      </div>
+      <div class="travel-hint" id="travelHint">Tipp: Reisedatum eingeben f&uuml;r direkte Verf&uuml;gbarkeitsprüfung</div>
     </div>
   </section>
 
@@ -1239,14 +1358,30 @@
     // BOOKING URL
     // =====================================================================
     function buildBookingUrl(h) {
+      const checkin = document.getElementById('tCheckin')?.value || '';
+      const checkout = document.getElementById('tCheckout')?.value || '';
+      const adults = document.getElementById('tAdults')?.value || '2';
+      const children = document.getElementById('tChildren')?.value || '0';
+
       if (h.booking_url) {
-        const url = safeUrl(h.booking_url);
-        if (url && !url.includes("aid=")) return url + (url.includes("?") ? "&" : "?") + "aid=" + CONFIG.AFFILIATE_ID;
+        let url = safeUrl(h.booking_url);
+        if (url && !url.includes("aid=")) url += (url.includes("?") ? "&" : "?") + "aid=" + CONFIG.AFFILIATE_ID;
+        if (checkin) url += "&checkin=" + checkin;
+        if (checkout) url += "&checkout=" + checkout;
+        url += "&group_adults=" + adults;
+        url += "&group_children=" + children;
+        url += "&no_rooms=1";
         return url;
       }
-      return "https://www.booking.com/searchresults.de.html?ss=" +
+      let url = "https://www.booking.com/searchresults.de.html?ss=" +
         encodeURIComponent(h.name + " " + CONFIG.DESTINATION) +
         "&aid=" + CONFIG.AFFILIATE_ID;
+      if (checkin) url += "&checkin=" + checkin;
+      if (checkout) url += "&checkout=" + checkout;
+      url += "&group_adults=" + adults;
+      url += "&group_children=" + children;
+      url += "&no_rooms=1";
+      return url;
     }
 
     // =====================================================================
@@ -1809,9 +1944,88 @@
     });
 
     // =====================================================================
+    // TRAVEL BAR: date constraints & dynamic URL updates
+    // =====================================================================
+    function initTravelBar() {
+      const tCheckin = document.getElementById('tCheckin');
+      const tCheckout = document.getElementById('tCheckout');
+      const tAdults = document.getElementById('tAdults');
+      const tChildren = document.getElementById('tChildren');
+      const travelHint = document.getElementById('travelHint');
+
+      // Set min date for check-in to today
+      const today = new Date().toISOString().split('T')[0];
+      tCheckin.setAttribute('min', today);
+
+      // When check-in changes, update check-out min
+      tCheckin.addEventListener('change', function() {
+        if (this.value) {
+          const nextDay = new Date(this.value);
+          nextDay.setDate(nextDay.getDate() + 1);
+          const minCheckout = nextDay.toISOString().split('T')[0];
+          tCheckout.setAttribute('min', minCheckout);
+          // If checkout is before new min, reset it
+          if (tCheckout.value && tCheckout.value < minCheckout) {
+            tCheckout.value = minCheckout;
+          }
+        }
+        updateAllBookingUrls();
+        updateTravelHint();
+      });
+
+      tCheckout.addEventListener('change', function() {
+        updateAllBookingUrls();
+        updateTravelHint();
+      });
+
+      tAdults.addEventListener('change', function() {
+        updateAllBookingUrls();
+      });
+
+      tChildren.addEventListener('change', function() {
+        updateAllBookingUrls();
+      });
+
+      function updateTravelHint() {
+        const hasCheckin = tCheckin.value;
+        const hasCheckout = tCheckout.value;
+        if (hasCheckin && hasCheckout) {
+          travelHint.innerHTML = '&#10003; Reisedaten werden an Buchungspartner &uuml;bergeben';
+          travelHint.classList.add('active');
+        } else {
+          travelHint.innerHTML = 'Tipp: Reisedatum eingeben f&uuml;r direkte Verf&uuml;gbarkeitsprüfung';
+          travelHint.classList.remove('active');
+        }
+      }
+    }
+
+    function updateAllBookingUrls() {
+      // Update all .btn-booking links in cards
+      document.querySelectorAll('.btn-booking').forEach(link => {
+        const card = link.closest('.hotel-card');
+        if (!card) return;
+        const hotelName = card.querySelector('.card-title')?.textContent;
+        if (!hotelName) return;
+        const hotel = HOTELS.find(h => h.name === hotelName);
+        if (hotel) link.href = buildBookingUrl(hotel);
+      });
+
+      // Update modal booking link if open
+      const mBooking = document.getElementById('mBooking');
+      const mTitle = document.getElementById('mTitle');
+      if (mBooking && mTitle && mTitle.textContent) {
+        const hotel = HOTELS.find(h => h.name === mTitle.textContent);
+        if (hotel) mBooking.href = buildBookingUrl(hotel);
+      }
+    }
+
+    // =====================================================================
     // BOOT
     // =====================================================================
     (async function boot() {
+      // Initialize travel bar
+      initTravelBar();
+
       // Initialize map
       initMap();
 
