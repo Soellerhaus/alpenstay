@@ -86,6 +86,7 @@
       min-height: 100vh;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
+      letter-spacing: 0.01em;
     }
     h1, h2, h3 { font-family: var(--font-display); color: var(--text-primary); font-weight: 700; line-height: 1.2; }
     a { text-decoration: none; color: inherit; }
@@ -329,7 +330,7 @@
       align-items: center; gap: 0.625rem; min-height: 100px;
     }
     .choice:hover {
-      border-color: var(--accent); background: var(--accent-soft);
+      border-color: var(--border); border-left: 3px solid var(--accent); background: var(--accent-soft);
       transform: translateY(-3px);
     }
     .choice.selected {
@@ -363,12 +364,12 @@
     /* ================================================================
        SECTION HEADERS
        ================================================================ */
-    .section-header { text-align: center; margin-bottom: 3rem; }
+    .section-header { text-align: left; margin-bottom: 3rem; }
     .section-header h2 {
       font-size: clamp(1.75rem, 3vw, 2.5rem); margin-bottom: 0.75rem;
       letter-spacing: -0.02em;
     }
-    .section-header p { font-size: 1rem; color: var(--text-muted); max-width: 500px; margin: 0 auto; }
+    .section-header p { font-size: 1rem; color: var(--text-muted); max-width: 500px; }
 
     /* ================================================================
        CURATED TABS
@@ -451,7 +452,7 @@
       .cards-grid { grid-template-columns: repeat(3, 1fr); }
     }
     .hotel-card {
-      border-radius: var(--radius-xl); background: var(--bg-card);
+      border-radius: var(--radius-md); background: var(--bg-card);
       border: 1px solid var(--border); overflow: hidden;
       transition: all var(--transition); display: flex; flex-direction: column;
     }
@@ -615,6 +616,13 @@
     }
     .about-inner h2 { font-size: 1.75rem; margin-bottom: 1rem; }
     .about-inner p { color: var(--text-muted); margin-bottom: 1rem; line-height: 1.7; font-size: 0.9375rem; }
+    .about-signature {
+      font-family: var(--font-display);
+      font-style: italic;
+      color: var(--accent);
+      font-size: 1.125rem;
+      margin-top: 1rem;
+    }
 
     /* ================================================================
        FOOTER
@@ -770,8 +778,8 @@
        ================================================================ -->
   <section class="hero" id="top" aria-label="Willkommen">
     <div class="hero-content">
-      <h1>In 5 Schritten zu deiner Unterkunft im Kleinwalsertal</h1>
-      <p class="hero-sub">Beantworte 5 kurze Fragen &mdash; wir finden die passende Unterkunft f&uuml;r dich.</p>
+      <h1>Welche Unterkunft passt wirklich zu dir?</h1>
+      <p class="hero-sub">Wir kennen jedes Hotel im Kleinwalsertal. Sag uns was du suchst.</p>
       <button class="hero-cta" id="btnStart">
         Hotel finden
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
@@ -821,19 +829,19 @@
         <!-- Step 1: Mit Kindern oder ohne? -->
         <div class="wizard-step active" data-step="1">
           <div class="wizard-step-indicator">Schritt <span class="stepNumSync">1</span> von 5</div>
-          <h2 class="step-question">Mit Kindern oder ohne?</h2>
+          <h2 class="step-question">Wer kommt mit?</h2>
           <div class="choice-grid">
             <button class="choice" data-key="party" data-val="family">
               <div class="choice-label">Mit Kindern</div>
-              <div class="choice-desc">Familienfreundlich &amp; praktisch</div>
+              <div class="choice-desc">Familie mit Kids</div>
             </button>
             <button class="choice" data-key="party" data-val="adults">
-              <div class="choice-label">Ohne Kinder</div>
-              <div class="choice-desc">Paare &amp; Ruhe</div>
+              <div class="choice-label">Nur Erwachsene</div>
+              <div class="choice-desc">Paar oder Freunde</div>
             </button>
             <button class="choice" data-key="party" data-val="egal">
-              <div class="choice-label">Egal</div>
-              <div class="choice-desc">Beides passt</div>
+              <div class="choice-label">Flexibel</div>
+              <div class="choice-desc">Beides m&ouml;glich</div>
             </button>
           </div>
         </div>
@@ -841,19 +849,19 @@
         <!-- Step 2: Ski-in/Ski-out -->
         <div class="wizard-step" data-step="2">
           <div class="wizard-step-indicator">Schritt <span class="stepNumSync">2</span> von 5</div>
-          <h2 class="step-question">Ski-in/Ski-out wichtig?</h2>
+          <h2 class="step-question">Wie nah an der Piste?</h2>
           <div class="choice-grid">
             <button class="choice" data-key="ski" data-val="skiinout_yes">
-              <div class="choice-label">Ja, direkt an der Piste</div>
-              <div class="choice-desc">Lift &amp; Piste sehr nah</div>
+              <div class="choice-label">Direkt dran</div>
+              <div class="choice-desc">Ski vor der Haust&uuml;r</div>
             </button>
             <button class="choice" data-key="ski" data-val="skiinout_no">
-              <div class="choice-label">Nein, muss nicht</div>
-              <div class="choice-desc">Skibus reicht</div>
+              <div class="choice-label">Kurzer Weg reicht</div>
+              <div class="choice-desc">5-10 Min zur Bahn</div>
             </button>
             <button class="choice" data-key="ski" data-val="egal">
-              <div class="choice-label">Egal</div>
-              <div class="choice-desc">Nicht entscheidend</div>
+              <div class="choice-label">Ist mir egal</div>
+              <div class="choice-desc">Hauptsache Berge</div>
             </button>
           </div>
         </div>
@@ -861,19 +869,19 @@
         <!-- Step 3: Langlauf oder Wandern -->
         <div class="wizard-step" data-step="3">
           <div class="wizard-step-indicator">Schritt <span class="stepNumSync">3</span> von 5</div>
-          <h2 class="step-question">Langlauf oder Wandern?</h2>
+          <h2 class="step-question">Was machst du am liebsten?</h2>
           <div class="choice-grid">
             <button class="choice" data-key="focus" data-val="langlauf">
               <div class="choice-label">Langlauf</div>
-              <div class="choice-desc">Nahe Loipe</div>
+              <div class="choice-desc">Loipe in der N&auml;he</div>
             </button>
             <button class="choice" data-key="focus" data-val="wandern">
               <div class="choice-label">Wandern</div>
-              <div class="choice-desc">Guter Ausgangspunkt</div>
+              <div class="choice-desc">Direkt los wandern</div>
             </button>
             <button class="choice" data-key="focus" data-val="egal">
-              <div class="choice-label">Egal</div>
-              <div class="choice-desc">Beides passt</div>
+              <div class="choice-label">Von allem etwas</div>
+              <div class="choice-desc">Ich lass mich &uuml;berraschen</div>
             </button>
           </div>
         </div>
@@ -881,19 +889,19 @@
         <!-- Step 4: Wellness -->
         <div class="wizard-step" data-step="4">
           <div class="wizard-step-indicator">Schritt <span class="stepNumSync">4</span> von 5</div>
-          <h2 class="step-question">Wellness wichtig?</h2>
+          <h2 class="step-question">Brauchst du Wellness?</h2>
           <div class="choice-grid">
             <button class="choice" data-key="wellness" data-val="yes">
-              <div class="choice-label">Ja, unbedingt</div>
-              <div class="choice-desc">Spa, Sauna &amp; Co.</div>
+              <div class="choice-label">Auf jeden Fall</div>
+              <div class="choice-desc">Sauna, Pool, Spa</div>
             </button>
             <button class="choice" data-key="wellness" data-val="no">
-              <div class="choice-label">Nein</div>
-              <div class="choice-desc">Nicht wichtig</div>
+              <div class="choice-label">Nicht n&ouml;tig</div>
+              <div class="choice-desc">Natur reicht mir</div>
             </button>
             <button class="choice" data-key="wellness" data-val="egal">
-              <div class="choice-label">Egal</div>
-              <div class="choice-desc">Nice to have</div>
+              <div class="choice-label">Wenns dabei ist, gern</div>
+              <div class="choice-desc">Kein Muss</div>
             </button>
           </div>
         </div>
@@ -901,19 +909,19 @@
         <!-- Step 5: Ruhig oder zentral -->
         <div class="wizard-step" data-step="5">
           <div class="wizard-step-indicator">Schritt <span class="stepNumSync">5</span> von 5</div>
-          <h2 class="step-question">Ruhig oder zentral?</h2>
+          <h2 class="step-question">Lieber ruhig oder mittendrin?</h2>
           <div class="choice-grid">
             <button class="choice" data-key="lage" data-val="ruhig">
-              <div class="choice-label">Ruhige Lage</div>
-              <div class="choice-desc">Abseits vom Trubel</div>
+              <div class="choice-label">Ruhig &amp; abgelegen</div>
+              <div class="choice-desc">Natur pur, wenig Trubel</div>
             </button>
             <button class="choice" data-key="lage" data-val="zentral">
-              <div class="choice-label">Zentral</div>
-              <div class="choice-desc">Kurze Wege</div>
+              <div class="choice-label">Mittendrin</div>
+              <div class="choice-desc">Restaurants &amp; Shops zu Fu&szlig;</div>
             </button>
             <button class="choice" data-key="lage" data-val="egal">
-              <div class="choice-label">Egal</div>
-              <div class="choice-desc">Beides ok</div>
+              <div class="choice-label">Passt beides</div>
+              <div class="choice-desc">Mir egal</div>
             </button>
           </div>
         </div>
@@ -947,16 +955,16 @@
   <section id="listen" class="curated-section" aria-label="Kuratierte Listen">
     <div class="container">
       <div class="section-header">
-        <h2>Unterk&uuml;nfte im Kleinwalsertal</h2>
-        <p>Direkt einsteigen &ndash; ohne Fragen.</p>
+        <h2>Unsere Empfehlungen</h2>
+        <p>Handverlesen &mdash; von Einheimischen, die das Tal kennen.</p>
       </div>
       <div class="curated-tabs" id="curatedPills">
-        <button class="curated-tab active" data-list="familie">F&uuml;r Familien</button>
+        <button class="curated-tab active" data-list="familie">Familien</button>
         <button class="curated-tab" data-list="ski">Ski-in/Ski-out</button>
-        <button class="curated-tab" data-list="wellness">Wellness &amp; Spa</button>
-        <button class="curated-tab" data-list="ruhig">Ruhige Lage</button>
+        <button class="curated-tab" data-list="wellness">Wellness</button>
+        <button class="curated-tab" data-list="ruhig">Ruhig &amp; Abseits</button>
         <button class="curated-tab" data-list="langlauf">Langlauf</button>
-        <button class="curated-tab" data-list="alle">Alle Hotels</button>
+        <button class="curated-tab" data-list="alle">Alle</button>
       </div>
       <div class="cards-grid" id="curatedCards"></div>
       <div class="load-more-wrap" id="curatedLoadMore" style="display:none">
@@ -975,15 +983,14 @@
   <section id="about" class="about-section" aria-label="Über AlpenStay">
     <div class="container">
       <div class="about-inner">
-        <h2>&Uuml;ber AlpenStay</h2>
-        <p>
-          AlpenStay ist ein unabh&auml;ngiger Hotel-Guide f&uuml;r das Kleinwalsertal.
-          Keine endlosen Listen, kein Marketing-Blabla &ndash; nur ehrliche Empfehlungen
-          von Menschen, die das Tal kennen.
-        </p>
-        <p>
-          Weitere Alpen-Destinationen folgen bald.
-        </p>
+        <h2>Von hier. F&uuml;r dich.</h2>
+        <p>Wir leben im Kleinwalsertal &mdash; nicht irgendwo in einem B&uuml;ro.
+Wenn wir ein Hotel empfehlen, dann weil wir es kennen. Weil wir dort gegessen,
+die Sauna getestet oder den Weg zur Piste selbst gelaufen sind.</p>
+        <p>AlpenStay ist keine Buchungsplattform. Wir sind ein unabh&auml;ngiger Guide &mdash;
+ehrlich, ohne Werbepartner-Rankings, ohne bezahlte Platzierungen.
+Nur Unterk&uuml;nfte, die wir mit gutem Gewissen empfehlen k&ouml;nnen.</p>
+        <p class="about-signature">&mdash; Claudio, Hirschegg</p>
       </div>
     </div>
   </section>
@@ -1006,8 +1013,7 @@
       </div>
     </div>
     <div class="footer-disclosure">
-      Einige Links auf dieser Seite sind Partnerlinks. F&uuml;r dich entstehen dadurch keine Mehrkosten.
-      Wir erhalten eine kleine Provision bei Buchungen &uuml;ber unsere Links.
+      Wenn du &uuml;ber uns buchst, bekommen wir eine kleine Provision &mdash; f&uuml;r dich &auml;ndert sich am Preis nichts. So k&ouml;nnen wir diesen Guide kostenlos anbieten.
     </div>
     <div class="footer-copy">&copy; 2025&ndash;2026 AlpenStay</div>
   </footer>
