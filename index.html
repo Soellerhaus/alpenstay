@@ -185,36 +185,9 @@
     .status-bar.error { border-color: rgba(239,68,68,0.2); color: #ef4444; }
 
     /* ================================================================
-       LOCATION NAV (pills/tabs)
+       LOCATION NAV (hidden, kept for JS compat)
        ================================================================ */
-    .location-nav {
-      display: flex;
-      gap: 0.75rem;
-      justify-content: center;
-      flex-wrap: wrap;
-      padding: 2rem 0;
-    }
-    .location-pill {
-      padding: 0.625rem 1.5rem;
-      border-radius: 999px;
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      color: var(--text-muted);
-      cursor: pointer;
-      font-family: 'Inter', sans-serif;
-      font-size: 0.9375rem;
-      transition: all 0.2s;
-    }
-    .location-pill.active, .location-pill:hover {
-      background: var(--accent-primary);
-      color: var(--bg-primary);
-      border-color: var(--accent-primary);
-    }
-    .location-pill .pill-count {
-      font-size: 0.75rem;
-      opacity: 0.7;
-      margin-left: 0.25rem;
-    }
+    .location-nav { display: none; }
 
     /* ================================================================
        MAP
@@ -254,7 +227,7 @@
     /* ================================================================
        WIZARD
        ================================================================ */
-    .wizard-section { padding: 5rem 0; }
+    .wizard-section { padding: 5rem 0 2rem; }
     .wizard {
       max-width: 800px; margin: 0 auto; padding: 3rem 2.5rem;
       background: var(--bg-card); border: 1px solid var(--border);
@@ -337,28 +310,95 @@
     .section-header p { font-size: 1rem; color: var(--text-muted); max-width: 500px; margin: 0 auto; }
 
     /* ================================================================
-       CURATED LIST PILLS
+       CURATED TABS
        ================================================================ */
-    .curated-section { padding: 4rem 0; }
-    .curated-pills {
-      display: flex; gap: 0.625rem; flex-wrap: wrap; justify-content: center;
-      margin-bottom: 2.5rem;
+    .curated-section { padding: 3rem 0 2rem; }
+    .curated-tabs {
+      display: flex; gap: 0.5rem; flex-wrap: wrap; justify-content: center;
+      margin-bottom: 2rem;
     }
-    .curated-pill {
-      padding: 0.625rem 1.25rem; border-radius: 999px; background: var(--bg-card);
-      border: 1px solid var(--border-medium); color: var(--text-muted);
-      font-size: 0.875rem; font-weight: 500; cursor: pointer;
-      transition: all var(--transition);
+    .curated-tab {
+      padding: 0.75rem 1.5rem; border-radius: var(--radius-md);
+      background: var(--bg-card); border: 1px solid var(--border-medium);
+      color: var(--text-muted); font-size: 0.9375rem; font-weight: 600;
+      cursor: pointer; transition: all var(--transition);
+      font-family: var(--font-body);
     }
-    .curated-pill:hover, .curated-pill.active {
+    .curated-tab:hover {
+      border-color: var(--accent); color: var(--text-primary);
+    }
+    .curated-tab.active {
       background: var(--accent); color: var(--bg-primary);
       border-color: var(--accent);
+    }
+    .curated-tab .tab-count {
+      font-size: 0.75rem; opacity: 0.7; margin-left: 0.25rem;
+    }
+    .load-more-wrap {
+      text-align: center; margin-top: 2rem;
+    }
+    .btn-load-more {
+      padding: 0.75rem 2rem; border-radius: 999px;
+      background: transparent; border: 1px solid var(--border-medium);
+      color: var(--text-secondary); font-weight: 600; font-size: 0.9375rem;
+      cursor: pointer; transition: all var(--transition);
+      font-family: var(--font-body);
+    }
+    .btn-load-more:hover {
+      border-color: var(--accent); color: var(--accent);
+    }
+
+    /* ================================================================
+       ALLE HOTELS SECTION
+       ================================================================ */
+    .alle-hotels-section { padding: 3rem 0 4rem; }
+    .sort-bar {
+      display: flex; gap: 0.75rem; align-items: center; justify-content: flex-end;
+      margin-bottom: 1.5rem; flex-wrap: wrap;
+    }
+    .sort-bar label {
+      font-size: 0.8125rem; color: var(--text-muted); font-weight: 500;
+    }
+    .sort-bar select {
+      background: var(--bg-card); border: 1px solid var(--border-medium);
+      border-radius: var(--radius-sm); color: var(--text-primary);
+      font-family: var(--font-body); font-size: 0.875rem;
+      padding: 0.5rem 0.75rem; appearance: auto; -webkit-appearance: auto;
+      cursor: pointer;
+    }
+    .sort-bar select:focus {
+      outline: none; border-color: var(--accent);
+    }
+
+    /* ================================================================
+       TRAVEL BAR COMPACT
+       ================================================================ */
+    .travel-bar-compact {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); padding: 1.25rem 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .travel-bar-compact .travel-bar-label {
+      font-size: 0.8125rem; color: var(--text-muted); font-weight: 600;
+      margin-bottom: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em;
+    }
+    .travel-bar-compact .travel-bar-inner {
+      display: flex; align-items: flex-end; gap: 1rem; flex-wrap: wrap;
+    }
+    @media (max-width: 768px) {
+      .travel-bar-compact .travel-bar-inner {
+        flex-direction: column; align-items: stretch;
+      }
+      .travel-bar-compact .travel-field { width: 100%; }
+      .travel-bar-compact .travel-field input[type="date"],
+      .travel-bar-compact .travel-field select { width: 100%; min-width: unset; }
+      .curated-tab { font-size: 0.8125rem; padding: 0.625rem 1rem; }
     }
 
     /* ================================================================
        HOTEL CARDS GRID
        ================================================================ */
-    .results-section { padding: 4rem 0; }
+    .results-section { padding: 3rem 0 2rem; }
     .cards-grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -594,90 +634,44 @@
       .wizard-actions { flex-direction: column; }
       .wizard-actions > * { width: 100%; text-align: center; justify-content: center; min-height: 48px; }
       .btn-back, .btn-reset, .btn-show { min-height: 48px; display: inline-flex; align-items: center; justify-content: center; }
-      .location-pill { padding: 0.5rem 1rem; font-size: 0.8125rem; }
     }
     @media (min-width: 769px) and (max-width: 1023px) {
       .cards-grid { grid-template-columns: repeat(2, 1fr); }
     }
 
     /* ================================================================
-       TRAVEL BAR (date & guest picker)
+       TRAVEL BAR (shared field styles)
        ================================================================ */
-    .travel-bar {
-      background: var(--bg-card);
-      border-bottom: 1px solid var(--border);
-      padding: 1.25rem 0;
-      position: relative;
-      z-index: 10;
-    }
-    .travel-bar-inner {
-      display: flex;
-      align-items: flex-end;
-      gap: 1rem;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
     .travel-field {
-      display: flex;
-      flex-direction: column;
-      gap: 0.3rem;
+      display: flex; flex-direction: column; gap: 0.3rem;
     }
     .travel-field label {
-      font-size: 0.6875rem;
-      font-weight: 600;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
+      font-size: 0.6875rem; font-weight: 600; color: var(--text-muted);
+      text-transform: uppercase; letter-spacing: 0.08em;
     }
     .travel-field input[type="date"],
     .travel-field select {
-      background: var(--bg-secondary);
-      border: 1px solid var(--border-medium);
-      border-radius: var(--radius-sm);
-      color: var(--text-primary);
-      font-family: var(--font-body);
-      font-size: 0.875rem;
-      padding: 0.5rem 0.75rem;
-      min-width: 140px;
+      background: var(--bg-secondary); border: 1px solid var(--border-medium);
+      border-radius: var(--radius-sm); color: var(--text-primary);
+      font-family: var(--font-body); font-size: 0.875rem;
+      padding: 0.5rem 0.75rem; min-width: 140px;
       transition: border-color var(--transition);
-      appearance: auto;
-      -webkit-appearance: auto;
+      appearance: auto; -webkit-appearance: auto;
     }
     .travel-field input[type="date"]:focus,
     .travel-field select:focus {
-      outline: none;
-      border-color: var(--accent);
+      outline: none; border-color: var(--accent);
       box-shadow: 0 0 0 2px rgba(20, 184, 166, 0.15);
     }
     .travel-field input[type="date"]::-webkit-calendar-picker-indicator {
-      filter: invert(0.7);
-      cursor: pointer;
+      filter: invert(0.7); cursor: pointer;
     }
     .travel-hint {
-      width: 100%;
-      text-align: center;
-      font-size: 0.75rem;
-      color: var(--text-muted);
-      margin-top: 0.5rem;
+      width: 100%; text-align: center; font-size: 0.75rem;
+      color: var(--text-muted); margin-top: 0.5rem;
       transition: color var(--transition);
     }
-    .travel-hint.active {
-      color: var(--accent);
-    }
-    @media (max-width: 768px) {
-      .travel-bar-inner {
-        flex-direction: column;
-        align-items: stretch;
-      }
-      .travel-field {
-        width: 100%;
-      }
-      .travel-field input[type="date"],
-      .travel-field select {
-        width: 100%;
-        min-width: unset;
-      }
-    }
+    .travel-hint.active { color: var(--accent); }
   </style>
 
   <!-- Structured Data -->
@@ -729,8 +723,8 @@
       </a>
       <nav class="nav-links" aria-label="Hauptnavigation">
         <a href="#wizard">Finder</a>
-        <a href="#empfehlungen">Hotels</a>
-        <a href="#listen">Listen</a>
+        <a href="#listen">Hotels</a>
+        <a href="#alle-hotels">Alle Hotels</a>
         <a href="#about">Info</a>
       </nav>
       <button class="nav-cta" id="navStart">Hotel finden &rarr;</button>
@@ -874,9 +868,9 @@
   </section>
 
   <!-- ================================================================
-       RESULTS (Wizard recommendations)
+       RESULTS (Wizard recommendations) — HIDDEN by default
        ================================================================ -->
-  <section id="empfehlungen" class="results-section" aria-label="Empfehlungen">
+  <section id="empfehlungen" class="results-section" style="display:none" aria-label="Empfehlungen">
     <div class="container">
       <div class="section-header">
         <h2>Deine Empfehlungen</h2>
@@ -887,25 +881,90 @@
   </section>
 
   <!-- ================================================================
-       CURATED LISTS
+       CURATED LISTS (Tabbed Interface)
        ================================================================ -->
   <section id="listen" class="curated-section" aria-label="Kuratierte Listen">
     <div class="container">
       <div class="section-header">
-        <h2>Kuratierte Listen</h2>
+        <h2>Hotels im Kleinwalsertal</h2>
         <p>Direkt einsteigen &ndash; ohne Fragen.</p>
       </div>
-      <div class="curated-pills" id="curatedPills">
-        <button class="curated-pill active" data-list="alle">Alle Hotels</button>
-        <button class="curated-pill" data-list="familie">F&uuml;r Familien mit Kindern</button>
-        <button class="curated-pill" data-list="ski">Ski-in/Ski-out direkt</button>
-        <button class="curated-pill" data-list="ruhig">Ruhige Lage, abseits</button>
-        <button class="curated-pill" data-list="wellness">Wellness &amp; Erholung</button>
-        <button class="curated-pill" data-list="langlauf">Langlauf-Paradies</button>
+      <div class="curated-tabs" id="curatedPills">
+        <button class="curated-tab active" data-list="familie">F&uuml;r Familien</button>
+        <button class="curated-tab" data-list="ski">Ski-in/Ski-out</button>
+        <button class="curated-tab" data-list="wellness">Wellness &amp; Spa</button>
+        <button class="curated-tab" data-list="ruhig">Ruhige Lage</button>
+        <button class="curated-tab" data-list="langlauf">Langlauf</button>
+        <button class="curated-tab" data-list="alle">Alle Hotels</button>
       </div>
       <div class="cards-grid" id="curatedCards"></div>
+      <div class="load-more-wrap" id="curatedLoadMore" style="display:none">
+        <button class="btn-load-more" id="btnCuratedMore">Mehr anzeigen &rarr;</button>
+      </div>
     </div>
   </section>
+
+  <!-- ================================================================
+       ALLE HOTELS (full listing with travel bar + sort)
+       ================================================================ -->
+  <section id="alle-hotels" class="alle-hotels-section" aria-label="Alle Unterk&uuml;nfte">
+    <div class="container">
+      <div class="section-header">
+        <h2>Alle Unterk&uuml;nfte im Kleinwalsertal</h2>
+        <p id="alleSub">118 Hotels, Pensionen &amp; Ferienwohnungen</p>
+      </div>
+
+      <!-- Travel date picker for booking URLs -->
+      <div class="travel-bar-compact">
+        <div class="travel-bar-label">Reisedaten f&uuml;r Verf&uuml;gbarkeitsabfrage:</div>
+        <div class="travel-bar-inner">
+          <div class="travel-field">
+            <label for="tCheckin">Check-in</label>
+            <input type="date" id="tCheckin">
+          </div>
+          <div class="travel-field">
+            <label for="tCheckout">Check-out</label>
+            <input type="date" id="tCheckout">
+          </div>
+          <div class="travel-field">
+            <label for="tAdults">Erwachsene</label>
+            <select id="tAdults">
+              <option value="1">1</option>
+              <option value="2" selected>2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </div>
+          <div class="travel-field">
+            <label for="tChildren">Kinder</label>
+            <select id="tChildren">
+              <option value="0" selected>0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+          </div>
+        </div>
+        <div class="travel-hint" id="travelHint">Tipp: Reisedatum eingeben f&uuml;r direkte Verf&uuml;gbarkeitsprüfung</div>
+      </div>
+
+      <div class="sort-bar">
+        <label for="alleSort">Sortierung:</label>
+        <select id="alleSort">
+          <option value="rating">Bewertung</option>
+          <option value="name">Name A-Z</option>
+          <option value="piste">N&auml;chste Piste</option>
+        </select>
+      </div>
+      <div class="cards-grid" id="alleCards"></div>
+      <div class="load-more-wrap" id="alleLoadMore" style="display:none">
+        <button class="btn-load-more" id="btnAlleMore">Mehr anzeigen &rarr;</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hidden locationNav for JS compatibility -->
+  <div id="locationNav" style="display:none"></div>
 
   <!-- ================================================================
        ABOUT
@@ -1125,8 +1184,16 @@
       wizardSummary: $("wizardSummary"),
       resultCards: $("resultCards"),
       resultSub: $("resultSub"),
+      empfehlungen: $("empfehlungen"),
       curatedCards: $("curatedCards"),
       curatedPills: $("curatedPills"),
+      curatedLoadMore: $("curatedLoadMore"),
+      btnCuratedMore: $("btnCuratedMore"),
+      alleCards: $("alleCards"),
+      alleLoadMore: $("alleLoadMore"),
+      btnAlleMore: $("btnAlleMore"),
+      alleSort: $("alleSort"),
+      alleSub: $("alleSub"),
       navStart: $("navStart"),
       btnStart: $("btnStart"),
       modalBackdrop: $("modalBackdrop"),
@@ -1141,6 +1208,16 @@
       mBooking: $("mBooking"),
       locationNav: $("locationNav"),
     };
+
+    // Curated tab pagination state
+    let curatedCurrentList = "familie";
+    let curatedShown = 9;
+    let curatedAllItems = [];
+
+    // Alle Hotels pagination state
+    let alleShown = 9;
+    let alleSorted = [];
+    let alleCurrentSort = "rating";
 
     let HOTELS = [];
     let currentStep = 1;
@@ -1388,52 +1465,14 @@
 
     function filterByLocation(location) {
       activeLocation = location;
-
-      // Update pills
+      if (!el.locationNav) return;
       el.locationNav.querySelectorAll('.location-pill').forEach(p =>
         p.classList.toggle('active', p.dataset.location === location)
       );
-
-      // Filter hotels
-      let filtered;
-      if (location === "alle") {
-        filtered = HOTELS;
-      } else if (location === "Baad") {
-        filtered = HOTELS.filter(h => isBaad(h));
-      } else {
-        filtered = HOTELS.filter(h => h.ortsteil === location && !isBaad(h));
-      }
-
-      // Update curated cards to show filtered hotels
-      renderLocationCards(filtered);
     }
 
-    function renderLocationCards(hotels) {
-      // This updates the curated section to reflect the location filter
-      const sorted = hotels.slice().sort((a, b) => (b.google_rating || 0) - (a.google_rating || 0));
-      renderCards(el.curatedCards, sorted.slice(0, 18));
-    }
-
-    // Update location pill counts
     function updateLocationCounts() {
-      el.locationNav.querySelectorAll('.location-pill').forEach(pill => {
-        const loc = pill.dataset.location;
-        let count;
-        if (loc === "alle") {
-          count = HOTELS.length;
-        } else if (loc === "Baad") {
-          count = HOTELS.filter(h => isBaad(h)).length;
-        } else {
-          count = HOTELS.filter(h => h.ortsteil === loc && !isBaad(h)).length;
-        }
-        // Add count badge
-        const existing = pill.querySelector('.pill-count');
-        if (existing) existing.remove();
-        const span = document.createElement('span');
-        span.className = 'pill-count';
-        span.textContent = '(' + count + ')';
-        pill.appendChild(span);
-      });
+      // locationNav is hidden; no-op
     }
 
     // =====================================================================
@@ -1607,16 +1646,15 @@
 
     function cardHtml(h) {
       const desc = h.ai_description || "";
-      const truncated = truncateDescription(desc, 2);
-      const chips = featureChips(h);
+      const shortDesc = desc.length > 150 ? desc.substring(0, 150).trim() + "\u2026" : desc;
+      const chips = featureChips(h).slice(0, 3);
       const bookUrl = buildBookingUrl(h);
       const ratingHtml = (h.google_rating && h.google_rating > 0)
         ? `<div class="card-rating">${ratingStars(h.google_rating)} ${h.google_rating.toFixed(1)} <span class="count">\u00B7 ${Math.round(h.google_reviews || 0)} Bewertungen</span></div>`
         : "";
 
-      // Location line: Ortsteil + Typ + Sterne
+      // Location line: Ortsteil + Typ
       const locationParts = [getEffectiveOrtsteil(h), h.typ];
-      if (h.sterne && h.sterne > 0) locationParts.push(sterneDisplay(h.sterne));
       const locationLine = locationParts.filter(Boolean).join(" \u00B7 ");
 
       return `<article class="hotel-card" data-ortsteil="${escapeHtml(h.ortsteil)}" data-baad="${isBaad(h) ? '1' : '0'}">
@@ -1624,8 +1662,7 @@
           <div class="card-location">${escapeHtml(locationLine)}</div>
           <h3 class="card-title">${escapeHtml(h.name)}</h3>
           ${ratingHtml}
-          ${truncated ? `<p class="card-quote">\u201E${escapeHtml(truncated)}\u201C</p>` : ""}
-          ${h.review_highlights ? `<div class="card-review-hl">\uD83D\uDCAC ${escapeHtml(h.review_highlights)}</div>` : ""}
+          ${shortDesc ? `<p class="card-quote">\u201E${escapeHtml(shortDesc)}\u201C</p>` : ""}
           <div class="card-features">${chips.map(c => `<span class="feature-chip ${c.cls}">${c.text}</span>`).join("")}</div>
           <div class="card-actions">
             <button class="btn-details" data-open="${escapeHtml(h.name)}">Details ansehen</button>
@@ -1658,15 +1695,86 @@
       }
       el.resultSub.textContent = summarizePrefs();
       renderCards(el.resultCards, scored.map(s => s.h));
-      document.getElementById("empfehlungen").scrollIntoView({ behavior: "smooth", block: "start" });
+      // Show the section and scroll to it
+      el.empfehlungen.style.display = "";
+      setTimeout(() => {
+        el.empfehlungen.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 50);
     }
 
     function renderCurated(listKey) {
       if (!HOTELS.length) return;
-      listKey = listKey || "alle";
+      listKey = listKey || "familie";
+      curatedCurrentList = listKey;
+      curatedShown = 9;
       const fn = filters[listKey] || filters.alle;
-      const hotels = fn().slice(0, 18);
-      renderCards(el.curatedCards, hotels);
+      curatedAllItems = fn();
+      renderCards(el.curatedCards, curatedAllItems.slice(0, curatedShown));
+      updateCuratedLoadMore();
+      // Update tab counts
+      el.curatedPills.querySelectorAll('.curated-tab').forEach(tab => {
+        const key = tab.dataset.list;
+        const fn2 = filters[key];
+        if (fn2) {
+          const existingCount = tab.querySelector('.tab-count');
+          if (existingCount) existingCount.remove();
+          const span = document.createElement('span');
+          span.className = 'tab-count';
+          span.textContent = '(' + fn2().length + ')';
+          tab.appendChild(span);
+        }
+      });
+    }
+
+    function updateCuratedLoadMore() {
+      if (curatedAllItems.length > curatedShown) {
+        el.curatedLoadMore.style.display = '';
+      } else {
+        el.curatedLoadMore.style.display = 'none';
+      }
+    }
+
+    function loadMoreCurated() {
+      curatedShown += 9;
+      renderCards(el.curatedCards, curatedAllItems.slice(0, curatedShown));
+      updateCuratedLoadMore();
+    }
+
+    // === ALLE HOTELS SECTION ===
+    function sortAlleHotels(sortKey) {
+      alleCurrentSort = sortKey;
+      const hotels = HOTELS.slice();
+      if (sortKey === 'rating') {
+        hotels.sort((a, b) => (b.google_rating || 0) - (a.google_rating || 0));
+      } else if (sortKey === 'name') {
+        hotels.sort((a, b) => a.name.localeCompare(b.name, 'de'));
+      } else if (sortKey === 'piste') {
+        hotels.sort((a, b) => (a.piste_distance_m ?? 999999) - (b.piste_distance_m ?? 999999));
+      }
+      return hotels;
+    }
+
+    function renderAlleHotels() {
+      if (!HOTELS.length) return;
+      alleShown = 9;
+      alleSorted = sortAlleHotels(alleCurrentSort);
+      el.alleSub.textContent = alleSorted.length + ' Hotels, Pensionen & Ferienwohnungen';
+      renderCards(el.alleCards, alleSorted.slice(0, alleShown));
+      updateAlleLoadMore();
+    }
+
+    function updateAlleLoadMore() {
+      if (alleSorted.length > alleShown) {
+        el.alleLoadMore.style.display = '';
+      } else {
+        el.alleLoadMore.style.display = 'none';
+      }
+    }
+
+    function loadMoreAlle() {
+      alleShown += 9;
+      renderCards(el.alleCards, alleSorted.slice(0, alleShown));
+      updateAlleLoadMore();
     }
 
     // =====================================================================
@@ -1779,6 +1887,7 @@
       setStep(1);
       el.resultCards.innerHTML = "";
       el.resultSub.textContent = "Starte den Finder \u2013 dann erscheinen hier passende Hotels.";
+      el.empfehlungen.style.display = "none";
       document.querySelectorAll(".choice.selected").forEach(c => c.classList.remove("selected"));
     }
 
@@ -1850,21 +1959,38 @@
       if (e.key === "Escape") closeModal();
     });
 
-    // Curated pills
+    // Curated tabs
     el.curatedPills.addEventListener("click", e => {
-      const pill = e.target.closest(".curated-pill");
-      if (!pill) return;
-      el.curatedPills.querySelectorAll(".curated-pill").forEach(p => p.classList.remove("active"));
-      pill.classList.add("active");
-      renderCurated(pill.dataset.list);
+      const tab = e.target.closest(".curated-tab");
+      if (!tab) return;
+      el.curatedPills.querySelectorAll(".curated-tab").forEach(p => p.classList.remove("active"));
+      tab.classList.add("active");
+      renderCurated(tab.dataset.list);
     });
 
-    // Location nav pills
-    el.locationNav.addEventListener("click", e => {
-      const pill = e.target.closest(".location-pill");
-      if (!pill) return;
-      filterByLocation(pill.dataset.location);
+    // Curated load more
+    el.btnCuratedMore.addEventListener("click", loadMoreCurated);
+
+    // Alle Hotels load more
+    el.btnAlleMore.addEventListener("click", loadMoreAlle);
+
+    // Alle Hotels sort
+    el.alleSort.addEventListener("change", function() {
+      alleCurrentSort = this.value;
+      alleShown = 9;
+      alleSorted = sortAlleHotels(alleCurrentSort);
+      renderCards(el.alleCards, alleSorted.slice(0, alleShown));
+      updateAlleLoadMore();
     });
+
+    // Location nav pills (hidden, but safe)
+    if (el.locationNav) {
+      el.locationNav.addEventListener("click", e => {
+        const pill = e.target.closest(".location-pill");
+        if (!pill) return;
+        filterByLocation(pill.dataset.location);
+      });
+    }
 
     // =====================================================================
     // TRAVEL BAR: date constraints & dynamic URL updates
@@ -1967,7 +2093,8 @@
         if (HOTELS.length > 0) {
           updateLocationCounts();
           updateMapMarkers(HOTELS);
-          renderCurated("alle");
+          renderCurated("familie");
+          renderAlleHotels();
         }
       } catch (e) {
         console.error("Fehler beim Laden:", e);
