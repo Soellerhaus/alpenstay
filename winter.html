@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Google Analytics GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TQYZD31SX8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TQYZD31SX8');
+  </script>
+  <title>Schneelage &amp; Wetter Kleinwalsertal | AlpenStay</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Aktuelle Schneelage, Wetter-Vorhersage und Webcams f&uuml;r das Kleinwalsertal. Schneesicherheit der letzten 6 Jahre im Vergleich.">
+  <meta name="keywords" content="Schneelage Kleinwalsertal, Wetter Kleinwalsertal, Webcam Kleinwalsertal, Schnee Kleinwalsertal, Skigebiet Kleinwalsertal, Schneeh&ouml;he Kleinwalsertal">
+  <meta name="author" content="AlpenStay">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0a0e1a">
+  <link rel="canonical" href="https://www.alpenstay.de/winter">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/favicon.png">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.alpenstay.de/winter">
+  <meta property="og:title" content="Schneelage &amp; Wetter Kleinwalsertal | AlpenStay">
+  <meta property="og:description" content="Aktuelle Schneelage, Wetter-Vorhersage und Webcams f&uuml;r das Kleinwalsertal.">
+  <meta property="og:image" content="https://www.alpenstay.de/images/hero-kwt.jpg">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:site_name" content="AlpenStay">
+
+  <!-- Geo tags -->
+  <meta name="geo.region" content="AT-8">
+  <meta name="geo.placename" content="Kleinwalsertal">
+  <meta name="geo.position" content="47.34;10.17">
+  <meta name="ICBM" content="47.34, 10.17">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    /* ================================================================
+       CSS VARIABLES & RESET (same as index.html)
+       ================================================================ */
+    :root {
+      --bg-primary: #0a0e1a;
+      --bg-secondary: #111827;
+      --bg-card: #1a1f2e;
+      --bg-card-hover: #1f2937;
+      --accent: #14b8a6;
+      --accent-primary: #14b8a6;
+      --accent-hover: #0d9488;
+      --accent-soft: rgba(20, 184, 166, 0.08);
+      --text-primary: #f8fafc;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+      --border: rgba(255, 255, 255, 0.06);
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-medium: rgba(255, 255, 255, 0.1);
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --radius-xl: 20px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.2);
+      --shadow-md: 0 4px 16px rgba(0,0,0,0.3);
+      --shadow-lg: 0 8px 32px rgba(0,0,0,0.4);
+      --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --transition: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      line-height: 1.6;
+      color: var(--text-secondary);
+      background: var(--bg-primary);
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    h1, h2, h3 { font-family: var(--font-display); color: var(--text-primary); font-weight: 700; line-height: 1.2; }
+    a { text-decoration: none; color: inherit; }
+    button { font-family: var(--font-body); border: none; cursor: pointer; }
+    img { display: block; max-width: 100%; }
+
+    /* LAYOUT */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+
+    /* ================================================================
+       HEADER (sticky, blurred)
+       ================================================================ */
+    header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+      backdrop-filter: blur(16px) saturate(180%);
+      -webkit-backdrop-filter: blur(16px) saturate(180%);
+      background: rgba(10, 14, 26, 0.85);
+      border-bottom: 1px solid var(--border);
+    }
+    .header-inner {
+      max-width: 1200px; margin: 0 auto; padding: 0.875rem 1.5rem;
+      display: flex; align-items: center; justify-content: space-between; gap: 1.5rem;
+    }
+    .logo {
+      font-family: var(--font-display); font-weight: 700; font-size: 1.25rem;
+      color: var(--text-primary); display: flex; align-items: center; gap: 0.625rem;
+      letter-spacing: -0.01em;
+    }
+    .logo-mark {
+      width: 32px; height: 32px; border-radius: 50%;
+      background: var(--accent); display: flex; align-items: center;
+      justify-content: center; font-size: 1rem; color: var(--bg-primary);
+    }
+    .nav-links { display: flex; gap: 2rem; font-size: 0.875rem; font-weight: 500; }
+    .nav-links a { color: var(--text-muted); transition: color var(--transition); }
+    .nav-links a:hover { color: var(--text-primary); }
+    .nav-links a.active { color: var(--accent); }
+    .nav-cta {
+      padding: 0.5rem 1.25rem; border-radius: 999px; background: var(--accent);
+      color: var(--bg-primary); font-weight: 600; font-size: 0.8125rem;
+      transition: all var(--transition); display: inline-flex; align-items: center;
+    }
+    .nav-cta:hover { background: var(--accent-hover); }
+
+    /* ================================================================
+       HERO
+       ================================================================ */
+    .hero {
+      position: relative;
+      min-height: 55vh;
+      background: url('images/hero-kwt.jpg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+      padding: 5rem 1.5rem 4rem;
+      margin-top: 57px;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(10,14,26,0.45) 0%, rgba(10,14,26,0.7) 100%);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
+    }
+    .hero h1 { font-size: clamp(2rem, 4.5vw, 3.25rem); margin-bottom: 1rem; letter-spacing: -0.02em; }
+    .hero-sub {
+      font-size: 1.125rem; color: var(--text-muted); margin-bottom: 0;
+      font-weight: 400; line-height: 1.7;
+    }
+
+    /* ================================================================
+       SECTIONS
+       ================================================================ */
+    .section {
+      padding: 4rem 0;
+    }
+    .section-title {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    .section-subtitle {
+      text-align: center;
+      color: var(--text-muted);
+      margin-top: -1.25rem;
+      margin-bottom: 2.5rem;
+      font-size: 0.9375rem;
+    }
+
+    /* ================================================================
+       WEATHER CURRENT
+       ================================================================ */
+    .weather-current {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+      padding: 2.5rem;
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      margin-bottom: 3rem;
+    }
+    .weather-temp-block {
+      text-align: center;
+    }
+    .weather-icon {
+      font-size: 4rem;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+    .weather-temp {
+      font-family: var(--font-display);
+      font-size: 4rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1;
+    }
+    .weather-temp small {
+      font-size: 1.5rem;
+      color: var(--text-muted);
+      font-weight: 400;
+    }
+    .weather-details {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .weather-detail {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.9375rem;
+    }
+    .weather-detail-label {
+      color: var(--text-muted);
+      min-width: 120px;
+    }
+    .weather-detail-value {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+    .weather-loading {
+      text-align: center;
+      padding: 3rem;
+      color: var(--text-muted);
+    }
+
+    /* ================================================================
+       FORECAST GRID
+       ================================================================ */
+    .forecast-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+    .forecast-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      padding: 1.25rem 0.75rem;
+      text-align: center;
+      transition: border-color var(--transition);
+    }
+    .forecast-card:hover {
+      border-color: var(--accent);
+    }
+    .forecast-day {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.5rem;
+    }
+    .forecast-icon {
+      font-size: 1.75rem;
+      margin-bottom: 0.5rem;
+    }
+    .forecast-temps {
+      font-size: 0.875rem;
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+    .forecast-temps span {
+      color: var(--text-muted);
+      font-weight: 400;
+    }
+    .forecast-snow {
+      font-size: 0.75rem;
+      color: var(--accent);
+      margin-top: 0.375rem;
+      font-weight: 500;
+    }
+
+    /* ================================================================
+       SNOW TABLE
+       ================================================================ */
+    .snow-table-wrapper {
+      overflow-x: auto;
+      margin-bottom: 3rem;
+    }
+    .snow-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.875rem;
+    }
+    .snow-table th {
+      padding: 0.875rem 1rem;
+      text-align: left;
+      font-weight: 600;
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-bottom: 2px solid var(--border-medium);
+      white-space: nowrap;
+    }
+    .snow-table td {
+      padding: 0.875rem 1rem;
+      border-bottom: 1px solid var(--border);
+      white-space: nowrap;
+    }
+    .snow-table tr:hover td {
+      background: var(--accent-soft);
+    }
+    .snow-table .saison-col {
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+    .snow-cell {
+      border-radius: var(--radius-sm);
+      padding: 0.375rem 0.75rem;
+      text-align: center;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+    .snow-cell-low { background: rgba(20, 184, 166, 0.1); }
+    .snow-cell-med { background: rgba(20, 184, 166, 0.25); }
+    .snow-cell-high { background: rgba(20, 184, 166, 0.4); }
+    .snow-cell-very-high { background: rgba(20, 184, 166, 0.6); }
+    .total-col {
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    /* ================================================================
+       BAR CHART (CSS-only)
+       ================================================================ */
+    .bar-chart-section {
+      margin-top: 2rem;
+    }
+    .bar-chart-title {
+      font-size: 1.125rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+    .bar-chart {
+      display: flex;
+      align-items: flex-end;
+      gap: 0.5rem;
+      height: 200px;
+      padding: 0 1rem;
+      justify-content: center;
+    }
+    .bar-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      flex: 1;
+      max-width: 80px;
+    }
+    .bar {
+      width: 100%;
+      background: linear-gradient(180deg, var(--accent), rgba(20, 184, 166, 0.4));
+      border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+      min-height: 4px;
+      transition: height 0.5s ease;
+      position: relative;
+    }
+    .bar-value {
+      font-size: 0.6875rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      white-space: nowrap;
+    }
+    .bar-label {
+      font-size: 0.6875rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    /* ================================================================
+       DATE PICKER / TRAVEL PERIOD
+       ================================================================ */
+    .date-picker-row {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+    .date-field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.375rem;
+    }
+    .date-field label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+    }
+    .date-field input[type="date"] {
+      background: var(--bg-card);
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-sm);
+      color: var(--text-primary);
+      padding: 0.75rem 1rem;
+      font-family: var(--font-body);
+      font-size: 0.9375rem;
+      outline: none;
+      transition: border-color var(--transition);
+    }
+    .date-field input[type="date"]:focus {
+      border-color: var(--accent);
+    }
+    .date-field input[type="date"]::-webkit-calendar-picker-indicator {
+      filter: invert(1) brightness(0.7);
+    }
+    .date-result {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      display: none;
+    }
+    .date-result.visible {
+      display: block;
+    }
+    .date-result-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .date-stat {
+      text-align: center;
+    }
+    .date-stat-value {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.2;
+    }
+    .date-stat-label {
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      margin-top: 0.25rem;
+    }
+    .date-recommendation {
+      text-align: center;
+      padding: 1.25rem;
+      background: var(--accent-soft);
+      border-radius: var(--radius-md);
+      font-weight: 500;
+      color: var(--text-primary);
+      font-size: 1rem;
+    }
+
+    /* ================================================================
+       WEBCAM GRID
+       ================================================================ */
+    .webcam-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.25rem;
+    }
+    .webcam-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+      transition: all var(--transition);
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .webcam-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+    .webcam-name {
+      font-family: var(--font-display);
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+    .webcam-location {
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+    }
+    .webcam-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.375rem;
+      color: var(--accent);
+      font-size: 0.875rem;
+      font-weight: 500;
+      margin-top: 0.5rem;
+      transition: color var(--transition);
+    }
+    .webcam-link:hover {
+      color: var(--accent-hover);
+    }
+
+    /* ================================================================
+       FOOTER
+       ================================================================ */
+    footer {
+      padding: 2.5rem 0; border-top: 1px solid var(--border); margin-top: 3rem;
+    }
+    .footer-inner {
+      max-width: 1200px; margin: 0 auto; padding: 0 1.5rem;
+      display: flex; justify-content: space-between; align-items: center;
+      gap: 1.5rem; flex-wrap: wrap;
+    }
+    .footer-brand {
+      font-family: var(--font-display); font-weight: 700; color: var(--text-primary);
+      font-size: 1rem; display: flex; align-items: center; gap: 0.5rem;
+    }
+    .footer-brand .logo-mark-sm {
+      width: 24px; height: 24px; border-radius: 50%;
+      background: var(--accent); display: inline-flex; align-items: center;
+      justify-content: center; font-size: 0.7rem; color: var(--bg-primary);
+    }
+    .footer-links { display: flex; gap: 1.5rem; }
+    .footer-links a { font-size: 0.8125rem; color: var(--text-muted); transition: color var(--transition); }
+    .footer-links a:hover { color: var(--text-primary); }
+    .footer-disclosure {
+      width: 100%; text-align: center; padding-top: 1.5rem; margin-top: 1.5rem;
+      border-top: 1px solid var(--border); font-size: 0.75rem; color: var(--text-muted);
+      max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.6;
+    }
+    .footer-copy {
+      width: 100%; text-align: center; margin-top: 1rem;
+      font-size: 0.75rem; color: var(--text-muted); opacity: 0.6;
+    }
+
+    /* ================================================================
+       RESPONSIVE
+       ================================================================ */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .forecast-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+      .weather-current {
+        flex-direction: column;
+        gap: 2rem;
+      }
+      .webcam-grid {
+        grid-template-columns: 1fr;
+      }
+      .date-picker-row {
+        flex-direction: column;
+        align-items: stretch;
+      }
+    }
+    @media (max-width: 480px) {
+      .forecast-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ================================================================
+       HEADER
+       ================================================================ -->
+  <header>
+    <div class="header-inner">
+      <a href="/" class="logo">
+        <div class="logo-mark">&#9968;</div>
+        AlpenStay
+      </a>
+      <nav class="nav-links" aria-label="Hauptnavigation">
+        <a href="/#wizard">Finder</a>
+        <a href="/#listen">Unterk&uuml;nfte</a>
+        <a href="/winter.html" class="active">Winter</a>
+        <a href="/sommer.html">Sommer</a>
+        <a href="/#about">Info</a>
+      </nav>
+      <a href="/" class="nav-cta">Hotel finden &rarr;</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================================================================
+         HERO
+         ================================================================ -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Schneelage &amp; Wetter im Kleinwalsertal</h1>
+        <p class="hero-sub">Live-Daten, Webcams und Schneesicherheit</p>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         SECTION 1: AKTUELLES WETTER
+         ================================================================ -->
+    <section class="section" id="wetter">
+      <div class="container">
+        <h2 class="section-title">Aktuelles Wetter</h2>
+        <p class="section-subtitle">Live-Daten von Open-Meteo f&uuml;r das Kleinwalsertal (1.100 m)</p>
+
+        <div id="weatherCurrent" class="weather-current">
+          <div class="weather-loading">Wetterdaten werden geladen&hellip;</div>
+        </div>
+
+        <h3 style="text-align:center; margin-bottom:1.25rem; font-size:1.125rem;">7-Tage Vorhersage</h3>
+        <div id="forecastGrid" class="forecast-grid">
+          <!-- filled by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         SECTION 2: SCHNEESICHERHEIT
+         ================================================================ -->
+    <section class="section" id="schneesicherheit" style="background: var(--bg-secondary);">
+      <div class="container">
+        <h2 class="section-title">Schneesicherheit</h2>
+        <p class="section-subtitle">6 Wintersaisons im Vergleich &mdash; historische Schneefall-Daten</p>
+
+        <div class="snow-table-wrapper">
+          <table class="snow-table" id="snowTable">
+            <thead>
+              <tr>
+                <th>Saison</th>
+                <th>Dez</th>
+                <th>Jan</th>
+                <th>Feb</th>
+                <th>M&auml;r</th>
+                <th>Gesamt</th>
+              </tr>
+            </thead>
+            <tbody id="snowTableBody">
+              <!-- filled by JS -->
+            </tbody>
+          </table>
+        </div>
+
+        <div class="bar-chart-section">
+          <h3 class="bar-chart-title">Durchschnittlicher Schneefall pro Monat (cm)</h3>
+          <div class="bar-chart" id="barChart">
+            <!-- filled by JS -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         SECTION 3: DEIN REISEZEITRAUM
+         ================================================================ -->
+    <section class="section" id="reisezeitraum">
+      <div class="container">
+        <h2 class="section-title">Dein Reisezeitraum</h2>
+        <p class="section-subtitle">W&auml;hle deine Reisedaten &mdash; wir zeigen dir historische Wetterdaten</p>
+
+        <div class="date-picker-row">
+          <div class="date-field">
+            <label for="arrivalDate">Anreise</label>
+            <input type="date" id="arrivalDate" />
+          </div>
+          <div class="date-field">
+            <label for="departureDate">Abreise</label>
+            <input type="date" id="departureDate" />
+          </div>
+        </div>
+
+        <div class="date-result" id="dateResult">
+          <div class="date-result-grid" id="dateResultGrid">
+            <!-- filled by JS -->
+          </div>
+          <div class="date-recommendation" id="dateRecommendation"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         SECTION 4: WEBCAMS
+         ================================================================ -->
+    <section class="section" id="webcams" style="background: var(--bg-secondary);">
+      <div class="container">
+        <h2 class="section-title">Webcams</h2>
+        <p class="section-subtitle">Live-Bilder aus dem Kleinwalsertal und Umgebung</p>
+
+        <div class="webcam-grid">
+          <a href="https://www.ok-bergbahnen.com/service/webcams-livecams/livecam-kanzelwand.html" target="_blank" rel="noopener" class="webcam-card">
+            <div class="webcam-name">Kanzelwand</div>
+            <div class="webcam-location">Bergstation, 2.058 m</div>
+            <div class="webcam-link">Live-Webcam ansehen &rarr;</div>
+          </a>
+          <a href="https://www.ok-bergbahnen.com/service/webcams-livecams/webcam-ifen.html" target="_blank" rel="noopener" class="webcam-card">
+            <div class="webcam-name">Ifen</div>
+            <div class="webcam-location">Hoher Ifen, 2.030 m</div>
+            <div class="webcam-link">Live-Webcam ansehen &rarr;</div>
+          </a>
+          <a href="https://www.kleinwalsertal.com/de/kleinwalsertal-live/webcams-kleinwalsertal" target="_blank" rel="noopener" class="webcam-card">
+            <div class="webcam-name">Walmendingerhorn</div>
+            <div class="webcam-location">Gipfelstation, 1.990 m</div>
+            <div class="webcam-link">Live-Webcam ansehen &rarr;</div>
+          </a>
+          <a href="https://www.ok-bergbahnen.com/service/webcams-livecams/livecam-fellhorn.html" target="_blank" rel="noopener" class="webcam-card">
+            <div class="webcam-name">Fellhorn</div>
+            <div class="webcam-location">Fellhorn/Kanzelwand, 2.037 m</div>
+            <div class="webcam-link">Live-Webcam ansehen &rarr;</div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================================================================
+       FOOTER
+       ================================================================ -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo-mark-sm">&#9968;</span>
+        AlpenStay
+      </div>
+      <div class="footer-links">
+        <a href="/#about">&Uuml;ber AlpenStay</a>
+        <a href="/impressum">Impressum</a>
+        <a href="/datenschutz">Datenschutz</a>
+      </div>
+    </div>
+    <div class="footer-disclosure">
+      Einige Links auf dieser Seite sind Partnerlinks. F&uuml;r dich entstehen dadurch keine Mehrkosten.
+      Wir erhalten eine kleine Provision bei Buchungen &uuml;ber unsere Links.
+    </div>
+    <div class="footer-copy">&copy; 2025&ndash;2026 AlpenStay</div>
+  </footer>
+
+  <!-- ================================================================
+       JAVASCRIPT
+       ================================================================ -->
+  <script>
+    /* --- Weather code to icon --- */
+    function weatherIcon(code) {
+      if (code <= 1) return "\u2600\uFE0F";
+      if (code <= 3) return "\u26C5";
+      if (code <= 48) return "\u2601\uFE0F";
+      if (code <= 57) return "\uD83C\uDF27\uFE0F";
+      if (code <= 67) return "\uD83C\uDF27\uFE0F";
+      if (code <= 77) return "\uD83C\uDF28\uFE0F";
+      if (code <= 82) return "\uD83C\uDF27\uFE0F";
+      if (code <= 86) return "\u2744\uFE0F";
+      return "\u26C8\uFE0F";
+    }
+
+    /* --- Day name helper --- */
+    const DAYS_DE = ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"];
+    function dayName(dateStr) {
+      const d = new Date(dateStr + "T00:00:00");
+      return DAYS_DE[d.getDay()];
+    }
+
+    /* --- Load current weather + forecast --- */
+    async function loadWeather() {
+      try {
+        const url = "https://api.open-meteo.com/v1/forecast?latitude=47.34&longitude=10.17&current=temperature_2m,weather_code,wind_speed_10m,snowfall,snow_depth&daily=weather_code,temperature_2m_max,temperature_2m_min,snowfall_sum,sunshine_duration&timezone=Europe/Berlin&forecast_days=7";
+        const resp = await fetch(url);
+        const data = await resp.json();
+        const c = data.current;
+
+        // Current weather
+        document.getElementById("weatherCurrent").innerHTML = `
+          <div class="weather-temp-block">
+            <div class="weather-icon">${weatherIcon(c.weather_code)}</div>
+            <div class="weather-temp">${Math.round(c.temperature_2m)}<small>&deg;C</small></div>
+          </div>
+          <div class="weather-details">
+            <div class="weather-detail">
+              <span class="weather-detail-label">Wind</span>
+              <span class="weather-detail-value">${c.wind_speed_10m} km/h</span>
+            </div>
+            <div class="weather-detail">
+              <span class="weather-detail-label">Schneefall</span>
+              <span class="weather-detail-value">${c.snowfall} cm</span>
+            </div>
+            <div class="weather-detail">
+              <span class="weather-detail-label">Schneeh\u00f6he</span>
+              <span class="weather-detail-value">${c.snow_depth != null ? c.snow_depth + " cm" : "n/a"}</span>
+            </div>
+          </div>
+        `;
+
+        // 7-day forecast
+        const daily = data.daily;
+        let html = "";
+        for (let i = 0; i < daily.time.length; i++) {
+          const snowfall = daily.snowfall_sum[i];
+          html += `
+            <div class="forecast-card">
+              <div class="forecast-day">${dayName(daily.time[i])}</div>
+              <div class="forecast-icon">${weatherIcon(daily.weather_code[i])}</div>
+              <div class="forecast-temps">
+                ${Math.round(daily.temperature_2m_max[i])}&deg;
+                <span>${Math.round(daily.temperature_2m_min[i])}&deg;</span>
+              </div>
+              ${snowfall > 0 ? `<div class="forecast-snow">${snowfall} cm</div>` : ""}
+            </div>
+          `;
+        }
+        document.getElementById("forecastGrid").innerHTML = html;
+      } catch (e) {
+        document.getElementById("weatherCurrent").innerHTML =
+          '<div class="weather-loading">Wetterdaten konnten nicht geladen werden.</div>';
+      }
+    }
+
+    /* --- Historical data --- */
+    let infoData = null;
+
+    async function loadHistoricalData() {
+      try {
+        const resp = await fetch("/data/kleinwalsertal_info.json");
+        infoData = await resp.json();
+        renderSnowTable();
+        renderBarChart();
+      } catch (e) {
+        console.error("Could not load historical data:", e);
+      }
+    }
+
+    function snowCellClass(cm) {
+      if (cm >= 200) return "snow-cell-very-high";
+      if (cm >= 100) return "snow-cell-high";
+      if (cm >= 50) return "snow-cell-med";
+      return "snow-cell-low";
+    }
+
+    function renderSnowTable() {
+      if (!infoData || !infoData.winter_seasons) return;
+      const tbody = document.getElementById("snowTableBody");
+      let html = "";
+      for (const s of infoData.winter_seasons) {
+        const m = s.monate;
+        html += `<tr>
+          <td class="saison-col">${s.saison}</td>
+          <td><span class="snow-cell ${snowCellClass(m.dez.schneefall_cm)}">${m.dez.schneefall_cm} cm</span></td>
+          <td><span class="snow-cell ${snowCellClass(m.jan.schneefall_cm)}">${m.jan.schneefall_cm} cm</span></td>
+          <td><span class="snow-cell ${snowCellClass(m.feb.schneefall_cm)}">${m.feb.schneefall_cm} cm</span></td>
+          <td><span class="snow-cell ${snowCellClass(m.mar.schneefall_cm)}">${m.mar.schneefall_cm} cm</span></td>
+          <td class="total-col">${s.gesamt_schnee_cm} cm</td>
+        </tr>`;
+      }
+      tbody.innerHTML = html;
+    }
+
+    function renderBarChart() {
+      if (!infoData || !infoData.winter_seasons) return;
+      // Average per month across all seasons
+      const months = ["dez", "jan", "feb", "mar"];
+      const labels = ["Dez", "Jan", "Feb", "M\u00e4r"];
+      const avgs = months.map(m => {
+        const vals = infoData.winter_seasons.map(s => s.monate[m].schneefall_cm);
+        return Math.round(vals.reduce((a, b) => a + b, 0) / vals.length);
+      });
+      const maxVal = Math.max(...avgs, 1);
+
+      let html = "";
+      for (let i = 0; i < months.length; i++) {
+        const pct = Math.round((avgs[i] / maxVal) * 100);
+        html += `
+          <div class="bar-col">
+            <div class="bar-value">${avgs[i]} cm</div>
+            <div class="bar" style="height: ${pct}%"></div>
+            <div class="bar-label">${labels[i]}</div>
+          </div>
+        `;
+      }
+      document.getElementById("barChart").innerHTML = html;
+    }
+
+    /* --- Date picker logic --- */
+    function setupDatePicker() {
+      const arrival = document.getElementById("arrivalDate");
+      const departure = document.getElementById("departureDate");
+
+      function calculate() {
+        if (!arrival.value || !departure.value || !infoData || !infoData.daily_averages) return;
+
+        const start = new Date(arrival.value);
+        const end = new Date(departure.value);
+        if (end <= start) return;
+
+        const avgs = infoData.daily_averages;
+        let snowChances = [];
+        let tminVals = [];
+        let tmaxVals = [];
+        let sunVals = [];
+
+        const cur = new Date(start);
+        while (cur <= end) {
+          const mm = String(cur.getMonth() + 1).padStart(2, "0");
+          const dd = String(cur.getDate()).padStart(2, "0");
+          const key = mm + "-" + dd;
+          if (avgs[key]) {
+            snowChances.push(avgs[key].snow_chance);
+            if (avgs[key].tmin_avg != null) tminVals.push(avgs[key].tmin_avg);
+            if (avgs[key].tmax_avg != null) tmaxVals.push(avgs[key].tmax_avg);
+            sunVals.push(avgs[key].sun_avg);
+          }
+          cur.setDate(cur.getDate() + 1);
+        }
+
+        if (snowChances.length === 0) return;
+
+        const avgSnowChance = Math.round(snowChances.reduce((a, b) => a + b, 0) / snowChances.length);
+        const avgTmin = tminVals.length ? (tminVals.reduce((a, b) => a + b, 0) / tminVals.length).toFixed(1) : "n/a";
+        const avgTmax = tmaxVals.length ? (tmaxVals.reduce((a, b) => a + b, 0) / tmaxVals.length).toFixed(1) : "n/a";
+        const avgSun = sunVals.length ? (sunVals.reduce((a, b) => a + b, 0) / sunVals.length).toFixed(1) : "n/a";
+
+        let recommendation = "";
+        const tminNum = parseFloat(avgTmin);
+        if (avgSnowChance > 70 && tminNum < -3) {
+          recommendation = "Sehr gute Schneebedingungen erwartet \u2744\uFE0F";
+        } else if (avgSnowChance > 40) {
+          recommendation = "Gute Chancen auf Schnee \uD83C\uDF28\uFE0F";
+        } else {
+          recommendation = "Schneelage k\u00f6nnte knapp werden \u26C5";
+        }
+
+        document.getElementById("dateResultGrid").innerHTML = `
+          <div class="date-stat">
+            <div class="date-stat-value">${avgSnowChance}%</div>
+            <div class="date-stat-label">Schnee-Wahrscheinlichkeit</div>
+          </div>
+          <div class="date-stat">
+            <div class="date-stat-value">${avgTmin}\u00b0 / ${avgTmax}\u00b0</div>
+            <div class="date-stat-label">Temperaturbereich (\u00b0C)</div>
+          </div>
+          <div class="date-stat">
+            <div class="date-stat-value">${avgSun} h</div>
+            <div class="date-stat-label">Sonnenstunden / Tag</div>
+          </div>
+        `;
+        document.getElementById("dateRecommendation").textContent = recommendation;
+        document.getElementById("dateResult").classList.add("visible");
+      }
+
+      arrival.addEventListener("change", calculate);
+      departure.addEventListener("change", calculate);
+    }
+
+    /* --- Init --- */
+    loadWeather();
+    loadHistoricalData();
+    setupDatePicker();
+  </script>
+
+  <!-- JSON-LD structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Schneelage & Wetter Kleinwalsertal",
+    "description": "Aktuelle Schneelage, Wetter-Vorhersage und Webcams f\u00fcr das Kleinwalsertal.",
+    "url": "https://www.alpenstay.de/winter",
+    "publisher": {
+      "@type": "Organization",
+      "name": "AlpenStay",
+      "url": "https://www.alpenstay.de"
+    },
+    "about": {
+      "@type": "Place",
+      "name": "Kleinwalsertal",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 47.34,
+        "longitude": 10.17
+      }
+    }
+  }
+  </script>
+</body>
+</html>

@@ -1,0 +1,2776 @@
+{
+  "destination": "Kleinwalsertal",
+  "latitude": 47.34,
+  "longitude": 10.17,
+  "elevation_m": 1100,
+  "winter_seasons": [
+    {
+      "saison": "2019/2020",
+      "monate": {
+        "dez": {
+          "schneefall_cm": 108,
+          "schneetage": 18,
+          "temp_min_avg": -4.5,
+          "temp_max_avg": 5.4,
+          "sonnenstunden": 139
+        },
+        "jan": {
+          "schneefall_cm": 54,
+          "schneetage": 11,
+          "temp_min_avg": -4.6,
+          "temp_max_avg": 6.2,
+          "sonnenstunden": 209
+        },
+        "feb": {
+          "schneefall_cm": 137,
+          "schneetage": 17,
+          "temp_min_avg": -3.5,
+          "temp_max_avg": 6.2,
+          "sonnenstunden": 167
+        },
+        "mar": {
+          "schneefall_cm": 56,
+          "schneetage": 13,
+          "temp_min_avg": -3.8,
+          "temp_max_avg": 7.0,
+          "sonnenstunden": 256
+        }
+      },
+      "gesamt_schnee_cm": 355
+    },
+    {
+      "saison": "2020/2021",
+      "monate": {
+        "dez": {
+          "schneefall_cm": 74,
+          "schneetage": 19,
+          "temp_min_avg": -5.2,
+          "temp_max_avg": 4.2,
+          "sonnenstunden": 151
+        },
+        "jan": {
+          "schneefall_cm": 164,
+          "schneetage": 21,
+          "temp_min_avg": -6.7,
+          "temp_max_avg": 0.5,
+          "sonnenstunden": 149
+        },
+        "feb": {
+          "schneefall_cm": 40,
+          "schneetage": 13,
+          "temp_min_avg": -4.4,
+          "temp_max_avg": 6.3,
+          "sonnenstunden": 207
+        },
+        "mar": {
+          "schneefall_cm": 123,
+          "schneetage": 19,
+          "temp_min_avg": -4.8,
+          "temp_max_avg": 5.7,
+          "sonnenstunden": 246
+        }
+      },
+      "gesamt_schnee_cm": 401
+    },
+    {
+      "saison": "2021/2022",
+      "monate": {
+        "dez": {
+          "schneefall_cm": 99,
+          "schneetage": 19,
+          "temp_min_avg": -5.2,
+          "temp_max_avg": 3.2,
+          "sonnenstunden": 135
+        },
+        "jan": {
+          "schneefall_cm": 80,
+          "schneetage": 17,
+          "temp_min_avg": -6.8,
+          "temp_max_avg": 3.3,
+          "sonnenstunden": 165
+        },
+        "feb": {
+          "schneefall_cm": 148,
+          "schneetage": 20,
+          "temp_min_avg": -5.6,
+          "temp_max_avg": 4.0,
+          "sonnenstunden": 161
+        },
+        "mar": {
+          "schneefall_cm": 4,
+          "schneetage": 3,
+          "temp_min_avg": -4.9,
+          "temp_max_avg": 8.8,
+          "sonnenstunden": 313
+        }
+      },
+      "gesamt_schnee_cm": 331
+    },
+    {
+      "saison": "2022/2023",
+      "monate": {
+        "dez": {
+          "schneefall_cm": 31,
+          "schneetage": 19,
+          "temp_min_avg": -4.2,
+          "temp_max_avg": 5.2,
+          "sonnenstunden": 124
+        },
+        "jan": {
+          "schneefall_cm": 56,
+          "schneetage": 20,
+          "temp_min_avg": -6.0,
+          "temp_max_avg": 2.8,
+          "sonnenstunden": 147
+        },
+        "feb": {
+          "schneefall_cm": 72,
+          "schneetage": 11,
+          "temp_min_avg": -5.6,
+          "temp_max_avg": 4.9,
+          "sonnenstunden": 196
+        },
+        "mar": {
+          "schneefall_cm": 86,
+          "schneetage": 17,
+          "temp_min_avg": -3.0,
+          "temp_max_avg": 7.4,
+          "sonnenstunden": 196
+        }
+      },
+      "gesamt_schnee_cm": 245
+    },
+    {
+      "saison": "2023/2024",
+      "monate": {
+        "dez": {
+          "schneefall_cm": 139,
+          "schneetage": 18,
+          "temp_min_avg": -5.2,
+          "temp_max_avg": 4.5,
+          "sonnenstunden": 113
+        },
+        "jan": {
+          "schneefall_cm": 61,
+          "schneetage": 17,
+          "temp_min_avg": -7.8,
+          "temp_max_avg": 4.2,
+          "sonnenstunden": 155
+        },
+        "feb": {
+          "schneefall_cm": 44,
+          "schneetage": 14,
+          "temp_min_avg": -1.9,
+          "temp_max_avg": 8.2,
+          "sonnenstunden": 155
+        },
+        "mar": {
+          "schneefall_cm": 70,
+          "schneetage": 13,
+          "temp_min_avg": -1.4,
+          "temp_max_avg": 9.5,
+          "sonnenstunden": 222
+        }
+      },
+      "gesamt_schnee_cm": 314
+    },
+    {
+      "saison": "2024/2025",
+      "monate": {
+        "dez": {
+          "schneefall_cm": 78,
+          "schneetage": 16,
+          "temp_min_avg": -5.7,
+          "temp_max_avg": 4.9,
+          "sonnenstunden": 157
+        },
+        "jan": {
+          "schneefall_cm": 73,
+          "schneetage": 15,
+          "temp_min_avg": -8.4,
+          "temp_max_avg": 4.7,
+          "sonnenstunden": 176
+        },
+        "feb": {
+          "schneefall_cm": 27,
+          "schneetage": 8,
+          "temp_min_avg": -5.5,
+          "temp_max_avg": 5.6,
+          "sonnenstunden": 196
+        },
+        "mar": {
+          "schneefall_cm": 47,
+          "schneetage": 15,
+          "temp_min_avg": -1.4,
+          "temp_max_avg": 9.1,
+          "sonnenstunden": 240
+        }
+      },
+      "gesamt_schnee_cm": 225
+    }
+  ],
+  "daily_averages": {
+    "01-01": {
+      "snow_avg": 0.1,
+      "snow_chance": 29,
+      "tmin_avg": -4.9,
+      "tmax_avg": 7.0,
+      "sun_avg": 7.8
+    },
+    "01-02": {
+      "snow_avg": 5.0,
+      "snow_chance": 57,
+      "tmin_avg": -4.8,
+      "tmax_avg": 6.0,
+      "sun_avg": 4.5
+    },
+    "01-03": {
+      "snow_avg": 1.8,
+      "snow_chance": 71,
+      "tmin_avg": -5.1,
+      "tmax_avg": 2.6,
+      "sun_avg": 3.6
+    },
+    "01-04": {
+      "snow_avg": 2.0,
+      "snow_chance": 43,
+      "tmin_avg": -5.7,
+      "tmax_avg": 3.5,
+      "sun_avg": 5.2
+    },
+    "01-05": {
+      "snow_avg": 5.8,
+      "snow_chance": 57,
+      "tmin_avg": -5.4,
+      "tmax_avg": 3.0,
+      "sun_avg": 1.9
+    },
+    "01-06": {
+      "snow_avg": 4.9,
+      "snow_chance": 57,
+      "tmin_avg": -4.3,
+      "tmax_avg": 2.6,
+      "sun_avg": 4.0
+    },
+    "01-07": {
+      "snow_avg": 3.0,
+      "snow_chance": 86,
+      "tmin_avg": -6.7,
+      "tmax_avg": 1.9,
+      "sun_avg": 4.3
+    },
+    "01-08": {
+      "snow_avg": 3.2,
+      "snow_chance": 86,
+      "tmin_avg": -6.4,
+      "tmax_avg": 1.8,
+      "sun_avg": 3.5
+    },
+    "01-09": {
+      "snow_avg": 7.4,
+      "snow_chance": 57,
+      "tmin_avg": -5.7,
+      "tmax_avg": 2.4,
+      "sun_avg": 4.6
+    },
+    "01-10": {
+      "snow_avg": 4.2,
+      "snow_chance": 71,
+      "tmin_avg": -8.3,
+      "tmax_avg": 0.0,
+      "sun_avg": 5.5
+    },
+    "01-11": {
+      "snow_avg": 0.9,
+      "snow_chance": 57,
+      "tmin_avg": -9.2,
+      "tmax_avg": 0.5,
+      "sun_avg": 6.9
+    },
+    "01-12": {
+      "snow_avg": 2.1,
+      "snow_chance": 43,
+      "tmin_avg": -9.2,
+      "tmax_avg": 1.8,
+      "sun_avg": 5.0
+    },
+    "01-13": {
+      "snow_avg": 6.8,
+      "snow_chance": 43,
+      "tmin_avg": -8.2,
+      "tmax_avg": 2.8,
+      "sun_avg": 5.4
+    },
+    "01-14": {
+      "snow_avg": 10.8,
+      "snow_chance": 57,
+      "tmin_avg": -6.7,
+      "tmax_avg": 5.0,
+      "sun_avg": 5.6
+    },
+    "01-15": {
+      "snow_avg": 3.5,
+      "snow_chance": 71,
+      "tmin_avg": -6.1,
+      "tmax_avg": 3.4,
+      "sun_avg": 4.5
+    },
+    "01-16": {
+      "snow_avg": 0.2,
+      "snow_chance": 43,
+      "tmin_avg": -9.4,
+      "tmax_avg": 2.9,
+      "sun_avg": 7.7
+    },
+    "01-17": {
+      "snow_avg": 3.6,
+      "snow_chance": 86,
+      "tmin_avg": -8.0,
+      "tmax_avg": 2.9,
+      "sun_avg": 4.0
+    },
+    "01-18": {
+      "snow_avg": 3.4,
+      "snow_chance": 86,
+      "tmin_avg": -7.6,
+      "tmax_avg": 2.1,
+      "sun_avg": 4.8
+    },
+    "01-19": {
+      "snow_avg": 1.1,
+      "snow_chance": 57,
+      "tmin_avg": -9.9,
+      "tmax_avg": 1.3,
+      "sun_avg": 6.8
+    },
+    "01-20": {
+      "snow_avg": 2.0,
+      "snow_chance": 29,
+      "tmin_avg": -10.1,
+      "tmax_avg": 0.8,
+      "sun_avg": 5.9
+    },
+    "01-21": {
+      "snow_avg": 1.7,
+      "snow_chance": 43,
+      "tmin_avg": -8.1,
+      "tmax_avg": 2.4,
+      "sun_avg": 6.7
+    },
+    "01-22": {
+      "snow_avg": 1.2,
+      "snow_chance": 57,
+      "tmin_avg": -8.3,
+      "tmax_avg": 3.7,
+      "sun_avg": 5.5
+    },
+    "01-23": {
+      "snow_avg": 2.5,
+      "snow_chance": 43,
+      "tmin_avg": -6.5,
+      "tmax_avg": 2.1,
+      "sun_avg": 5.8
+    },
+    "01-24": {
+      "snow_avg": 0.7,
+      "snow_chance": 29,
+      "tmin_avg": -7.6,
+      "tmax_avg": 3.9,
+      "sun_avg": 6.3
+    },
+    "01-25": {
+      "snow_avg": 1.3,
+      "snow_chance": 43,
+      "tmin_avg": -6.2,
+      "tmax_avg": 3.1,
+      "sun_avg": 6.3
+    },
+    "01-26": {
+      "snow_avg": 1.6,
+      "snow_chance": 57,
+      "tmin_avg": -5.5,
+      "tmax_avg": 2.8,
+      "sun_avg": 4.8
+    },
+    "01-27": {
+      "snow_avg": 1.0,
+      "snow_chance": 71,
+      "tmin_avg": -6.0,
+      "tmax_avg": 4.0,
+      "sun_avg": 6.1
+    },
+    "01-28": {
+      "snow_avg": 8.9,
+      "snow_chance": 86,
+      "tmin_avg": -5.4,
+      "tmax_avg": 2.5,
+      "sun_avg": 2.3
+    },
+    "01-29": {
+      "snow_avg": 4.2,
+      "snow_chance": 57,
+      "tmin_avg": -6.0,
+      "tmax_avg": 3.5,
+      "sun_avg": 5.7
+    },
+    "01-30": {
+      "snow_avg": 3.2,
+      "snow_chance": 71,
+      "tmin_avg": -5.5,
+      "tmax_avg": 4.4,
+      "sun_avg": 5.1
+    },
+    "01-31": {
+      "snow_avg": 3.8,
+      "snow_chance": 71,
+      "tmin_avg": -4.8,
+      "tmax_avg": 3.3,
+      "sun_avg": 4.7
+    },
+    "02-01": {
+      "snow_avg": 5.5,
+      "snow_chance": 71,
+      "tmin_avg": -2.9,
+      "tmax_avg": 3.8,
+      "sun_avg": 3.0
+    },
+    "02-02": {
+      "snow_avg": 7.4,
+      "snow_chance": 71,
+      "tmin_avg": -1.4,
+      "tmax_avg": 4.5,
+      "sun_avg": 3.5
+    },
+    "02-03": {
+      "snow_avg": 4.7,
+      "snow_chance": 57,
+      "tmin_avg": -1.6,
+      "tmax_avg": 6.6,
+      "sun_avg": 5.1
+    },
+    "02-04": {
+      "snow_avg": 5.9,
+      "snow_chance": 71,
+      "tmin_avg": -3.8,
+      "tmax_avg": 5.5,
+      "sun_avg": 6.3
+    },
+    "02-05": {
+      "snow_avg": 2.6,
+      "snow_chance": 43,
+      "tmin_avg": -5.9,
+      "tmax_avg": 4.1,
+      "sun_avg": 6.9
+    },
+    "02-06": {
+      "snow_avg": 0.5,
+      "snow_chance": 29,
+      "tmin_avg": -6.7,
+      "tmax_avg": 4.9,
+      "sun_avg": 8.1
+    },
+    "02-07": {
+      "snow_avg": 5.1,
+      "snow_chance": 57,
+      "tmin_avg": -7.4,
+      "tmax_avg": 4.8,
+      "sun_avg": 5.8
+    },
+    "02-08": {
+      "snow_avg": 0.5,
+      "snow_chance": 43,
+      "tmin_avg": -7.2,
+      "tmax_avg": 5.0,
+      "sun_avg": 7.0
+    },
+    "02-09": {
+      "snow_avg": 0.3,
+      "snow_chance": 29,
+      "tmin_avg": -6.1,
+      "tmax_avg": 4.8,
+      "sun_avg": 6.1
+    },
+    "02-10": {
+      "snow_avg": 3.3,
+      "snow_chance": 43,
+      "tmin_avg": -5.0,
+      "tmax_avg": 5.9,
+      "sun_avg": 5.8
+    },
+    "02-11": {
+      "snow_avg": 7.7,
+      "snow_chance": 71,
+      "tmin_avg": -5.6,
+      "tmax_avg": 2.3,
+      "sun_avg": 3.7
+    },
+    "02-12": {
+      "snow_avg": 3.3,
+      "snow_chance": 43,
+      "tmin_avg": -5.5,
+      "tmax_avg": 2.2,
+      "sun_avg": 6.6
+    },
+    "02-13": {
+      "snow_avg": 1.8,
+      "snow_chance": 43,
+      "tmin_avg": -8.2,
+      "tmax_avg": 4.3,
+      "sun_avg": 7.9
+    },
+    "02-14": {
+      "snow_avg": 2.0,
+      "snow_chance": 43,
+      "tmin_avg": -7.8,
+      "tmax_avg": 5.2,
+      "sun_avg": 6.8
+    },
+    "02-15": {
+      "snow_avg": 1.4,
+      "snow_chance": 29,
+      "tmin_avg": -7.0,
+      "tmax_avg": 7.6,
+      "sun_avg": 7.7
+    },
+    "02-16": {
+      "snow_avg": 0.5,
+      "snow_chance": 43,
+      "tmin_avg": -3.5,
+      "tmax_avg": 9.2,
+      "sun_avg": 6.0
+    },
+    "02-17": {
+      "snow_avg": 0.8,
+      "snow_chance": 57,
+      "tmin_avg": -1.5,
+      "tmax_avg": 7.5,
+      "sun_avg": 5.4
+    },
+    "02-18": {
+      "snow_avg": 0.7,
+      "snow_chance": 29,
+      "tmin_avg": -2.5,
+      "tmax_avg": 8.7,
+      "sun_avg": 8.7
+    },
+    "02-19": {
+      "snow_avg": 3.0,
+      "snow_chance": 43,
+      "tmin_avg": -3.2,
+      "tmax_avg": 4.8,
+      "sun_avg": 6.0
+    },
+    "02-20": {
+      "snow_avg": 1.7,
+      "snow_chance": 29,
+      "tmin_avg": -4.0,
+      "tmax_avg": 7.4,
+      "sun_avg": 8.2
+    },
+    "02-21": {
+      "snow_avg": 2.2,
+      "snow_chance": 29,
+      "tmin_avg": -3.0,
+      "tmax_avg": 9.1,
+      "sun_avg": 8.7
+    },
+    "02-22": {
+      "snow_avg": 1.7,
+      "snow_chance": 14,
+      "tmin_avg": -0.9,
+      "tmax_avg": 9.3,
+      "sun_avg": 5.9
+    },
+    "02-23": {
+      "snow_avg": 1.7,
+      "snow_chance": 57,
+      "tmin_avg": -1.6,
+      "tmax_avg": 7.8,
+      "sun_avg": 5.8
+    },
+    "02-24": {
+      "snow_avg": 0.4,
+      "snow_chance": 29,
+      "tmin_avg": -2.7,
+      "tmax_avg": 9.9,
+      "sun_avg": 8.6
+    },
+    "02-25": {
+      "snow_avg": 4.1,
+      "snow_chance": 71,
+      "tmin_avg": -3.3,
+      "tmax_avg": 7.7,
+      "sun_avg": 7.2
+    },
+    "02-26": {
+      "snow_avg": 3.6,
+      "snow_chance": 57,
+      "tmin_avg": -3.9,
+      "tmax_avg": 4.4,
+      "sun_avg": 5.8
+    },
+    "02-27": {
+      "snow_avg": 1.3,
+      "snow_chance": 71,
+      "tmin_avg": -5.5,
+      "tmax_avg": 3.4,
+      "sun_avg": 6.5
+    },
+    "02-28": {
+      "snow_avg": 1.2,
+      "snow_chance": 43,
+      "tmin_avg": -4.9,
+      "tmax_avg": 4.7,
+      "sun_avg": 8.9
+    },
+    "02-29": {
+      "snow_avg": 0.0,
+      "snow_chance": 50,
+      "tmin_avg": -2.5,
+      "tmax_avg": 11.2,
+      "sun_avg": 10.4
+    },
+    "03-01": {
+      "snow_avg": 2.3,
+      "snow_chance": 43,
+      "tmin_avg": -5.0,
+      "tmax_avg": 5.3,
+      "sun_avg": 7.0
+    },
+    "03-02": {
+      "snow_avg": 0.8,
+      "snow_chance": 29,
+      "tmin_avg": -4.9,
+      "tmax_avg": 7.5,
+      "sun_avg": 8.1
+    },
+    "03-03": {
+      "snow_avg": 1.6,
+      "snow_chance": 14,
+      "tmin_avg": -4.7,
+      "tmax_avg": 7.5,
+      "sun_avg": 9.2
+    },
+    "03-04": {
+      "snow_avg": 1.2,
+      "snow_chance": 43,
+      "tmin_avg": -4.2,
+      "tmax_avg": 6.3,
+      "sun_avg": 9.3
+    },
+    "03-05": {
+      "snow_avg": 3.5,
+      "snow_chance": 57,
+      "tmin_avg": -5.2,
+      "tmax_avg": 4.3,
+      "sun_avg": 5.8
+    },
+    "03-06": {
+      "snow_avg": 2.9,
+      "snow_chance": 43,
+      "tmin_avg": -5.8,
+      "tmax_avg": 5.2,
+      "sun_avg": 7.1
+    },
+    "03-07": {
+      "snow_avg": 1.3,
+      "snow_chance": 57,
+      "tmin_avg": -5.0,
+      "tmax_avg": 4.9,
+      "sun_avg": 8.8
+    },
+    "03-08": {
+      "snow_avg": 0.6,
+      "snow_chance": 43,
+      "tmin_avg": -5.4,
+      "tmax_avg": 6.7,
+      "sun_avg": 8.5
+    },
+    "03-09": {
+      "snow_avg": 2.0,
+      "snow_chance": 57,
+      "tmin_avg": -3.9,
+      "tmax_avg": 7.5,
+      "sun_avg": 7.7
+    },
+    "03-10": {
+      "snow_avg": 2.4,
+      "snow_chance": 86,
+      "tmin_avg": -3.0,
+      "tmax_avg": 7.4,
+      "sun_avg": 4.8
+    },
+    "03-11": {
+      "snow_avg": 4.3,
+      "snow_chance": 57,
+      "tmin_avg": -3.2,
+      "tmax_avg": 7.1,
+      "sun_avg": 5.9
+    },
+    "03-12": {
+      "snow_avg": 2.5,
+      "snow_chance": 71,
+      "tmin_avg": -1.8,
+      "tmax_avg": 6.5,
+      "sun_avg": 6.1
+    },
+    "03-13": {
+      "snow_avg": 3.9,
+      "snow_chance": 71,
+      "tmin_avg": -1.4,
+      "tmax_avg": 7.5,
+      "sun_avg": 6.9
+    },
+    "03-14": {
+      "snow_avg": 5.9,
+      "snow_chance": 71,
+      "tmin_avg": -2.0,
+      "tmax_avg": 6.3,
+      "sun_avg": 5.4
+    },
+    "03-15": {
+      "snow_avg": 6.4,
+      "snow_chance": 71,
+      "tmin_avg": -2.1,
+      "tmax_avg": 7.0,
+      "sun_avg": 5.4
+    },
+    "03-16": {
+      "snow_avg": 3.5,
+      "snow_chance": 43,
+      "tmin_avg": -2.3,
+      "tmax_avg": 7.6,
+      "sun_avg": 6.9
+    },
+    "03-17": {
+      "snow_avg": 3.2,
+      "snow_chance": 43,
+      "tmin_avg": -2.4,
+      "tmax_avg": 9.4,
+      "sun_avg": 8.2
+    },
+    "03-18": {
+      "snow_avg": 1.6,
+      "snow_chance": 43,
+      "tmin_avg": -2.0,
+      "tmax_avg": 7.2,
+      "sun_avg": 8.1
+    },
+    "03-19": {
+      "snow_avg": 0.5,
+      "snow_chance": 43,
+      "tmin_avg": -3.5,
+      "tmax_avg": 8.1,
+      "sun_avg": 9.9
+    },
+    "03-20": {
+      "snow_avg": 0.4,
+      "snow_chance": 29,
+      "tmin_avg": -3.5,
+      "tmax_avg": 8.8,
+      "sun_avg": 9.3
+    },
+    "03-21": {
+      "snow_avg": 0.4,
+      "snow_chance": 14,
+      "tmin_avg": -3.0,
+      "tmax_avg": 9.5,
+      "sun_avg": 8.4
+    },
+    "03-22": {
+      "snow_avg": 0.8,
+      "snow_chance": 14,
+      "tmin_avg": -1.5,
+      "tmax_avg": 10.5,
+      "sun_avg": 9.9
+    },
+    "03-23": {
+      "snow_avg": 1.2,
+      "snow_chance": 29,
+      "tmin_avg": -2.4,
+      "tmax_avg": 9.2,
+      "sun_avg": 9.4
+    },
+    "03-24": {
+      "snow_avg": 1.4,
+      "snow_chance": 29,
+      "tmin_avg": -3.1,
+      "tmax_avg": 8.4,
+      "sun_avg": 9.2
+    },
+    "03-25": {
+      "snow_avg": 2.6,
+      "snow_chance": 57,
+      "tmin_avg": -3.1,
+      "tmax_avg": 7.0,
+      "sun_avg": 9.7
+    },
+    "03-26": {
+      "snow_avg": 0.9,
+      "snow_chance": 43,
+      "tmin_avg": -2.9,
+      "tmax_avg": 8.5,
+      "sun_avg": 8.8
+    },
+    "03-27": {
+      "snow_avg": 4.9,
+      "snow_chance": 43,
+      "tmin_avg": -2.0,
+      "tmax_avg": 7.8,
+      "sun_avg": 7.1
+    },
+    "03-28": {
+      "snow_avg": 1.5,
+      "snow_chance": 29,
+      "tmin_avg": -3.6,
+      "tmax_avg": 8.9,
+      "sun_avg": 10.0
+    },
+    "03-29": {
+      "snow_avg": 1.8,
+      "snow_chance": 43,
+      "tmin_avg": -1.6,
+      "tmax_avg": 10.4,
+      "sun_avg": 7.8
+    },
+    "03-30": {
+      "snow_avg": 0.8,
+      "snow_chance": 43,
+      "tmin_avg": -0.3,
+      "tmax_avg": 10.3,
+      "sun_avg": 7.0
+    },
+    "03-31": {
+      "snow_avg": 3.1,
+      "snow_chance": 43,
+      "tmin_avg": -0.5,
+      "tmax_avg": 9.3,
+      "sun_avg": 8.9
+    },
+    "04-01": {
+      "snow_avg": 2.4,
+      "snow_chance": 57,
+      "tmin_avg": -1.9,
+      "tmax_avg": 7.7,
+      "sun_avg": 7.4
+    },
+    "04-02": {
+      "snow_avg": 1.6,
+      "snow_chance": 43,
+      "tmin_avg": -2.4,
+      "tmax_avg": 8.3,
+      "sun_avg": 9.3
+    },
+    "04-03": {
+      "snow_avg": 0.2,
+      "snow_chance": 43,
+      "tmin_avg": -3.0,
+      "tmax_avg": 7.0,
+      "sun_avg": 7.1
+    },
+    "04-04": {
+      "snow_avg": 1.6,
+      "snow_chance": 14,
+      "tmin_avg": -2.7,
+      "tmax_avg": 8.3,
+      "sun_avg": 10.3
+    },
+    "04-05": {
+      "snow_avg": 1.6,
+      "snow_chance": 57,
+      "tmin_avg": -1.9,
+      "tmax_avg": 10.6,
+      "sun_avg": 9.8
+    },
+    "04-06": {
+      "snow_avg": 1.0,
+      "snow_chance": 14,
+      "tmin_avg": -2.2,
+      "tmax_avg": 10.6,
+      "sun_avg": 12.6
+    },
+    "04-07": {
+      "snow_avg": 1.3,
+      "snow_chance": 29,
+      "tmin_avg": -1.0,
+      "tmax_avg": 10.5,
+      "sun_avg": 9.5
+    },
+    "04-08": {
+      "snow_avg": 1.5,
+      "snow_chance": 57,
+      "tmin_avg": -0.4,
+      "tmax_avg": 10.5,
+      "sun_avg": 7.4
+    },
+    "04-09": {
+      "snow_avg": 1.8,
+      "snow_chance": 29,
+      "tmin_avg": -2.1,
+      "tmax_avg": 10.5,
+      "sun_avg": 9.5
+    },
+    "04-10": {
+      "snow_avg": 1.4,
+      "snow_chance": 43,
+      "tmin_avg": -1.4,
+      "tmax_avg": 10.1,
+      "sun_avg": 8.9
+    },
+    "04-11": {
+      "snow_avg": 0.8,
+      "snow_chance": 14,
+      "tmin_avg": -0.9,
+      "tmax_avg": 12.2,
+      "sun_avg": 9.3
+    },
+    "04-12": {
+      "snow_avg": 2.0,
+      "snow_chance": 43,
+      "tmin_avg": -0.6,
+      "tmax_avg": 13.6,
+      "sun_avg": 8.0
+    },
+    "04-13": {
+      "snow_avg": 2.0,
+      "snow_chance": 43,
+      "tmin_avg": 1.0,
+      "tmax_avg": 11.2,
+      "sun_avg": 9.3
+    },
+    "04-14": {
+      "snow_avg": 1.7,
+      "snow_chance": 57,
+      "tmin_avg": -0.4,
+      "tmax_avg": 9.8,
+      "sun_avg": 9.7
+    },
+    "04-15": {
+      "snow_avg": 0.8,
+      "snow_chance": 29,
+      "tmin_avg": -0.2,
+      "tmax_avg": 11.0,
+      "sun_avg": 10.4
+    },
+    "04-16": {
+      "snow_avg": 4.5,
+      "snow_chance": 43,
+      "tmin_avg": -0.8,
+      "tmax_avg": 10.1,
+      "sun_avg": 9.7
+    },
+    "04-17": {
+      "snow_avg": 3.3,
+      "snow_chance": 57,
+      "tmin_avg": -0.9,
+      "tmax_avg": 8.5,
+      "sun_avg": 8.9
+    },
+    "04-18": {
+      "snow_avg": 1.8,
+      "snow_chance": 43,
+      "tmin_avg": -0.6,
+      "tmax_avg": 10.0,
+      "sun_avg": 9.3
+    },
+    "04-19": {
+      "snow_avg": 2.5,
+      "snow_chance": 43,
+      "tmin_avg": -0.0,
+      "tmax_avg": 10.8,
+      "sun_avg": 9.2
+    },
+    "04-20": {
+      "snow_avg": 4.2,
+      "snow_chance": 43,
+      "tmin_avg": 0.8,
+      "tmax_avg": 11.3,
+      "sun_avg": 9.2
+    },
+    "04-21": {
+      "snow_avg": 1.6,
+      "snow_chance": 43,
+      "tmin_avg": -0.2,
+      "tmax_avg": 12.5,
+      "sun_avg": 10.6
+    },
+    "04-22": {
+      "snow_avg": 0.6,
+      "snow_chance": 29,
+      "tmin_avg": -0.0,
+      "tmax_avg": 13.4,
+      "sun_avg": 10.3
+    },
+    "04-23": {
+      "snow_avg": 0.6,
+      "snow_chance": 14,
+      "tmin_avg": 1.2,
+      "tmax_avg": 12.6,
+      "sun_avg": 9.5
+    },
+    "04-24": {
+      "snow_avg": 1.5,
+      "snow_chance": 43,
+      "tmin_avg": 1.1,
+      "tmax_avg": 10.4,
+      "sun_avg": 9.1
+    },
+    "04-25": {
+      "snow_avg": 2.4,
+      "snow_chance": 57,
+      "tmin_avg": 0.8,
+      "tmax_avg": 10.6,
+      "sun_avg": 9.2
+    },
+    "04-26": {
+      "snow_avg": 1.5,
+      "snow_chance": 57,
+      "tmin_avg": -0.7,
+      "tmax_avg": 10.6,
+      "sun_avg": 10.6
+    },
+    "04-27": {
+      "snow_avg": 0.5,
+      "snow_chance": 29,
+      "tmin_avg": -0.4,
+      "tmax_avg": 12.7,
+      "sun_avg": 12.0
+    },
+    "04-28": {
+      "snow_avg": 0.8,
+      "snow_chance": 14,
+      "tmin_avg": 1.2,
+      "tmax_avg": 12.6,
+      "sun_avg": 9.0
+    },
+    "04-29": {
+      "snow_avg": 1.0,
+      "snow_chance": 29,
+      "tmin_avg": 1.4,
+      "tmax_avg": 12.9,
+      "sun_avg": 8.6
+    },
+    "04-30": {
+      "snow_avg": 0.4,
+      "snow_chance": 29,
+      "tmin_avg": 2.6,
+      "tmax_avg": 13.6,
+      "sun_avg": 8.3
+    },
+    "05-01": {
+      "snow_avg": 0.5,
+      "snow_chance": 29,
+      "tmin_avg": 2.9,
+      "tmax_avg": 13.5,
+      "sun_avg": 9.1
+    },
+    "05-02": {
+      "snow_avg": 2.2,
+      "snow_chance": 29,
+      "tmin_avg": 2.0,
+      "tmax_avg": 13.3,
+      "sun_avg": 8.5
+    },
+    "05-03": {
+      "snow_avg": 0.1,
+      "snow_chance": 14,
+      "tmin_avg": 2.1,
+      "tmax_avg": 11.7,
+      "sun_avg": 9.3
+    },
+    "05-04": {
+      "snow_avg": 1.2,
+      "snow_chance": 14,
+      "tmin_avg": 1.7,
+      "tmax_avg": 13.5,
+      "sun_avg": 10.3
+    },
+    "05-05": {
+      "snow_avg": 2.9,
+      "snow_chance": 29,
+      "tmin_avg": 2.3,
+      "tmax_avg": 10.0,
+      "sun_avg": 5.2
+    },
+    "05-06": {
+      "snow_avg": 0.6,
+      "snow_chance": 29,
+      "tmin_avg": 2.2,
+      "tmax_avg": 10.5,
+      "sun_avg": 6.1
+    },
+    "05-07": {
+      "snow_avg": 1.0,
+      "snow_chance": 14,
+      "tmin_avg": 1.5,
+      "tmax_avg": 11.1,
+      "sun_avg": 7.9
+    },
+    "05-08": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 2.6,
+      "tmax_avg": 13.3,
+      "sun_avg": 6.5
+    },
+    "05-09": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 3.0,
+      "tmax_avg": 16.3,
+      "sun_avg": 10.8
+    },
+    "05-10": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 4.0,
+      "tmax_avg": 15.7,
+      "sun_avg": 10.5
+    },
+    "05-11": {
+      "snow_avg": 0.1,
+      "snow_chance": 29,
+      "tmin_avg": 3.4,
+      "tmax_avg": 15.5,
+      "sun_avg": 8.1
+    },
+    "05-12": {
+      "snow_avg": 3.1,
+      "snow_chance": 43,
+      "tmin_avg": 3.0,
+      "tmax_avg": 12.0,
+      "sun_avg": 8.8
+    },
+    "05-13": {
+      "snow_avg": 0.1,
+      "snow_chance": 14,
+      "tmin_avg": 3.8,
+      "tmax_avg": 12.8,
+      "sun_avg": 6.9
+    },
+    "05-14": {
+      "snow_avg": 0.5,
+      "snow_chance": 14,
+      "tmin_avg": 2.7,
+      "tmax_avg": 12.9,
+      "sun_avg": 10.6
+    },
+    "05-15": {
+      "snow_avg": 0.1,
+      "snow_chance": 14,
+      "tmin_avg": 4.0,
+      "tmax_avg": 12.3,
+      "sun_avg": 6.9
+    },
+    "05-16": {
+      "snow_avg": 0.0,
+      "snow_chance": 14,
+      "tmin_avg": 2.9,
+      "tmax_avg": 12.4,
+      "sun_avg": 8.6
+    },
+    "05-17": {
+      "snow_avg": 0.3,
+      "snow_chance": 29,
+      "tmin_avg": 2.9,
+      "tmax_avg": 12.7,
+      "sun_avg": 10.1
+    },
+    "05-18": {
+      "snow_avg": 0.7,
+      "snow_chance": 29,
+      "tmin_avg": 2.8,
+      "tmax_avg": 14.6,
+      "sun_avg": 11.7
+    },
+    "05-19": {
+      "snow_avg": 0.5,
+      "snow_chance": 14,
+      "tmin_avg": 3.6,
+      "tmax_avg": 15.5,
+      "sun_avg": 11.1
+    },
+    "05-20": {
+      "snow_avg": 0.1,
+      "snow_chance": 14,
+      "tmin_avg": 4.8,
+      "tmax_avg": 16.0,
+      "sun_avg": 10.2
+    },
+    "05-21": {
+      "snow_avg": 0.0,
+      "snow_chance": 14,
+      "tmin_avg": 5.4,
+      "tmax_avg": 14.4,
+      "sun_avg": 6.0
+    },
+    "05-22": {
+      "snow_avg": 0.2,
+      "snow_chance": 14,
+      "tmin_avg": 5.5,
+      "tmax_avg": 15.1,
+      "sun_avg": 9.6
+    },
+    "05-23": {
+      "snow_avg": 0.5,
+      "snow_chance": 14,
+      "tmin_avg": 5.0,
+      "tmax_avg": 15.7,
+      "sun_avg": 10.1
+    },
+    "05-24": {
+      "snow_avg": 0.0,
+      "snow_chance": 14,
+      "tmin_avg": 4.2,
+      "tmax_avg": 13.2,
+      "sun_avg": 7.4
+    },
+    "05-25": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 4.4,
+      "tmax_avg": 13.6,
+      "sun_avg": 9.7
+    },
+    "05-26": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 4.4,
+      "tmax_avg": 15.1,
+      "sun_avg": 11.6
+    },
+    "05-27": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 4.3,
+      "tmax_avg": 15.1,
+      "sun_avg": 9.7
+    },
+    "05-28": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 4.1,
+      "tmax_avg": 13.6,
+      "sun_avg": 8.4
+    },
+    "05-29": {
+      "snow_avg": 0.2,
+      "snow_chance": 14,
+      "tmin_avg": 3.5,
+      "tmax_avg": 13.4,
+      "sun_avg": 10.3
+    },
+    "05-30": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 4.0,
+      "tmax_avg": 15.1,
+      "sun_avg": 12.9
+    },
+    "05-31": {
+      "snow_avg": 0.0,
+      "snow_chance": 14,
+      "tmin_avg": 3.2,
+      "tmax_avg": 16.2,
+      "sun_avg": 12.1
+    },
+    "06-01": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 5.0,
+      "tmax_avg": 17.6,
+      "sun_avg": 10.9
+    },
+    "06-02": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 6.5,
+      "tmax_avg": 18.8,
+      "sun_avg": 12.1
+    },
+    "06-03": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 7.4,
+      "tmax_avg": 19.6,
+      "sun_avg": 11.4
+    },
+    "06-04": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 7.5,
+      "tmax_avg": 19.7,
+      "sun_avg": 11.0
+    },
+    "06-05": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 7.9,
+      "tmax_avg": 17.9,
+      "sun_avg": 9.4
+    },
+    "06-06": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 7.2,
+      "tmax_avg": 17.2,
+      "sun_avg": 8.9
+    },
+    "06-07": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 7.9,
+      "tmax_avg": 17.4,
+      "sun_avg": 8.7
+    },
+    "06-08": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 7.5,
+      "tmax_avg": 17.1,
+      "sun_avg": 8.5
+    },
+    "06-09": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 7.5,
+      "tmax_avg": 17.0,
+      "sun_avg": 10.0
+    },
+    "06-10": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 7.9,
+      "tmax_avg": 17.6,
+      "sun_avg": 10.0
+    },
+    "06-11": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 7.2,
+      "tmax_avg": 17.6,
+      "sun_avg": 10.7
+    },
+    "06-12": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 7.0,
+      "tmax_avg": 20.0,
+      "sun_avg": 13.4
+    },
+    "06-13": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 8.3,
+      "tmax_avg": 19.0,
+      "sun_avg": 12.0
+    },
+    "06-14": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 7.2,
+      "tmax_avg": 20.6,
+      "sun_avg": 11.0
+    },
+    "06-15": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 9.0,
+      "tmax_avg": 19.3,
+      "sun_avg": 10.4
+    },
+    "06-16": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 9.5,
+      "tmax_avg": 18.3,
+      "sun_avg": 11.7
+    },
+    "06-17": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 8.9,
+      "tmax_avg": 20.4,
+      "sun_avg": 12.7
+    },
+    "06-18": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 8.4,
+      "tmax_avg": 23.1,
+      "sun_avg": 14.5
+    },
+    "06-19": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 10.7,
+      "tmax_avg": 23.1,
+      "sun_avg": 12.6
+    },
+    "06-20": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 10.9,
+      "tmax_avg": 22.2,
+      "sun_avg": 11.5
+    },
+    "06-21": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 10.9,
+      "tmax_avg": 21.4,
+      "sun_avg": 11.6
+    },
+    "06-22": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 10.9,
+      "tmax_avg": 21.0,
+      "sun_avg": 10.2
+    },
+    "06-23": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 10.3,
+      "tmax_avg": 19.8,
+      "sun_avg": 10.8
+    },
+    "06-24": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 10.2,
+      "tmax_avg": 20.9,
+      "sun_avg": 13.1
+    },
+    "06-25": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 9.4,
+      "tmax_avg": 22.4,
+      "sun_avg": 14.8
+    },
+    "06-26": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 10.7,
+      "tmax_avg": 23.7,
+      "sun_avg": 12.9
+    },
+    "06-27": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 11.4,
+      "tmax_avg": 22.6,
+      "sun_avg": 12.2
+    },
+    "06-28": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 11.6,
+      "tmax_avg": 22.1,
+      "sun_avg": 11.2
+    },
+    "06-29": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 11.0,
+      "tmax_avg": 23.7,
+      "sun_avg": 12.4
+    },
+    "06-30": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 11.7,
+      "tmax_avg": 21.9,
+      "sun_avg": 11.1
+    },
+    "07-01": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 11.3,
+      "tmax_avg": 19.5,
+      "sun_avg": 9.1
+    },
+    "07-02": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 10.9,
+      "tmax_avg": 19.9,
+      "sun_avg": 11.5
+    },
+    "07-03": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 11.0,
+      "tmax_avg": 19.1,
+      "sun_avg": 10.1
+    },
+    "07-04": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 10.7,
+      "tmax_avg": 19.6,
+      "sun_avg": 9.8
+    },
+    "07-05": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 10.2,
+      "tmax_avg": 20.4,
+      "sun_avg": 12.6
+    },
+    "07-06": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 9.6,
+      "tmax_avg": 21.7,
+      "sun_avg": 11.8
+    },
+    "07-07": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 9.9,
+      "tmax_avg": 17.5,
+      "sun_avg": 8.6
+    },
+    "07-08": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 8.7,
+      "tmax_avg": 17.4,
+      "sun_avg": 9.4
+    },
+    "07-09": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 8.9,
+      "tmax_avg": 20.1,
+      "sun_avg": 13.2
+    },
+    "07-10": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 8.6,
+      "tmax_avg": 20.4,
+      "sun_avg": 13.6
+    },
+    "07-11": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 8.9,
+      "tmax_avg": 19.3,
+      "sun_avg": 12.1
+    },
+    "07-12": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 9.3,
+      "tmax_avg": 20.3,
+      "sun_avg": 11.6
+    },
+    "07-13": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 8.4,
+      "tmax_avg": 18.2,
+      "sun_avg": 11.1
+    },
+    "07-14": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 9.3,
+      "tmax_avg": 19.9,
+      "sun_avg": 12.8
+    },
+    "07-15": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 10.1,
+      "tmax_avg": 20.1,
+      "sun_avg": 11.1
+    },
+    "07-16": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 11.6,
+      "tmax_avg": 18.6,
+      "sun_avg": 9.5
+    },
+    "07-17": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 10.4,
+      "tmax_avg": 18.7,
+      "sun_avg": 8.8
+    },
+    "07-18": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 10.0,
+      "tmax_avg": 21.0,
+      "sun_avg": 13.1
+    },
+    "07-19": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 10.2,
+      "tmax_avg": 23.3,
+      "sun_avg": 13.4
+    },
+    "07-20": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 11.0,
+      "tmax_avg": 23.3,
+      "sun_avg": 13.8
+    },
+    "07-21": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 10.8,
+      "tmax_avg": 20.9,
+      "sun_avg": 11.4
+    },
+    "07-22": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 11.0,
+      "tmax_avg": 21.2,
+      "sun_avg": 13.5
+    },
+    "07-23": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 11.3,
+      "tmax_avg": 21.9,
+      "sun_avg": 13.4
+    },
+    "07-24": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 11.5,
+      "tmax_avg": 20.8,
+      "sun_avg": 9.8
+    },
+    "07-25": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 10.8,
+      "tmax_avg": 21.2,
+      "sun_avg": 11.5
+    },
+    "07-26": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 10.7,
+      "tmax_avg": 18.9,
+      "sun_avg": 9.1
+    },
+    "07-27": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 10.8,
+      "tmax_avg": 20.9,
+      "sun_avg": 10.5
+    },
+    "07-28": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 10.6,
+      "tmax_avg": 19.0,
+      "sun_avg": 6.6
+    },
+    "07-29": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 10.3,
+      "tmax_avg": 20.2,
+      "sun_avg": 11.3
+    },
+    "07-30": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 10.7,
+      "tmax_avg": 21.1,
+      "sun_avg": 13.0
+    },
+    "07-31": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 11.1,
+      "tmax_avg": 20.9,
+      "sun_avg": 11.8
+    },
+    "08-01": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 11.5,
+      "tmax_avg": 19.9,
+      "sun_avg": 9.9
+    },
+    "08-02": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 10.7,
+      "tmax_avg": 18.8,
+      "sun_avg": 9.9
+    },
+    "08-03": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 9.6,
+      "tmax_avg": 17.8,
+      "sun_avg": 9.1
+    },
+    "08-04": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 9.6,
+      "tmax_avg": 17.9,
+      "sun_avg": 6.5
+    },
+    "08-05": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 9.7,
+      "tmax_avg": 20.0,
+      "sun_avg": 11.2
+    },
+    "08-06": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 9.6,
+      "tmax_avg": 18.9,
+      "sun_avg": 11.4
+    },
+    "08-07": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 10.1,
+      "tmax_avg": 19.9,
+      "sun_avg": 9.2
+    },
+    "08-08": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 10.0,
+      "tmax_avg": 20.3,
+      "sun_avg": 11.9
+    },
+    "08-09": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 9.6,
+      "tmax_avg": 22.3,
+      "sun_avg": 11.8
+    },
+    "08-10": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 11.2,
+      "tmax_avg": 22.0,
+      "sun_avg": 12.4
+    },
+    "08-11": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 10.9,
+      "tmax_avg": 24.0,
+      "sun_avg": 13.5
+    },
+    "08-12": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 12.0,
+      "tmax_avg": 23.7,
+      "sun_avg": 11.9
+    },
+    "08-13": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 11.6,
+      "tmax_avg": 23.0,
+      "sun_avg": 11.6
+    },
+    "08-14": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 11.3,
+      "tmax_avg": 23.6,
+      "sun_avg": 12.9
+    },
+    "08-15": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 11.2,
+      "tmax_avg": 22.7,
+      "sun_avg": 12.7
+    },
+    "08-16": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 11.0,
+      "tmax_avg": 21.6,
+      "sun_avg": 11.5
+    },
+    "08-17": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 10.8,
+      "tmax_avg": 20.5,
+      "sun_avg": 9.6
+    },
+    "08-18": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 10.9,
+      "tmax_avg": 20.3,
+      "sun_avg": 9.1
+    },
+    "08-19": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 11.0,
+      "tmax_avg": 19.8,
+      "sun_avg": 8.5
+    },
+    "08-20": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 10.9,
+      "tmax_avg": 20.6,
+      "sun_avg": 8.4
+    },
+    "08-21": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 10.8,
+      "tmax_avg": 21.0,
+      "sun_avg": 11.2
+    },
+    "08-22": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 10.3,
+      "tmax_avg": 20.2,
+      "sun_avg": 10.1
+    },
+    "08-23": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 10.4,
+      "tmax_avg": 19.4,
+      "sun_avg": 10.3
+    },
+    "08-24": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 8.7,
+      "tmax_avg": 20.9,
+      "sun_avg": 12.3
+    },
+    "08-25": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 9.3,
+      "tmax_avg": 20.7,
+      "sun_avg": 10.3
+    },
+    "08-26": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 10.0,
+      "tmax_avg": 20.3,
+      "sun_avg": 9.3
+    },
+    "08-27": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 9.7,
+      "tmax_avg": 19.0,
+      "sun_avg": 9.6
+    },
+    "08-28": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 9.5,
+      "tmax_avg": 18.5,
+      "sun_avg": 7.5
+    },
+    "08-29": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 9.5,
+      "tmax_avg": 16.0,
+      "sun_avg": 6.1
+    },
+    "08-30": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 8.6,
+      "tmax_avg": 17.4,
+      "sun_avg": 7.8
+    },
+    "08-31": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 8.0,
+      "tmax_avg": 18.0,
+      "sun_avg": 9.0
+    },
+    "09-01": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 8.5,
+      "tmax_avg": 18.1,
+      "sun_avg": 10.5
+    },
+    "09-02": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 7.5,
+      "tmax_avg": 17.6,
+      "sun_avg": 9.7
+    },
+    "09-03": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 7.4,
+      "tmax_avg": 19.1,
+      "sun_avg": 12.3
+    },
+    "09-04": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 7.9,
+      "tmax_avg": 21.2,
+      "sun_avg": 12.5
+    },
+    "09-05": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 8.4,
+      "tmax_avg": 19.6,
+      "sun_avg": 8.8
+    },
+    "09-06": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 8.1,
+      "tmax_avg": 18.4,
+      "sun_avg": 8.5
+    },
+    "09-07": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 8.1,
+      "tmax_avg": 19.6,
+      "sun_avg": 10.4
+    },
+    "09-08": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 7.8,
+      "tmax_avg": 18.7,
+      "sun_avg": 8.4
+    },
+    "09-09": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 8.2,
+      "tmax_avg": 17.2,
+      "sun_avg": 8.7
+    },
+    "09-10": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 7.7,
+      "tmax_avg": 17.5,
+      "sun_avg": 8.2
+    },
+    "09-11": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 8.0,
+      "tmax_avg": 17.7,
+      "sun_avg": 9.7
+    },
+    "09-12": {
+      "snow_avg": 0.1,
+      "snow_chance": 14,
+      "tmin_avg": 7.1,
+      "tmax_avg": 17.3,
+      "sun_avg": 9.3
+    },
+    "09-13": {
+      "snow_avg": 0.4,
+      "snow_chance": 14,
+      "tmin_avg": 7.3,
+      "tmax_avg": 17.8,
+      "sun_avg": 8.5
+    },
+    "09-14": {
+      "snow_avg": 1.0,
+      "snow_chance": 14,
+      "tmin_avg": 8.6,
+      "tmax_avg": 17.9,
+      "sun_avg": 8.8
+    },
+    "09-15": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 8.0,
+      "tmax_avg": 19.1,
+      "sun_avg": 10.1
+    },
+    "09-16": {
+      "snow_avg": 0.0,
+      "snow_chance": 14,
+      "tmin_avg": 8.1,
+      "tmax_avg": 16.1,
+      "sun_avg": 6.8
+    },
+    "09-17": {
+      "snow_avg": 0.6,
+      "snow_chance": 14,
+      "tmin_avg": 7.1,
+      "tmax_avg": 15.8,
+      "sun_avg": 9.1
+    },
+    "09-18": {
+      "snow_avg": 0.1,
+      "snow_chance": 14,
+      "tmin_avg": 6.0,
+      "tmax_avg": 16.9,
+      "sun_avg": 8.6
+    },
+    "09-19": {
+      "snow_avg": 0.3,
+      "snow_chance": 14,
+      "tmin_avg": 5.0,
+      "tmax_avg": 17.2,
+      "sun_avg": 10.5
+    },
+    "09-20": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 5.6,
+      "tmax_avg": 17.4,
+      "sun_avg": 10.5
+    },
+    "09-21": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 5.4,
+      "tmax_avg": 18.1,
+      "sun_avg": 11.4
+    },
+    "09-22": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 5.7,
+      "tmax_avg": 15.8,
+      "sun_avg": 8.0
+    },
+    "09-23": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 5.2,
+      "tmax_avg": 15.0,
+      "sun_avg": 8.5
+    },
+    "09-24": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 4.9,
+      "tmax_avg": 14.6,
+      "sun_avg": 7.7
+    },
+    "09-25": {
+      "snow_avg": 0.4,
+      "snow_chance": 14,
+      "tmin_avg": 3.7,
+      "tmax_avg": 14.5,
+      "sun_avg": 7.5
+    },
+    "09-26": {
+      "snow_avg": 2.8,
+      "snow_chance": 29,
+      "tmin_avg": 5.7,
+      "tmax_avg": 14.1,
+      "sun_avg": 5.5
+    },
+    "09-27": {
+      "snow_avg": 0.3,
+      "snow_chance": 29,
+      "tmin_avg": 5.2,
+      "tmax_avg": 13.7,
+      "sun_avg": 7.3
+    },
+    "09-28": {
+      "snow_avg": 0.1,
+      "snow_chance": 29,
+      "tmin_avg": 5.8,
+      "tmax_avg": 12.7,
+      "sun_avg": 4.9
+    },
+    "09-29": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 4.5,
+      "tmax_avg": 13.9,
+      "sun_avg": 7.0
+    },
+    "09-30": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 5.7,
+      "tmax_avg": 13.3,
+      "sun_avg": 5.7
+    },
+    "10-01": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 3.4,
+      "tmax_avg": 14.8,
+      "sun_avg": 8.0
+    },
+    "10-02": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 4.5,
+      "tmax_avg": 14.6,
+      "sun_avg": 6.5
+    },
+    "10-03": {
+      "snow_avg": 0.1,
+      "snow_chance": 29,
+      "tmin_avg": 3.1,
+      "tmax_avg": 13.3,
+      "sun_avg": 7.7
+    },
+    "10-04": {
+      "snow_avg": 0.0,
+      "snow_chance": 14,
+      "tmin_avg": 3.1,
+      "tmax_avg": 12.9,
+      "sun_avg": 5.4
+    },
+    "10-05": {
+      "snow_avg": 0.0,
+      "snow_chance": 14,
+      "tmin_avg": 4.0,
+      "tmax_avg": 11.5,
+      "sun_avg": 5.4
+    },
+    "10-06": {
+      "snow_avg": 0.0,
+      "snow_chance": 14,
+      "tmin_avg": 3.0,
+      "tmax_avg": 12.6,
+      "sun_avg": 5.9
+    },
+    "10-07": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 2.8,
+      "tmax_avg": 13.6,
+      "sun_avg": 7.0
+    },
+    "10-08": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 3.8,
+      "tmax_avg": 16.4,
+      "sun_avg": 8.2
+    },
+    "10-09": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 4.9,
+      "tmax_avg": 15.1,
+      "sun_avg": 6.6
+    },
+    "10-10": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 4.3,
+      "tmax_avg": 14.0,
+      "sun_avg": 8.1
+    },
+    "10-11": {
+      "snow_avg": 0.2,
+      "snow_chance": 14,
+      "tmin_avg": 1.6,
+      "tmax_avg": 13.0,
+      "sun_avg": 8.6
+    },
+    "10-12": {
+      "snow_avg": 0.5,
+      "snow_chance": 29,
+      "tmin_avg": 2.0,
+      "tmax_avg": 13.6,
+      "sun_avg": 8.0
+    },
+    "10-13": {
+      "snow_avg": 1.4,
+      "snow_chance": 29,
+      "tmin_avg": 3.2,
+      "tmax_avg": 13.5,
+      "sun_avg": 7.7
+    },
+    "10-14": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 1.8,
+      "tmax_avg": 13.5,
+      "sun_avg": 7.9
+    },
+    "10-15": {
+      "snow_avg": 0.6,
+      "snow_chance": 29,
+      "tmin_avg": 2.6,
+      "tmax_avg": 12.4,
+      "sun_avg": 6.2
+    },
+    "10-16": {
+      "snow_avg": 0.4,
+      "snow_chance": 14,
+      "tmin_avg": 2.7,
+      "tmax_avg": 13.0,
+      "sun_avg": 7.7
+    },
+    "10-17": {
+      "snow_avg": 0.0,
+      "snow_chance": 14,
+      "tmin_avg": 2.2,
+      "tmax_avg": 14.4,
+      "sun_avg": 9.1
+    },
+    "10-18": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 3.1,
+      "tmax_avg": 14.6,
+      "sun_avg": 8.3
+    },
+    "10-19": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 2.9,
+      "tmax_avg": 14.5,
+      "sun_avg": 5.9
+    },
+    "10-20": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 3.8,
+      "tmax_avg": 18.4,
+      "sun_avg": 6.9
+    },
+    "10-21": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 5.8,
+      "tmax_avg": 16.0,
+      "sun_avg": 6.9
+    },
+    "10-22": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 4.2,
+      "tmax_avg": 14.0,
+      "sun_avg": 7.0
+    },
+    "10-23": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 3.8,
+      "tmax_avg": 15.6,
+      "sun_avg": 6.2
+    },
+    "10-24": {
+      "snow_avg": 0.5,
+      "snow_chance": 14,
+      "tmin_avg": 3.2,
+      "tmax_avg": 13.0,
+      "sun_avg": 5.5
+    },
+    "10-25": {
+      "snow_avg": 0.3,
+      "snow_chance": 14,
+      "tmin_avg": 2.2,
+      "tmax_avg": 13.8,
+      "sun_avg": 7.8
+    },
+    "10-26": {
+      "snow_avg": 2.6,
+      "snow_chance": 29,
+      "tmin_avg": 2.7,
+      "tmax_avg": 12.2,
+      "sun_avg": 6.0
+    },
+    "10-27": {
+      "snow_avg": 1.7,
+      "snow_chance": 29,
+      "tmin_avg": 1.1,
+      "tmax_avg": 12.2,
+      "sun_avg": 7.9
+    },
+    "10-28": {
+      "snow_avg": 0.0,
+      "snow_chance": 14,
+      "tmin_avg": 1.5,
+      "tmax_avg": 13.7,
+      "sun_avg": 7.3
+    },
+    "10-29": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 2.9,
+      "tmax_avg": 14.7,
+      "sun_avg": 6.7
+    },
+    "10-30": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 2.7,
+      "tmax_avg": 14.6,
+      "sun_avg": 6.4
+    },
+    "10-31": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": 1.9,
+      "tmax_avg": 15.5,
+      "sun_avg": 8.4
+    },
+    "11-01": {
+      "snow_avg": 0.2,
+      "snow_chance": 14,
+      "tmin_avg": 2.1,
+      "tmax_avg": 13.7,
+      "sun_avg": 5.2
+    },
+    "11-02": {
+      "snow_avg": 0.4,
+      "snow_chance": 29,
+      "tmin_avg": 2.6,
+      "tmax_avg": 12.0,
+      "sun_avg": 4.5
+    },
+    "11-03": {
+      "snow_avg": 1.4,
+      "snow_chance": 43,
+      "tmin_avg": -0.1,
+      "tmax_avg": 10.5,
+      "sun_avg": 4.8
+    },
+    "11-04": {
+      "snow_avg": 1.4,
+      "snow_chance": 29,
+      "tmin_avg": -1.4,
+      "tmax_avg": 9.5,
+      "sun_avg": 5.1
+    },
+    "11-05": {
+      "snow_avg": 1.2,
+      "snow_chance": 57,
+      "tmin_avg": -1.0,
+      "tmax_avg": 9.0,
+      "sun_avg": 5.9
+    },
+    "11-06": {
+      "snow_avg": 0.1,
+      "snow_chance": 29,
+      "tmin_avg": -2.0,
+      "tmax_avg": 10.7,
+      "sun_avg": 8.6
+    },
+    "11-07": {
+      "snow_avg": 0.2,
+      "snow_chance": 29,
+      "tmin_avg": -2.3,
+      "tmax_avg": 11.3,
+      "sun_avg": 8.4
+    },
+    "11-08": {
+      "snow_avg": 0.6,
+      "snow_chance": 29,
+      "tmin_avg": -1.5,
+      "tmax_avg": 9.6,
+      "sun_avg": 7.3
+    },
+    "11-09": {
+      "snow_avg": 0.1,
+      "snow_chance": 29,
+      "tmin_avg": -2.3,
+      "tmax_avg": 10.0,
+      "sun_avg": 7.3
+    },
+    "11-10": {
+      "snow_avg": 0.2,
+      "snow_chance": 14,
+      "tmin_avg": -2.0,
+      "tmax_avg": 9.8,
+      "sun_avg": 8.1
+    },
+    "11-11": {
+      "snow_avg": 0.9,
+      "snow_chance": 43,
+      "tmin_avg": -2.0,
+      "tmax_avg": 10.3,
+      "sun_avg": 7.7
+    },
+    "11-12": {
+      "snow_avg": 2.4,
+      "snow_chance": 43,
+      "tmin_avg": -1.1,
+      "tmax_avg": 10.4,
+      "sun_avg": 5.5
+    },
+    "11-13": {
+      "snow_avg": 0.8,
+      "snow_chance": 43,
+      "tmin_avg": -1.4,
+      "tmax_avg": 9.9,
+      "sun_avg": 5.6
+    },
+    "11-14": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": -1.4,
+      "tmax_avg": 9.4,
+      "sun_avg": 5.8
+    },
+    "11-15": {
+      "snow_avg": 0.9,
+      "snow_chance": 29,
+      "tmin_avg": -0.9,
+      "tmax_avg": 10.6,
+      "sun_avg": 6.5
+    },
+    "11-16": {
+      "snow_avg": 0.3,
+      "snow_chance": 29,
+      "tmin_avg": -1.0,
+      "tmax_avg": 9.0,
+      "sun_avg": 5.8
+    },
+    "11-17": {
+      "snow_avg": 7.7,
+      "snow_chance": 71,
+      "tmin_avg": -1.5,
+      "tmax_avg": 6.1,
+      "sun_avg": 3.3
+    },
+    "11-18": {
+      "snow_avg": 2.4,
+      "snow_chance": 71,
+      "tmin_avg": -3.1,
+      "tmax_avg": 5.9,
+      "sun_avg": 6.3
+    },
+    "11-19": {
+      "snow_avg": 0.2,
+      "snow_chance": 29,
+      "tmin_avg": -2.1,
+      "tmax_avg": 6.7,
+      "sun_avg": 4.0
+    },
+    "11-20": {
+      "snow_avg": 4.2,
+      "snow_chance": 57,
+      "tmin_avg": -3.2,
+      "tmax_avg": 5.4,
+      "sun_avg": 6.2
+    },
+    "11-21": {
+      "snow_avg": 3.3,
+      "snow_chance": 57,
+      "tmin_avg": -3.7,
+      "tmax_avg": 3.6,
+      "sun_avg": 4.9
+    },
+    "11-22": {
+      "snow_avg": 3.1,
+      "snow_chance": 71,
+      "tmin_avg": -5.0,
+      "tmax_avg": 2.8,
+      "sun_avg": 3.6
+    },
+    "11-23": {
+      "snow_avg": 0.4,
+      "snow_chance": 29,
+      "tmin_avg": -5.7,
+      "tmax_avg": 6.1,
+      "sun_avg": 7.4
+    },
+    "11-24": {
+      "snow_avg": 3.1,
+      "snow_chance": 43,
+      "tmin_avg": -3.2,
+      "tmax_avg": 8.0,
+      "sun_avg": 4.3
+    },
+    "11-25": {
+      "snow_avg": 3.5,
+      "snow_chance": 57,
+      "tmin_avg": -3.5,
+      "tmax_avg": 7.1,
+      "sun_avg": 5.9
+    },
+    "11-26": {
+      "snow_avg": 4.4,
+      "snow_chance": 57,
+      "tmin_avg": -5.3,
+      "tmax_avg": 3.6,
+      "sun_avg": 3.7
+    },
+    "11-27": {
+      "snow_avg": 0.8,
+      "snow_chance": 43,
+      "tmin_avg": -6.9,
+      "tmax_avg": 5.4,
+      "sun_avg": 6.4
+    },
+    "11-28": {
+      "snow_avg": 5.7,
+      "snow_chance": 71,
+      "tmin_avg": -5.1,
+      "tmax_avg": 4.2,
+      "sun_avg": 3.1
+    },
+    "11-29": {
+      "snow_avg": 4.8,
+      "snow_chance": 71,
+      "tmin_avg": -5.8,
+      "tmax_avg": 1.6,
+      "sun_avg": 3.6
+    },
+    "11-30": {
+      "snow_avg": 4.3,
+      "snow_chance": 71,
+      "tmin_avg": -7.4,
+      "tmax_avg": 3.6,
+      "sun_avg": 4.1
+    },
+    "12-01": {
+      "snow_avg": 4.0,
+      "snow_chance": 86,
+      "tmin_avg": -4.9,
+      "tmax_avg": 4.3,
+      "sun_avg": 4.0
+    },
+    "12-02": {
+      "snow_avg": 4.7,
+      "snow_chance": 71,
+      "tmin_avg": -5.3,
+      "tmax_avg": 3.1,
+      "sun_avg": 2.7
+    },
+    "12-03": {
+      "snow_avg": 0.8,
+      "snow_chance": 29,
+      "tmin_avg": -8.7,
+      "tmax_avg": 2.2,
+      "sun_avg": 6.9
+    },
+    "12-04": {
+      "snow_avg": 2.7,
+      "snow_chance": 86,
+      "tmin_avg": -6.2,
+      "tmax_avg": 5.4,
+      "sun_avg": 3.4
+    },
+    "12-05": {
+      "snow_avg": 2.5,
+      "snow_chance": 86,
+      "tmin_avg": -5.8,
+      "tmax_avg": 3.4,
+      "sun_avg": 3.5
+    },
+    "12-06": {
+      "snow_avg": 3.6,
+      "snow_chance": 57,
+      "tmin_avg": -6.2,
+      "tmax_avg": 3.3,
+      "sun_avg": 3.3
+    },
+    "12-07": {
+      "snow_avg": 2.2,
+      "snow_chance": 100,
+      "tmin_avg": -6.8,
+      "tmax_avg": 2.8,
+      "sun_avg": 3.0
+    },
+    "12-08": {
+      "snow_avg": 4.0,
+      "snow_chance": 57,
+      "tmin_avg": -5.5,
+      "tmax_avg": 4.3,
+      "sun_avg": 3.6
+    },
+    "12-09": {
+      "snow_avg": 3.9,
+      "snow_chance": 86,
+      "tmin_avg": -3.6,
+      "tmax_avg": 3.6,
+      "sun_avg": 2.7
+    },
+    "12-10": {
+      "snow_avg": 4.6,
+      "snow_chance": 86,
+      "tmin_avg": -6.4,
+      "tmax_avg": 2.8,
+      "sun_avg": 4.3
+    },
+    "12-11": {
+      "snow_avg": 2.4,
+      "snow_chance": 57,
+      "tmin_avg": -6.5,
+      "tmax_avg": 2.7,
+      "sun_avg": 4.1
+    },
+    "12-12": {
+      "snow_avg": 1.4,
+      "snow_chance": 43,
+      "tmin_avg": -5.9,
+      "tmax_avg": 3.2,
+      "sun_avg": 4.4
+    },
+    "12-13": {
+      "snow_avg": 1.5,
+      "snow_chance": 57,
+      "tmin_avg": -5.6,
+      "tmax_avg": 4.8,
+      "sun_avg": 4.7
+    },
+    "12-14": {
+      "snow_avg": 3.1,
+      "snow_chance": 57,
+      "tmin_avg": -2.9,
+      "tmax_avg": 6.2,
+      "sun_avg": 4.6
+    },
+    "12-15": {
+      "snow_avg": 1.9,
+      "snow_chance": 43,
+      "tmin_avg": -2.0,
+      "tmax_avg": 6.1,
+      "sun_avg": 5.6
+    },
+    "12-16": {
+      "snow_avg": 0.6,
+      "snow_chance": 14,
+      "tmin_avg": -4.3,
+      "tmax_avg": 5.6,
+      "sun_avg": 5.8
+    },
+    "12-17": {
+      "snow_avg": 0.1,
+      "snow_chance": 14,
+      "tmin_avg": -4.0,
+      "tmax_avg": 7.1,
+      "sun_avg": 6.2
+    },
+    "12-18": {
+      "snow_avg": 0.0,
+      "snow_chance": 0,
+      "tmin_avg": -4.3,
+      "tmax_avg": 9.1,
+      "sun_avg": 7.9
+    },
+    "12-19": {
+      "snow_avg": 1.4,
+      "snow_chance": 14,
+      "tmin_avg": -3.3,
+      "tmax_avg": 9.0,
+      "sun_avg": 6.2
+    },
+    "12-20": {
+      "snow_avg": 2.4,
+      "snow_chance": 57,
+      "tmin_avg": -3.4,
+      "tmax_avg": 5.7,
+      "sun_avg": 4.4
+    },
+    "12-21": {
+      "snow_avg": 1.6,
+      "snow_chance": 43,
+      "tmin_avg": -4.3,
+      "tmax_avg": 5.2,
+      "sun_avg": 3.3
+    },
+    "12-22": {
+      "snow_avg": 7.0,
+      "snow_chance": 57,
+      "tmin_avg": -2.7,
+      "tmax_avg": 5.6,
+      "sun_avg": 3.4
+    },
+    "12-23": {
+      "snow_avg": 5.7,
+      "snow_chance": 71,
+      "tmin_avg": -2.6,
+      "tmax_avg": 4.8,
+      "sun_avg": 3.0
+    },
+    "12-24": {
+      "snow_avg": 3.6,
+      "snow_chance": 86,
+      "tmin_avg": -2.6,
+      "tmax_avg": 3.4,
+      "sun_avg": 1.2
+    },
+    "12-25": {
+      "snow_avg": 4.4,
+      "snow_chance": 43,
+      "tmin_avg": -4.3,
+      "tmax_avg": 5.4,
+      "sun_avg": 5.2
+    },
+    "12-26": {
+      "snow_avg": 0.5,
+      "snow_chance": 57,
+      "tmin_avg": -6.9,
+      "tmax_avg": 5.2,
+      "sun_avg": 6.5
+    },
+    "12-27": {
+      "snow_avg": 2.2,
+      "snow_chance": 43,
+      "tmin_avg": -5.6,
+      "tmax_avg": 6.0,
+      "sun_avg": 5.8
+    },
+    "12-28": {
+      "snow_avg": 1.5,
+      "snow_chance": 43,
+      "tmin_avg": -5.9,
+      "tmax_avg": 6.2,
+      "sun_avg": 5.4
+    },
+    "12-29": {
+      "snow_avg": 0.6,
+      "snow_chance": 29,
+      "tmin_avg": -4.7,
+      "tmax_avg": 6.8,
+      "sun_avg": 6.2
+    },
+    "12-30": {
+      "snow_avg": 0.5,
+      "snow_chance": 43,
+      "tmin_avg": -5.2,
+      "tmax_avg": 5.3,
+      "sun_avg": 5.7
+    },
+    "12-31": {
+      "snow_avg": 1.0,
+      "snow_chance": 29,
+      "tmin_avg": -5.0,
+      "tmax_avg": 7.5,
+      "sun_avg": 7.4
+    }
+  }
+}
