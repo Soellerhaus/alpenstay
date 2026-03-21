@@ -1421,6 +1421,7 @@
     }
 
     function updateMapMarkers(filteredHotels) {
+      if (!map) return; // Map removed from homepage
       // Clear existing markers
       mapMarkers.forEach(m => map.removeLayer(m));
       mapMarkers = [];
