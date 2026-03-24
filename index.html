@@ -1418,6 +1418,11 @@
     // =====================================================================
     // EXPEDIA & HOTELS.COM COMPARISON URLS
     // =====================================================================
+    // CJ deeplink format: /links/{PID}/type/dlg/{destination_url}
+    function cjDeeplink(destUrl) {
+      return 'https://www.anrdoezrs.net/links/' + CONFIG.CJ_PID + '/type/dlg/' + destUrl;
+    }
+
     function buildExpediaUrl() {
       const checkin = document.getElementById('tCheckin')?.value || '';
       const checkout = document.getElementById('tCheckout')?.value || '';
@@ -1435,8 +1440,7 @@
       if (checkout) expUrl += '&endDate=' + encodeURIComponent(toDE(checkout));
       expUrl += '&adults=' + adults;
 
-      return 'https://www.anrdoezrs.net/click-' + CONFIG.CJ_PID + '-' + CONFIG.CJ_EXPEDIA_AID +
-        '?url=' + encodeURIComponent(expUrl);
+      return cjDeeplink(expUrl);
     }
 
     function buildHotelsComUrl() {
@@ -1449,8 +1453,7 @@
       if (checkout) hUrl += '&endDate=' + encodeURIComponent(checkout);
       hUrl += '&adults=' + adults;
 
-      return 'https://www.anrdoezrs.net/click-' + CONFIG.CJ_PID + '-' + CONFIG.CJ_HOTELSCOM_AID +
-        '?url=' + encodeURIComponent(hUrl);
+      return cjDeeplink(hUrl);
     }
 
     function updateCompareLinks() {
