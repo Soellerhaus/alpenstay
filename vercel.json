@@ -1,4 +1,12 @@
 {
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "alpenstay.de" }],
+      "destination": "https://www.alpenstay.de/$1",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     { "source": "/winter", "destination": "/winter.html" },
     { "source": "/sommer", "destination": "/sommer.html" }

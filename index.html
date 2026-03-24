@@ -608,6 +608,59 @@
     .modal-close:hover { color: var(--text-primary); }
 
     /* ================================================================
+       COMPARE SECTION (Expedia / Hotels.com)
+       ================================================================ */
+    .compare-section {
+      padding: 3rem 0;
+      text-align: center;
+    }
+    .compare-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem 2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .compare-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .compare-card p {
+      color: var(--text-muted);
+      font-size: 0.9375rem;
+      margin-bottom: 1.5rem;
+    }
+    .compare-links {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .compare-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: var(--radius-md);
+      font-weight: 600;
+      font-size: 0.875rem;
+      transition: all var(--transition);
+      border: 1px solid var(--border-medium);
+      color: var(--text-secondary);
+    }
+    .compare-link:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-sm);
+    }
+    .compare-link img {
+      height: 20px;
+      width: auto;
+    }
+
+    /* ================================================================
        ABOUT
        ================================================================ */
     .about-section { padding: 5rem 0 3rem; }
@@ -973,6 +1026,26 @@
   <div id="locationNav" style="display:none"></div>
 
   <!-- ================================================================
+       COMPARE SECTION
+       ================================================================ -->
+  <section class="compare-section">
+    <div class="container">
+      <div class="compare-card">
+        <h3>Preise vergleichen</h3>
+        <p>Finde das beste Angebot f&uuml;r deine Unterkunft im Kleinwalsertal &mdash; auch auf anderen Plattformen.</p>
+        <div class="compare-links">
+          <a id="expediaCompareLink" class="compare-link" href="#" target="_blank" rel="noopener sponsored">
+            Expedia.de &rarr;
+          </a>
+          <a id="hotelscomCompareLink" class="compare-link" href="#" target="_blank" rel="noopener sponsored">
+            Hotels.com &rarr;
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
        ABOUT
        ================================================================ -->
   <section id="about" class="about-section" aria-label="Über AlpenStay">
@@ -1164,6 +1237,9 @@
       DATA_URL: "data/kleinwalsertal_real.json",
       DESCRIPTIONS_URL: "data/descriptions.json",
       AFFILIATE_ID: "DEIN_AFFILIATE_ID",
+      CJ_PID: "7904454",
+      CJ_EXPEDIA_AID: "5289015",
+      CJ_HOTELSCOM_AID: "5275606",
       DESTINATION: "Kleinwalsertal",
       MAP_CENTER: [47.34, 10.17],
       MAP_ZOOM: 13,
@@ -1337,6 +1413,51 @@
         h.adults_only ? "adults only erwachsenenhotel" : ""].filter(Boolean).join(" ");
 
       return h;
+    }
+
+    // =====================================================================
+    // EXPEDIA & HOTELS.COM COMPARISON URLS
+    // =====================================================================
+    function buildExpediaUrl() {
+      const checkin = document.getElementById('tCheckin')?.value || '';
+      const checkout = document.getElementById('tCheckout')?.value || '';
+      const adults = document.getElementById('tAdults')?.value || '2';
+
+      // Expedia.de uses DD.MM.YYYY format
+      function toDE(isoDate) {
+        if (!isoDate) return '';
+        const [y, m, d] = isoDate.split('-');
+        return d + '.' + m + '.' + y;
+      }
+
+      let expUrl = 'https://www.expedia.de/Hotel-Search?destination=' + encodeURIComponent(CONFIG.DESTINATION);
+      if (checkin) expUrl += '&startDate=' + encodeURIComponent(toDE(checkin));
+      if (checkout) expUrl += '&endDate=' + encodeURIComponent(toDE(checkout));
+      expUrl += '&adults=' + adults;
+
+      return 'https://www.anrdoezrs.net/click-' + CONFIG.CJ_PID + '-' + CONFIG.CJ_EXPEDIA_AID +
+        '?url=' + encodeURIComponent(expUrl);
+    }
+
+    function buildHotelsComUrl() {
+      const checkin = document.getElementById('tCheckin')?.value || '';
+      const checkout = document.getElementById('tCheckout')?.value || '';
+      const adults = document.getElementById('tAdults')?.value || '2';
+
+      let hUrl = 'https://de.hotels.com/Hotel-Search?destination=' + encodeURIComponent(CONFIG.DESTINATION);
+      if (checkin) hUrl += '&startDate=' + encodeURIComponent(checkin);
+      if (checkout) hUrl += '&endDate=' + encodeURIComponent(checkout);
+      hUrl += '&adults=' + adults;
+
+      return 'https://www.anrdoezrs.net/click-' + CONFIG.CJ_PID + '-' + CONFIG.CJ_HOTELSCOM_AID +
+        '?url=' + encodeURIComponent(hUrl);
+    }
+
+    function updateCompareLinks() {
+      const expLink = document.getElementById('expediaCompareLink');
+      const hcLink = document.getElementById('hotelscomCompareLink');
+      if (expLink) expLink.href = buildExpediaUrl();
+      if (hcLink) hcLink.href = buildHotelsComUrl();
     }
 
     // =====================================================================
@@ -1955,9 +2076,25 @@
       const today = new Date().toISOString().split('T')[0];
       tCheckin.setAttribute('min', today);
 
+      // Load saved dates from localStorage (shared with winter.html)
+      const savedCheckin = localStorage.getItem('alpenstay_checkin');
+      const savedCheckout = localStorage.getItem('alpenstay_checkout');
+      if (savedCheckin && savedCheckin >= today && !tCheckin.value) {
+        tCheckin.value = savedCheckin;
+      }
+      if (savedCheckout && savedCheckout > today && !tCheckout.value) {
+        tCheckout.value = savedCheckout;
+        if (tCheckin.value) {
+          const nextDay = new Date(tCheckin.value);
+          nextDay.setDate(nextDay.getDate() + 1);
+          tCheckout.setAttribute('min', nextDay.toISOString().split('T')[0]);
+        }
+      }
+
       // When check-in changes, update check-out min
       tCheckin.addEventListener('change', function() {
         if (this.value) {
+          localStorage.setItem('alpenstay_checkin', this.value);
           const nextDay = new Date(this.value);
           nextDay.setDate(nextDay.getDate() + 1);
           const minCheckout = nextDay.toISOString().split('T')[0];
@@ -1965,12 +2102,16 @@
           // If checkout is before new min, reset it
           if (tCheckout.value && tCheckout.value < minCheckout) {
             tCheckout.value = minCheckout;
+            localStorage.setItem('alpenstay_checkout', minCheckout);
           }
         }
         updateAllBookingUrls();
       });
 
       tCheckout.addEventListener('change', function() {
+        if (this.value) {
+          localStorage.setItem('alpenstay_checkout', this.value);
+        }
         updateAllBookingUrls();
       });
 
@@ -2002,6 +2143,9 @@
         const hotel = HOTELS.find(h => h.name === mTitle.textContent);
         if (hotel) mBooking.href = buildBookingUrl(hotel);
       }
+
+      // Update Expedia/Hotels.com comparison links
+      updateCompareLinks();
     }
 
     // =====================================================================
@@ -2010,6 +2154,9 @@
     (async function boot() {
       // Initialize travel bar
       initTravelBar();
+
+      // Initialize comparison links
+      updateCompareLinks();
 
       // Initialize map
       initMap();
