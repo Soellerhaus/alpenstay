@@ -1428,17 +1428,12 @@
       const checkout = document.getElementById('tCheckout')?.value || '';
       const adults = document.getElementById('tAdults')?.value || '2';
 
-      // Expedia.de uses DD.MM.YYYY format
-      function toDE(isoDate) {
-        if (!isoDate) return '';
-        const [y, m, d] = isoDate.split('-');
-        return d + '.' + m + '.' + y;
-      }
-
-      let expUrl = 'https://www.expedia.de/Hotel-Search?destination=' + encodeURIComponent(CONFIG.DESTINATION);
-      if (checkin) expUrl += '&startDate=' + encodeURIComponent(toDE(checkin));
-      if (checkout) expUrl += '&endDate=' + encodeURIComponent(toDE(checkout));
-      expUrl += '&adults=' + adults;
+      let expUrl = 'https://www.expedia.de/Hotel-Search?destination=' +
+        encodeURIComponent('Kleinwalsertal, Vorarlberg, Österreich') +
+        '&regionId=6169757';
+      if (checkin) expUrl += '&startDate=' + checkin;
+      if (checkout) expUrl += '&endDate=' + checkout;
+      expUrl += '&adults=' + adults + '&sort=RECOMMENDED';
 
       return cjDeeplink(expUrl);
     }
@@ -1448,10 +1443,12 @@
       const checkout = document.getElementById('tCheckout')?.value || '';
       const adults = document.getElementById('tAdults')?.value || '2';
 
-      let hUrl = 'https://de.hotels.com/Hotel-Search?destination=' + encodeURIComponent(CONFIG.DESTINATION);
-      if (checkin) hUrl += '&startDate=' + encodeURIComponent(checkin);
-      if (checkout) hUrl += '&endDate=' + encodeURIComponent(checkout);
-      hUrl += '&adults=' + adults;
+      let hUrl = 'https://de.hotels.com/Hotel-Search?destination=' +
+        encodeURIComponent('Kleinwalsertal, Vorarlberg, Österreich') +
+        '&regionId=6169757';
+      if (checkin) hUrl += '&startDate=' + checkin;
+      if (checkout) hUrl += '&endDate=' + checkout;
+      hUrl += '&adults=' + adults + '&sort=RECOMMENDED';
 
       return cjDeeplink(hUrl);
     }
